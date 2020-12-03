@@ -12,10 +12,10 @@ kramdown:
 #    you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 #    You can create any custom variable you like, and they will be accessible
 #    in the templates via {{ site.myvariable }} for example.
-url: "https://tradecontrol.online" 
+url: "https://tradecontrol.github.io" 
 baseurl: "" # the subpath of your site if needed, e.g. /sitecontent
 
-email: tc.info@tradecontrol.co.uk
+email: office@tradecontrol.co.uk
 
 title: tradecontrol.online
 description: >- # this means to ignore newlines
