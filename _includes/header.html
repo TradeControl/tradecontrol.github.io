@@ -1,0 +1,64 @@
+<header class="site-header" role="banner">
+
+<div class="wrapper">
+  <img class="logo-float-left" alt="" src="{{ site.url }}/images/tradecontrol_logo.png" />  
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.header_pages | default: default_paths -%}
+  <span><a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></span>
+</div>
+
+<nav class="navbar navbar-default navbar-narrow">
+  <div class="container-fluid">
+
+    <!-- Enable mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-nav-bar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Nav links for toggling -->
+    <div class="collapse navbar-collapse" id="collapsing-nav-bar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="/about">About</a></li> 
+        <li><a href="/app">App</a></li> 
+        <li><a href="/network">Networking</a></li>
+        <li><a href="/bitcoin">Bitcoin</a></li>
+        <li><a href="/quotation">Quotations</a></li>
+        <li><a href="/contact">Contact</a></li>
+
+        <li class="dropdown">
+          <a data-toggle="dropdown" role="button">Tutorials<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/tutorials/overview">Tutorial Overview</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/tutorials/installing-sqlnode">Installing a Trade Control node</a></li>
+            <li><a href="/tutorials/installing-office">Installing an Office 365 clients</a></li>
+            <li><a href="/tutorials/installing-vsto">Configuring VSTO documents</a></li>
+            <li><a href="/tutorials/installing-powerbi">Power BI template sample data</a></li>
+            <li><a href="/tutorials/installing-network">Setting up an ethereum network</a></li>
+            <li><a href="/tutorials/installing-bitcoin">Installing a bitcoin wallet </a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/tutorials/cash-codes">Classifying cash transactions</a></li>
+            <li><a href="/tutorials/services">Business System overview</a></li>
+            <li><a href="/tutorials/manufacturing">Modelling a Bill of Materials</a></li>
+            <li><a href="/tutorials/balance-sheet">How to generate a Balance Sheet</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/tutorials/digital-tax">MTD Vat posting</a></li>
+            <li><a href="/tutorials/powerbi">Business Intelligence with Power BI</a></li>
+            <li><a href="/tutorials/quotations">Raising quotations from XML price lists</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/tutorials/network">Connecting Trade Control nodes in supply-chains</a></li>  
+            <li><a href="/tutorials/bitcoin">Using a bitcoin commercial wallet as your UOA</a></li>  
+          </ul>
+        </li>   
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+</header>

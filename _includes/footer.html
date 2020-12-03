@@ -1,0 +1,25 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <img class="logo-footer" alt="" src="{{ site.url }}/images/tradecontrol_logo.png" /> 
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          {%- if site.web_github_link -%}
+          <li class="footer-links"><a href="{{ site.web_github_link }}">tradecontrol.online github</a></li>
+          {%- endif -%}
+          {%- if site.tradecontrol_github_link -%}
+          <li class="footer-links"><a href="{{ site.tradecontrol_github_link }}">trade control github</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
