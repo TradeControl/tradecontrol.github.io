@@ -1,17 +1,17 @@
 ---
 layout: home
-title: an open source, trading platform for SMEs
+title: Technical Documentation
 permalink: /
 ---
-#### Everything you need to run your business successfully
+#### Unlocking the potential of your SME
 
-## Purpose
+## Trade Control is an Open Source trading platform
 
-- Share with the community a free, practical alternative to [conventional MIS]({{ site.url }}/about) and accountancy implementations.
-- Deliver a [new business framework]({{ site.url }}/app) that is resistant to fraud whilst enabling fine-grained global visibility at transaction level speeds.
-- Express the commercial architecture of the business entity as a recursive node, facilitating [supply-chain scheduling]({{ site.url }}/network).
-- Optionally introduce a crypto-currency [Unit of Account]({{ site.url }}/bitcoin) into the industrial landscape.  
-- Demonstrate a working version of a global trading platform by integrating [bitcoin](https://bitcoincore.org/) with the [ethereum](https://github.com/ethereum/wiki/wiki) world computer.
+- A practical and powerful alternative to [conventional MIS]({{ site.url }}/about) and accountancy systems
+- Proven real-world IT solution including a [new business framework]({{ site.url }}/app) that is robust, fast and secure
+- Detailed multi-level order workflows to manage processes and facilitate [supply-chain scheduling]({{ site.url }}/network)
+- Capture and analyse powerful [management data]({{ site.url }}/tutorials/powerbi) to take control of production and finances
+- A future-proof option that enables global trading in [crypto-currency]({{ site.url }}/bitcoin)
 
 ## Scalable Solution
 
