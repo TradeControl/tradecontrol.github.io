@@ -6,9 +6,9 @@ permalink: /quotation
 
 Communicates product and service prices to customers in XML file format so that your customers can generate their own quotations.
 
-[user instructions]({{ site.url }}/tutorials/quotations)
+- [quotation instructions]({{ site.url }}/tutorials/quotations)
+- [price list construction]({{ site.url }}/tutorials/pricelists)
 
-[pricing](#pricing)
 
 ## Features
 
@@ -22,13 +22,19 @@ Communicates product and service prices to customers in XML file format so that 
 
 ## Quotations
 
-XML files are opened in an interface that allows quotations to be saved and copied to the clipboard for export.
+XML files are opened in [an interface]({{ site.url }}/tutorials/quotations) that allows quotations to be saved and copied to the clipboard for export.
 
 ![viewer]({{ site.url }}/images/quotation_ui.png)
 
-## Pricing
+## Price Lists
 
-We create the initial XML file for your products and prices and advise on formatting.
+Whilst it is possible to contruct an xml file in a text editor, it is not very convenient, especially if you are storing images. There is an [xml generation app]({{ site.url }}/tutorials/pricelists) that allows you to easily create price list files, add your logo, product images and terms.
+
+![generator]({{ site.url }}/images/quotation_gen.png)
+
+## Assistance
+
+To save time, we can create the initial XML file for your products and prices, as well as advise on formatting.
 
 The cost is 1 GBP per entry less than 150 with unlimited distribution. For more entries, we can write customer-specific import code. 
 

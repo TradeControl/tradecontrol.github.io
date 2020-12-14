@@ -16,7 +16,7 @@ Run setup.exe to check that the required .NET framework is installed. The app do
 
 ## Opening the Price List
 
-Copy supplier price lists into a working folder and use the Open menu item to load the file. It will remember the last price list, but you can re-open others as needed. 
+Copy the supplier's price lists into a working folder.
 
 Open the app from the desktop icon and locate the XML file. The window will load the first product in the listing, with a quantity of 1. The products, extras and images will relate to your supplier. Changing the product, quantity or checking extras will update the Unit Price.
 

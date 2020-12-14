@@ -43,7 +43,8 @@ The Experimental tutorials cover supply-chain scheduling and bitcoin as UOA. Of 
 
 - [MTD Vat posting]({{ site.url}}/tutorials/digital-tax)
 - [Business Intelligence with Power BI]({{ site.url}}/tutorials/powerbi)
-- [Raising quotations from XML price lists]({{ site.url}}/tutorials/price-lists)
+- [Raising quotations from XML price lists]({{ site.url}}/tutorials/quotations)
+- [Creating an XML price list]({{ site.url}}/tutorials/pricelists)
 
 ### Experimental
 
