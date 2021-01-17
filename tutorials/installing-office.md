@@ -4,6 +4,10 @@ title: Installing an Office 365 client
 permalink: /tutorials/installing-office
 ---
 
+For an entry-level application, follow the instructions for a [basic single user install]({{ site.url }}/tutorials/installing-local).
+
+## Client
+
 The client interface is a thin Access database that uses ODBC linked tables, Pass Through Queries and ADO to interact with the business entity. The Access database does not contain any business logic or queries; these are processed by Sql Server. It is therefore both a practical tool, but also a fully specified model for future developments, such as a mobile app or ASP.NET website. The client is documented in the [tutorials]({{ site.url }}/tutorials/services).
 
 The first section describes how to install the client locally, [the second section](#azure-installation) sets up a connection to Azure Sql and includes the [VSTO templates]({{ site.url }}/tutorials/installing-vsto).
@@ -68,7 +72,7 @@ The following is a record of the pre-release installation test for Trade Control
 
 1. Log into your 365 account and install the 64-bit version of Office.
 2. Install ODBC Driver 17 for Sql Server and create a 64-bit ODBC Data Source.
-3. Download and extract the following zip files from the [latest release](https://github.com/tradecontrol/office/releases): tcOfficeClient.zip, tcOfficeTemplates.zip and tcOfficeMTD.zip
+3. Download and extract the following zip files from the [latest release](https://github.com/tradecontrol/office/releases): tcOfficeClient.zip, tcOfficeCashFlow.zip, tcOfficeTemplates.zip and tcOfficeMTD.zip
 4. Install the Office Client and the MTD. Open the Office Client.
 5. Specify the Data Source: delete the default Windows connection and modify the Azure template by replacing the tags with their actual values.
 6. Connect and accept the Administration settings.

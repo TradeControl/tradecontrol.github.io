@@ -9,7 +9,7 @@ A VSTO is an Office 365 document coded in C# that functions as an automated temp
 1. The Excel VSTO is an essential template because it presents the company's Trade Statement. It consists of the P&L, Balance Sheet, and Cash Flow Forecast with forward accruals.
 2. Word VSTO documents for customer and supplier communications. These are loaded from the Office Client from a COM interface in the .NET GAC and receive data via XML. They are optional and enable the company to use Word to profile PDF outputs to external organisations.
 
-Download the templates from the [latest office client release - tcOfficeTemplates.zip](https://github.com/tradecontrol/office/releases).
+Download the templates from the [latest office client release - tcOfficeTemplates.zip and tcOfficeCashFlow.zip](https://github.com/tradecontrol/office/releases).
 
 ### Cash Flow
 

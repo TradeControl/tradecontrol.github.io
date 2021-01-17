@@ -4,7 +4,7 @@ title: Trading Network
 permalink: /network
 ---
 
-Connecting [Trade Control](https://github.com/tradecontrol/sqlnode) nodes with [Ethereum](https://github.com/ethereum/wiki/wiki).
+#### Connecting [Trade Control](https://github.com/tradecontrol/sqlnode) nodes with [Ethereum](https://github.com/ethereum/wiki/wiki).
 
 ## Documentation
 

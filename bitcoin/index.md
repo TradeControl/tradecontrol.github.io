@@ -4,7 +4,7 @@ title: Trading with a commercial bitcoin wallet
 permalink: /bitcoin
 ---
 
-Using [bitcoin](https://bitcoincore.org/) as your commercial Unit of Account (UOA).
+#### Using [bitcoin](https://bitcoincore.org/) as your commercial Unit of Account (UOA).
 
 ## Documentation
 

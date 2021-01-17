@@ -4,11 +4,12 @@ title: XML Price Lists for Customer Quotations
 permalink: /quotation
 ---
 
-Communicates product and service prices to customers in XML file format so that your customers can generate their own quotations.
+#### Product and service prices for customer generated quotations
+
+## Documentation
 
 - [quotation instructions]({{ site.url }}/tutorials/quotations)
 - [price list construction]({{ site.url }}/tutorials/pricelists)
-
 
 ## Features
 
