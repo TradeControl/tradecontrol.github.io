@@ -10,7 +10,7 @@ Instructions for installing a local copy suitable for [entry-level use]({{ site.
 
 ### Service
 
-Trade Control is a multi-user [scalable environment]({{ site.url }}#scalable-solution). Whilst installing it locally is a good place to start (or end if there will only be one user), the server components still need to be set up. This could prove frustrating if you are without prior experience. Please [contact support]({{ site.url }}/contact) for assistence.
+Trade Control is a multi-user [scalable environment]({{ site.url }}#scalable-solution). Whilst installing it locally is a good place to start (or end if there will only be one user), the server components still need to be set up. This could prove frustrating if you are not an IT professional. Please [contact support]({{ site.url }}/contact) for assistence.
 
 ### Downloads
 

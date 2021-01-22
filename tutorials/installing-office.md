@@ -22,6 +22,8 @@ First, if not already available, [install and configure]({{ site.url }}/tutorial
 
 [office client - tcOfficeClient.zip](https://github.com/tradecontrol/office/releases)
 
+> Office modifies documents. When upgrading, ensure you install the latest version by uninstalling the old client first.
+
 ### Options
 
 The Trade Control client is installed into the user's local _AppData_ folder. There are two open modes: compiled and un-compiled. If you are using the [Bitcoin Wallet]({{ site.url }}/tutorials/bitcoin), you must use the Native Version, since Bitcoin is not supported by the Windows OS as a Unit of Account and the client must re-configure itself locally.
