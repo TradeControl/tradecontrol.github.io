@@ -29,7 +29,7 @@ Theme color ref:
 }
 
 .h1, h1 {
-  background-color: #53bd58;
+  background-color: #ff0000;
   color: white !important;
   font-family: Open Sans, sans-serif !important;
   font-size: 28px !important;
@@ -84,7 +84,7 @@ Theme color ref:
 
 // A h4 is used as a comment/tip block:
 .h4, h4 {
-  color: #53bd58 !important;
+  color: #c00204 !important;
   font-family: Open Sans, sans-serif !important;
   font-size: 14px !important;
   font-weight: bolder !important;
@@ -146,7 +146,7 @@ Theme color ref:
 
 // Highlight current active page on nav bar
 .navbar-nav>.active>a {
-  background-color: #53bd58 !important;
+  background-color: #ff0000 !important;
   color: white !important;
 }
 
@@ -157,7 +157,7 @@ Theme color ref:
 
 // Highlight current active page in nav drop down
 .dropdown-menu>.active>a {
-  background-color: #13c05b !important;
+  background-color: #ff0000 !important;
   color: white !important;
 }
 
@@ -202,14 +202,14 @@ Theme color ref:
 
 // Make the nav bar align with the site identity and logo
 .navbar-narrow {
-  max-width: calc(800px);  
+  //max-width: calc(800px);  
   position: auto;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 0px !important;
   margin-top: 10px;
-  padding-right: 15px !important;
-  padding-left: 15px !important;
+  //padding-right: 15px !important;
+  //padding-left: 15px !important;
   background-color: white !important;
   border: none !important; 
 }
@@ -253,7 +253,7 @@ table {
 
 table th {
   background-color: white;
-  color: #53bd58;
+  color: #ff0000;
   font-family: Open Sans, sans-serif !important;
   font-size: 18px !important;
   font-weight: lighter !important;
@@ -360,4 +360,8 @@ strong {
 .doc pre {
   word-break: break-word;
   white-space: pre-wrap;
+}
+
+.wrapper {
+  max-width: 100%;
 }

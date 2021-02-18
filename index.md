@@ -7,7 +7,7 @@ permalink: /
 
 ## Trade Control is an Open Source trading platform
 
-- A simple way to generate your [Company Accounts]({{ site.url }}/accounts) without incurring accountancy fees
+- A simple way to generate your [Company Accounts]({{ site.url }}/accounts) without incurring accountancy fees.
 - Proven real-world IT solution with a [new business framework]({{ site.url }}/mis) that is robust, fast and secure
 - A practical and [powerful alternative]({{ site.url }}/about) to conventional MIS and accountancy systems
 - Detailed multi-level order workflows to manage processes and facilitate [supply-chain scheduling]({{ site.url }}/network)

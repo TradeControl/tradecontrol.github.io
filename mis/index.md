@@ -26,7 +26,7 @@ The [Accounts Mode]({{ site.url }}/accounts) allows you to enter your own Compan
 
 These kinds of questions can only be answered by using the project management tools. The Accounts Mode uses the MIS algorithms, simply removing workflows from the interface. Therefore, to activate, just re-connect the data source and select **Connect to MIS**. Consult the tutorials for [services]({{ site.url}}/tutorials/services) and [manufacturing]({{ site.url}}/tutorials/manufacturing) for ideas on how to apply this new functionality in your own business.
 
-![Connection]({{ site.url }}/images/tc_office_connection.jpg)
+![ODBC Connection]({{ site.url }}/images/accounts_connection.png)
 
 > **Note:** 
 > 

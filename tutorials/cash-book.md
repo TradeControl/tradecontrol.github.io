@@ -19,11 +19,15 @@ This tutorial explains how to maintain your cash book, raise invoices and email 
 
 ## Menu
 
-When you log onto the system for the first time, you are presented by the [System Admin](#administration) form. Right click on the Company Logo and insert a bitmap, pasting in your image.  Assuming you entered the correct details during the installation, you can accept all these values without review. Here is the Accounts Mode Home screen:
+When you log onto the system for the first time, you are presented by the [System Admin](#administration) form. Right click on the Company Logo and insert a bitmap (350x190px), pasting in your image.  Assuming you entered the correct details during the installation, you can accept all these values without review. You can also add an avatar to your user account if you like:
+
+![avatar]({{ site.url }}/images/accounts_avatar.png)
+
+Here is the Accounts Mode Home screen (with some outstanding invoices):
 
 ![Accounts Home Screen]({{ site.url }}/images/accounts_home.png)
 
-You will notice that there are not very many buttons on the menu. The reason for that is the way Trade Control models workflows. It classifies transactions by cash polarity rather than by actors and actions, such as customers and suppliers, sales and purchase orders or credit and debit notes. Although not essential, understanding how this works will help you navigate the system effectively:
+The menu is in the middle section. You will notice that there are not very many options. The reason for that is the way Trade Control models workflows. It classifies transactions by cash polarity rather than by actors and actions, such as customers and suppliers, sales and purchase orders or credit and debit notes. Although not essential, understanding how this works will help you navigate the system effectively:
 
 [Cash Polarity Explained]({{ site.url}}/tutorials/cash-codes#cash-polarity)
 
@@ -55,7 +59,7 @@ Pay in the capital injection into your current account by opening Payment Entry.
 
 ![owner]({{ site.url}}/images/accounts_owner.png)
 
-> Use the 1st of the previous month because the tutorial must post payments retrospectively.
+> For all transactions, use the 1st of the previous month because the tutorial must post payments retrospectively.
 
 The Share Capital cash code is an asset class which cannot be paid into your bank account. Instead, we pay in the capital as a Company Loan:
 
@@ -69,7 +73,7 @@ Set the transaction to Posted.
 
 ### Directors Loan
 
-The reason why owners prefer a director's loan to capital is that they can modify the [corporation tax](#corporation-tax) bill at year end by deciding how much to pay back. Because the loan is a long-term liability, it is processed in the same way as we have just completed for share capital. These codes and accounts are installed in the basic setup, so:
+The reason why owners prefer a director's loan to capital is that they can modify the corporation tax bill at year end by deciding how much to pay back. Because the loan is a long-term liability, it is processed in the same way as we have just completed for share capital. These codes and accounts are installed in the basic setup, so:
 
 1. Open Payment Entry and pay in 10K into the current account from the owner. Use the Director Loan cash code.
 2. Open Asset Entry and pay out 10K from the Long-Term Liabilities account.
@@ -80,11 +84,15 @@ Follow the instructions for [account transfers](#account-transfers) and move 5K 
 
 ### Review
 
-The Cash Accounts will show a current account of 5,001 with reserves of 5K, a share capital account of -1 and a long-term liability of -10K. 
+The Cash Account Statement will show a current account of 5,001 with reserves of 5K, a share capital account of -1 and a long-term liability of -10K. 
+
+![rebuild]({{ site.url }}/images/accounts_rebuild.png)
+
+There are two rebuild functions: one for integrating externally imported information or repairing corrupted data; the other for accepting retrospective modifications to a closed period end.  Because we are modifying the past, you can accept these changes here since the Cash Statement runs both.
 
 Open the [VSTO Excel Trade Statement]({{ site.url }}/tutorials/installing-local#trade-statement) and run the cash flow. It should look like the following screenshot. Note that the capital value of the business is still zero:
 
-![opening balance sheet]({{ site.url }}/images/accounts_opening_balance_sheet.png)
+![opening balance sheet]({{ site.url }}/images/accounts_balance_sheet_opening.png)
 
 ## Invoicing
 
@@ -112,7 +120,7 @@ When emailing the PDF, Outlook is instructed to create an email to the default a
 
 ### Invoice Register
 
-Use the toolbar to clear the workspace and open Invoice Register. We retrospectively entered invoices in the previous month, so select that period. The pages are self-explanatory. Below is a screenshot of unpaid purchases.
+Use the toolbar to clear the workspace and open Invoice Register. We retrospectively entered invoices in the previous month, so select that period. The pages are self-explanatory. Below is a screenshot of the period purchases so far.
 
 ![invoice register]({{ site.url }}/images/accounts_invoice_register.png)
 
@@ -134,13 +142,13 @@ It is possible for a sole trader to produce legally compliant books by using mis
 
 To make a miscellaneous payment, open Payment Entry and include a cash code in the transaction. That is all. The transactions are entered from your online bank statement. Therefore, once posted the bank balance must equal that on the corresponding cash account. If there is a mismatch, edit the [cash account statement]({{ site.url }}/tutorials/cash-book#cash-accounts).
 
-Here are some purchases our start-up might need:
+Here are some purchases our start-up might need, entered in datasheet view with a running total:
 
 ![miscellaneous payments]({{ site.url }}/images/accounts_miscellaneous_payments.png)
 
 Once posted, open the Invoice Register and there will be paid purchase invoices in the previous period that match these payments (minus vat). You can always move these invoices into different accounting periods. For example, invoices for Employers NI would normally be moved into the financial period to which they apply (although unnecessary if [manually invoiced]({{ site.url }}/tutorials/cash-book#invoicing) in advance).
 
-![purchase invoices]({{ site.url }}/images/accounts_automatic_invoices.png)
+![automatic invoices]({{ site.url }}/images/accounts_automatic_invoices.png)
 
 ### Paying invoices
 
@@ -150,9 +158,13 @@ For the tutorial, we pay off all the suppliers, but the customer partially pays 
 
 ![invoice payments]({{ site.url }}/images/accounts_invoice_payment.png)
 
-From the Invoice Register, the Sales Items page shows the partially paid invoice. The [Organisation Statement]({{ site.url }}/tutorials/cash-book#organisation-statement) for the customer shows a negative balance for the outstanding amount. 
+From the Invoice Register, the Sales Items page shows the partially paid invoice. The [Organisation Statement]({{ site.url }}/tutorials/cash-book#organisation-enquiry) for the customer shows a negative balance for the outstanding amount. 
 
-We are now in a loss-making position and pay no tax. [Raise an invoice]({{ site.url }}/tutorials/cash-book#raising-invoices) for another customer:
+The P&L and Balance Sheet now show that the business is in a loss-making position, pays no tax and can reclaim vat on purchases. The profit on then P&L is the same as the capital because capital is initially zero in the first year of trading and there is no corporation tax liability.
+
+![invoice sales]({{ site.url }}/images/accounts_balance_sheet_profit.png)
+
+To make some profit, [raise an invoice]({{ site.url }}/tutorials/cash-book#raising-invoices) for another customer, then regenerate the Trade Statement to see the effect on profit and capital:
 
 ![invoice sales]({{ site.url }}/images/accounts_invoice_sales.png)
 
@@ -168,13 +180,13 @@ When trades do not work out there is an application for credit. You apply for cr
 
 ![raise credit note]({{ site.url }}/images/accounts_credit_note.png)
 
-The credit note document is the same as that for debit applications. Often, the latter is not sent out, but the credit note from the supplier will need to be entered as a debit to correct their SvD statement.
+The credit note document is the same as that for debit applications. Often, the latter is not sent out, but credit notes from a supplier will need to be entered as a debit to correct their SvD statement.
 
 [accounts_sample_credit_note.pdf]({{ site.url }}/docs/accounts_sample_credit_note.pdf)
 
 ## Period End
 
-Because we have been changing the past retrospectively, it is necessary to re-build the period end. This will not affect the Balance Sheet, but it will impact the P&L. Open System Admin and click Reset Periods. This re-runs the period-end closedown procedure for historical data, so it can be executed at any time. The only reason for using it is when retrospectively changing the invoice register.
+Because we have been changing the past retrospectively, it is necessary to re-build the period end. Open System Admin and click Reset Periods. This re-runs the period-end closedown procedure for historical data, so it can be executed at any time. The only reason for using it is when retrospectively changing the invoice register.
 
 The period end dates below were created during the setup procedure. Looking forward, you need to closedown each month once everything is in order. The period start on dates would only be modified if you were implementing a stock take. To enter new financial years, just the year is required. Press the Reset Periods and it will generate the months automatically. As the years roll by, setting a financial year to archived will remove the associated months from the Cash Statements, Invoice Register and Trade Statements. It will not alter any of the projected SvD balances or tax calculations.
 
@@ -222,7 +234,7 @@ For Customer One the statement shows the projected balance. Each month end balan
 
 ![organisation statement]({{ site.url }}/images/accounts_org_statement.png)
 
-The current balance of the debtor or creditor is also used to set the payment status of the allocated invoices. In live circumstances, the SvD projection can be quite complicated, particularly if both income and expenditure are included on the same account (such as HMRC); but the principle is the same. From the Item Invoice enquiry for Customer One, you can see how the SvD algorithm has calculated the invoice and vat value paid and set the payment status if **010003.AA** to partial:
+The current balance of the debtor or creditor is also used to set the payment status of the allocated invoices. In live circumstances, the SvD projection can be quite complicated, particularly if both income and expenditure are included on the same account (such as HMRC); but the principle is the same. From the Item Invoice enquiry for Customer One, you can see how the SvD algorithm has calculated the invoice and vat value paid and set the payment status 0f **010003.AA** to partial:
 
 ![invoice status]({{ site.url }}/images/accounts_invoice_status.png)
 
@@ -280,9 +292,9 @@ A Cash Account is a set of dated paid in/out transactions, each with a correspon
 
 CASH type accounts are vital to the effective running of any business. ASSET types do not apply to sole traders, only corporations. The DUMMY type is administrative only, for example, to correct a supplier invoice without a credit note, or vat anomalies.
 
-#### Interface
+#### Cash Statement
 
-Because your bank account is mirrored by a cash account, the interface is a useful reference for locating historical transactions. It also allows you to edit and delete any transaction. Modifying cash payments triggers a discrete re-build on the effected organisation, ensuring invoice status matches the projected SvD balance.
+Because your bank account is mirrored by a cash account, the statement is a useful reference for locating historical transactions. It also allows you to edit and delete any transaction. Modifying cash payments triggers a discrete re-build on the effected organisation, ensuring invoice status matches the projected SvD balance.
 
 ![Cash Account Statements]({{ site.url }}/images/accounts_cash_statement.png)
 
@@ -296,7 +308,15 @@ Once up and running, you will seldom need to create new cash codes to classify f
 
 During the tutorial, we used the Administrator to review tax and set period end dates. The Accounts Mode can also be used in a multi-user environment by moving the database to Azure Sql or a licensed server. The User page lists employees with system access and specifies status and rights. Multi-user environments are more involved because they involve privileges and permissions. Use the [Node Configurator]({{ site.url }}/tutorials/installing-sqlnode#add-users) to add new users or upgrade their permissions.
 
-Any error that occurs on the backend is written to the Event Log, which also includes informational entries. Most errors are likely to be integrity check failures, but more serious failures should be reported to [support]({{ site.url }}/contact). The Administrator allows you to clear down the log files if you are running out of space.
+Logs are presented in the Administrator. Any error that occurs on the backend is written to an Event Log, which also includes informational entries. Most errors are likely to be integrity check failures, but more serious failures should be reported to [support]({{ site.url }}/contact). The Administrator allows you to clear down the log files if you are running out of space.
+
+You can create new menus and add your own custom forms and reports if you need to. [Contact support]({{ site.url }}/contact) for our customisation services.
+
+![administrator]({{ site.url }}/images/accounts_admin.png)
+
+## Balance Sheets
+
+Incorporated businesses will also need to know [how to generate a balance sheet]({{ site.url}}/tutorials/balance-sheet).
 
 ## Licence
 

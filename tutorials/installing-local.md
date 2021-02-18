@@ -58,7 +58,13 @@ Open the Office Client from the start menu. Close the splash screen and trust th
 
 ![ODBC Connection]({{ site.url }}/images/accounts_connection.png)
 
-You may need to re-open the client to re-set the ribbon visibility. 
+To choose your Office Theme, right click any form tab and select Layout View. The Design group on the ribbon allows you to hover over a theme for a live preview of the active form. Alternatively, use the palletes and fonts to create and save your own theme.  
+
+![Office Theme]({{ site.url }}/images/accounts_theme_selection.png)
+
+The Office blue theme is used for the tutorials and is installed by default, but there are quite a few to choose from. For example, here is the green theme:
+
+![Green Theme]({{ site.url }}/images/accounts_theme_green.png)
 
 #### Trade Statement
 
