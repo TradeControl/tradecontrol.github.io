@@ -12,12 +12,37 @@ This tutorial explains how to maintain your cash book, raise invoices and email 
 > 
 > It is important to understand that the Accounts Mode is an interface to the Trade Control node that hides tasks and workflows. If you connect in [MIS Mode]({{ site.url }}/mis), all of the accounts information will still be visible. However, if you start using the MIS Mode, it is not backwards compatible.
 
-## Requirements
+## Index
+
+### Instructions
+
+- [System Initialisation]({{ site.url }}/tutorials/cash-book#initialisation)
+- [Going Concerns]({{ site.url }}/tutorials/cash-book#going-concerns)
+- [Injecting Capital]({{ site.url }}/tutorials/cash-book#capital-injection)
+- [Retrospective Review]({{ site.url }}/tutorials/cash-book#review)
+- [Invoicing]({{ site.url }}/tutorials/cash-book#invoicing)
+- [Payments]({{ site.url }}/tutorials/cash-book#money)
+- [Account Transfers]({{ site.url }}/tutorials/cash-book#account-transfers)
+- [Processing credit]({{ site.url }}/tutorials/cash-book#crediting-accounts)
+- [Period and Year End]({{ site.url }}/tutorials/cash-book#period-end)
+- [Finalised Accounts]({{ site.url }}/tutorials/cash-book#finalised-accounts)
+
+### Information
+
+- [Organisations]({{ site.url }}/tutorials/cash-book#organisations)
+- [Trade Statement]({{ site.url }}/tutorials/cash-book#trade-statement)
+- [Budgets]({{ site.url }}/tutorials/cash-book#budgeting)
+- [Tax]({{ site.url }}/tutorials/cash-book#tax)
+- [Maintenance and Customisation]({{ site.url }}/tutorials/cash-book#maintenance)
+
+# Instructions
+
+## Requirement
 
 - [installation]({{ site.url}}/tutorials/installing-local) [Client Version >=3.17.3; Node >=3.32.1;]
 - [motivation]({{ site.url }}/accounts#accountancy)
 
-## Menu
+## Initialisation
 
 When you log onto the system for the first time, you are presented by the [System Admin](#administration) form. Right click on the Company Logo and insert a bitmap (350x190px), pasting in your image.  Assuming you entered the correct details during the installation, you can accept all these values without review. You can also add an avatar to your user account if you like:
 
@@ -49,11 +74,11 @@ Reference [Cash Codes]({{ site.url}}/tutorials/cash-book#cash-codes)
 
 ## Capital Injection
 
-> Sole Traders can skip this section.
-
 A company needs some money to get going, either by issuing shares or obtaining a loan. For corporations, it is necessary to inject the share capital at the outset. Most owners issue 1 share each and transfer funds into the business account in the form of a long-term loan.
 
 ### Share Capital
+
+> Sole Traders can skip this section.
 
 Pay in the capital injection into your current account by opening Payment Entry. Click New Org in the footer and enter the owner's name, accept the automatic account code, specify employee, zero payment days and close:
 
@@ -82,7 +107,7 @@ The reason why owners prefer a director's loan to capital is that they can modif
 
 Follow the instructions for [account transfers](#account-transfers) and move 5K into the reserve account.
 
-### Review
+## Review
 
 The Cash Account Statement will show a current account of 5,001 with reserves of 5K, a share capital account of -1 and a long-term liability of -10K. 
 
@@ -192,7 +217,7 @@ The period end dates below were created during the setup procedure. Looking forw
 
 ![period end]({{ site.url }}/images/accounts_period_end.png)
 
-## Finalised Balance Sheet
+## Finalised Accounts
 
 Once all these steps have been completed, you will have generated a legally compliant P&L with an associated Balance Sheet. If you replicated the figures above, the start-up now has 1972 GBP capital, having made 2435 GBP profit in its first month of trading, incurring 463 GBP tax. The Trade Statement should look like this:
 
@@ -201,7 +226,6 @@ Once all these steps have been completed, you will have generated a legally comp
 From the Home menu, open the Balance Sheet Audit, which will present a list of debtors and creditors by month:
 
 ![audit]({{ site.url }}/images/accounts_balance_sheet_audit.png)
-
 
 # INFORMATION
 

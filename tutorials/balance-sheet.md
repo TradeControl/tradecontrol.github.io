@@ -6,7 +6,31 @@ permalink: /tutorials/balance-sheet
 
 It is a statutory requirement for all companies to submit both a P&L and Balance Sheet to the government. Trade Control can generate legally compliant, auditable versions of both. Because it is not a statutory requirement to be represented by a chartered accountant, it is possible to present these documents yourself.  The following tutorial shows you how to prepare your balance sheet so that you can do this.
 
-## Requirements
+## Index
+
+### Instructions
+
+- [Basic Company Accounts]({{ site.url }}/tutorials/balance-sheet#basic-accounts)
+- [Configuration]({{ site.url }}/tutorials/balance-sheet#configuration)
+- [Current Assets]({{ site.url }}/tutorials/balance-sheet#current-assets)
+- [Fixed Assets]({{ site.url }}/tutorials/balance-sheet#fixed-assets)
+- [Long-term liabilities]({{ site.url }}/tutorials/balance-sheet#long-term-liabilities)
+- [Accounts Review]({{ site.url }}/tutorials/balance-sheet#accounts-review)
+- [Petty Cash]({{ site.url }}/tutorials/balance-sheet#cash-box)
+- [Profit and Loss]({{ site.url }}/tutorials/balance-sheet#profit-and-loss)
+- [Accruals and Prepayments]({{ site.url }}/tutorials/balance-sheet#accruals-and-prepayments)
+
+### Information
+
+- [Cash Statement]({{ site.url }}/tutorials/balance-sheet#cash-statement)
+- [VAT and Corporation Tax]({{ site.url }}/tutorials/balance-sheet#tax)
+- [Auditing Accounts]({{ site.url }}/tutorials/balance-sheet#audit)
+- [Modifying Capital]({{ site.url }}/tutorials/balance-sheet#modifying-capital)
+- [Finalised Company Accounts]({{ site.url }}/tutorials/balance-sheet#trade-statement)
+
+# Instructions
+
+## Requirement
 
 - [Sql Node Installation](installing-sqlnode) [>=3.29](https://github.com/tradecontrol/sqlnode/releases)
 - [Office 365 Client](installing-office) [>=3.15](https://github.com/tradecontrol/office/releases)
@@ -16,7 +40,7 @@ It is a statutory requirement for all companies to submit both a P&L and Balance
 
 After installing a test company trading in fiat using the [node configurator](installing-sqlnode), install the [services tutorial](installing-sqlnode#services-tutorial) with the Pay option selected. 
 
-## Basic Implementation
+## Basic Accounts
 
 Open the [Cash Flow XLS](installing-vsto#cash-flow) and switch off accruals by only checking these options in the Action Pane:
 
@@ -222,6 +246,8 @@ Finally, since we have made a lot of retrospective changes, [rebuild the period 
 ![Accrued Values]({{ site.url }}/images/balance_sheet_accruals_pl.png)
 
 By selecting Active Period Invoices and Orders, historical transactions merge into the future order book, along with the outstanding invoices of creditors and debtors. You then have a framework that you can plan around. Any change to these orders and invoices instantly effects the Company Balance, where and when it shifts into the red or opens up investment opportunities.
+
+# Information
 
 ## Cash Statement
 
