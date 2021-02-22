@@ -14,7 +14,7 @@ Trade Control is not a manufacturing system, it is generic; yet the design has b
 
 Once installed, you will have created an assembly of injection moulded components as an Activity. Opening Activities from the client you should see the following:
 
-![BoM]({{ site.url }}/images/bom_project_view.jpg)
+![BoM]({{ site.url }}/images/bom_project_view.png)
 
 The bill of materials in the example is a shelf assembly of injection moulded parts, consisting of four components. The top level (root) of the BoM is the assembly, which has the Activity Code **M/00/70/00**. It has a blue icon to indicate it will create a Sales Order. The four components are linked in the workflow to the assembly with the required quantity used in each assembly. Their icon is green, because they do not involve financial transactions, and therefore they will generate operational Works Orders. The materials are then connected to these components, represented by a red icon for Purchase Orders.
 
@@ -22,15 +22,15 @@ In Trade Control, there are no native Sales, Purchase or Works Orders, but it ca
 
 To the right of the Project View is the Parts Master equivalent:
 
-![PartsListing]({{ site.url }}/images/bom_parts_listing.jpg)
+![PartsListing]({{ site.url }}/images/bom_parts_listing.png)
 
 When a row is selected, the corresponding project view is displayed. Selecting the plastic **PC/999** you get a where-used listing, because it is used by more than one component. This is just an upside-down presentation of the BoM.
 
-![WhereUsedListing]({{ site.url }}/images/bom_where_used.jpg)
+![WhereUsedListing]({{ site.url }}/images/bom_where_used.png)
 
 Tasks require a register that provides document level classification and a numbering system.
 
-![Register]({{ site.url }}/images/bom_register.jpg)
+![Register]({{ site.url }}/images/bom_register.png)
 
 This is configured in the Documents page of Administration.
 
@@ -38,7 +38,7 @@ This is configured in the Documents page of Administration.
 
 Select **M/00/70/00** and open the Workflow tab, you will see:
 
-![Work Flow]({{ site.url }}/images/bom_work_flow.jpg)
+![Work Flow]({{ site.url }}/images/bom_work_flow.png)
 
 This is the list of components and activities that are required by the assembly, with the used-on-quantity needed by each one. Therefore, there are 8 sub-shelf **M/100/70/00** in every shelf. Because each child component can also become a parent, there is, at least in theory, no end to how deep or complex the BoM can be. In practice it is restricted by the technology. Recursive depth in Sql Server is exhausted at 100 for CTEs, and 32 for procedures, views and functions. This BoM is 2 levels deep.
 
@@ -52,7 +52,7 @@ Sequencing is used to schedule projects when generating sales orders (Tasks). Th
 
 Every activity can have a set of operations, describing what needs to be done to make it happen. Here are the operations for the sub-shelf **M/100/70/00**:
 
-![BomOperations]({{ site.url }}/images/bom_operations.jpg)
+![BomOperations]({{ site.url }}/images/bom_operations.png)
 
 Like workflows, Operations also have an associated Sync Type. The sub-shelf has three operations. The first op is performed by a moulding machine. Each time the mould tool opens, the mouldings will be removed by a robot. It then attaches **INSERT/09** inside the same cycle. Therefore op 20 is ASYNC. When all the components have been completed, the Quality Controller checks they are good to go. In this way, the inserts are issued at the beginning of the job, as does the operation for inserting them; and the inspector checks the work out at the end.
 
@@ -62,7 +62,7 @@ Operations in a manufacturing system will have a more sophisticated handling of 
 
 Attributes describe the activity, and they are an important way to communicate the product or service to those involved. By default, they are listed in the standard documents that can be viewed in the Document Manager, or Word Templates if you are using them. Here are the attributes for the assembly **M/100/70/00**:
 
-![BoMAttributes]({{ site.url }}/images/bom_attributes.jpg) 
+![BoMAttributes]({{ site.url }}/images/bom_attributes.png) 
 
 Many of these attributes would be hard coded in a manufacturing system, but in TC you just list them in the attributes page against the activity they describe, and you build up a set. They will be carried over into the orders when they are created and modified to suit.
 
@@ -73,13 +73,13 @@ Attributes can be hidden from the orders sent to customers and suppliers by sett
 
 Re-run the [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Create Orders option selected.
 
-Switch to the client and open Task Explorer from the toolbar or Workflow menu. In the Activities page you will see the assembly, components and materials listed. Selecting the assembly, you can see that 5 top level sales orders have been added, a month apart in their corresponding time buckets. Select any one of these rows and edit the task. 
+    Switch to the client and open Task Explorer from the toolbar or Workflow menu. In the Activities page you will see the assembly, components and materials listed. Selecting the assembly, you can see that 5 top level sales orders have been added, a month apart in their corresponding time buckets. Select any one of these rows and edit the task. 
 
 ### Project Schedule
 
-The left pane of the Task Editor is a tree in the following format:
+The left pane of the Task Editor is a tree where new tasks can be added. When selecting a task from the tree, the corresponding task editor opens.
 
-![TaskEditView]({{ site.url }}/images/bom_task_view.jpg)
+![TaskEditView]({{ site.url }}/images/bom_task_view.png)
 
 The installer has created a top-level project task to group all orders for this assembly into one container. This is simply achieved by adding an activity with an Activity Code set to Project, leaving the Cash Code blank, and selecting the Works Order register. You can then add a new task using this activity and assign orders by using it as a parent. 
 
@@ -92,10 +92,6 @@ You can select any task in the project and click the Schedule button, and all th
 ### Task Editing
 
 Raising a new task causes the full activity workflow to be automatically added and scheduled from the Action By date. The installer generates the first order, then edits the suppliers, contacts and addresses that have been raised to make it. The installer then clones this order four times, schedules them 1 month apart and gives each a unique title. Try selecting a task with Activity Code **M/00/70/00** and clone it. The Task Editor will make a perfect copy of the entire BoM, ops and attributes from today. You can then amend the Action On date and Reschedule. When done, delete the sales order (or re-run the installer), and all the associated orders will be removed. 
-
-When selecting a task from the tree, the corresponding task editor opens. 
-
-![TaskEditor]({{ site.url }}/images/bom_task_edit.jpg)
 
 | Field | Description |
 | --| -- |
@@ -113,48 +109,48 @@ When selecting a task from the tree, the corresponding task editor opens.
 
 ### Company Statement
 
-The Company Statement is a dynamically calculated snapshot of your business's position. In accounting terms, it could be regarded as a forward-looking transaction grained balance sheet. If you modify any financial data from the past, or the future, it will impact either the opening balance, or its projection. If you have run the demo with the Create Orders option, you will have borrowed some start-up money from the bank (see Cash Statement) and raised several un-invoiced sales and purchase orders.
+The Company Statement is a dynamically calculated snapshot of your business's position. In accounting terms, it could be regarded as a forward-looking transaction grained balance sheet. If you modify any financial data from the past, or the future, it will impact either the opening balance, or its projection. If you have run the tutorial with the Create Orders option, you will have borrowed some start-up money from the bank (see Cash Statement) and raised several un-invoiced sales and purchase orders.
 
 There are two projections: one for the current account and the other for an optional reserve account. Current accounts have a Cash Code of type BANK, whereas the Cash Codes of reserve accounts are left blank. The first line in each is the current balance. The forward order book is placed on the statement, along with Vat due and corporation tax, using their expected Payment On date. The forward balance is then projected from current balance across the active periods and tax horizons set in Administration.
 
-![CSUninvoiced]({{ site.url }}/images/bom_compstat_uninvoiced.jpg)
+![CSUninvoiced]({{ site.url }}/images/bom_compstat_uninvoiced.png)
 
 From the Company Statement you can edit and reschedule orders, invoices and accruals or pay and collect from them. This gives you a great deal of control over your forward planning, because every time you amend the order book or pay an invoice, the vat and corporation tax will adjust accordingly, and there will be a new projection. And if you amend the past, the current balance changes so that it no longer matches your actual bank account, so it is easy to spot anything that requires reconciliation.
 
-Because the Company Statement is dynamically calculated, it will depend where you are in the financial year as to how it will look for you. To amend the financial years and tax periods open the Tax and Period End pages of the Administrator where these settings can be modified. Because the demo installer has created an overdue order, you must borrow money or invest to prevent being overdrawn. Open the Cash Statement, which is basically a perfect reflection of your bank account and delete the Company Loan entry. The current balance is zeroised and your projected balance goes into the red. Also try cloning a project and rescheduling it to see how it impacts on the Company Statement and the P&L.
+Because the Company Statement is dynamically calculated, it will depend where you are in the financial year as to how it will look for you. To amend the financial years and tax periods open the Tax and Period End pages of the Administrator where these settings can be modified. Because the tutorial installer has created an overdue order, you must borrow money or invest to prevent being overdrawn. Open the Cash Statement, which is basically a perfect reflection of your bank account and delete the Company Loan entry. The current balance is zeroised and your projected balance goes into the red. Also try cloning a project and rescheduling it to see how it impacts on the Company Statement and the P&L.
 
 ### Cash Flow
 
 Even though you have not invoiced anything yet, using the accruals system, there can be a P&L to match the Company Statement. Install the Cash Flow VSTO Workbook and add the connection to the BoM database. Then set the flags to the following settings.
 
-![CashFlowSettings]({{ site.url }}/images/bom_cash_flow_settings.jpg)
+![CashFlowSettings]({{ site.url }}/images/bom_cash_flow_settings.png)
 
 The Cash Flow should look something like this:
 
-![CashFlowUninvoiced]({{ site.url }}/images/bom_cash_flow_uninvoiced.jpg)
+![CashFlowUninvoiced]({{ site.url }}/images/bom_cash_flow_uninvoiced.png)
 
-> NOTE: If you are running this in April, which is the start month of the basic configuration, you will need to unarchive the financial year to see the overdue orders.
+> NOTE: Visible [period end dates]({{ site.url }}tutorials/cash-book#period-end) can be adjusted.
 
 The yellow column is the active period. Each Cash Flow generation is rendered from scratch using the Categories and Cash Code classifications, then applying the Cash Totals and Expressions specified in Definitions. The quarterly VAT, presented to the Inland Revenue in the UK, is taken from the Vat Statement in the Invoice Register, as is the Corporation Tax (both set at 20% here). The Taxes section shows the accrued Vat and Corporation Tax, adjusted by the offset days of the Tax Type. If you check out the Invoice Register Vat and Corporation Tax Statements, however, they will be empty. That is because taxes are not due on un-invoiced demands.
 
 ## Invoicing
 
-Re-run the [demo installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Invoice First Order option selected.
+Re-run the [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Invoice First Order option selected.
 
 Refresh the Company Statement and every order relating to the first sales order has been replaced with an invoice. The overdue order book has been resolved, but overall, the company is in the same position.
-Render the Cash Flow again and you will see that, with the flag settings in the previous section, it is roughly the same. The only difference is that the overdue accruals are now in the current period, pushing the corporation tax payment into the following year. Uncheck the live order book flag and the invoiced project can be seen.
+Render the Cash Flow again and you will see that, with the flag settings in the previous section, it is roughly the same. The only difference is that the overdue accruals are now in the current period, pushing the corporation tax payment into the following year. Uncheck the live order book flag and vat accruals and the invoiced project can be seen.
 
-![CashFlowUninvoiced]({{ site.url }}/images/bom_cash_flow_invoiced.jpg)
+![CashFlowUninvoiced]({{ site.url }}/images/bom_cash_flow_invoiced.png)
 
 ### The Invoice Register
 
 Natively, there are no sales or purchase invoices, and no credit or debit notes in TC; there are only invoices with an associated polarity. Therefore, whether the invoice is received from a supplier, or sent to a customer is a difference in state rather than object. However, to make the system more in line with current thinking, the Invoice Register is presented as if they are all different objects. There is therefore a numbering system associated with each document type, which can be amended in the Documents page of Administration.
 
-![InvoicePolarity]({{ site.url }}/images/bom_invoice_polarity.jpg)
+![InvoicePolarity]({{ site.url }}/images/bom_invoice_polarity.png)
 
 The Invoice Type is then used by the Invoice Register to present the four kinds of invoices users have come to expect. Opening the Invoice Register from the Information menu gives you access to every invoice within the active financial year and allows you to edit or delete them as needed. Invoices can be raised from the Workflow menu, which has a multi-item capability; or directly from the Task Editor, where subsequent items can be added (such as miscellaneous charges like carriage). Your register should match the following:
 
-![InvoiceRegister]({{ site.url }}/images/bom_invoice_register.jpg)
+![InvoiceRegister]({{ site.url }}/images/bom_invoice_register.png)
 
 The pages shown are self-explanatory, except perhaps Expenses or Expenditures. These are simply purchase orders that are not related to a sales order. Which is to say, they are Tasks with a negative Cash Mode unconnected to a Workflow that contains a positive mode. 
 
@@ -164,27 +160,27 @@ Result sets in TC are created dynamically, except for Invoice Status. Invoices a
 
 Check out the Status Graphs from the Information menu.  Only one period and one project has been processed, but it is starting to look the part.
 
-![StatusGraphs]({{ site.url }}/images/bom_status_graphs.jpg)
+![StatusGraphs]({{ site.url }}/images/bom_status_graphs.png)
 
 From the same menu, Job Profit provides performance reporting by project, available as a report or exportable dataset, which includes payment status. Costs are calculated anew using the same recursive algorithm as the [Task Editor](#task-editing).
 
-![JobProfitReport]({{ site.url }}/images/bom_job_profit_report.jpg)
+![JobProfitReport]({{ site.url }}/images/bom_job_profit_report.png)
 
 ## Payments
 
 ### Organisation Statement
 
-Before re-running the demo installation to pay these invoices, you could try out the payment system by paying the Unpaid Purchases in the Invoice Register manually. It is very straight forward.
+Before re-running the tutorial installation to pay these invoices, you could try out the payment system by paying the Unpaid Purchases in the Invoice Register manually. It is very straight forward.
 
-There is a flag in Organisation Edit called Pay Balance. If it is OFF then only the earliest invoice outstanding will default, otherwise the entire balance is calculated. You can still pay any amount you want by overriding this figure. Setting the Pay Balance OFF for select accounts is useful if you pay the schedule from the Company Statement, individually relating an invoice to each payment, as does the demo installer; or you can pay the lot in one go, as we will do here. 
+There is a flag in Organisation Edit called Pay Balance. If it is OFF then only the earliest invoice outstanding will default, otherwise the entire balance is calculated. You can still pay any amount you want by overriding this figure. Setting the Pay Balance OFF for select accounts is useful if you pay the schedule from the Company Statement, individually relating an invoice to each payment, as does the tutorial installer; or you can pay the lot in one go, as we will do here. 
 
-Open Payment Entry and paste in the Account Codes of the Unpaid Purchases from the Invoice Register, and the total outstanding will be set by default. Leave the Cash Code blank and the payment system will pay off invoices on a FIFO basis.
+Open Payment Entry and paste in the Account Names of the Unpaid Purchase Items from the Invoice Register, and the total outstanding will be set by default. Leave the Cash Code blank and the payment system will pay off invoices on a FIFO basis.
 
-![PaymentEntry]({{ site.url }}/images/bom_payment_entry.jpg)
+![PaymentEntry]({{ site.url }}/images/bom_payment_entry.png)
 
 Post the payments, then open Organisation Enquiry and locate the **PLAPRO** account (or select a **PLAPRO** order in the Company Statement and open Org Enquiry). The Enquiry includes the Organisation Statement below:
 
-![OrganisationStatement]({{ site.url }}/images/bom_organisation_statement.jpg)
+![OrganisationStatement]({{ site.url }}/images/bom_organisation_statement.png)
 
 The Organisation Statement is presented in reverse projection because it builds up over time, and you will want to see the latest balance outstanding. Check out the statement of the **STOBOX** account. Worth noting is the fact that purchases yield a positive balance to the supplier, but negative for the customer. The Organisation Statement is therefore from the point of view of the organisation, not the business. It means that the business must register a payment with a negative polarity to address the balance, reducing the bank balance accordingly. In this instance by -6,455.16.
 
@@ -196,9 +192,9 @@ Rendering the Cash Flow again with the specified [settings](#cash-flow) returns 
 
 ### Cash Statement
 
-The Cash Statement is a mirror image of your bank account, with the additional capacity to classify transactions by Cash Code and split out the tax content. Below is the statement after you have run the demo installer. It is slightly different from the manual approach you have just carried out, because the installer has invoiced each demand on the Supplier Schedule, but the balances will be the same.
+The Cash Statement is a mirror image of your bank account, with the additional capacity to classify transactions by Cash Code and split out the tax content. Below is the statement after you have run the tutorial installer. It is slightly different from the manual approach you have just carried out, because the installer has invoiced each demand on the Supplier Schedule, but the balances will be the same.
 
-![CashStatement]({{ site.url }}/images/bom_cash_statement.jpg)
+![CashStatement]({{ site.url }}/images/bom_cash_statement.png)
 
 You should not need to run the Re-build function, but if you do, under normal conditions it will have no effect. It is useful to integrate imported data into the system, repair corrupted data, an impacting upgrade or because certain essential information has been changed (like moving the financial year).
 
@@ -214,7 +210,7 @@ The Task Explorer is the go-to place for:
 - Activity Code, Account and Contact enquiries
 - Managing the active Sales and Purchase Order Books
 
-![TaskExplorer]({{ site.url }}/images/bom_task_explorer.jpg)
+![TaskExplorer]({{ site.url }}/images/bom_task_explorer.png)
 
 ### Document Manager
 
@@ -225,7 +221,7 @@ There are two document systems for communicating with other organisations:
 
 Both can email a pdf document to the contact's address directly from within the client. Reports in the Document Manager are more flexible. In manufacturing, you would probably need a Supplier Schedule, instead of lots of single line Purchase Orders. 
 
-![DocumentManager]({{ site.url }}/images/bom_document_manager.jpg)
+![DocumentManager]({{ site.url }}/images/bom_document_manager.png)
 
 You can write your own reports, and then tell the Document Manager what report goes with which Document Type, and how it is to be communicated by default. These are listed in the Selected Report box.
 
@@ -247,7 +243,7 @@ Why not create a bill of materials yourself, for something simple like a plastic
 4. Add attributes to describe them
 5. Insert operations to instruct the steps needed for their manufacture
 6. Create a customer to buy them 
-7. Suppliers to provide the materials (or use the ones in the demo)
+7. Suppliers to provide the materials (or use the ones in the tutorial)
 8. Add a top-level Project for the customer from Task Explorer
 9. Edit the Project and add the top-level product code, status Pending/Quote
 10. Assign suppliers and costs to the materials and sub-contractors
@@ -255,17 +251,17 @@ Why not create a bill of materials yourself, for something simple like a plastic
 12. Select the top-level and check out the cost and price for a healthy profit
 13. Open the quotation for review from the Document Manager
 14. If the quote is acceptable, change the project's status to Open
-15. Using the Company Statement, follow through this demo until all the suppliers have been paid and customer's money is in the bank
+15. Using the Company Statement, follow through this tutorial until all the suppliers have been paid and customer's money is in the bank
 
 In a real factory, you must do a lot more than that - exciting duties like stock control - but you will learn the basics and familiarise yourself with the system.
 
 ### Supply-Chains
 
-Trade Control instances are nodes that can be connected, such that BOM-like workflows can operate over supply-chains. Install the [Trade Control Network]({{ site.url }}/tutorials/network) and try out the demo. It shows you how to schedule the entire supply chain for both customers and suppliers of the assembly.
+Trade Control instances are nodes that can be connected, such that BOM-like workflows can operate over supply-chains. Install the [Trade Control Network]({{ site.url }}/tutorials/network) and try out the tutorial. It shows you how to schedule the entire supply chain for both customers and suppliers of the assembly.
 
 ### Bitcoin
 
-Install the [bitcoin wallet]({{ site.url }}/tutorials/bitcoin) and follow the demo, replacing the [payment system](#payments) with payments from an HD Wallet.
+Install the [bitcoin wallet]({{ site.url }}/tutorials/bitcoin) and follow the tutorial, replacing the [payment system](#payments) with payments from an HD Wallet.
 
 ## Licence
 
