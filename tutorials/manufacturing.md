@@ -73,7 +73,7 @@ Attributes can be hidden from the orders sent to customers and suppliers by sett
 
 Re-run the [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Create Orders option selected.
 
-    Switch to the client and open Task Explorer from the toolbar or Workflow menu. In the Activities page you will see the assembly, components and materials listed. Selecting the assembly, you can see that 5 top level sales orders have been added, a month apart in their corresponding time buckets. Select any one of these rows and edit the task. 
+Switch to the client and open Task Explorer from the toolbar or Workflow menu. In the Activities page you will see the assembly, components and materials listed. Selecting the assembly, you can see that 5 top level sales orders have been added, a month apart in their corresponding time buckets. Select any one of these rows and edit the task. 
 
 ### Project Schedule
 

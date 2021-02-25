@@ -48,19 +48,19 @@ Firstly, we create a simple supply chain in the form Retail -> Secondary Industr
 
 Secondly, we connect the supply chain together using Ethereum.
 
-1. Load Ganache and create a new workspace TRADE-CONTROL. This presents a private offline Ethereum node. Ganache gives each account 100 ETH to play with, so you do not need to transfer currency. Copy the RPC Server address (Remote Procedure Call interface).
-2. Open the Network Interface, select the tcTHEBUS database in the Sql Server page and connect. Paste the RPC Server address into the Url of the Network and connect.
-3. From the Ganache Accounts page, use the keys from the first account listed. It will look like this:
+- Load Ganache and create a new workspace TRADE-CONTROL. This presents a private offline Ethereum node. Ganache gives each account 100 ETH to play with, so you do not need to transfer currency. Copy the RPC Server address (Remote Procedure Call interface).
+- Open the Network Interface, select the tcTHEBUS database in the Sql Server page and connect. Paste the RPC Server address into the Url of the Network and connect.
+- From the Ganache Accounts page, use the keys from the first account listed. It will look like this:
 
 ![Ganache PK]({{ site.Url }}/images/network_account_keys.png)
 
-4. Paste the public and private keys into the Network page and click Save:
+- Paste the public and private keys into the Network page and click Save:
 
 ![Network Account]({{ site.Url }}/images/network_account_settings.png)
 
-5. Deploy the byte code of the [Org.sol contract](https://github.com/tradecontrol/network/blob/master/docs/tc_network_spec.md) from the Consortium page. It will return a contract address which identifies the location of the Consortium on the blockchain. From Ganache the transaction count is incremented, and the balance is reduced to pay for the administration cost. This is also recorded in the Transactions page of the Network Interface.
-6. Open another two instances and repeat 2-5 for tcPLAPRO and tcSTOBOX.  Each will then have a unique Public EOA address that owns the contracts and pays the fees, and a Consortium Address to register contract deployments and events.
-7. We now need to connect the Org contracts to form a consortium using their unique keys. THE BUSINESS will have two members (a customer and supplier), whilst the others will have only one. So, the supply chain is THE STORAGE BOX COMPANY -> THE BUSINESS -> PLASTICS PROVIDER. This is just before the STOBOX keys are added to THE BUSINESS instance:
+- Deploy the byte code of the [Org.sol contract](https://github.com/tradecontrol/network/blob/master/docs/tc_network_spec.md) from the Consortium page. It will return a contract address which identifies the location of the Consortium on the blockchain. From Ganache the transaction count is incremented, and the balance is reduced to pay for the administration cost. This is also recorded in the Transactions page of the Network Interface.
+- Open another two instances and repeat 2-5 for tcPLAPRO and tcSTOBOX.  Each will then have a unique Public EOA address that owns the contracts and pays the fees, and a Consortium Address to register contract deployments and events.
+- We now need to connect the Org contracts to form a consortium using their unique keys. THE BUSINESS will have two members (a customer and supplier), whilst the others will have only one. So, the supply chain is THE STORAGE BOX COMPANY -> THE BUSINESS -> PLASTICS PROVIDER. This is just before the STOBOX keys are added to THE BUSINESS instance:
 
 ![Add Consortium Members]({{ site.Url }}/images/network_consortium_members1.png)
 
@@ -70,13 +70,13 @@ Here is the STORAGE BOX COMPANY instance as well:
 
 > Make sure the keys are correct because the blockchain is immutable. An error at this stage would involve de-activating the account and re-creating it with a new code.  
 
-8. Test everything is working by selecting a member account. The keys should be obtained from the EOA's Org contract. Then set the authorisation status on and off. Because this is a change in the state of the blockchain, there is a transaction cost:  
+- Test everything is working by selecting a member account. The keys should be obtained from the EOA's Org contract. Then set the authorisation status on and off. Because this is a change in the state of the blockchain, there is a transaction cost:  
 
 ![Transactions]({{ site.Url }}/images/network_transactions.png)
 
-9. Although we are not using the EVM to transact payments, live installations would require that you secure your private key. This is written to table _App.tbEth_; therefore, only the Sql User running the service needs access to this table. The keys of suppliers and customers are stored on the blockchain in the Org contract. At the same time, the **TransmitStatusCode** of the account is set to **Deploy**, determining the communication status of events written to the Task or Invoice change logs. Having added members to the tcTHEBUS consortium, the Organisation datasheet reflects this:
+- Although we are not using the EVM to transact payments, live installations would require that you secure your private key. This is written to table _App.tbEth_; therefore, only the Sql User running the service needs access to this table. The keys of suppliers and customers are stored on the blockchain in the Org contract. At the same time, the **TransmitStatusCode** of the account is set to **Deploy**, determining the communication status of events written to the Task or Invoice change logs. Having added members to the tcTHEBUS consortium, the Organisation datasheet reflects this:
 
 ![Org Edit]({{ site.Url }}/images/network_orgedit.png)
 
-
+- [continue with the tutorial]({{ site.url}}/tutorials/network)
 

@@ -82,8 +82,8 @@ In conventional accounting practice there are two capital categories representin
 
 CASH ACCOUNT | REF | PAID IN | PAID OUT | CASH CODE
 -- | -- | -- | -- | --
-LONLIA | A long term debt | - | 50,000 | Dept Repayment
-LONLIA | First instalment | 10,000 | - | Dept Repayment
+LONLIA | A long term debt | - | 50,000 | Debt Repayment
+LONLIA | First instalment | 10,000 | - | Debt Repayment
 PLAMAC | A machine | 2,000 | - | Depreciation
 PLAMAC | write-down | - | 500 | Depreciation
 

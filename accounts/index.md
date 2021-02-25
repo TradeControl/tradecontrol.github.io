@@ -24,7 +24,7 @@ To estimate the amount of work you must generate to pay for your accountant and 
 
 > (AccountsCost + SoftwareSubscription) / ((NetProfit + AccountsCost + SoftwareSubscription) / Turnover) * YearsTrading
 
-It may take a bit of effort on your part to understand what is required, but if you are self-employed, whether through a limited company or sole trader, think upon this: once you know what is needed to submit your accounts to government, you will never need to pay for accountants, or their accounting software for the rest of your life. Replace the YearsTrading with that number and see what you can save.
+If you run this calculation you will see just how much turnover you need to finance your accounts.
 
 ### Tax Law
 
