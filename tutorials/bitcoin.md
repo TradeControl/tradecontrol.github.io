@@ -45,7 +45,7 @@ In consumer wallets, only the first condition must be met to spend the coins, be
 
 ![Investor]({{ site.url }}/images/btc_investor.png)
 
-Then enable the Investment Category Code in Definitions, which is disabled by default:
+Ensure the Investment Category Code in Definitions is enabled:
 
 ![Investment Category]({{ site.url }}/images/btc_investment_category.png)
 

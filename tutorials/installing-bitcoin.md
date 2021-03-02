@@ -22,7 +22,7 @@ Open the Company Statement of the manufacturer (SI) and you will see their trans
 
 ![Company Statement]({{ site.url }}/images/btc_company_statement.png)
 
-Because they are a start-up company, initially there are no funds to purchase the materials needed to manufacture the product. If you scroll down the statement, you can see how over time the profits are translated into accumulated funds that can finance inputs without credit. This delay in financing is why some customers in trading networks demand a 30-90-day window to pay for services and materials. Our manufacturer requests a 30-day payment term from its suppliers, and COD (Cash on Delivery) from its customer. That way they can purchase the materials to manufacture the goods, despatch and receive payment, then pass the cash down the supply chain so they are up and running. This is what we are going to carry out in the [bitcoin tutorial]({{ site.url }}/tutorials/bitcoin).
+Because they are a start-up company, initially there are no funds to purchase the materials needed to manufacture the product. If you scroll down the statement, you can see how over time the profits are translated into accumulated funds that can finance inputs without credit. This delay in financing is why some customers in trading networks demand a 30-90-day window to pay for services and materials. Our manufacturer requests a 30-day payment term from its suppliers, and Cash With Order from its customer. That way they can purchase the materials to manufacture the goods, despatch and receive payment, then pass the cash down the supply chain so they are up and running. This is what we are going to carry out in the [bitcoin tutorial]({{ site.url }}/tutorials/bitcoin).
 
 ## Installation
 
