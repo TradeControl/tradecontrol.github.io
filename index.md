@@ -32,6 +32,6 @@ If you would like to set up a working environment or evaluate the system for use
 
 - [presenting company accounts without an accountant]({{ site.url }}/tutorials/balance-sheet)
 - [connecting supplier and customer order books over a blockchain]({{ site.url }}/network)
-- [schedule work against a forward projected company balance]({{ site.url }}/tutorials/manufacturing)
+- [schedule work against a forward projected company balance]({{ site.url }}/tutorials/manufacturing#company-statement)
 - [distribute price lists for quotations]({{ site.url }}/quotation)
 - [learn about Trade Control from the tutorials]({{ site.url }}/tutorials/overview)

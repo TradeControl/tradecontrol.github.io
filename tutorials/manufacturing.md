@@ -8,6 +8,40 @@ Trade Control is not a manufacturing system, it is generic; yet the design has b
 
 [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial)
 
+## Index
+
+### Work Specification
+
+- [Project View]({{ site.url }}/tutorials/manufacturing#project-view)
+- [Work Flow]({{ site.url }}/tutorials/manufacturing#workflow)
+- [Operations]({{ site.url }}/tutorials/manufacturing#operations)
+- [Attributes]({{ site.url }}/tutorials/manufacturing#attributes)
+
+### Order Processing
+
+- [Project Schedule]({{ site.url }}/tutorials/manufacturing#project-schedule)
+- [Task Editing]({{ site.url }}/tutorials/manufacturing#task-editing)
+- [Company Statement]({{ site.url }}/tutorials/manufacturing#company-statement)
+- [Job Costing]({{ site.url }}/tutorials/manufacturing#job-costing)
+- [Cash Flow]({{ site.url }}/tutorials/manufacturing#cash-flow)
+  
+### Invoices and Payments
+
+- [Invoicing]({{ site.url }}/tutorials/manufacturing#invoicing)
+- [Invoice Register]({{ site.url }}/tutorials/manufacturing#invoice-register)
+- [Status and Performance]({{ site.url }}/tutorials/manufacturing#status-and-performance)
+- [Organisation Statement]({{ site.url }}/tutorials/manufacturing#organisation-statement)
+- [Payment System]({{ site.url }}/tutorials/manufacturing#payment-system)
+- [Cash Statement]({{ site.url }}/tutorials/manufacturing#cash-statement)
+
+### Project Management
+
+- [Task Explorer]({{ site.url }}/tutorials/manufacturing#task-explorer)
+- [Document Manager]({{ site.url }}/tutorials/manufacturing#document-manager)
+- [Advanced Features]({{ site.url }}/tutorials/manufacturing#supply-chains)
+
+# Instructions
+
 ## BoM Specification
 
 ### Project View
@@ -119,6 +153,56 @@ From the Company Statement you can edit and reschedule orders, invoices and accr
 
 Because the Company Statement is dynamically calculated, it will depend where you are in the financial year as to how it will look for you. To amend the financial years and tax periods open the Tax and Period End pages of the Administrator where these settings can be modified. Because the tutorial installer has created an overdue order, you must borrow money or invest to prevent being overdrawn. Open the Cash Statement, which is basically a perfect reflection of your bank account and delete the Company Loan entry. The current balance is zeroised and your projected balance goes into the red. Also try cloning a project and rescheduling it to see how it impacts on the Company Statement and the P&L.
 
+### Job Costing
+
+The costing system of Trade Control consists of two components: real-time job costs for establishing profitability, and what-if analysis for pricing and job scheduling. 
+
+#### Job Profit
+
+When you select the parent task of a job using [the editor]({{ site.url}}/tutorials/manufacturing#project-schedule), profit is dynamically calculated and displayed. As you add materials, labour or services, the profit margin for each parent task will be affected. To benchmark the margin, you could add a [Cash Expression]({{ site.url}}/tutorials/cash-codes#cash-expressions) that calculates your average gross margin for each period: 
+
+``` IF([Turnover] = 0, 0, ([Direct Cost] / [Turnover])) ```
+
+To keep track of [performance]({{ site.url}}/tutorials/manufacturing#status-and-performance) and progress, job profitability is presented by month, showing the live invoice and payment status of its associated income and expenditure:
+
+![Job Profit]({{ site.url }}/images/bom_job_profit.png)
+    
+#### Pricing and Scheduling
+
+Trade Control employs transaction-grained algorithms for calculating vat, corporation tax, cash and organisation statements. It can therefore easily present what-if scenarios on the [Company Statement]({{ site.url}}/tutorials/manufacturing#company-statement). A quotation is identical to an order, but it is not included on the live Company Statement because it has no inherent value. The What-If page allows you to drop these quotes into the statement without impacting the live version or other user's what-if scenarios. In so doing, you can evaluate prices and costs in the context of your entire order-book and financial obligations. Because quotes are tasks like any other, they can be re-scheduled or priced to fit in with the totality of operations, ensuring costs are affordable or facilitating competitive pricing opportunities.  
+
+For our example, the Storage Box Company would like to order an additional 10,000 boxes in the third month of trading. Can we afford it?
+
+- Clone a **M/00/70/00** task
+- Amend the quantity to 10,000
+- Reduce the price by around 25% to reflect the increase in order quantity
+- Set Action On to the same delivery date as the month 3 consignment
+- Change the status to **Quote**
+- Reschedule
+
+The quotation status will cascade down to all the dependent orders, re-scheduling their dates and quantities:
+
+![Quotation]({{ site.url }}/images/bom_quotation.png)
+
+It looks like we are making a nice profit on the job, but can its production be financed given the company's commitments? From the Quotation page on the Company Statement, add the quote to the What-If: 
+
+![Add Quote to What If]({{ site.url }}/images/bom_quote_whatif.png)
+
+Note that you can also add quoted purchases. However, here there is no need to add dependant purchases because they are automatically added as a part of the job. Only quotes assigned to the current user will appear on their what-if analysis. The right-hand panel lists these, where they can be edited and deleted. The statement clearly shows that we cannot afford to make this job given the quantity and date constraint:
+
+![What-if Unscheduled]({{ site.url }}/images/bom_whatif_unscheduled.png)
+
+Many different options present themselves, such as:
+
+- Re-arrange payment terms with the customer or suppliers
+- Price incentives to re-schedule the job later
+- Offer call-off quantities over subsequent months
+- Increase the price
+- Re-negotiate purchase costs for higher quantity requirements
+- Postpone the payment of other bills and taxes
+
+In this example, the order date is earlier than the negative company balance. We contact the customer, and they accept the new requirement on cash-with-order terms. Locate the sales order on the What If Statement and edit the task, so that Payment On is the same date as Action On. Refreshing the statement results in a positive company balance. To turn the quote into an order you only must change the status to Open. This will remove the quoted job from your What If selections, turn the job into a sales order and amend the associated supplier schedules.
+
 ### Cash Flow
 
 Even though you have not invoiced anything yet, using the accruals system, there can be a P&L to match the Company Statement. Install the Cash Flow VSTO Workbook and add the connection to the BoM database. Then set the flags to the following settings.
@@ -142,7 +226,7 @@ Render the Cash Flow again and you will see that, with the flag settings in the 
 
 ![CashFlowUninvoiced]({{ site.url }}/images/bom_cash_flow_invoiced.png)
 
-### The Invoice Register
+### Invoice Register
 
 Natively, there are no sales or purchase invoices, and no credit or debit notes in TC; there are only invoices with an associated polarity. Therefore, whether the invoice is received from a supplier, or sent to a customer is a difference in state rather than object. However, to make the system more in line with current thinking, the Invoice Register is presented as if they are all different objects. There is therefore a numbering system associated with each document type, which can be amended in the Documents page of Administration.
 
@@ -162,7 +246,7 @@ Check out the Status Graphs from the Information menu.  Only one period and one 
 
 ![StatusGraphs]({{ site.url }}/images/bom_status_graphs.png)
 
-From the same menu, Job Profit provides performance reporting by project, available as a report or exportable dataset, which includes payment status. Costs are calculated anew using the same recursive algorithm as the [Task Editor](#task-editing).
+From the same menu, [Job Profit]({{ site.url }}/tutorials/manufacturing#job-costing) provides performance reporting by project, available as a report or exportable dataset, which includes payment status. Costs are calculated anew using the same recursive algorithm as the [Task Editor](#task-editing).
 
 ![JobProfitReport]({{ site.url }}/images/bom_job_profit_report.png)
 
@@ -198,7 +282,7 @@ The Cash Statement is a mirror image of your bank account, with the additional c
 
 You should not need to run the Re-build function, but if you do, under normal conditions it will have no effect. It is useful to integrate imported data into the system, repair corrupted data, an impacting upgrade or because certain essential information has been changed (like moving the financial year).
 
-## Project Processing
+## Project Management
 
 ### Task Explorer
 

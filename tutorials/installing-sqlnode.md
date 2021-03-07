@@ -38,7 +38,7 @@ When you first load the app, it will request a connection. It must be to either 
 
 The button to the far right of the server name will collect local instances of Sql Server. For Azure, type in the server name manually.
 
-![Connection]({{ site.url }}/images/tc_config_connection.jpg)
+![Connection]({{ site.url }}/images/tc_config_connection.png)
 
 When you test the connection, a series of checks are applied to assess its current state. If this results in an action, the test is automatically re-applied. The checks are:
 
@@ -56,7 +56,7 @@ The details below are all you need to install an instance that can be used by cl
 
 Trade Control supports both fiat and bitcoin as your Unit of Account. If you select bitcoin, the configuration process will be slightly different. Consult the [bitcoin wallet]({{ site.url }}/tutorials/installing-bitcoin) documentation for details.
 
-![Business Details]({{ site.url }}/images/tc_config_business_details.jpg)
+![Business Details]({{ site.url }}/images/tc_config_business_details.png)
 
 Refer to procedure _App.proc_NodeInitialisation()_ for the T-SQL that first configures the instance. Its parameters match the data specified on this page, but it also adds the administrator account and populates the [enumerated type tables](https://github.com/tradecontrol/sqlnode/master/blob/docs/tc_coding_practice.md)
  
@@ -64,7 +64,7 @@ Refer to procedure _App.proc_NodeInitialisation()_ for the T-SQL that first conf
 
 Once you have entered your business details, you will be able to connect from a client using your admin credentials. However, it is recommended that you create at least one user account for yourself that does not have administrative permissions to the database. 
 
-![Add Users]({{ site.url }}/images/tc_config_add_users.jpg)
+![Add Users]({{ site.url }}/images/tc_config_add_users.png)
 
 If the user is already registered with the server, you can leave the password blank and the Create Sql Login and Login as User flags will be disabled. When the Login as User flag is checked, the user will be created, and the connection changed to the new user. This is what you should do when you first create a Basic Set-up or run the Tutorials. Otherwise the objects will be assigned to the administrator account.
 
@@ -92,7 +92,7 @@ Bitcoin users do not use a bank or transact exchanges from bank accounts. Instea
 Login as a data user. Either enter your correct details if this is the live database, or just accept the defaults for the tutorial. If you do not have a reserve account, leave the defaults. You can edit/delete all these settings later from a client. 
 
 
-![Basic Setup]({{ site.url }}/images/tc_config_basic_setup.jpg)
+![Basic Setup]({{ site.url }}/images/tc_config_basic_setup.png)
 
 These settings are passed as parameters to the procedure _App.proc_BasicSetup_. It registers your Government and bank accounts, but also adds the following:
 
@@ -117,7 +117,7 @@ You are now able to install the services or manufacturing tutorials.
 
 Install the [tutorial]({{ site.url }}/tutorials/manufacturing) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below. If you want, you can replace the fiat payment system with a [bitcoin wallet]({{ site.url }}/tutorials/bitcoin).
 
-![Tutorial Install]({{ site.url }}/images/bom_install.jpg)
+![Tutorial Install]({{ site.url }}/images/bom_install.png)
 
 There are four modes of installation, allowing you to review how the Bill of Materials (BoM) is constructed and deployed. First install with the Activities selected, which will create the BoM. Re-running the installation, setting each option on in turn, re-creates the BoM and activates the instruction. In so doing, you can obtain a vital understanding of accruals from the Company Statement.
 
@@ -125,7 +125,7 @@ There are four modes of installation, allowing you to review how the Bill of Mat
 
 Install the [tutorial]({{ site.url }}/tutorials/services) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below.
 
-![Tutorial Install]({{ site.url }}/images/services_install.jpg)
+![Tutorial Install]({{ site.url }}/images/services_install.png)
 
 Select the Pay Invoices option first, then [try out the other options]({{ site.url }}/tutorials/services#install-options) at the end of the tutorial.
 

@@ -49,7 +49,7 @@ From the _Menus_ page of the Administration form, create a new menu or add your 
 
 When you load the client for the first time you will be presented with the connection dialog below. The dialog is available from the menus so you can switch between companies and/or the tutorials.
 
-![Connection]({{ site.url }}/images/tc_office_connection.jpg)
+![Connection]({{ site.url }}/images/accounts_connection.png)
 
 There are two pre-loaded connections; one for Azure Sql and another for Windows Authentication. You need to create an ODBC data source and replace the tags with your own settings.
 
