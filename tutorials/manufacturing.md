@@ -201,7 +201,7 @@ Many different options present themselves, such as:
 - Re-negotiate purchase costs for higher quantity requirements
 - Postpone the payment of other bills and taxes
 
-In this example, the order date is earlier than the negative company balance. We contact the customer, and they accept the new requirement on cash-with-order terms. Locate the sales order on the What If Statement and edit the task, so that Payment On is the same date as Action On. Refreshing the statement results in a positive company balance. To turn the quote into an order you only must change the status to Open. This will remove the quoted job from your What If selections, turn the job into a sales order and amend the associated supplier schedules.
+In this example, the order date is earlier than the negative company balance. We contact the customer, and they accept the new requirement on cash-with-order terms. Locate the sales order on the What If Statement and edit the task, so that Payment On is the same date as Action On. Refreshing the statement results in a positive company balance. To turn the quote into an order you just change the status to Open. This will remove the quoted job from your What If selections, turn the job into a sales order and amend the associated supplier schedules.
 
 ### Cash Flow
 

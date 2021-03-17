@@ -6,6 +6,67 @@ permalink: /tutorials/services
 
 Authored by Steve Wicks, [Greenprint Consultancy Ltd](http://www.green-print.net)
 
+## Index
+
+### Introduction
+
+- [Overview](#overview)
+- [Home Page](#home-page)
+
+### Tasks
+
+- [Task Explorer](#task-explorer)
+- [Creating a New Task](#creating-a-new-task)
+- [Edit Task](#edit-task)
+- [Attributes](#attributes)
+- [Operations](#operations)
+- [Task Workflows](#task-workflow)
+- [Quotes](#quote)
+- [Documents](#task-documents)
+- [Task Invoices](#task-invoices)
+
+### Workflow
+
+- [Document Manager](#document-manager)
+- [Expenses](#expenses)
+- [Network Allocations and Invoicing](#network-allocations-and-invoicing)
+- [Payment Entry](#payment-entry)
+- [Raising Invoices](#raise-invoices)
+- [Task Explorer](#task-explorer)
+- [Bank Account Transfers](#transfers)
+
+### System Settings
+
+- [Administration](#administration)
+- [Definitions](#definitions)
+- [Calendars](#calendar)
+- [Cash Accounts](#cash-accounts)
+- [SQL Connections](#sql-connect)
+
+### Maintenance
+
+- [Activities](#activities)
+- [Assets](#assets)
+- [Budgeting](#budget)
+- [Organisations](#organisations)
+
+### Information
+
+- [Audit Reports](#audit-reports)
+- [Cash Statements](#cash-statements)
+- [Company Statement](#company-statement)
+- [Data Warehouse](#data-warehouse)
+- [Invoice Register](#invoice-register)
+- [Job Profit](#job-profit-status-by-month)
+- [Organisation Enquiry](#organisation-enquiry)
+- [Status Graphs](#status-graphs)
+
+### Tutorial
+
+- [Install Options](#install-options)
+
+# Instructions
+
 ## Overview
 
 Trade Control (TC) has been derived from Systems Engineering principles evolved in the manufacturing 
@@ -22,16 +83,25 @@ This tutorial shows you how to set up and manage these processes.
 
 [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#services-tutorial)
 
-## Menu
+## Home Page
 
-Clicking on the + symbol to the left of the folders in the Home screen gives you an expanded view. The below screenshot shows all the options on the default Administrator menu:
+When opening Trade Control in MIS mode the Home Screen menu will show 4 view modes:
 
-![System Overview]({{ site.url }}/images/services_system_overview.jpg)
+- Information
+- Maintenance
+- System Settings
+- Workflow
+ 
+![System Overview]({{ site.url }}/images/services_system_overview.png)
 
-In addition to selecting a folder from the left-hand tree, many frequently-used folders can be accessed with a 
-single click from the Main tab, such as Task Explorer, Organisations and Invoicing. An overview of each folder
+A single click on any of these will open a submenu from which the required module can be selected. 
+Each module will open in a new tab so multiple modules can be open at any one time, allowing users to switch between them.
+
+In addition to selecting a module from the main menu, many frequently used modules can be accessed with a 
+single click from the MIS tab, such as Task Explorer, Organisations and Invoicing. An overview of each module
 is provided later in this document, but for now we will focus on the basic tasks of raising a new task and 
 creating dependent (child) tasks where required.
+
 
 ## Task Explorer
 
@@ -43,7 +113,7 @@ Task Explorer is the go-to place for:
 - Activity Code, Account and Contact enquiries
 - Managing the active Sales and Purchase Order Books
 
-Task Explorer can be opened either from the Work Flow menu or from the Main tab on the toolbar. It contains 
+Task Explorer can be opened either from the Workflow menu or from the Main tab on the toolbar. It contains 
 tabs which enable users to view tasks in various ways:
 Users / Activities / Schedule / Organisations / Contacts / Sales Orders / Purchase Orders
 
@@ -55,7 +125,7 @@ This effectively shows all open tasks by activity, as assigned in the Ops tab (s
 with the order sorted by End On / Oldest to Newest (left click arrow in the header of the End On column) and 
 the Task Status set to Open, users can see a definitive list of all scheduled operations:
 
-![Task Explorer Menu]({{ site.url }}/images/services_task_explorer.jpg)
+![Task Explorer Menu]({{ site.url }}/images/services_task_explorer.png)
 
 This is an effective way to project manage all open tasks. Selecting the required row and clicking on Edit 
 Task opens the Edit Task tab and allows access to the full task details along with any related sales or 
@@ -74,18 +144,18 @@ Task Explorer is also where new tasks are set up by clicking on the New Task but
 Here is a view of a New Task screen where the details have been entered prior to selecting the Accept or Edit 
 Project button:
 
-![Task Explorer Menu]({{ site.url }}/images/services_new_task.jpg)
+![Task Explorer Menu]({{ site.url }}/images/services_new_task.png)
 
  Field Name | Description 
  -- | -- 
 Task Code | The Task Code uses the specified document register against the Activity and the User Id. All the codes in TC work this way, so it is possible to go offline with a different database instance, create orders etc, and subsequently synchronise the databases without internal conflicts. 
-Reference Number | An optional field for the customers order number.
+Reference Number | An optional field for the customer’s order number.
 Project Title | Because orders tasks and operations are linked into the same tree you can assign a project title to an entire collection of child tasks. If the title is changed it will cascade down to all child tasks where the title was equivalent
 Action On | This is the scheduled completion date for the task. The Action On date can trigger a series of cascading events. If child tasks are automatically created (as defined in the Work Flow for the selected Activity Code) and Offset days are set up in the Operations tab in Activities, then the child tasks will automatically be created along with the current task and any scheduled operations will be calculated based on the Action On date.
 Payment On |This is calculated by adding the payment days as defined in the Organisation record to the Action On date. If End of Month payment is checked in the Organisation Record then the Payment On date will determine the last working day of the month the payment falls due.  If there is an entry in the 'Expected Days Extra' field in the Organisation Record, the extra days will be added to the due date then adjusted to the active user's calendar. The Payment On date is important as it is used to manage cashflow forecasts in the Company Statement module. Dates can be overwritten by the user if a specific payment date has been arranged outside of the system parameters.
 Task Status | The default status for the selected activity will be selected automatically.  In the above example, the "SO_Book" activity code is set to in Activities to default to Open, but it can be set to 'Pending' (i.e. not a live task, so it will not appear in Task Explorer when the 'Open' filter is selected) or 'Closed' (i.e. not a scheduled forward task, but a current or retrospective task which can be closed once it is created, such as an expense).
 Cash Code | The Cash Code will be automatically selected based on the chosen activity. If there is no cash code assigned to the chosen activity, such as with the 'Project' activity code, it will have a neutral impact on cash flow.
-VAT Code | The VAT Code will be automatically selected based on the chosen activity, but it can be overwritten if required. Many printed products are zero rated for VAT but there are rules which might change the VAT status of  a particular product, so the ability to overwrite the default VAT status is important.
+VAT Code | The VAT Code will be automatically selected based on the chosen activity, but it can be overwritten if required. Many printed products are zero rated for VAT but there are rules which might change the VAT status of a particular product, so the ability to overwrite the default VAT status is important.
 Unit of Measure | This is determined by the activity and is assigned in Activities. It cannot be overwritten within this New Task screen.
 Addresses | Both the 'Address From' and 'Address To' fields will default to the first address as set up within the Organisation. Alternative addresses can be selected from a list of additional addresses as set up within the selected organisation. Address codes are, like all codes in TC, alpha-numeric and are automatically generated by appending an address number to the organisations Account Code.
 Task Description and Notes | This is a free field where any in-house notes can be made, as these notes will not appear in the task attributes which will populate sales and purchase orders.
@@ -105,7 +175,7 @@ Edit Task is opened if it was not already open. The next section explains the ke
 
 The Edit Task screen is where users can add detail to or amend any task and can also create new tasks within
 the project, such as a purchase task as a 'child' task which is attached to the sales 'parent' task. If a
-new task is created for an activity which is set up with an automatic work flow (see Activities and Work Flow) 
+new task is created for an activity which is set up with an automatic workflow (see Activities and Work Flow) 
 then any child tasks are automatically created at the same time. But additional tasks can be set up manually 
 by selecting the New Task button. Existing tasks can also be 'Cloned', creating a duplicate new task along with 
 any linked tasks, with a new default Action On date of today. It is important at this stage to understand the way 
@@ -153,7 +223,7 @@ today. You can then amend the Action On date and Reschedule.
 
 When selecting a task from the tree, the corresponding task editor opens. 
 
-![Tree_Example]({{ site.url }}/images/services_tree_example.jpg)
+![Tree Example]({{ site.url }}/images/services_tree_example.png)
 
 Here you can see that there are two purchase tasks linked to one sales task which is retained along with other 
 related sales tasks for the same client under the Project parent task.  Click between the tasks to familiarise 
@@ -174,7 +244,7 @@ so make sure that you have selected the correct task. For example, if you select
 parent sales task, the cloned task would be created as a new child task linked to the original sales task, 
 duplicating only the selected task level along with any child tasks linked below it.
 
-## Edit Task - additional features
+## Additional Features
 
 Having now covered the basics of creating and editing tasks, we move to looking at the other tabs in the Edit Task
 tab. These are:
@@ -188,7 +258,7 @@ sales order acknowledgement. Then, the original task was Cloned each time a new 
 brings through the attributes exactly as per the original task - it does not bring through the 'template' attributes 
 assigned to the task activity code. 
 
-![Attributes]({{ site.url }}/images/services_attributes.jpg)
+![Attributes]({{ site.url }}/images/services_attributes.png)
 
 If an additional row is required, select the first empty row below the existing rows and type in the Attribute, Type 
 and Description. The position of the row can be defined by assigning the number in the Order column to a number 
@@ -204,14 +274,14 @@ Attributes can be hidden from the orders sent to customers and suppliers by sett
 then not be included in the sales order but will only show in any quote which you might generate from the task.
 
 
-### Operations (Ops)
+### Operations
  
-Every activity can have a set of operations, describing what needs to be done in order to make it happen. Here are 
+Every activity can have a set of operations (Ops), describing what needs to be done in order to make it happen. Here are 
 the operations for the sales task SW_10014 (following the same task through from the Attributes section):
 
-![Ops]({{ site.url }}/images/services_ops.jpg)
+![Ops]({{ site.url }}/images/services_ops.png)
 
-Like work flows, Operations also have an associated Sync Type - SYNC / ASYNC / CALL-OFF. Selecting the required Sync 
+Like workflows, Operations also have an associated Sync Type - SYNC / ASYNC / CALL-OFF. Selecting the required Sync 
 Type defines the way in which TC automatically assigns dates to related activities and sets the Action On date 
 to match the final CALL-OFF date:
 
@@ -221,15 +291,15 @@ SYNC | A SYNC date is synchronised to any related activities, so if the related 
 ASYNC | non-synchronised, ASYNC dates are not affected by any other date changes within Operations 
 CALL-OFF | This is the date which synchronises with the Action On date, so updating the CALL-OFF date will cause the Action On date to be matched. Generally speaking, it will be the last activity, such as delivery of the completed order to the client or collection of the completed order from a supplier.
 
-### Work Flow
+### Task Workflow
 
-The screen grab below shows the Work Flow for the sales task SW_10014 (following the same task through from the 
+The screen grab below shows the Workflow for the sales task SW_10014 (following the same task through from the 
 Attributes section):
 
-![Work_Flow]({{ site.url }}/images/services_work_flow.jpg)
+![Work_Flow]({{ site.url }}/images/services_work_flow.png)
 
 As the task we are looking at is a sales task, we can see two dependent child tasks which are automatically created 
-due to the work flow setting in Activities. So, every time a new task with the Activity Code 
+due to the workflow setting in Activities. So, every time a new task with the Activity Code 
 'SO Brochure or Catalogue' is created, the two child tasks are created at the same time.
 
 ### Quote
@@ -242,7 +312,7 @@ added to ('run on' from) the base quantity or deducted from ('run back' from) th
 below we see the base prices for various quantity break points, then the run on and run back costs for each quantity. 
 But these extra columns are not necessary, users can just complete a row for each price break point as required. 
 
-![Quote]({{ site.url }}/images/services_Quote.jpg)
+![Quote]({{ site.url }}/images/services_Quote.png)
 
 The Quote tab serves as both a pricing table which can be referred to internally to access agreed pricing levels 
 which would be set up against the original task and would be copied over when the task was cloned, and it can also 
@@ -250,22 +320,23 @@ be used to populate the Quotation form, so the Quotation template will load the 
 and quantities as defined in the Quote tab. All attributes will appear in the quotation form but remember that those 
 set to 'QUOTE' will only appear in the quotation and not in the order acknowledgement.
 
-### Documents
+### Task Documents
 
 Documents is a repository where any associated files can be stored within the task. To add a document, simply left 
 click and type in a name in the Document Name field, then left click on the box below the Optional Description 
 field. Then select 'Form' from the toolbar at the top of the page and select 'Insert Object'. You can either create 
 a new document or select a location for an existing document and upload it to the task.
 
-### Invoices
+### Task Invoices
 
 If the task has been Charged, the invoice details can be viewed in the Invoices tab, but note that you cannot open 
 or edit invoices from this tab. To open or edit invoices see the Invoice Register section.
 
-## Work Flow
 
-Having covered the basic activities involved in creating and managing tasks, let us move onto the Work Flow section 
-which can be accessed via the Work Flow tree in the Home menu. The following tabs can be found here: 
+## Workflow
+
+Having covered the basic activities involved in creating and managing tasks, let us move onto the Workflow section 
+which can be accessed via the Workflow folder in the Home menu. The following tabs can be found here: 
 
 ### Document Manager
 
@@ -278,7 +349,7 @@ can spool multiple orders in one generation.
 Both can email a pdf document to the contact's address directly from within the client. Reports in the Document 
 Manager are more flexible.
 
-![DocumentManager]({{ site.url }}/images/bom_document_manager.jpg)
+![DocumentManager]({{ site.url }}/images/services_document_manager.png)
 
 You can write your own reports, and then tell the Document Manager what report goes with which Document Type, and 
 how it is to be communicated by default. These are listed in the Selected Report box.
@@ -293,7 +364,7 @@ Expenses is where an entry can be made without having to create a Task first. Cr
 creates an expense task and you can decide whether you want to simply create the expense task or to create it and to 
 pay it at the same time. 
 
-Selecting Expenses from the Work Flow tree will open a new tab 'Paid Expenses'. Simply enter the required fields in 
+Selecting Expenses from the Workflow menu will open a new tab 'Paid Expenses'. Simply enter the required fields in 
 the form (ensuring that you select the correct VAT code, as the code will default to the one set up within the 
 Activity which may not always reflect the actual expense VAT e.g. a supplier may be supplying a VATable product or 
 service but may not be VAT registered). 
@@ -312,11 +383,23 @@ will be shown in the Company Statement as pending payment. This is a very useful
 and immediate creation and payment of an expense or for the creation only so the payment can be entered when the 
 cash leaves the bank account, so your Cash Statement will reflect the exact order of your bank statements.
 
-![Expenses]({{ site.url }}/images/services_expenses.jpg)
+![Expenses]({{ site.url }}/images/services_expenses.png)
+
+### Network Allocations and Invoicing
  
+Network Allocation and Invoices are advanced features which are covered in the tutorial on [connecting supply-chains]({{ site.url }}/tutorials/network).
+
+Trade Control is capable of connecting multiple companies using the system to share data by exporting and importing
+tasks to drive automated sales and purchase task creation. The system's unique programming using simple negative and positive
+cash codes associated with each task enables information from a sales order on one side of the relationship to populate a 
+purchase task (and therefore all of the subsequent processes) on the other side. This seamless linking of systems and data sharing
+capability gives both sides of the exchange a robust trading platform, streamlining processes and eliminating 
+duplication which also prevents potential errors when orders are created manually.  If this powerful feature is of interest
+please [let us know]({{ site.url }}/contact) and we can provide more information and support.  
+
 ### Payment Entry
 
-Selecting Payment Entry from the Work Flow tree will open the Payment Entry tab. Here you can post payments and 
+Selecting Payment Entry from the Workflow menu will open the Payment Entry tab. Here you can post payments and 
 receipts against existing tasks or you can assign an Activity Code which will override any existing tasks which 
 might be pending payment for the selected organisation.
 
@@ -348,7 +431,7 @@ Multiple payments can be created in the Payment Entry tab which will all be post
 
 ### Raise Invoices
 
-Selecting Raise Invoices from the Work Flow tree will open the Raise Invoices tab. This tab can also be opened from 
+Selecting Raise Invoices from the Workflow menu will open the Raise Invoices tab. This tab can also be opened from 
 the 'Invoicing' shortcut found in the Main header tab. Here you can select the Account using the dropdown menu 
 which shows all outstanding all organisations with open or closed sales and purchase tasks which are pending 
 invoicing. Selecting the required organisation will show all invoiceable tasks. Click on the task you require and 
@@ -369,7 +452,7 @@ earlier or later payment is anticipated which you want to reflect in the cashflo
 The screen shot below shows the first tab of the Invoice Edit screen which opens on choosing to raise an invoice in 
 the Raise Invoices section: 
 
-![Invoice]({{ site.url }}/images/services_invoice.jpg)
+![Invoice]({{ site.url }}/images/services_invoice.png)
 
 For this purchase invoice the terms are set to 30 days end of month. The invoice is created once the supplier's 
 invoice is received, and the invoice number is entered in the free field 'Notes' section. Any text entered in 
@@ -400,7 +483,7 @@ been checked in Administration - otherwise the invoice will be printed without p
 
 ### Transfers
 
-Selecting Transfers from the Work Flow tree will open the Transfers tab. This feature enables money to be 
+Selecting Transfers from the Workflow menu will open the Transfers tab. This feature enables money to be 
 transferred from one business bank account to another. The [basic setup]({{ site.url }}/tutorials/installing-sqlnode#basic-setup) has a current account and a reserve account 
 and payments in can be created by selecting the receiving account and selecting 'Transfer Receipt' as the Cash Code. 
 Payments out use the Cash Code 'Account Payment'. TC recognises the polarity of these Cash Codes, so if the amount 
@@ -413,33 +496,38 @@ up to restore a positive cash balance. Excess current account funds can also be 
 and a Transfer set up to the interest-bearing reserve account. To transact the transfer and update the bank account 
 balances simply select the row for the payment in or out and click the 'Post Selected' button.
 
+
+## System Settings
+
+Clicking on System Settings from the Home Page menu will enable users to access the following modules: 
+
 ## Administration
+The Administration tab can be opened from the System Settings menu on the Home screen or via the System Admin 
+button in the main Header tab. 
+Administration is where all the company settings are created. There are multiple tabs:
 
-The Administration tab can be opened by expanding 'Settings' from the Home screen. Administration is where all the 
-company settings are created. There are multiple tabs:
-
-### Company
+#### Company
 
 This section is quite self-explanatory. There are multiple tabs to set up your company's details.
 
-### Users
+#### Users
     
 Multiple users can be created here, and administrator rights assigned.
 
-### Period End
+#### Period End
 
 Here the Financial Years and periods are set up. The initial view when opening the Period End tab show the months 
 condensed, with only the year view shown. Clicking on the + button to the left of the Year expands the tree to show 
 the months, as the screen shot below:
 
-![Period End]({{ site.url }}/images/services_period_end.jpg)
+![Period End]({{ site.url }}/images/services_period_end.png)
 
 Administrators must ensure that the periods have been created in advance to enable TC to create tasks which fall 
 into the period. You will see that this snapshot was taken in July 2019 and shows it as the Current month, with 
 April-June showing as Closed as all transactions for these months have been posted and reconciled before clicking 
 on the 'Period End' button on the right to close the current period. All future months are set as Forecast.
 
-### Tax
+#### Tax
 
 The Tax tab enables administrators to set a Tax Horizon, which will define how far forward tax payments are 
 calculated and shown in Company Statement. The test system is set to 2 years (730 days).
@@ -463,7 +551,7 @@ If the items have been ordered on TC as one total task, the VAT will be calculat
 total cost and this cannot be amended within the purchase invoice, leading to a small discrepancy in the VAT for 
 the period in question. Entering a balancing value in VAT Adjust will correct the VAT calculation.
 
-### Documents
+#### Documents
 
 The Invoice Numbering Register within Documents is where the starting number range is set for Sales Invoices, 
 Credit Notes, Purchase Invoices and Debit Notes. The Task Numbering Register is where the number range is set for 
@@ -512,29 +600,114 @@ as 'Acknowledgement - no contact', then enter the filename 'docAcknowledgementno
 the Folder Name path from the row above. When Document Manager opens, you will see this template as an available 
 option.
 
-### Time Buckets
+#### Time Buckets
 
 It is not necessary to adjust Time Buckets as the parameters are set to define how TC manages current and forecast 
 calculations, but this tab enables advanced users to set up time periods by day, week or month and to define how 
 tasks which fall within these time buckets to be reported in Task Explorer.
 
-### Menu System
+#### Menu System
 
 The Menu System enables administrators to control which areas of the system individual users can access and whether 
 they can Read Only, Add or Edit entries within the modules they have access to.
 
+#### Event Log/Task Log/Invoice Log
+
+These last three tabs are a system record of all events and actions, designed primarily for problem-solving by 
+Administrators in the event of a posting query or where unexpected results or discrepancies have been found on the system.
+
 NB there is no x/close button on the Administration tab. To close this section, click on either the 'OK' or 'Cancel' 
 buttons on the right-hand side of the screen.
 
+### Definitions
+
+Clicking on Definitions from within the System Settings menu opens the Definitions tab within which
+there are multiple tabs as listed below:
+
+#### Lookup Data
+
+The first tab is Lookup Data where the following parameters are set:
+
+#### Tax Codes
+
+VAT, National Insurance and other tax codes can be created in this table. NB once a code has been allocated to an 
+Activity, it must not be deleted. So, if tax rates change, a new code must be created and the original code and value 
+must remain in the table.
+
+#### Organisation Types
+
+Here, the Organisation Types are created, and the polarity of each type is set by defining whether it generates 
+Expense, Income or is Neutral.
+
+#### Unit of Measure 
+Any Unit of Measure (UoM) defined in this table can be selected when creating Activities. The selected UoM will be 
+displayed in Edit Task and will print out on any documents where the XML tag inserts this value.
+
+### Calendar
+
+One the Calendar tab the working days of the standard week are set by ticking the required days. Holidays are inserted by clicking on the 
+'+' button and entering the holiday/non-working dates. These will be factored into any automatic scheduling by TC when 
+looking at Operations offset days to determine Operation dates working back from the defined Call-Off (Action On) date. 
+
+### Cash Accounts
+
+Cash Accounts is where bank accounts, loan accounts etc. are created and opening balances entered when setting up the 
+system for the first time. In the Test System, there is a Dummy Bank Account which has no Cash Code allocated to it. 
+This is an example of the flexibility of the system, as this account could be used to balance small anomalies without 
+impacting on trading figures - for example, VAT rounding, or discrepancies on cash balances when importing from an 
+existing system. There is a check box 'Dummy Account' which must be selected to prevent the account from 
+showing in the Company Statement. Cash can be transferred between a live Cash Account and a dummy one and only the live 
+account, with a valid Cash Code, will impact on the Cash Statement. 
+
+#### Cash Categories
+
+[Cash Categories]({{ site.url }}/tutorials/cash-codes) are the top-level cash management codes. Once the Cash Categories are set up, Cash Codes can be 
+created which will feed up into the selected Cash Category. Each Category must have a Mode (Expense/Income/Neutral), 
+and a Type (Bank/Trade/External). Checking the Enabled box will post all transactions for that Cash Category into 
+the Cash Flow forecast spreadsheet, leaving it unchecked will exclude the category from the forecast.
+
+#### Cash Codes
+
+Every Activity which has a financial impact on the company must be assigned a Cash Code to determine the polarity of 
+any transaction by linking it to the Cash Category and to assign the required Tax Code. The 'Enabled' box must be 
+checked to utilise a Cash Code. Leaving it unchecked means that it will not appear in the available list of 
+Cash Codes when creating an Activity. This feature enables redundant Cash Codes to be effectively archived, where they 
+cannot be deleted if they are associated with an old Activity.
+
+#### Cash Totals
+
+Totals are explained in a separate section on the general structure of [Cash Codes]({{ site.url }}/tutorials/cash-codes)
+
+#### Totals and Expressions
+
+Administrators can create Cash Expressions using Excel formulae which will appear in the Cashflow Forecast linked 
+spreadsheet. Two examples are shown, Gross Margin and Wages Ratio. The formula for each can be seen in the Formula 
+Expression box. Using Xls syntax and inserting parameters by double-clicking on a category from the left-hand menu 
+will create a formula which will appear in the Cashflow Forecast spreadsheet alongside the Category name, allowing 
+dynamic calculations to be made when the spreadsheet is opened to show any key ratios which management may use to 
+monitor business performance. This is another example of the flexibility of TC, enabling administrators to adapt and 
+add to the power of the system without having to revert back to developers or employ programmers to manage their MIS platform.
+
+## SQL Connect
+
+Opening SQL Connect either via the System Setting section of the Home Page menu or via the shortcut on the Header tab 
+will open a settings screen enabling admins to connect to various data sources. If more than one database has been set up then 
+these can be accessed by scrolling across and selecting the required source. 
+
+
+
+
+
+
 ## Maintenance
 
-Now let us look at the Maintenance section which is found in the Home Screen. Expanding this tree will reveal the 
-following modules:
+Now let us look at the Maintenance section which is found in the Home Screen.
+Maintenance is where the core data is set up to determine things like Units of Measure, Organisation Codes, Calendars, 
+Cash Accounts and Cash Codes. 
 
-### Activities and Workflow
+### Activities
 
-Selecting Activities from the Maintenance tree will open the Activity tabs. 
-Definitions tab. 
+Selecting Activities from the Maintenance section will open the Activities tabs. The tabs available within this module are shown below:  
 
 #### Details
 
@@ -603,6 +776,19 @@ the tree and the purchase order numbering will be determined by this hierarchy.
 
 The Project tab shows the structure of the Activities and enables users to load any individual Activity for editing. 
 
+#### Mirrors
+
+The Mirrors tab allows users to connect specified aspects of the system to another Third-Party user through a connected network.
+This is an advanced capability which is not covered within this tutorial, but if this feature is of interest please
+contact us for further details.
+
+### Assets
+
+Opening Assets from the Maintenance menu will enable users to post asset adjustments onto the system which will in turn affect depreciation calculations.
+Selecting the required Cash Code from the dropdown menu will allocate the asset to the designated code e.g. Stock Movement, Share Capital etc.
+
+Refer to the tutorial on [balance sheets]({{ site.url }}/tutorials/balance-sheet) for more details.
+
 ### Budget
 
 Selecting Budget from the Maintenance tree will open the Budget tab. Here, users can enter budget data by month/year 
@@ -612,84 +798,15 @@ a tax value based on the tax status of the selected Cash Code. There are two tab
 a Forecast where an overall value can be entered and a Projection where the forecast values can be viewed alongside 
 the current system values.
 
-### Definitions
-
-Definitions is where the core data is set up to determine Units of Measure, Organisation Codes, Calendars, 
-Cash Accounts and Cash Codes. Selecting Definitions from the Maintenance tree will open the Definitions 
-tab.
-
-#### Lookup Data
-
-The first screen is Lookup Data where the following parameters are set:
-    Unit of Measure 
-Any Unit of Measure (UoM) defined in this table can be selected when creating Activities. The selected UoM will be 
-displayed in Edit Task and will print out on any documents where the XML tag inserts this value.
-
-#### Organisation Types
-
-Here, the Organisation Types are created, and the polarity of each type is set by defining whether it generates 
-Expense, Income or is Neutral.
-
-#### Tax Codes
-
-VAT, National Insurance and other tax codes can be created in this table. NB once a code has been allocated to an 
-Activity, it must not be deleted. So, if tax rates change, a new code must be created and the original code and value 
-must remain in the table.
-
-#### Calendar
-
-The working days of the standard week are set be ticking the required days. Holidays are inserted by clicking on the 
-'+' button and entering the holiday/non-working dates. These will be factored into any automatic scheduling by TC when 
-looking at Operations offset days to determine Operation dates working back from the defined Call-Off (Action On) date. 
-
-#### Cash Accounts
-
-Cash Accounts is where bank accounts, loan accounts etc. are created and opening balances entered when setting up the 
-system for the first time. In the Test System, there is a Dummy Bank Account which has no Cash Code allocated to it. 
-This is an example of the flexibility of the system, as this account could be used to balance small anomalies without 
-impacting on trading figures - for example, VAT rounding, or discrepancies on cash balances when importing from an 
-existing system. There is a check box 'Dummy Account' which must be selected to prevent the account from 
-showing in the Company Statement. Cash can be transferred between a live Cash Account and a dummy one and only the live 
-account, with a valid Cash Code, will impact on the Cash Statement. 
-
-#### Cash Categories
-
-[Cash Categories]({{ site.url }}/tutorials/cash-codes) are the top-level cash management codes. Once the Cash Categories are set up, Cash Codes can be 
-created which will feed up into the selected Cash Category. Each Category must have a Mode (Expense/Income/Neutral), 
-and a Type (Bank/Trade/External). Checking the Enabled box will post all transactions for that Cash Category into 
-the Cash Flow forecast spreadsheet, leaving it unchecked will exclude the category from the forecast.
-
-#### Cash Codes
-
-Every Activity which has a financial impact on the company must be assigned a Cash Code to determine the polarity of 
-any transaction by linking it to the Cash Category and to assign the required Tax Code. The 'Enabled' box must be 
-checked to utilise a Cash Code. Leaving it unchecked means that it will not appear in the available list of 
-Cash Codes when creating an Activity. This feature enables redundant Cash Codes to be effectively archived, where they 
-can't be deleted if they are associated with an old Activity.
-
-#### Cash Totals
-
-Totals are explained in a separate section on the general structure of [Cash Codes]({{ site.url }}/tutorials/cash-codes)
-
-#### Cash Expressions
-
-Administrators can create Cash Expressions using Excel formulae which will appear in the Cashflow Forecast linked 
-spreadsheet. Two examples are shown, Gross Margin and Wages Ratio. The formula for each can be seen in the Formula 
-Expression box. Using Xls syntax and inserting parameters by double-clicking on a category from the left-hand menu 
-will create a formula which will appear in the Cashflow Forecast spreadsheet alongside the Category name, allowing 
-dynamic calculations to be made when the spreadsheet is opened to show any key ratios which management may use to 
-monitor business performance. This is another example of the flexibility of TC, enabling administrators to adapt and 
-add to the power of the system without having to revert back to developers or employ programmers to manage their MIS platform.
-
 ### Organisation Datasheet
 
-Selecting Organisation Datasheet from Maintenance tree opens a summary Organisation Edit tab. Here details can be 
+Selecting Organisation Datasheet from Maintenance opens a summary Organisation Edit tab. Here details can be 
 viewed or edited for any existing organisation. This is a 'quick view' with limited data, so if any in-depth editing 
 or a new organisation needs to be created, go to Organisations (see next section).
 
 ### Organisations
 
-Selecting Organisations from Maintenance tree opens Organisation Edit tab. Here existing organisations can be updated 
+Selecting Organisations from Maintenance opens the Organisation Edit tab. Here existing organisations can be updated 
 or new ones created. To find an existing organisation, enter the first few letters into the Lookup box and the 
 selection will load the organisation, then hit Return to load the details into the current screen.
 
@@ -699,9 +816,7 @@ will comprise the first 3 characters of the first and second names combined (so 
 use a different coding system you can enter any sequence of numbers or letters up to 10 characters in total. To save the 
 new record click 'Save' (the button below 'New').
 
-![New Organisation]({{ site.url }}/images/services_new_org.jpg)
-
-There are multiple tabs within the Organisation Datasheet as listed below:
+![New Organisation]({{ site.url }}/images/services_new_org.png)
 
 #### Details
 
@@ -712,6 +827,9 @@ date for each task. The next box is 'Expected Days Extra' which is a very useful
 forecast as shown in Company Statement to account for customers who regularly pay outside of the agreed terms. Adding 
 a value in this box will extend the expected payment received date by the desired number of days, leaving it blank 
 will leave the expected payment date in the cashflow forecast as the payment due date.
+
+#### Extended
+This is an additional page to record other company information.
 
 #### Addresses
 
@@ -736,7 +854,7 @@ Organisation or to the Home account address.
 In the screen grab below, you will see the two entries for AB Customer. In the second entry we have added a contact 
 name and phone number so this will appear in the delivery address detail when Address Code ABCUST_002 is selected:
  
-![Address]({{ site.url }}/images/services_address.jpg)
+![Address]({{ site.url }}/images/services_addresses.png)
 
 #### Contacts 
 
@@ -746,20 +864,35 @@ name field. This will not be visible until you tab through the fields to the nex
 after creating the entry. Alternatively, users can manually enter a Nick Name and the system will accept this and 
 will not create an automatic entry.
 
-#### Business Description
+#### Documents
 
-A free field area where any text can be entered relating to the Organisation.
+Documents can be pasted into the Organisation record by right clicking and pasting into the white box alongside the 
+"Right click to insert/edit a document' box. Give the document a name and optional description if required.
+
 
 #### Cash Accounts
 
 A repository for bank and payment details
 
+#### Allocations / Cash Codes
+
+These are advanced features only required when creating inter-company trading links so are not covered in this tutorial. 
+If you are interested in linking TC across multiple operations or third-party businesses please contact us for further information.
+
+
 ## Information
   
-The next part of this documentation covers the Information section which is found in the Home Screen. Expanding this 
-tree will reveal the following modules:
+The next part of this documentation covers the Information section which is found in the Home Screen. Clicking on the 
+Information button will reveal the following modules:
 
-### Audit Accruals - Corporation Tax
+## Audit Reports
+There are four sections relating to auditing and accruals with the Audit Reports module, as follows:
+
+#### Balance Sheet Audit
+Clicking on this menu item opens a report screen which shows any income or expenditure which has not been included in any
+Balance Sheet value of the company.  It shows transactions for the current year to date, month by month up to the most recently closed monthly period. 
+
+#### Corporation Tax Accruals
 
 Selecting Audit Accruals - Corporation Tax from the Information tree will open the Audit Accruals - Corporation Tax
 tab. The system calculates Corporation Tax based on invoiced transactions, so when viewing the Corporation Tax tab 
@@ -775,18 +908,18 @@ be added to the Corporation Tax totals found in the Invoice Register to arrive a
 Statement helpfully incorporates both values and shows two adjacent values - the top one being calculated on 
 invoiced values and the one below based on the Audit Accruals values.
 
-### Audit Accruals - VAT
+#### VAT Accruals
 
-Selecting Audit Accruals - VAT from the Information tree will open the Audit Accruals - VAT tab. 
-This section works in the same way as Audit Accruals - Corporation Tax (see above). Un-invoiced tasks are listed here 
+Selecting VAT Accruals from the Audit Reports menu will open the VAT Accruals tab. 
+This section works in the same way as Corporation Tax Accruals (see above). Un-invoiced tasks are listed here 
 and a VAT calculation is shown by month which must be added to the VAT Totals values found in the Invoice Register. 
 The Company Statement helpfully shows both values when they fall due for payment - the top one being calculated on 
 invoiced values and the one below based on the Audit Accruals values.
 
-### Cash Statement
+### Cash Statements
 
-Selecting Cash Statement from the Information tree will open the Cash Statement tab. The default Bank Account will 
-open and the current month's financial transactions will be loaded. Selecting another month or a different Bank 
+Selecting Cash Statements from the Information section of the Home Page menu will open the Cash Statement tab. 
+The default Bank Account will open and the current month's financial transactions will be loaded. Selecting another month or a different Bank 
 Account will load that data. If all transactions have been entered accurately the Cash Statement will reflect your 
 bank statement exactly, making it easy for an accountant to identify every transaction within the system. If a 
 posting has been made on the wrong date or to the wrong account or at an incorrect value, these problems can be 
@@ -794,7 +927,7 @@ corrected within Cash Statement.
 
 The screen grab below shows the Current Account for June 2019 on the test system: 
 
-![Cash Statement]({{ site.url }}/images/services_cash_statement.jpg)
+![Cash Statement]({{ site.url }}/images/services_cash_statement.png)
 
 The Current Balance will feed into the Company Statement for cashflow forecasting so must always be checked to 
 ensure that it is accurate. If a discrepancy is found, users can make adjustments by clicking on the buttons at 
@@ -812,7 +945,7 @@ original transaction and post a new one. Simple select the Bank Account from the
 
 #### Cash Statement - Pay
 
-Clickin the 'Pay' button opens the Payment Recharge section where Organisation, Cash Code, transaction value and VAT 
+Clicking the 'Pay' button opens the Payment Recharge section where Organisation, Cash Code, transaction value and VAT 
 status can be edited.
 
 The next two buttons on this screen are simply shortcuts: 'Add Payment' opens Payment Entry and 'Transfers' opens Cash Transfers
@@ -831,9 +964,9 @@ year.
 
 ### Company Statement
 
-Selecting Company Statement from the Information tree will open the Company Statement tab. The Company Statement 
-may take longer to load than other modules as it performs some major calculations across the whole system.
-It is a dynamically calculated snapshot of your business's position. If you modify any financial data from the past, 
+Selecting Company Statement from the Information section of the Home Page menu will open the Company Statement tab. 
+The Company Statement may take slightly longer to load than other modules as it performs some major calculations across the 
+whole system. It is a dynamically calculated snapshot of your business's position. If you modify any financial data from the past, 
 or the future, it will impact on the either the opening balance, or its projection. 
 
 There are two projections: one for the Current Account and the other for an optional Reserve Account. Current 
@@ -913,7 +1046,7 @@ held on the system can be located and viewed, by Organisation or by Task.
  
 ### Invoice Register
 
-Selecting Invoice Register from the Information tree will open the Invoice Register tab. Users can explore every 
+Selecting Invoice Register from the Information menu will open the Invoice Register tab. Users can explore every 
 invoiced task by month, with the current month selected by default. There are multiple tabs which are explained 
 below:
 
@@ -970,15 +1103,15 @@ Shows a list of all unpaid purchase invoices which can be sorted by date/organis
 Shows a list of Expense invoices which can be sorted by date/organisation/value. All Activities with an Expense 
 Cash Code will appear in this section, enabling direct and indirect costs to be separated.
 
-### Job Profit Status
+### Job Profit Status by Month
 
-Selecting Job Profit Status from the Information tree will open the Job Profit Status tab. Selecting the required 
+Selecting Job Profit Status by Month from the Information menu will open the Job Profit Status tab. Selecting the required 
 month will display all invoiced income and outgoings and will show a gross profit total. Listed tasks can be edited 
 using the 'Edit Task' button and reports can be generated using the 'Period' and 'Financial Year' buttons.
 
 ### Organisation Enquiry
 
-Selecting Organisation Enquiry from the Information tree will open the Organisation Enquiry tab. This module can 
+Selecting Organisation Enquiry from the Information menu will open the Organisation Enquiry tab. This module can 
 also be accessed via a button within Organisations, but it will not display the list of organisations which can be 
 selected on the left-hand side of the screen, it will just load the current organisation selected in Organisations. 
 
@@ -1055,7 +1188,7 @@ Task Explorer. Check out the Company Statement to see how the system accrues inc
 payments based on the task completion dates to create a cashflow forecast.
 
 You can then move onto installing the 'Invoice first order' database and see how we have invoiced 
-historical jobs which changes the status of the tasks to 'Invoiced' so the invoices can be viewed 
+historical jobs which change the status of the tasks to 'Invoiced' so the invoices can be viewed 
 by month in Invoice Register. You can experiment with the option to raise and pay an expense task 
 simultaneously or to raise the task and invoice through the Company Statement module, which would 
 be the typical route when posting payments as part of a bank statement reconciliation, where the 
