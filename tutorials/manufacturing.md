@@ -117,7 +117,7 @@ The left pane of the Task Editor is a tree where new tasks can be added. When se
 
 The installer has created a top-level project task to group all orders for this assembly into one container. This is simply achieved by adding an activity with an Activity Code set to Project, leaving the Cash Code blank, and selecting the Works Order register. You can then add a new task using this activity and assign orders by using it as a parent. 
 
-The first order, on the 7 Apr, is a purchase for 50 pallets, to be received 1 day in advance of the first despatch. The cash code for the other pallet tasks have been set to blank, so their supply is scheduled but not ordered (green). The other materials are processed differently, in that each demand constitutes a Supplier Schedule.
+The first order is a purchase for 50 pallets, to be received 1 day in advance of the first despatch. The cash code for the other pallet tasks have been set to blank, so their supply is scheduled but not ordered (green). The other materials are processed differently, in that each demand constitutes a Supplier Schedule.
 
 Looking at the dates, you can see that the delivery and packing materials are 1 offset day from the customer's due date. Whereas the components are to be completed before starting the assembly operations. In turn, material arrivals are before the moulding begins. All these orders and operations are placed dynamically in the configured time buckets. Reviewing them in Task Explorer, you will notice that the material arrivals for the first order are overdue.  
 

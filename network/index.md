@@ -26,7 +26,7 @@ The Ethereum Virtual Machine (EVM) enables coders to write programs, called Smar
 
 1. Immutably and safely record transactions in Ethereum's public blockchain
 2. Dispense with the traditional commercial communication protocols (legality aside)
-3. Improve the integrity and responsiveness of the [Company Statement]({{ site.url }}/tutorials/power-bi#statements)
+3. Improve the integrity and responsiveness of the [Company Statement]({{ site.url }}/tutorials/manufacturing#company-statement)
 3. Deliver the necessary communications for supply-chain scheduling
 
 ## Currency

@@ -42,9 +42,9 @@ In the past, to process PAYE it was necessary either to buy payroll software or 
 
 Vat is automatically calculated from VAT Codes and presented in the [Invoice Register]({{ site.url }}/tutorials/cash-book#invoice-register). Prior to 2019, a business could enter this information directly into the VAT section of the portal. For some reason, the legislation was changed such that entry could only be made by MTD approved third party private software. Trade Control uses a low-cost [CSV import website]({{ site.url }}/tutorials/digital-tax) to address the issue. At some point this will be replaced with its own access if the law is not repealed.
 
-#### Corporation Tax Return
+#### Company Tax Return
 
-By far the most difficult accounting service to replace is the Corporation Tax Return, because of two things:
+By far the most difficult accounting service to replace is the Company Tax Return, because of two things:
 
 1. how the corporation tax is calculated.
 2. the legal obligation to communicate the asset value of your business.

@@ -20,7 +20,7 @@ You can begin with a [local single-user installation]({{ site.url }}/tutorials/i
 
 ## Free Software
 
-Trade Control is published under the GNU licence. You are free to engage with the code and extend functionality without permission. As a first-generation app, you can incorporate new developments without additional cost. There are no subscription fees.
+Trade Control is published under the GNU licence. You are free to engage with the code and extend functionality without permission. You can therefore incorporate new developments without additional cost. There are no subscription fees.
 
 ## Implementation
 
