@@ -84,23 +84,22 @@ New users are added by calling the procedure _Usr.proc_AddUser()_. It carries ou
 To get started, the system needs to know your financial year, the government of the presiding jurisdiction, your bank and at least one bank account. Here there are three, modelled by Cash Accounts:
 
 1. Current Account for trading
-2. Reserve Account for savings and tax
-3. Capital Account for storing assets and applying depreciation
+2. Reserve Account for savings and tax (Optional)
+3. Capital Account for storing assets and applying depreciation (Incorporated Entities)
 
 Bitcoin users do not use a bank or transact exchanges from bank accounts. Instead, their current and reserve accounts correspond to HD Wallets. Therefore, the basic setup has different defaults to that shown below.
 
-Login as a data user. Either enter your correct details if this is the live database, or just accept the defaults for the tutorial. If you do not have a reserve account, leave the defaults. You can edit/delete all these settings later from a client. 
-
+Login as a data user. Select the configuration template that best matches your requirements. For the tutorials, choose the correct template and enter a reserve account. If you do not have a reserve account, leave it blank. You can edit/delete all these settings later from a client. 
 
 ![Basic Setup]({{ site.url }}/images/tc_config_basic_setup.png)
 
-These settings are passed as parameters to the procedure _App.proc_BasicSetup_. It registers your Government and bank accounts, but also adds the following:
+Each template registers your government and bank accounts, then adds the following:
 
 - Units of Measure
 - Time Buckets
 - Tax Codes
 - Financial years and periods 
-- Cash and Category Codes
+- Cash and Category Codes for cash and assets
 - Cash Totals for net and gross profit
 - Corporation tax levels
 - Government and Cash Code assignment to Tax Types
