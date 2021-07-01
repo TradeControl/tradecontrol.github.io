@@ -4,7 +4,7 @@ title: Basic Single User Installation
 permalink: /tutorials/installing-local
 ---
 
-Instructions for installing a local copy suitable for [entry-level use]({{ site.url }}/accounts). Presuming you are already an Office 365 Business subscriber, there are no software costs.
+Instructions for installing a local copy for a single user. Presuming you are already an Office 365 Business subscriber, there are no software costs.
 
 ## Instructions
 

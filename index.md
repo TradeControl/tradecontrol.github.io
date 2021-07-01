@@ -14,9 +14,15 @@ permalink: /
 - Capture and analyse comprehensive [management data]({{ site.url }}/tutorials/powerbi) to take control of production and finances
 - A future-proof option that enables global trading in [crypto-currency]({{ site.url }}/bitcoin)
 
-## Scalable Solution
+## ASP.NET Core Web App
 
-You can begin with a [local single-user installation]({{ site.url }}/tutorials/installing-local) for generating [Company Accounts]({{ site.url }}/accounts), then grow into the multi-user environment. The Trade Control core algorithms are implemented in Azure Sql, scalable to any practical degree. The network interfaces are coded in c#. These are P2P networks, and hence global in their extent. Windows Virtual Desktop installed in Azure supports hundreds of users.
+For businesses that just want to eliminate accountancy fees using their mobile phones, a [secure web interface]({{ site.url }}/tutorials/installing-web) can be accessed from any device or browser. There is a richer presentation when accessing data via a tablet or workstation, but the functionality is identical.
+
+Your existing website may be compatible. However, web service providers offer ASP.NET Core specific services starting at 1 GBP pcm. You can also install into Azure App Services on Linux and Azure SQL, enabling you to interact with your business data from both the web or 365.
+
+## Scalable Solution for Office 365
+
+You can begin with a free [local single-user installation]({{ site.url }}/tutorials/installing-local), then grow into a multi-user environment. The Trade Control core algorithms can be implemented in Azure Sql, scalable to any practical degree. The network interfaces are coded in c#. These are P2P networks, and hence global in their extent. Windows Virtual Desktop installed in Azure supports hundreds of users. 
 
 ## Free Software
 

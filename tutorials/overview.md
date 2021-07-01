@@ -25,9 +25,10 @@ The Experimental tutorials cover supply-chain scheduling and bitcoin as UOA. Of 
 
 ### Installation
 
-- [Basic Single User Installation]({{ site.url}}/tutorials/installing-local)
+- [ASP.NET Core Site Setup]({{ site.url }}/tutorials/installing-web)
+- [Free Single User 365 Installation]({{ site.url}}/tutorials/installing-local)
 - [Installing a Trade Control node]({{ site.url}}/tutorials/installing-sqlnode)
-- [Installing an Office 365 clients]({{ site.url}}/tutorials/installing-office)
+- [Installing Office 365 clients]({{ site.url}}/tutorials/installing-office)
 - [Configuring VSTO documents]({{ site.url}}/tutorials/installing-vsto)
 - [Power BI template sample data]({{ site.url}}/tutorials/installing-powerbi)
 - [Setting up an ethereum network]({{ site.url}}/tutorials/installing-network)
@@ -36,7 +37,7 @@ The Experimental tutorials cover supply-chain scheduling and bitcoin as UOA. Of 
 ### User Guide
 
 - [Classifying cash transactions]({{ site.url}}/tutorials/cash-codes)
-- [Maintaining a Cash Book]({{ site.url}}/tutorials/cash-book)
+- [Accounts and invoicing]({{ site.url}}/tutorials/cash-book)
 - [How to generate a Balance Sheet]({{ site.url}}/tutorials/balance-sheet)
 - [Business System Overview]({{ site.url}}/tutorials/services)
 - [Modelling a Bill of Materials]({{ site.url}}/tutorials/manufacturing)

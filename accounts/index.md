@@ -4,12 +4,13 @@ title: Company Accounts
 permalink: /accounts
 ---
 
-#### Free entry-level cash book and Company Accounts for Office 365 Business.
+#### Free cash-book and accounts for SMEs
 
 ## Documentation
 
-- [Single User Installation]({{ site.url }}/tutorials/installing-local)
 - [Accounts Tutorial]({{ site.url }}/tutorials/cash-book)
+- [ASP.NET Core Web App Setup]({{ site.url }}/tutorials/installing-web)
+- [Single User 365 Installation]({{ site.url }}/tutorials/installing-local)
 
 ## Accountancy
 
@@ -64,7 +65,21 @@ Trade Control replaces this approach with an SvD model from manufacturing. To er
 
 The first is very easy to check with online banking (Bitcoin Wallets are automatically synchronised and do not need checking). Secondly, every business knows who owes them money and how much they owe. Yet this will validate all previous period end accounts from first to last transaction. That is because Trade Control calculates VAT, Corporation Tax, Balances, Debtors and Creditors from the genesis transaction in real time. Modifying any payment or invoice in the past would instantaneously throw out balances, taxes, debtors and creditors from that point onward. This would be reflected in incorrect balances and outstanding payments. Not only is this instantly apparent, making it easy to spot errors, it is also fraud-resistant.
 
-## Trade Statement
+## Trade Statements
+
+### Web
+
+Balance Sheets are available by month. They derive capital algorithmically from the set of all transactions that describe assets and liabilities at each month end.
+
+![Balance Sheet Web]({{ site.url }}/images/app_balance_sheet_web.png)
+
+Profit and loss is set by a formal month-end closedown procedure, but can be retrospectively modified by simply moving transaction dates between periods. 
+
+![Profit and Loss Web]({{ site.url }}/images/app_profit_and_loss_web.png)
+
+None of the categories on the P&L are hard coded, and only capital and tax on the balance sheet. Instead, they are constructed from a combination of user-specified cash accounts (bank and assets) and [cash codes]({{ site.url }}/tutorials/cash-codes). 
+
+### 365
 
 Company Accounts can be obtained from the [Trade Statement]({{ site.url }}/docs/tc_balance_sheet.xlsx) (an Excel [VSTO template]({{ site.url }}/tutorials/installing-vsto)).
 
