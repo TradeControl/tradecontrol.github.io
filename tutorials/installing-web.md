@@ -38,11 +38,13 @@ Many companies have a fixed IP address and an SQL Server multi-user licence. A s
 
 ## Instructions
 
+Estimated completion time 10-15 minutes.
+
 ### Start-up
 
 The app requires authentication to get past the home page. The first user to register their email address and password with the app is assigned an administrator role with login rights. Log on and you will be taken to the Initialisation form where you enter business identity and bank details. This form can be re-run from the System menu at any point, so you can re-boot the business after trying out the tutorials. Because each setting is remembered, it is worth entering in the correct values first time round. All these settings can also be amended from within an initialised business. If there is an error, you do not need to start from scratch.
 
-The installation template you select determines how the business will be configured. If you are working through [the web app tutorial]({{ site.url}}/tutorials/cash-book-web) make sure you select template zero. You can change the year end to the previous month if you want to replicate a year end. However, because the accounts are presented monthly, this is not important.
+The installation template you select determines how the business will be configured. The HMRC templates map cash to tax return codes, and therefore significantly simplify the submission process. You just enter in the corresponding values when filing your accounts. If you are working through [the web app tutorial]({{ site.url}}/tutorials/cash-book-web), change the year end to the previous month to replicate a year end. Otherwise, choose the start month you registered with HMRC.|
 
 ![initialisation]({{ site.url }}/images/web_initialisation.png)
 
@@ -79,7 +81,7 @@ Select Images and upload your company logo using the name *company_logo.png*. Th
 
 A document template is html with [Tags]. These tags are replaced with data when constructing a document. Images associated with the html need to be embedded in the email, so they also have a tag. Finally, it is common practice to attach PDF documents with invoices, such as Policy Statements, although this is optional. 
 
-[Template Tag Listing](https://github.com/tradecontrol/tradecontrol.web/docs/template_tags.md)
+[Template Tag Listing](https://github.com/tradecontrol/tradecontrol.web/blob/master/docs/template_tags.md)
 
 From **Invoicing/Email Templates** assign a template to an Invoice Type. Select the template and assign the logo. Click the logo and change the default tag [TAG0] to [LOGO], which is used by the template. Finally, add any PDF attachments you want to send with your invoices and credit notes.
 

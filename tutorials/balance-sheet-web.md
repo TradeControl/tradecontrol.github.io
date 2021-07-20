@@ -45,7 +45,7 @@ Cash is classified [by three transaction types](cash-codes#types): TRADE, EXTERN
 
 Assets are modelled in Cash Accounts, like your bank statement. The Cash Account Type distinguishes between CASH, DUMMY and ASSETS.  CASH types are employed in the financial side of trading. DUMMY accounts merely allow you to adjust the invoice register without impacting the bank statements. The ASSETS type is used for calculating capital. Payments for these cash accounts will not generate associated invoices. All ASSET type accounts require a Cash Code of type MONEY. Each asset account requires a liquidity level because a balance sheet is presented least liquid first (Property=60). Zero liquidity represents the most liquid asset (Cash=0). It does not matter what these numbers are, only their order. You can close all these accounts, delete them or add others. 
 
-For the tutorial, create a new cash code called Stock Movement, using the Asset Category and no vat. Then filter the Maintenance page by Asset, un-close any defaults and add the additional accounts:
+Filter the Maintenance page by Asset and un-close the following template accounts:
 
 ![asset accounts]({{ site.url}}/images/web_asset_accounts.png)
 
@@ -76,7 +76,10 @@ To record stock, there will be an opening stock figure, then subsequent entries 
 
 ![Stock Movement]({{ site.url }}/images/web_stock_movement.png)
 
-To post, press the yellow button. The Statement button takes you to the Cash Statement. Since the Cash Statement by month is not very useful when reviewing assets, the projected balance will be presented for all transactions. The entry balance is the stock value at that time, which goes on the balance sheet; whilst the value of the Paid In or Out is carried over onto the P&L. If there is more than one entry in a period, the last balance is always used for the accounts.
+To post, press the yellow button. The Statement button takes you to the Cash Statement. Since the Cash Statement by month is not very useful when reviewing assets, the projected balance will be presented for all transactions. The entry balance is the stock value at that time, which goes on the balance sheet; whilst the value of the Paid In or Out is [carried over onto the P&L](#review-4). If there is more than one entry in a period, the last balance is always used for the accounts.
+
+![stock projection]({{ site.url }}/images/web_stock_projection.png)
+
 
 ### Fixed Assets
 
@@ -106,7 +109,7 @@ Firstly, we make a trading entry on the first month of our financial year that p
 
 ![bank loan]({{ site.url }}/images/web_bank_loan.png)
 
-Secondly, we make the corresponding double-entry with the opposite polarity, followed by the pay offs without interest, which is a cost. In this way, the company loan means the net increase in asset value is zero. On the trading side, these debt repayments would be accrued on the Company Statement, [as explained below](#accruals-and-prepayments) and therefore the loan is not free money.
+Secondly, we make the corresponding double-entry with the opposite polarity, followed by the pay offs without interest, which is a cost. In this way, the company loan means the net increase in asset value is zero.
 
 Finally, to register the Director Loan liability, we post an asset transaction to the bank loan for GBP 25K, obtaining the statement below. 
 
@@ -150,13 +153,39 @@ The balance sheet will now show a new cash balance. However, we should periodica
 
 ## Review 5
 
-The new transactions alter the amount of cash we have and affect the company tax and VAT owing. This changes the capital value of the business. Open the [Period End]({{ site.url }}/tutorials/cash-book-web#period-end) and re-build the retrospectively altered financial year.
+The new transactions alter the amount of cash we have and affect the company tax and VAT owing. This changes the capital value of the business. Open the [Period End]({{ site.url }}/tutorials/cash-book-web#period-end) and re-build the retrospectively altered financial year. 
+
+There are three components to your annual accounts - the balance sheet, the profit and loss account and the company tax return. For a detailed explanation, consult the tutorial on [filing your accounts]({{ site.url }}/tutorials/accounts-filing).
+
+### Balance Sheet
+
+Your updated balance sheet should match the following:
 
 ![balance sheet]({{ site.url }}/images/web_balance_sheet5.png) 
 
-The Profit and Loss account has also been updated. Debtors and creditors should remain unchanged. If there is a mismatch, you can view the organisation statement and modify the incorrect invoice. The details button breaks down the P&L into individual categories and cash codes. 
+### Profit and Loss Account
+
+The Debtors and Creditors Listing should remain unchanged. If there is a mismatch due to rounding, you can view the organisation statement and modify the incorrect invoice. There are three sections to the P&L.
+
+The first section presents your year-end accounts. Because we have used the HMRC template, the codes correspond to the required boxes on the government portal. The codes relating to accounts begin with the letters **AC**. Any codes prefixed with **TC** are internal to Trade Control and are not entered into the portal.
 
 ![profit and loss account]({{ site.url }}/images/web_profit_and_loss3.png) 
+
+### Company Tax Totals
+
+Tax totals and category details are required for completing the corporation tax computation, as well as submitting the assorted information to government that they want to collect. These codes begin with **CP**. 
+
+![company tax totals]({{ site.url }}/images/web_tax_totals.png) 
+
+### Cash Code and Category Totals
+
+Clicking on Details loads a long list of the categories and cash code details that make up the accounts. 
+
+![company tax details]({{ site.url }}/images/web_tax_details.png) 
+
+If you are running the website as an Azure App Service, you can also dynamically generate the Trade Statement from Excel. You can then view the whole year by period, as well as tax values and bank balances.
+
+[Download the Trade Statement for this tutorial]({{ site.url }}/docs/tc_accounts_hmrc.xlsx)
 
 ## Tax
 
@@ -184,8 +213,11 @@ Like VAT, adjust company tax by using the yellow button. This is necessary for g
 
 ![company tax totals]({{ site.url }}/images/web_company_tax_totals.png)
 
-If the company has made losses in previous financial years, the Company Tax statement automatically presents that in the projected balance. Dividing the negative tax due by the period end tax rate gives the total losses that can be carried forward. 
+If the company has made losses in previous financial years, the Company Tax statement automatically presents that in the projected balance. However, the statement presents a negative tax due rather than the total losses required by the government portal. The Losses C/F button presents a page that communicates how much losses can offset against your year-end obligation.
 
+## Filing
+
+Follow the instructions for [filing company accounts]({{ site.url }}/tutorials/accounts-filing)
 
 ## Licence
 

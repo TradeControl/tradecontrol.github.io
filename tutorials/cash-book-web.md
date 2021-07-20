@@ -19,6 +19,7 @@ The web app detects the device upon which it is running. In this tutorial we wil
 - [Processing credit](#crediting-accounts)
 - [Period and Year End](#period-end)
 - [Finalised Accounts](#finalised-accounts)
+- [Filing your accounts with HMRC]({{ site.url }}/tutorials/accounts-filing)
 - [Advanced Balance Sheet]({{ site.url}}/tutorials/balance-sheet-web)
 - [Cash Boxes]({{ site.url}}/tutorials/balance-sheet-web#cash-box)
 
@@ -39,11 +40,11 @@ The web app detects the device upon which it is running. In this tutorial we wil
 
 ### Setup
 
-When you [initialise the business]({{ site.url}}/tutorials/installing-web#start-up), choose Template 0. If your business is already set up, log on as [an administrator]({{ site.url}}/tutorials/installing-web#registrations) and from the menu open **System/Initialisation**. This tutorial was constructed in June and the start month was set to May (so y/e April 31st).
+When you [initialise the business]({{ site.url}}/tutorials/installing-web#start-up), choose the latest HRMC Company Accounts template. If your business is already set up, log on as [an administrator]({{ site.url}}/tutorials/installing-web#registrations) and from the menu open **System/Initialisation**. This tutorial was constructed in June and the start month was set to May (so y/e April 31st).
 
 ### Theory
 
-Trade Control does use the traditional system of double-entry book-keeping to derive the accounts. It applies Supply and Demand to money using a Cash/Quantity polarity principle. This method has distinct advantages generally. In relation to accounting:
+Trade Control does not use the traditional system of double-entry book-keeping to derive company accounts. Instead, it applies Supply and Demand to money using a Cash/Quantity polarity principle. This method has distinct advantages generally. In relation to accounting:
 
 - anyone can check the accounts for correctness
 - the algorithms can calculate tax and capital on a transaction grained basis from a genesis transaction
@@ -94,7 +95,7 @@ The Share Capital cash code is an asset class which cannot be paid into your ban
 
 Because this is a capital transaction, we must register its effect on the asset value of the business. Open **Cash Accounts/Asset Entry**:
 
-- Create a new entry on Called Up Share Capital
+- Select, or create a new entry, Called Up Share Capital
 - Pay out 1 GBP on the business start-up date
 - From the listing click on the yellow button next to the entry and post
  
@@ -129,15 +130,23 @@ Open the **Invoicing/Raise** list and use the New button to create suppliers and
 
 > Use your own email addresses so you can send yourself invoices and credit notes 
 
-Raise a new entry and create a supplier, with a cash code for carriage. You can also create a corresponding cash code for passing on the charge to the customer by using the sales category.
-
-![new cash code]({{ site.url }}/images/web_new_cash_code.png)
-
-The unposted invoices should specify the following values (default view):
+Raise entries for supply and sales to new customers and suppliers. The unposted invoices should specify the following values (workstation view):
 
 ![unposted invoices]({{ site.url }}/images/web_invoices_unposted.png)
 
 If you were using this capability as a kind of forward order book, you can post individually or by account. Here we just press the Post All button. [Manger and Administrator roles]({{ site.url}}/tutorials/installing-web#registrations) can post any invoice, otherwise a user can only post those they have raised themselves.
+
+Administators can also create new cash and category codes during the invoicing process:
+
+![new cash code]({{ site.url }}/images/web_new_cash_code.png)
+
+If you are using an HMRC template, cash codes will need to be integrated into the P&L totals. The categories that can be safely assigned to are:
+
+| Code | Description
+| - | - |
+| TC-DIRECT | Direct Costs
+| CP37 | Sundry Costs
+| TC-SALES | Sales |
 
 ### Emailing Invoices
 
@@ -187,7 +196,7 @@ Paying outstanding invoices is the same as making a miscellaneous payment only y
 
 ![debtors and creditors]({{ site.url }}/images/web_debtors_and_creditors1.png)
 
-When payment is incomplete, invoices are set to partially paid. For the tutorial, we pay off all the suppliers, but the customer partially pays their invoice on account. We therefore accept the default paid value for the suppliers and reduce the customer payment to half. Pressing the blue outline button from **Invoicing/Unpaid** will load the organisation into the Payment Entry form with the outstanding balance.
+When payment is incomplete, invoices are set to partially paid. For the tutorial, we pay off all the suppliers, but the customer partially pays their invoice on account. We therefore accept the default paid value for the suppliers and reduce the customer payment to half. Pressing the blue outline button from **Invoicing/Unpaid** will load the organisation into the Payment Entry form with the outstanding balance. Make sure you change the payment date to the last month of the previous financial year (April in this instance). 
 
 Returning to the Unpaid Invoices page shows the customer's partially paid invoice and the [Organisation Statement](#organisation-enquiry) for the customer shows a negative balance for the outstanding amount. 
 
@@ -217,13 +226,15 @@ The period end dates below were created during the setup procedure. Looking forw
 
 ## Finalised Accounts
 
-Once all these steps have been completed, you will have generated a legally compliant P&L with an associated Balance Sheet. Here is the Profit and Loss Account for the year:
+Once all these steps have been completed, you will have generated a legally compliant P&L with an associated Balance Sheet. Here is the Profit and Loss Account for the year, where the codes identify the corresponding box in the government portal:
 
 ![profit and loss account]({{ site.url }}/images/web_profit_and_loss1.png) 
 
-And here is the corresponding balance sheet:
+And here is the associated balance sheet:
 
 ![balance sheet]({{ site.url }}/images/web_balance_sheet3.png) 
+
+Follow the tutorial on [filing your accounts with HMRC]({{ site.url }}/tutorials/accounts-filing) for a step-by-step guide on submitting your annual tax return.
 
 ### Error Checking
 

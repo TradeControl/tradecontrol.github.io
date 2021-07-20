@@ -18,6 +18,7 @@ permalink: /tutorials/cash-book-365
 - [Processing credit](#crediting-accounts)
 - [Period and Year End](#period-end)
 - [Finalised Accounts](#finalised-accounts)
+- [Filing your accounts with HMRC]({{ site.url }}/tutorials/accounts-filing)
 
 ### Information
 
@@ -216,6 +217,8 @@ Once all these steps have been completed, you will have generated a legally comp
 From the Home menu, open the Balance Sheet Audit, which will present a list of debtors and creditors by month:
 
 ![audit]({{ site.url }}/images/accounts_balance_sheet_audit.png)
+
+Follow the tutorial on [filing your accounts with HMRC]({{ site.url }}/tutorials/accounts-filing) for a step-by-step guide on submitting your annual tax return.
 
 # INFORMATION
 

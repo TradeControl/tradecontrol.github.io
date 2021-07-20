@@ -25,11 +25,11 @@ To estimate the amount of work you must generate to pay for your accountant and 
 
 > (AccountsCost + SoftwareSubscription) / ((NetProfit + AccountsCost + SoftwareSubscription) / Turnover) * YearsTrading
 
-If you run this calculation you will see just how much turnover you need to finance your accounts.
+If you run this calculation, you will see just how much turnover you need to finance your accounts.
 
 ### Tax Law
 
-In recent years, HMRC have made great strides in their Make Tax Digital (MTD) initiative. Each business is provided with a key to their government gateway, and from the portal you can register for various services. The three relevant services for your accounts are VAT, PAYE and the Corporation Tax Return. After registering, the Inland Revenue post the activation keys and you can interact with these services in a very intuitive way. Therefore, you do not need to read up on the latest tax law, because it is reflected live in the portal interfaces. Unlike times of yore, the best tax advisor is now the taxman. 
+In recent years, HMRC have made great strides in their Make Tax Digital (MTD) initiative and Government Gateway service. Each business is provided with a key to their government gateway, and from the portal you can register for various services. The three relevant services for your accounts are VAT, PAYE and the Corporation Tax Return. After registering, the Inland Revenue post the activation keys and you can interact with these services in a very intuitive way. Therefore, you do not need to read up on the latest tax law, because it is reflected live in the portal interfaces. Unlike times of yore, the best tax advisor is now the taxman. 
 
 Here is a sample home screen:
 
@@ -37,11 +37,11 @@ Here is a sample home screen:
 
 #### PAYE
 
-In the past, to process PAYE it was necessary either to buy payroll software or pay an accountant. Today, the government provide simple PAYE Tools that run locally, sending wage submissions to the HMRC payroll service. The service calculates your employer and employee NI and Income Tax obligations. It shows outstanding amounts in the PAYE section of your business portal and updates your employees personal NI records.
+In the past, to process PAYE it was necessary either to buy payroll software or pay an accountant. Today, the government provide simple PAYE Tools that run locally, sending wage submissions to the HMRC payroll service. The service calculates your employer and employee NI and Income Tax obligations. It shows outstanding amounts in the PAYE section of your business portal and updates your employee's personal NI records.
 
 #### VAT
 
-Vat is automatically calculated from VAT Codes and presented in the [Invoice Register]({{ site.url }}/tutorials/cash-book#invoice-register). Prior to 2019, a business could enter this information directly into the VAT section of the portal. For some reason, the legislation was changed such that entry could only be made by MTD approved third party private software. Trade Control uses a low-cost [CSV import website]({{ site.url }}/tutorials/digital-tax) to address the issue. At some point this will be replaced with its own access if the law is not repealed.
+Vat is automatically calculated from VAT Codes and presented in the [Invoice Statement]({{ site.url }}/tutorials/balance-sheet-web#vat). Prior to 2019, a business could enter this information directly into the VAT section of the portal. For some reason, the legislation was changed such that entry could only be made by MTD approved third party private software. Trade Control uses a low-cost [CSV import website]({{ site.url }}/tutorials/digital-tax) to address the issue. At some point this will be replaced with its own access if the law is not repealed.
 
 #### Company Tax Return
 
@@ -77,11 +77,11 @@ Profit and loss is set by a formal month-end closedown procedure, but can be ret
 
 ![Profit and Loss Web]({{ site.url }}/images/app_profit_and_loss_web.png)
 
-None of the categories on the P&L are hard coded, and only capital and tax on the balance sheet. Instead, they are constructed from a combination of user-specified cash accounts (bank and assets) and [cash codes]({{ site.url }}/tutorials/cash-codes). 
+Except for capital and tax, none of the categories in the accounts are hard coded. Instead, they are constructed from a combination of user-specified cash accounts (bank and assets) and [cash codes]({{ site.url }}/tutorials/cash-codes). Here we are using an HMRC template, so the codes identify required values for [filing your company annual return]({{ site.url }}/tutorials/accounts-filing).
 
 ### 365
 
-Company Accounts can be obtained from the [Trade Statement]({{ site.url }}/docs/tc_balance_sheet.xlsx) (an Excel [VSTO template]({{ site.url }}/tutorials/installing-vsto)).
+Company Accounts can be obtained from the [Trade Statement]({{ site.url }}/docs/tc_accounts_hmrc.xlsx) (an Excel [VSTO template]({{ site.url }}/tutorials/installing-vsto)).
 
 The first section shows trading performance, irrespective of assets. This information is obtained from [payment entries]({{ site.url }}/tutorials/cash-book#payment-entry), or the invoicing of [workflows]({{ site.url }}/tutorials/manufacturing#workflow) (tasks/jobs/projects) if you are using [the MIS]({{ site.url }}/mis):
 
