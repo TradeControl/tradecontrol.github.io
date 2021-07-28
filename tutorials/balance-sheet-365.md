@@ -313,6 +313,10 @@ When completed, the full Trade Statement should look like the Advanced worksheet
 
 ![Balance Sheet]({{ site.url }}/images/balance_sheet_full.png)
 
+## Filing
+
+Follow the instructions for [filing company accounts]({{ site.url }}/tutorials/accounts-filing#instructions)
+
 ## Licence
 
 Trade Control Documentation by Trade Control Ltd is licenced under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/) 

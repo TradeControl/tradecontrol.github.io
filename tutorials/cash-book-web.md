@@ -10,7 +10,7 @@ The web app detects the device upon which it is running. In this tutorial we wil
 
 ### Instructions
 
-- [System Initialisation](#initialisation)
+- [System Initialisation](#setup)
 - [Going Concerns](#going-concerns)
 - [Injecting Capital](#capital-injection)
 - [Account Transfers](#account-transfers)

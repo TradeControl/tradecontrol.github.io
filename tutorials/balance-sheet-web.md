@@ -13,7 +13,7 @@ permalink: /tutorials/balance-sheet-web
 - [Current Assets](#current-assets)
 - [Fixed Assets](#fixed-assets)
 - [Long-term liabilities](#long-term-liabilities)
-- [Accounts Review](#accounts-review)
+- [Accounts Review](#review-5)
 - [Petty Cash](#cash-box)
 - [VAT](#vat)
 - [Company Tax](#company-tax)
@@ -217,7 +217,7 @@ If the company has made losses in previous financial years, the Company Tax stat
 
 ## Filing
 
-Follow the instructions for [filing company accounts]({{ site.url }}/tutorials/accounts-filing)
+Follow the instructions for [filing company accounts]({{ site.url }}/tutorials/accounts-filing#instructions)
 
 ## Licence
 

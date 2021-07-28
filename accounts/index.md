@@ -8,6 +8,7 @@ permalink: /accounts
 
 ## Documentation
 
+- [Why file your Company Accounts]({{ site.url }}/tutorials/accounts-filing#why-file-your-own-accounts)
 - [Accounts Tutorial]({{ site.url }}/tutorials/cash-book)
 - [ASP.NET Core Web App Setup]({{ site.url }}/tutorials/installing-web)
 - [Single User 365 Installation]({{ site.url }}/tutorials/installing-local)
@@ -29,11 +30,7 @@ If you run this calculation, you will see just how much turnover you need to fin
 
 ### Tax Law
 
-In recent years, HMRC have made great strides in their Make Tax Digital (MTD) initiative and Government Gateway service. Each business is provided with a key to their government gateway, and from the portal you can register for various services. The three relevant services for your accounts are VAT, PAYE and the Corporation Tax Return. After registering, the Inland Revenue post the activation keys and you can interact with these services in a very intuitive way. Therefore, you do not need to read up on the latest tax law, because it is reflected live in the portal interfaces. Unlike times of yore, the best tax advisor is now the taxman. 
-
-Here is a sample home screen:
-
-![Government Gateway]( {{ site.url}}/images/accounts_hmrc.png)
+In recent years, HMRC have made great strides in their Make Tax Digital (MTD) initiative and [Government Gateway]({{ site.url }}/tutorials/accounts-filing#government-gateway) service. Each business is provided with a key to their government gateway, and from the portal you can register for various services. The three relevant services for your accounts are VAT, PAYE and the Corporation Tax Return. After registering, the Inland Revenue post the activation keys and you can interact with these services in a very intuitive way. Therefore, you do not need to read up on the latest tax law, because it is reflected live in the portal interfaces. Unlike times of yore, the best tax advisor is now the taxman. 
 
 #### PAYE
 
@@ -41,7 +38,7 @@ In the past, to process PAYE it was necessary either to buy payroll software or 
 
 #### VAT
 
-Vat is automatically calculated from VAT Codes and presented in the [Invoice Statement]({{ site.url }}/tutorials/balance-sheet-web#vat). Prior to 2019, a business could enter this information directly into the VAT section of the portal. For some reason, the legislation was changed such that entry could only be made by MTD approved third party private software. Trade Control uses a low-cost [CSV import website]({{ site.url }}/tutorials/digital-tax) to address the issue. At some point this will be replaced with its own access if the law is not repealed.
+Vat is automatically calculated from VAT Codes and presented in the [Invoice Statement]({{ site.url }}/tutorials/balance-sheet-web#vat). Prior to 2019, a business could enter this information directly into the VAT section of the portal. For some reason, [the legislation was changed]({{ site.url }}/tutorials/accounts-filing#make-tax-digital) such that subscribers with turnover above the VAT Threshold must enter their VAT return by MTD approved third party private software. Trade Control currently uses a low-cost [CSV import website]({{ site.url }}/tutorials/digital-tax) to work around the issue.
 
 #### Company Tax Return
 

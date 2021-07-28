@@ -39,6 +39,7 @@ The Experimental tutorials cover supply-chain scheduling and bitcoin as UOA. Of 
 - [Classifying cash transactions]({{ site.url}}/tutorials/cash-codes)
 - [Accounts and invoicing]({{ site.url}}/tutorials/cash-book)
 - [How to generate a Balance Sheet]({{ site.url}}/tutorials/balance-sheet)
+- [Filing your Company Accounts]({{ site.url}}/tutorials/accounts-filing)
 - [Business System Overview]({{ site.url}}/tutorials/services)
 - [Modelling a Bill of Materials]({{ site.url}}/tutorials/manufacturing)
 
