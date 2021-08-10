@@ -16,7 +16,7 @@ ASP.NET Core applications can be hosted in a number of ways and environments, fr
 
 Subscribe to an ASP.NET Core package from a Web Service Provider. This will give you a domain, an SSL certificate and the exact pre-configured environment. 
 
-If you subscribe to the [Windows Hosting package from Ionis](https://www.ionos.co.uk/hosting/windows-hosting), [Contact us]({{ site.url }}/contact) because we are currently installing the app for free. Once installed, you just enter the address into the browser on your phone and [follow the instructions](#instructions).
+Please [contact us]({{ site.url }}/contact) for installation advice. Once installed, you just enter the address into the browser on your phone and [follow the instructions](#instructions).
 
 ### Cloud
 
