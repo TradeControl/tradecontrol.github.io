@@ -14,9 +14,7 @@ ASP.NET Core applications can be hosted in a number of ways and environments, fr
 
 ### Web Hosting
 
-Subscribe to an ASP.NET Core package from a Web Service Provider. This will give you a domain, an SSL certificate and the exact pre-configured environment. 
-
-Please [contact us]({{ site.url }}/contact) for installation advice. Once installed, you just enter the address into the browser on your phone and [follow the instructions](#instructions).
+This is the easiest option. For the latest installation advice, refer to the [Product Delivery](https://www.tradecontrol.online/product-delivery) page on the [application website](https://www.tradecontrol.online). Once installed, you just enter the address into the browser on your phone or tablet and [follow the instructions](#instructions).
 
 ### Cloud
 

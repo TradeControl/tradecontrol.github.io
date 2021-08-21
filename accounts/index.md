@@ -8,7 +8,7 @@ permalink: /accounts
 
 ## Documentation
 
-- [Why file your Company Accounts]({{ site.url }}/tutorials/accounts-filing#why-file-your-own-accounts)
+- [How to file your Company Accounts]({{ site.url }}/tutorials/accounts-filing)
 - [Accounts Tutorial]({{ site.url }}/tutorials/cash-book)
 - [ASP.NET Core Web App Setup]({{ site.url }}/tutorials/installing-web)
 - [Single User 365 Installation]({{ site.url }}/tutorials/installing-local)

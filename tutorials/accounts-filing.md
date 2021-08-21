@@ -4,35 +4,15 @@ title: Filing Company Accounts
 permalink: /tutorials/accounts-filing
 ---
 
-Describing why and how to file your company accounts.
+Describing how to file your company accounts without an accountant.
 
 ## Index
 
-- [Why file your own accounts?](#why-file-your-own-accounts)
 - [Make Tax Digital service](#make-tax-digital)
-- [Instructions](#instructions)
 - [Government Gateway](#government-gateway)
 - [Creating a submission](#company-tax-return)
 - [Company Accounts](#company-accounts)
 - [Corporation Tax Computation](#corporation-tax)
-
-## Background
-
-### Why file your own accounts?
-
-You can save the money you are currently paying to your accountant by using a FREE easy-to-understand app which also allows you to gain more control and understanding of your business.
-
-### Why is the system free?
-
-The MIS application has been around since 2008, working in a number of businesses, but never commercialised. During the first lockdown of the pandemic the economy froze and the author was asked if the system could be adapted to eliminate the overhead of accountacy fees. Coming out of the global crisis, we offer our app to small businesses to use freely for life. Should you need any other services, consult our [price list](https://www.tradecontrol.online/pricing) or [contact us](https://www.tradecontrol.online/contact) for a quote.
-
-## Make Tax Digital
-
-If you are currently renting an accounting package from a bank or accountancy software provider, it is likely that they will be posting the figures to HRMC via the government's Make Tax Digital (MTD) service. This is a web service that offers an automated interface between a private computer program and the government tax system. Your tax requirements are therefore concealed behind the provider's private application and responsibility to collect the correct information is delegated to them. To take responsibility for your own finances requires bypassing this MTD interface and obtaining a direct connection with the tax system through the Government Gateway. It will inform you whenever tax law changes and provide itemised, context sensitive help for every obligation and deduction.
-
-When your turnover is above a certain threshold (currently GBP 80K), you are now legally obliged to submit your VAT returns through the MTD web service, therefore forcing you to use a private package. In 2022, the existing VAT return system in the gateway will be disabled and all vat registered companies will be forced down the same path. The reason for this constraint is unknown, although it will further benefit the financial services sector by marshalling every productive business to operate through their systems.  To counter, we use a [simple and cost-effective intermediary]({{ site.url }}/tutorials/digital-tax) which works well enough. With sufficient commercial support, we could code a free interface to the VAT MTD service for you.
-
-# Instructions
 
 ## Requirements
 
@@ -42,6 +22,12 @@ The following walk-through presents the accounts generated from these two tutori
 - [Balance Sheet]({{ site.url }}/tutorials/balance-sheet-web)
 
 You can replicate the process using the [P&L and Balance Sheet]({{ site.url }}/tutorials/balance-sheet-web#review-5) on your phone, or by [generating a Trade Statement]({{ site.url }}/docs/tc_accounts_hmrc.xlsx) using Office 365.
+
+## Make Tax Digital
+
+If you are currently renting an accounting package from a bank or accountancy software provider, it is likely that they will be posting the figures to HRMC via the government's Make Tax Digital (MTD) service. This is a web service that offers an automated interface between a private computer program and the government tax system. Your tax requirements are therefore concealed behind the provider's private application and responsibility to collect the correct information is delegated to them. To take responsibility for your own finances requires bypassing this MTD interface and obtaining a direct connection with the tax system through the Government Gateway. It will inform you whenever tax law changes and provide itemised, context sensitive help for every obligation and deduction.
+
+When your turnover is above a certain threshold (currently GBP 80K), you are now legally obliged to submit your VAT returns through the MTD web service, therefore forcing you to use a private package. In 2022, the existing VAT return system in the gateway will be disabled and all vat registered companies will be forced down the same path. The reason for this constraint is unknown, although it will further benefit the financial services sector by marshalling every productive business to operate through their systems.  To counter, we use a [simple and cost-effective intermediary]({{ site.url }}/tutorials/digital-tax) which works well enough. With sufficient commercial support, we could code a free interface to the VAT MTD service for you.
 
 ## Government Gateway
 
