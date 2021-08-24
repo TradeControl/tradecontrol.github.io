@@ -66,6 +66,8 @@ The algorithm knows the first entries constitute a liability because the asset v
 
 ## Asset Entry
 
+Open the Cash Accounts Maintenance page, filter by the Asset type and un-close Stock, Vehicles and Plant and Machinery. These are closed by default and therefore inaccessible.
+
 Normally, asset entries take place over several years. For the purposes of tutorial, however, we must add assets retrospectively and rebuild the period-end closedowns. The **Financial Periods** page on the **Accounts** menu communicates the current period and the financial year. The [basic tutorial]({{ site.url}}/tutorials/cash-book-web) ended its financial year m/e April, but yours will likely be different.
 
 The Cash Account Asset Entry page is where you register assets, depreciate them or specify movement.
@@ -110,8 +112,6 @@ Firstly, we make a trading entry on the first month of our financial year that p
 ![bank loan]({{ site.url }}/images/web_bank_loan.png)
 
 Secondly, we make the corresponding double-entry with the opposite polarity, followed by the pay offs without interest, which is a cost. In this way, the company loan means the net increase in asset value is zero.
-
-Finally, to register the Director Loan liability, we post an asset transaction to the bank loan for GBP 25K, obtaining the statement below. 
 
 ![Debt Repayment]({{ site.url }}/images/web_debt_repayment.png)
 

@@ -40,7 +40,7 @@ The web app detects the device upon which it is running. In this tutorial we wil
 
 ### Setup
 
-When you [initialise the business]({{ site.url}}/tutorials/installing-web#start-up), choose the latest HRMC Company Accounts template. If your business is already set up, log on as [an administrator]({{ site.url}}/tutorials/installing-web#registrations) and from the menu open **System/Initialisation**. This tutorial was constructed in June and the start month was set to May (so y/e April 31st).
+When you [initialise the business]({{ site.url}}/tutorials/installing-web#start-up), choose the latest HRMC Company Accounts template. If your business is already set up, log on as [an administrator]({{ site.url}}/tutorials/installing-web#registrations) and from the menu open **System/Initialisation**. The tutorial will be made easier if you set the start month to the current month; that way the financial year-end will be the month previous. This tutorial was constructed in June and the start month was set to May (so y/e April 31st). Once initialised, check the [Period End](#period-end) page to confirm the exact dates.
 
 ### Theory
 
