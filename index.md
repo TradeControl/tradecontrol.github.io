@@ -18,7 +18,7 @@ permalink: /
 
 For businesses that just want to eliminate accountancy fees using their mobile phones, a [secure web interface]({{ site.url }}/tutorials/installing-web) can be accessed from any device or browser. There is a richer presentation when accessing data via a tablet or workstation, but the functionality is identical.
 
-Your existing website may be compatible. However, web service providers offer ASP.NET Core specific services starting at 1 GBP pcm. You can also install into Azure App Services on Linux and Azure SQL, enabling you to interact with your business data from both the web or 365.
+Your existing website may be compatible. However, we recommend using [a tested provider](https://www.tradecontrol.online/product-delivery) listed on our website, where you can interact with your business data from both the web or 365. You can also install into Azure App Services on Linux or Windows with Azure SQL and obtain access to both environments.
 
 ## Scalable Solution for Office 365
 
