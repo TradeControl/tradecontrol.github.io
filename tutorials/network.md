@@ -4,6 +4,8 @@ title: Connecting Trade Control nodes
 permalink: /tutorials/network
 ---
 
+[overview]({{ site.url }}/tutorials/network_overview)
+
 The following tutorial explains how to organise production, commerce and financial exchange across supply-chains. 
 
 It assumes you are familiar with the system or have completed the [Modelling Bills of Materials]({{ site.Url }}/tutorials/manufacturing) tutorial. If you are using [bitcoin]({{ site.Url }}/tutorials/bitcoin), the procedure is the same as that for fiat currencies, except for the [payment](#payment).

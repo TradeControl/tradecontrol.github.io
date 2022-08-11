@@ -33,11 +33,4 @@ Whilst it is possible to contruct an xml file in a text editor, it is not very c
 
 ![generator]({{ site.url }}/images/quotation_gen.png)
 
-## Assistance
-
-To save time, we can create the initial XML file for your products and prices, as well as advise on formatting.
-
-The cost is 1 GBP per entry less than 150 with unlimited distribution. For more entries, we can write customer-specific import code. 
-
-Please [contact us]({{ site.url }}/contact) for a quotation.
 

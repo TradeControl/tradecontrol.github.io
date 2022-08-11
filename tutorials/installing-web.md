@@ -38,8 +38,6 @@ Many companies have a fixed IP address and an SQL Server multi-user licence. A s
 
 ## Instructions
 
-Estimated completion time 10-15 minutes.
-
 ### Start-up
 
 The app requires authentication to get past the home page. The first user to register their email address and password with the app is assigned an administrator role with login rights. Log on and you will be taken to the Initialisation form where you enter business identity and bank details. This form can be re-run from the System menu at any point, so you can re-boot the business after trying out the tutorials. Because each setting is remembered, it is worth entering in the correct values first time round. All these settings can also be amended from within an initialised business. If there is an error, you do not need to start from scratch.

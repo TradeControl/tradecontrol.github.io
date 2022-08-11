@@ -14,7 +14,7 @@ permalink: /network
  
 ## Supply Chains
 
-Whilst Trade Control works fine in stand-alone mode, the capability for each node to be connected in a network is intrinsic to the schema design. The network enables businesses to create private consortiums and public markets where borderless trading patterns are more-or-less instantly reflected over their supply-chains.
+Whilst Trade Control works fine in stand-alone mode, the capability for each node to be connected in a network is intrinsic to the [schema design](https://github.com/tradecontrol/sqlnode). The network enables businesses to create private consortiums and public markets where borderless trading patterns are more-or-less instantly reflected over their supply-chains.
 
 A network consists of connected nodes. To qualify as a node, outputs must be accepted recursively as inputs. In Trade Control, each business instance is called a node because it is designed to be connected to other instances in a network. For this to work, inputs must perfectly match outputs, so there can be no native customer or supplier accounts; no sales, purchase or works orders. Instead demand and supply present a mirror interface and order types are modelled using a principle of [cash polarity]({{ site.url }}/tutorials/cash-codes#cash-polarity).  Once nodes are connected, the network operates as though it is a single distributed world-wide trading platform.
 

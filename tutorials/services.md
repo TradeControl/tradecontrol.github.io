@@ -394,8 +394,7 @@ tasks to drive automated sales and purchase task creation. The system's unique p
 cash codes associated with each task enables information from a sales order on one side of the relationship to populate a 
 purchase task (and therefore all of the subsequent processes) on the other side. This seamless linking of systems and data sharing
 capability gives both sides of the exchange a robust trading platform, streamlining processes and eliminating 
-duplication which also prevents potential errors when orders are created manually.  If this powerful feature is of interest
-please [let us know]({{ site.url }}/contact) and we can provide more information and support.  
+duplication which also prevents potential errors when orders are created manually.  
 
 ### Payment Entry
 
@@ -779,8 +778,6 @@ The Project tab shows the structure of the Activities and enables users to load 
 #### Mirrors
 
 The Mirrors tab allows users to connect specified aspects of the system to another Third-Party user through a connected network.
-This is an advanced capability which is not covered within this tutorial, but if this feature is of interest please
-contact us for further details.
 
 ### Assets
 
@@ -877,8 +874,6 @@ A repository for bank and payment details
 #### Allocations / Cash Codes
 
 These are advanced features only required when creating inter-company trading links so are not covered in this tutorial. 
-If you are interested in linking TC across multiple operations or third-party businesses please contact us for further information.
-
 
 ## Information
   
