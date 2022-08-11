@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Trading Network
-permalink: /network
+permalink: /tutorials/network_overview
 ---
 
 #### Connecting [Trade Control](https://github.com/tradecontrol/sqlnode) nodes with [Ethereum](https://eth.wiki).

@@ -4,7 +4,7 @@ title: Using bitcoin as a UOA
 permalink: /tutorials/bitcoin
 ---
 
-[overview]({{ site.url }}/tutorials/bitcoin_overview.md)
+[overview]({{ site.url }}/tutorials/bitcoin_overview)
 
 In the tutorial, we work through a hypothetical scenario whereby goods are passed through a supply chain that inhabits the three main industrial landscapes of primary, secondary and retail. In practice, your customers and suppliers do not need to be connected to [the network]({{ site.url }}/network) for you to use the wallet instead of a bank account. Even if they pay into your fiat account, you can easily transfer these funds into the wallet from an exchange.
 

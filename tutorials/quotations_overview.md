@@ -1,7 +1,7 @@
 ---
 layout: page
 title: XML Price Lists for Customer Quotations 
-permalink: /quotation
+permalink: /tutorials/quotations_overview
 ---
 
 #### Product and service prices for customer generated quotations
