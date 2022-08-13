@@ -25,9 +25,7 @@ You can replicate the process using the [P&L and Balance Sheet]({{ site.url }}/t
 
 ## Make Tax Digital
 
-If you are currently renting an accounting package from a bank or accountancy software provider, it is likely that they will be posting the figures to HRMC via the government's Make Tax Digital (MTD) service. This is a web service that offers an automated interface between a private computer program and the government tax system. Your tax requirements are therefore concealed behind the provider's private application and responsibility to collect the correct information is delegated to them. To take responsibility for your own finances requires bypassing this MTD interface and obtaining a direct connection with the tax system through the Government Gateway. It will inform you whenever tax law changes and provide itemised, context sensitive help for every obligation and deduction.
-
-When your turnover is above a certain threshold (currently GBP 80K), you are now legally obliged to submit your VAT returns through the MTD web service, therefore forcing you to use a private package. In 2022, the existing VAT return system in the gateway will be disabled and all vat registered companies will be forced down the same path. The reason for this constraint is unknown, although it will further benefit the financial services sector by marshalling every productive business to operate through their systems.  To counter, we use a [simple and cost-effective intermediary]({{ site.url }}/tutorials/digital-tax) which works well enough. With sufficient commercial support, we could code a free interface to the VAT MTD service for you.
+VAT registered UK businesses are legally obliged to post their Vat Returns through a privately owned MTD gateway. The free [Trade Control MTD service](https://github.com/TradeControl/hmrc_mtd) is currently in progress. In the meantime, there is an easy work around available using a [basic intermediary]({{ site.url }}/tutorials/digital-tax).
 
 ## Government Gateway
 
