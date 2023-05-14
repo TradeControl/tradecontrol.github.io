@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Developmemts
+title: Developments
 permalink: dev/index
 ---
 

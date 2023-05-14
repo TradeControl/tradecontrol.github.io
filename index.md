@@ -5,11 +5,12 @@ permalink: /
 ---
 ## Welcome!
 
-- [Technical Documentation](./tutorials/overview)
+- [Supporting Theory and Articles](./articles/tc_intro)
+- [Technical Documentation](./tutorials/tc_overview)
 
 ## Project Goals
 
-Trade Control is a global trading platform published under an Open Source licence. The app’s functionality and architecture are derived from Manufacturing Systems Engineering. Materialised and tested in live environments, the project goals are as follows:
+Trade Control is a global trading platform published under an Open Source licence. The app’s functionality and architecture are derived from [Manufacturing Systems Engineering](./articles/tc_production). Materialised and tested in live environments, the project goals are as follows:
 
 - Replace the traditional ERP architecture of purchasing->production->sales with [a node based schema design](./tutorials/cash-codes#cash-polarity) where inputs match outputs.
 - Replace the asset-based recording surface of financial accounting (Double-Entry Book-keeping) with the [transaction-based recording surface of production](./tutorials/cash-book-web#organisation-enquiry) (Supply and Demand).
@@ -21,7 +22,7 @@ Trade Control is a global trading platform published under an Open Source licenc
 - Integrate business nodes using the blockchain Ethereum to implement [supply-chain scheduling](./tutorials/network_overview) and contract-level integration.
 - Finance supply-chains using the crypto-currency Bitcoin by attaching [a commercial wallet](./tutorials/bitcoin_overview) to the transaction-based recording surface.
 
-To verify that the goals have been achieved, please follow the instructions in the tutorials. Because the app is Open Source you also have access to every algorithm.
+To verify that the goals have been achieved, please follow the instructions in the tutorials. Because the app is Open Source you also have access to every algorithm. To understand the benefits obtained from attaining these goals, you will need to [read the articles](./articles/tc_intro).
 
 ## Licence
 
