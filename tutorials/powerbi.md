@@ -6,19 +6,19 @@ permalink: /tutorials/powerbi
 
 The Power BI template for Trade Control presents users with Business Intelligence data. It communicates several useful indicators and provides a basis for further development and customisation. Once published to the BI Service, users can interact with the information by creating their own dashboards and workspaces on tablets and mobile phones.
 
-The template also works with [bitcoin as unit of account]({{ site.url }}/tutorials/bitcoin).
+The template also works with [bitcoin as unit of account](./bitcoin).
 
 ## Template
 
-Follow the instructions for [installing the Power BI Template]({{ site.url }}/tutorials/installing-powerbi).
+Follow the instructions for [installing the Power BI Template](./installing-powerbi).
 
 The template has separate pages for finance, statements and sales analysis. 
 
-> The information presented in the following screenshots is [fictitious]({{ site.url }}/tutorials/installing-powerbi#sample). 
+> The information presented in the following screenshots is [fictitious](./installing-powerbi#sample). 
 
 ### Finance
 
-The underlying data for this page is taken from unaggregated Sql Server views, also presented in the [Office 365 interface]({{ site.url }}/tutorials/manufacturing#status-and-performance).
+The underlying data for this page is taken from unaggregated Sql Server views, also presented in the [Office 365 interface](./manufacturing#status-and-performance).
 
 Trade Control calculates the tax burden with transaction grained frequency. Because it also reconciles to cash accounts that can mirror money in the bank, it is possible to report on the real-time financial health of the business.
 

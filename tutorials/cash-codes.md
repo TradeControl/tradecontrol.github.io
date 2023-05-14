@@ -4,9 +4,9 @@ title: Classifying Cash Transactions
 permalink: /tutorials/cash-codes
 ---
 
-The [tutorials]({{ site.url }}/tutorials/manufacturing) cover the structure of activities and tasks, but the classification of cash transactions is pre-configured by the Basic Setup. To address that, the following explanation explains how it is structured so you can create a meaningful configuration for your own business. 
+The [tutorials](./manufacturing) cover the structure of activities and tasks, but the classification of cash transactions is pre-configured by the Basic Setup. To address that, the following explanation explains how it is structured so you can create a meaningful configuration for your own business. 
 
-Install the [Basic Setup]({{ site.url }}/tutorials/installing-sqlnode#basic-setup) and refer to [Settings/Definitions]({{ site.url }}/tutorials/services#definitions) for concrete examples.
+Install the [Basic Setup](./installing-sqlnode#basic-setup) and refer to [Settings/Definitions](./services#definitions) for concrete examples.
 
 ## Cash Polarity
 
@@ -38,7 +38,7 @@ Debit Note | NEG | POS | Credit Note | POS | NEG
 
 ### Advantages
 
-Using polarity, the node can simply switch the polarity to turn an input into an output. In so doing, nodes can be easily connected together into a [trading network]({{ site.url }}/network) of supply-chains. Furthermore, simply adding up live tasks obtains the order book profit or adding up the entire payment entries yields the current balance. That means data integrity can be confirmed on a transaction-grained basis, as well as [business intelligence]({{ site.url }}/tutorials/powerbi) being easily obtainable and aggregated.
+Using polarity, the node can simply switch the polarity to turn an input into an output. In so doing, nodes can be easily connected together into a [trading network]({{ site.url }}/network) of supply-chains. Furthermore, simply adding up live tasks obtains the order book profit or adding up the entire payment entries yields the current balance. That means data integrity can be confirmed on a transaction-grained basis, as well as [business intelligence](./powerbi) being easily obtainable and aggregated.
 
 ## Categories and Cash Codes
 

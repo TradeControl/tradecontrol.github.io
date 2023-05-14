@@ -38,9 +38,9 @@ For Vat registered companies:
 #### Sql Node
 
 1. Open Sql Management Studio and create a new database, choosing an approriate database name.
-2. Run the Node Configurator from the start menu and [establish a connection]({{ site.url }}/tutorials/installing-sqlnode#connection) to the server. Because the server is running locally, the server name will likely be your computer name with Windows Authentication (There is a search button that may locate it automatically).
-3. A successful connection installs the database and requests your [business details]({{ site.url }}/tutorials/installing-sqlnode#business-details). Make sure the Unit of Account is correct.
-4. Complete the [basic setup]({{ site.url }}/tutorials/installing-sqlnode#basic-setup) form.  
+2. Run the Node Configurator from the start menu and [establish a connection](./installing-sqlnode#connection) to the server. Because the server is running locally, the server name will likely be your computer name with Windows Authentication (There is a search button that may locate it automatically).
+3. A successful connection installs the database and requests your [business details](./installing-sqlnode#business-details). Make sure the Unit of Account is correct.
+4. Complete the [basic setup](./installing-sqlnode#basic-setup) form.  
 
 #### ODBC Connection
 
@@ -68,11 +68,11 @@ The Office blue theme is used for the tutorials and is installed by default, but
 
 #### Trade Statement
 
-The Trade Statement is a VSTO XLS template, extension xltx. It does not open directly, but each time opens a new xlsx instance. After having [installed the template]({{ site.url }}/tutorials/installing-vsto), open the xltx, specify the connection details as below, saving the xlsx for general use.
+The Trade Statement is a VSTO XLS template, extension xltx. It does not open directly, but each time opens a new xlsx instance. After having [installed the template](./installing-vsto), open the xltx, specify the connection details as below, saving the xlsx for general use.
 
 ![Action Pane]({{ site.url}}/images/accounts_action_pane.png) 
 
-You can now work through the [Company Accounts tutorial]({{ site.url }}/tutorials/cash-book).
+You can now work through the [Company Accounts tutorial](./cash-book).
 
 ## Licence
 

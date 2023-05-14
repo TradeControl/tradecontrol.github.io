@@ -4,7 +4,7 @@ title: Installing the Ethereum Network
 permalink: /tutorials/installing-network
 ---
 
-The Trade Control network is built on smart contracts running on the Ethereum Virtual Machine. To run the network for testing or [learning]({{ site.Url }}/tutorials/network), you will need local instances of Ethereum and Sql Server.
+The Trade Control network is built on smart contracts running on the Ethereum Virtual Machine. To run the network for testing or [learning](./network), you will need local instances of Ethereum and Sql Server.
 
 ## Networks
 
@@ -20,8 +20,8 @@ The Trade Control network is built on smart contracts running on the Ethereum Vi
 
 ### Dependencies
 
-- [Node]({{ site.Url }}/tutorials/installing-sqlnode) - Fiat >= 3.27.1; Bitcoin >= 3.28.3
-- [Office]({{ site.Url }}/tutorials/installing-office) - Fiat >= 3.13.1; Bitcoin >= 3.14.1
+- [Node](./installing-sqlnode) - Fiat >= 3.27.1; Bitcoin >= 3.28.3
+- [Office](./installing-office) - Fiat >= 3.13.1; Bitcoin >= 3.14.1
 
 ## Setup
 
@@ -29,16 +29,16 @@ The Trade Control network is built on smart contracts running on the Ethereum Vi
 
 For live environments, you just must configure a single node on the public network.
 
-The following explains how to install and configure a supply-chain of nodes for [the tutorial]({{ site.Url }}/tutorials/network). 
+The following explains how to install and configure a supply-chain of nodes for [the tutorial](./network). 
 
 ### Database
 
 Firstly, we create a simple supply chain in the form Retail -> Secondary Industry -> Primary Industry. Because we will be simulating the actions of three separate business entities, it may seem more complicated than it is. In a live environment you would only interact with the network from the vantage of a single entity. 
 
 1. Create three databases: tcTHEBUS, tcPLAPRO and tcSTOBOX with corresponding 64bit ODBC data sources.
-2. Configure each database using the [node installer]({{ site.Url }}/tutorials/installing-sqlnode) with a different business name for each (e.g. THE BUSINESS, PLASTICS PROVIDER, THE STORAGE BOX COMPANY). Accept the other defaults, including the Basic Configuration page.
-3. Install the [BOM Tutorial]({{ site.Url }}/tutorials/installing-sqlnode#bom-tutorial) into tcTHEBUS, **Activities option only**.
-4. Open the client and for each database [set up a connection]({{ site.Url }}/tutorials/installing-office#connection).
+2. Configure each database using the [node installer](./installing-sqlnode) with a different business name for each (e.g. THE BUSINESS, PLASTICS PROVIDER, THE STORAGE BOX COMPANY). Accept the other defaults, including the Basic Configuration page.
+3. Install the [BOM Tutorial](./installing-sqlnode#bom-tutorial) into tcTHEBUS, **Activities option only**.
+4. Open the client and for each database [set up a connection](./installing-office#connection).
 5. Optionally, [copy the Office interface](https://github.com/tradecontrol/office/blob/master/src/access) into two additional folders and run [the client](https://github.com/tradecontrol/office/blob/master/src/access/TCnode_3.accde) separately for each business. Change the Application Titles to facilitate switching businesses across the supply chain. 
 5. Connect to tcPLAPRO and in Organisations, Quick Entry, add account THE BUSINESS as a Customer, specifying payment terms (COD etc) and Standard Rate Vat. Then connect to tcSTOBOX and add THE BUSINESS as a supplier.
 

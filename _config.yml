@@ -19,7 +19,7 @@ email: office@tradecontrol.co.uk
 
 title: tradecontrol.online
 description: >- # this means to ignore newlines
-  Trade Control - an open source, trading platform for SMEs.
+  Trade Control - an open source, global trading platform.
 
 plugins:
   - jekyll-redirect-from

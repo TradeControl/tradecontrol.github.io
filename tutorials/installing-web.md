@@ -30,7 +30,7 @@ We can install the App Services and Azure SQL database without cost. However, th
 
 Your existing website may support the app. Consult your systems administrator for feasibility and installation.
 
-They will need to download the [latest Release](https://github.com/tradecontrol/tradecontrol.web/releases) and modify the connection string in *appsettings.json*. If the Sql Server version is incompatible, the database can be generated from scratch using the [Node Configurator]({{ site.url }}/tutorials/installing-sqlnode).
+They will need to download the [latest Release](https://github.com/tradecontrol/tradecontrol.web/releases) and modify the connection string in *appsettings.json*. If the Sql Server version is incompatible, the database can be generated from scratch using the [Node Configurator](./installing-sqlnode).
 
 ### Intranet
 
@@ -88,4 +88,4 @@ Because you can associate as many templates as you like with an invoice type, yo
 ![document template]({{ site.url }}/images/web_document_template.png)
 
 ---
-[Proceed to the tutorial]({{ site.url }}/tutorials/cash-book-web)
+[Proceed to the tutorial](./cash-book-web)

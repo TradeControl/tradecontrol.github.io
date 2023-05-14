@@ -18,14 +18,14 @@ Describing how to file your company accounts without an accountant.
 
 The following walk-through presents the accounts generated from these two tutorials:
 
-- [Accounts Tutorial]({{ site.url }}/tutorials/cash-book-web)
-- [Balance Sheet]({{ site.url }}/tutorials/balance-sheet-web)
+- [Accounts Tutorial](./cash-book-web)
+- [Balance Sheet](./balance-sheet-web)
 
-You can replicate the process using the [P&L and Balance Sheet]({{ site.url }}/tutorials/balance-sheet-web#review-5) on your phone, or by [generating a Trade Statement]({{ site.url }}/docs/tc_accounts_hmrc.xlsx) using Office 365.
+You can replicate the process using the [P&L and Balance Sheet](./balance-sheet-web#review-5) on your phone, or by [generating a Trade Statement]({{ site.url }}/docs/tc_accounts_hmrc.xlsx) using Office 365.
 
 ## Make Tax Digital
 
-VAT registered UK businesses are legally obliged to post their Vat Returns through a privately owned MTD gateway. The free [Trade Control MTD service](https://github.com/TradeControl/hmrc_mtd) is currently in progress. In the meantime, there is an easy work around available using a [basic intermediary]({{ site.url }}/tutorials/digital-tax).
+VAT registered UK businesses are legally obliged to post their Vat Returns through a privately owned MTD gateway. The free [Trade Control MTD service](https://github.com/TradeControl/hmrc_mtd) is currently in progress. In the meantime, there is an easy work around available using a [basic intermediary](./digital-tax).
 
 ## Government Gateway
 
@@ -67,7 +67,7 @@ The tutorial qualifies, so for brevity we are going to select that.
 
 ![accounts type]({{ site.url }}/images/filing_05_accounts_type.png)
 
-Now you can enter the Profit and Loss values, which correspond to the [P&L on your phone]({{ site.url }}/tutorials/balance-sheet-web#profit-and-loss-account) or [Trade Statement]({{ site.url }}/accounts#365).
+Now you can enter the Profit and Loss values, which correspond to the [P&L on your phone](./balance-sheet-web#profit-and-loss-account) or [Trade Statement]({{ site.url }}/accounts#365).
 
 > A few things to note - there is context sensitive help for every single entry; the portal is bang up to date with the latest requirements (Covid); and you can contact HMRC directly with any codes you are uncertain about. 
 
@@ -83,7 +83,7 @@ Finally, you approve your accounts, and HMRC generate a PDF document that they s
 
 ## Corporation Tax
 
-To enter the values associated with the tax computation, use the codes that begin with **CP**. From the web app, scroll to the [company tax totals]({{ site.url }}/tutorials/balance-sheet-web#company-tax-totals) and select details to view the full listing. To simplify the entry, we have moved the Assets - Net Profit category (**TC-ASSETNP**) from Total Expenses (**CP40**) into the Cost of Sales (**CP8**). Otherwise we would need to split out depreciation from the asset account balance.
+To enter the values associated with the tax computation, use the codes that begin with **CP**. From the web app, scroll to the [company tax totals](./balance-sheet-web#company-tax-totals) and select details to view the full listing. To simplify the entry, we have moved the Assets - Net Profit category (**TC-ASSETNP**) from Total Expenses (**CP40**) into the Cost of Sales (**CP8**). Otherwise we would need to split out depreciation from the asset account balance.
 
 ![start computations]({{ site.url }}/images/filing_09_start_computations.png)
 

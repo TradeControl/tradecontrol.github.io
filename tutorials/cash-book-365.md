@@ -18,7 +18,7 @@ permalink: /tutorials/cash-book-365
 - [Processing credit](#crediting-accounts)
 - [Period and Year End](#period-end)
 - [Finalised Accounts](#finalised-accounts)
-- [Filing your accounts with HMRC]({{ site.url }}/tutorials/accounts-filing)
+- [Filing your accounts with HMRC](./accounts-filing)
 
 ### Information
 
@@ -61,7 +61,7 @@ Reference [Cash Accounts](#cash-accounts)
 
 ### Classifying Transactions
 
-If you accept the default cash codes, you can start trading straight away. However, companies that have pre-existing accounts should classify transactions in the same way for historical comparison. In DEBK accounts, nominal codes classify transactions. Trade Control does not have a nominal ledger, but you can translate nominal into cash codes very easily. However, cash codes are [structured by categories]({{ site.url }}/tutorials/cash-codes#categories-and-cash-codes) and therefore it may involve re-configuring them.
+If you accept the default cash codes, you can start trading straight away. However, companies that have pre-existing accounts should classify transactions in the same way for historical comparison. In DEBK accounts, nominal codes classify transactions. Trade Control does not have a nominal ledger, but you can translate nominal into cash codes very easily. However, cash codes are [structured by categories](./cash-codes#categories-and-cash-codes) and therefore it may involve re-configuring them.
 
 Reference [Cash Codes](#cash-codes)
 
@@ -106,7 +106,7 @@ The Cash Account Statement will show a current account of 5,001 with reserves of
 
 There are two rebuild functions: one for integrating externally imported information or repairing corrupted data; the other for accepting retrospective modifications to a closed period end.  Because we are modifying the past, you can accept these changes here since the Cash Statement runs both.
 
-Open the [VSTO Excel Trade Statement]({{ site.url }}/tutorials/installing-local#trade-statement) and run the cash flow. It should look like the following screenshot. Note that the capital value of the business is still zero:
+Open the [VSTO Excel Trade Statement](./installing-local#trade-statement) and run the cash flow. It should look like the following screenshot. Note that the capital value of the business is still zero:
 
 ![opening balance sheet]({{ site.url }}/images/accounts_balance_sheet_opening.png)
 
@@ -218,7 +218,7 @@ From the Home menu, open the Balance Sheet Audit, which will present a list of d
 
 ![audit]({{ site.url }}/images/accounts_balance_sheet_audit.png)
 
-Follow the tutorial on [filing your accounts with HMRC]({{ site.url }}/tutorials/accounts-filing) for a step-by-step guide on submitting your annual tax return.
+Follow the tutorial on [filing your accounts with HMRC](./accounts-filing) for a step-by-step guide on submitting your annual tax return.
 
 # INFORMATION
 
@@ -323,7 +323,7 @@ Once up and running, you will seldom need to create new cash codes to classify f
 
 ### Administration
 
-During the tutorial, we used the Administrator to review tax and set period end dates. The Accounts Mode can also be used in a multi-user environment by moving the database to Azure Sql or a licensed server. The User page lists employees with system access and specifies status and rights. Multi-user environments are more involved because they involve privileges and permissions. Use the [Node Configurator]({{ site.url }}/tutorials/installing-sqlnode#add-users) to add new users or upgrade their permissions.
+During the tutorial, we used the Administrator to review tax and set period end dates. The Accounts Mode can also be used in a multi-user environment by moving the database to Azure Sql or a licensed server. The User page lists employees with system access and specifies status and rights. Multi-user environments are more involved because they involve privileges and permissions. Use the [Node Configurator](./installing-sqlnode#add-users) to add new users or upgrade their permissions.
 
 Logs are presented in the Administrator. Any error that occurs on the backend is written to an Event Log, which also includes informational entries. Most errors are likely to be integrity check failures, but more serious failures should be reported to [support]({{ site.url }}/contact). The Administrator allows you to clear down the log files if you are running out of space.
 

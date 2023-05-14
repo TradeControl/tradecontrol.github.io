@@ -1,49 +1,39 @@
 ---
 layout: page
-title: Tutorials
+title: Technical Documentation
 permalink: tutorials/overview
 ---
 
-Tutorials has four sections:
+## Installation
 
-- [Installation](#installation)
-- [User guide](#user-guide)
-- [Blockchain](#blockchain)
-- [Features](#features)
+- [ASP.NET Core Site Setup](./installing-web)
+- [Free Single User 365 Installation](./installing-local)
+- [Installing a Trade Control node](./installing-sqlnode)
+- [Installing Office 365 clients](./installing-office)
+- [Configuring VSTO documents](./installing-vsto)
+- [Power BI template sample data](./installing-powerbi)
+- [Setting up an ethereum network](./installing-network)
+- [Installing a bitcoin wallet](./installing-bitcoin)
 
+## User Guide
 
-## Tutorials
+- [Classifying cash transactions](./cash-codes)
+- [Accounts and invoicing](./cash-book)
+- [How to generate a Balance Sheet](./balance-sheet)
+- [Filing your Company Accounts](./accounts-filing)
+- [Business System Overview](./services)
+- [Modelling a Bill of Materials](./manufacturing)
 
-### Installation
+## Blockchain
 
-- [ASP.NET Core Site Setup]({{ site.url }}/tutorials/installing-web)
-- [Free Single User 365 Installation]({{ site.url}}/tutorials/installing-local)
-- [Installing a Trade Control node]({{ site.url}}/tutorials/installing-sqlnode)
-- [Installing Office 365 clients]({{ site.url}}/tutorials/installing-office)
-- [Configuring VSTO documents]({{ site.url}}/tutorials/installing-vsto)
-- [Power BI template sample data]({{ site.url}}/tutorials/installing-powerbi)
-- [Setting up an ethereum network]({{ site.url}}/tutorials/installing-network)
-- [Installing a bitcoin wallet]({{ site.url}}/tutorials/installing-bitcoin)
+- [Connecting Trade Control nodes in supply-chains](./network)
+- [Using a bitcoin commercial wallet as your UOA](./bitcoin)
 
-### User Guide
+## Features
 
-- [Classifying cash transactions]({{ site.url}}/tutorials/cash-codes)
-- [Accounts and invoicing]({{ site.url}}/tutorials/cash-book)
-- [How to generate a Balance Sheet]({{ site.url}}/tutorials/balance-sheet)
-- [Filing your Company Accounts]({{ site.url}}/tutorials/accounts-filing)
-- [Business System Overview]({{ site.url}}/tutorials/services)
-- [Modelling a Bill of Materials]({{ site.url}}/tutorials/manufacturing)
-
-### Blockchain
-
-- [Connecting Trade Control nodes in supply-chains]({{ site.url}}/tutorials/network)
-- [Using a bitcoin commercial wallet as your UOA]({{ site.url}}/tutorials/bitcoin)
-
-### Features
-
-- [MTD Vat posting]({{ site.url}}/tutorials/digital-tax)
-- [Business Intelligence with Power BI]({{ site.url}}/tutorials/powerbi)
-- [Raising quotations from XML price lists]({{ site.url}}/tutorials/quotations)
-- [Creating an XML price list]({{ site.url}}/tutorials/pricelists)
+- [MTD Vat posting](./digital-tax)
+- [Business Intelligence with Power BI](./powerbi)
+- [Raising quotations from XML price lists](./quotations)
+- [Creating an XML price list](./pricelists)
 
 

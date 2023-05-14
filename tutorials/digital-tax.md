@@ -24,7 +24,7 @@ The installer gives the client the ability to output the vat return in the requi
 
 ## Instructions
 
-(refer to the [services tutorial]({{ site.url }}/tutorials/services#invoice-register) for how to open the Invoice Register)
+(refer to the [services tutorial](./services#invoice-register) for how to open the Invoice Register)
 
 ![MTD_Vat_Totals image]({{ site.url }}/images/mtd_vat_totals.jpg)
 

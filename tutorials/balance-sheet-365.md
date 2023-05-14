@@ -139,7 +139,7 @@ FInally, to register the Director Loan liability, we post an asset transaction t
 
 ## Accounts Review
 
-We are now in a position to review how these assets have modified the balance sheet and P&L.  [Re-generate the closed period ends]({{ site.url }}/tutorials/cash-book#period-end) and run the Trade Statement:
+We are now in a position to review how these assets have modified the balance sheet and P&L.  [Re-generate the closed period ends](./cash-book#period-end) and run the Trade Statement:
 
 ![Balance Sheet]({{ site.url }}/images/balance_sheet_interim.png)
 
@@ -165,7 +165,7 @@ For the tutorial, you could enter something like this:
 
 ![Cash Box]({{ site.url }}/images/balance_sheet_cash_box.png)
 
-The Trade Statement shows the period end closing balances (after [re-generating the closed period ends]({{ site.url }}/tutorials/cash-book#period-end)):
+The Trade Statement shows the period end closing balances (after [re-generating the closed period ends](./cash-book#period-end)):
 
 ![Closing Balances Before]({{ site.url }}/images/balance_sheet_cash_box_balance.png)
 
@@ -239,7 +239,7 @@ In Accounts Mode, we are recording historical and current transactions. The MIS 
 
 ![Company Statement]({{ site.url }}/images/balance_sheet_accruals_statement.png)
 
-Finally, since we have made a lot of retrospective changes, [rebuild the period end close downs]({{ site.url }}/tutorials/cash-book#period-end). The Trade Statement shows the rent in their correct periods, irrespective of payment amounts or dates. The additional rent is for *use of home as office* from the Services Tutorial.
+Finally, since we have made a lot of retrospective changes, [rebuild the period end close downs](./cash-book#period-end). The Trade Statement shows the rent in their correct periods, irrespective of payment amounts or dates. The additional rent is for *use of home as office* from the Services Tutorial.
 
 ![Accrued Values]({{ site.url }}/images/balance_sheet_accruals_pl.png)
 
@@ -249,7 +249,7 @@ By selecting Active Period Invoices and Orders, historical transactions merge in
 
 ## Cash Statement
 
-Asset Type cash accounts work the same as your bank account, with a projected and current balance. The key difference between trading accounts and asset accounts is that the former generates invoices connected to Tasks. Tasks model workflows and workflows drive [trading networks]({{ site.url }}/tutorials/network). But otherwise, you can use the existing means to amend, reschedule or delete them.
+Asset Type cash accounts work the same as your bank account, with a projected and current balance. The key difference between trading accounts and asset accounts is that the former generates invoices connected to Tasks. Tasks model workflows and workflows drive [trading networks](./network). But otherwise, you can use the existing means to amend, reschedule or delete them.
 
 ![Cash Statement]({{ site.url }}/images/balance_sheet_cash_statement.png)
 
@@ -315,7 +315,7 @@ When completed, the full Trade Statement should look like the Advanced worksheet
 
 ## Filing
 
-Follow the instructions for [filing company accounts]({{ site.url }}/tutorials/accounts-filing#instructions)
+Follow the instructions for [filing company accounts](./accounts-filing#instructions)
 
 ## Licence
 

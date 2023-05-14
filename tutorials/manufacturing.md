@@ -6,39 +6,39 @@ permalink: /tutorials/manufacturing
 
 Trade Control is not a manufacturing system, it is generic; yet the design has been derived from Systems Engineering principles evolved in the manufacturing industry. To work in a factory, the design would have to include stuff like stock control, resources, tooling, quality and planning capabilities. However, it is possible to faithfully model a multi-level Bill of Materials, and generate corresponding sales, works and purchase orders from them, automatically calculating quantities and timings (in whole days) for operations and arrivals. This tutorial shows you how to do that. In so doing, you are introduced to more advanced features that can be applied when modelling any other kind of workflow.
 
-[tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial)
+[tutorial installation](./installing-sqlnode#bom-tutorial)
 
 ## Index
 
 ### Work Specification
 
-- [Project View]({{ site.url }}/tutorials/manufacturing#project-view)
-- [Work Flow]({{ site.url }}/tutorials/manufacturing#workflow)
-- [Operations]({{ site.url }}/tutorials/manufacturing#operations)
-- [Attributes]({{ site.url }}/tutorials/manufacturing#attributes)
+- [Project View](./manufacturing#project-view)
+- [Work Flow](./manufacturing#workflow)
+- [Operations](./manufacturing#operations)
+- [Attributes](./manufacturing#attributes)
 
 ### Order Processing
 
-- [Project Schedule]({{ site.url }}/tutorials/manufacturing#project-schedule)
-- [Task Editing]({{ site.url }}/tutorials/manufacturing#task-editing)
-- [Company Statement]({{ site.url }}/tutorials/manufacturing#company-statement)
-- [Job Costing]({{ site.url }}/tutorials/manufacturing#job-costing)
-- [Cash Flow]({{ site.url }}/tutorials/manufacturing#cash-flow)
+- [Project Schedule](./manufacturing#project-schedule)
+- [Task Editing](./manufacturing#task-editing)
+- [Company Statement](./manufacturing#company-statement)
+- [Job Costing](./manufacturing#job-costing)
+- [Cash Flow](./manufacturing#cash-flow)
   
 ### Invoices and Payments
 
-- [Invoicing]({{ site.url }}/tutorials/manufacturing#invoicing)
-- [Invoice Register]({{ site.url }}/tutorials/manufacturing#invoice-register)
-- [Status and Performance]({{ site.url }}/tutorials/manufacturing#status-and-performance)
-- [Organisation Statement]({{ site.url }}/tutorials/manufacturing#organisation-statement)
-- [Payment System]({{ site.url }}/tutorials/manufacturing#payment-system)
-- [Cash Statement]({{ site.url }}/tutorials/manufacturing#cash-statement)
+- [Invoicing](./manufacturing#invoicing)
+- [Invoice Register](./manufacturing#invoice-register)
+- [Status and Performance](./manufacturing#status-and-performance)
+- [Organisation Statement](./manufacturing#organisation-statement)
+- [Payment System](./manufacturing#payment-system)
+- [Cash Statement](./manufacturing#cash-statement)
 
 ### Project Management
 
-- [Task Explorer]({{ site.url }}/tutorials/manufacturing#task-explorer)
-- [Document Manager]({{ site.url }}/tutorials/manufacturing#document-manager)
-- [Advanced Features]({{ site.url }}/tutorials/manufacturing#supply-chains)
+- [Task Explorer](./manufacturing#task-explorer)
+- [Document Manager](./manufacturing#document-manager)
+- [Advanced Features](./manufacturing#supply-chains)
 
 # Instructions
 
@@ -52,7 +52,7 @@ Once installed, you will have created an assembly of injection moulded component
 
 The bill of materials in the example is a shelf assembly of injection moulded parts, consisting of four components. The top level (root) of the BoM is the assembly, which has the Activity Code **M/00/70/00**. It has a blue icon to indicate it will create a Sales Order. The four components are linked in the workflow to the assembly with the required quantity used in each assembly. Their icon is green, because they do not involve financial transactions, and therefore they will generate operational Works Orders. The materials are then connected to these components, represented by a red icon for Purchase Orders.
 
-In Trade Control, there are no native Sales, Purchase or Works Orders, but it can model them through the polarity of the [Cash Code]({{ site.url }}/tutorials/cash-codes) to which they are assigned. Because the components are not assigned any Cash Code, they function as Works Orders. Manufacturing systems work differently. They assign a Part Type (e.g. ASSEMBLY, COMPONENT or MATERIAL) and have a separate control system for production.
+In Trade Control, there are no native Sales, Purchase or Works Orders, but it can model them through the polarity of the [Cash Code](./cash-codes) to which they are assigned. Because the components are not assigned any Cash Code, they function as Works Orders. Manufacturing systems work differently. They assign a Part Type (e.g. ASSEMBLY, COMPONENT or MATERIAL) and have a separate control system for production.
 
 To the right of the Project View is the Parts Master equivalent:
 
@@ -105,7 +105,7 @@ Attributes can be hidden from the orders sent to customers and suppliers by sett
 
 ## Order Processing
 
-Re-run the [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Create Orders option selected.
+Re-run the [tutorial installation](./installing-sqlnode#bom-tutorial) with the Create Orders option selected.
 
 Switch to the client and open Task Explorer from the toolbar or Workflow menu. In the Activities page you will see the assembly, components and materials listed. Selecting the assembly, you can see that 5 top level sales orders have been added, a month apart in their corresponding time buckets. Select any one of these rows and edit the task. 
 
@@ -219,7 +219,7 @@ The yellow column is the active period. Each Cash Flow generation is rendered fr
 
 ## Invoicing
 
-Re-run the [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Invoice First Order option selected.
+Re-run the [tutorial installation](./installing-sqlnode#bom-tutorial) with the Invoice First Order option selected.
 
 Refresh the Company Statement and every order relating to the first sales order has been replaced with an invoice. The overdue order book has been resolved, but overall, the company is in the same position.
 Render the Cash Flow again and you will see that, with the flag settings in the previous section, it is roughly the same. The only difference is that the overdue accruals are now in the current period, pushing the corporation tax payment into the following year. Uncheck the live order book flag and vat accruals and the invoiced project can be seen.
@@ -246,7 +246,7 @@ Check out the Status Graphs from the Information menu.  Only one period and one 
 
 ![StatusGraphs]({{ site.url }}/images/bom_status_graphs.png)
 
-From the same menu, [Job Profit]({{ site.url }}/tutorials/manufacturing#job-costing) provides performance reporting by project, available as a report or exportable dataset, which includes payment status. Costs are calculated anew using the same recursive algorithm as the [Task Editor](#task-editing).
+From the same menu, [Job Profit](./manufacturing#job-costing) provides performance reporting by project, available as a report or exportable dataset, which includes payment status. Costs are calculated anew using the same recursive algorithm as the [Task Editor](#task-editing).
 
 ![JobProfitReport]({{ site.url }}/images/bom_job_profit_report.png)
 
@@ -270,7 +270,7 @@ The Organisation Statement is presented in reverse projection because it builds 
 
 ### Payment System
 
-Run the [tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#bom-tutorial) with the Pay Invoices option selected.
+Run the [tutorial installation](./installing-sqlnode#bom-tutorial) with the Pay Invoices option selected.
 
 Rendering the Cash Flow again with the specified [settings](#cash-flow) returns the same results as previously, except the bank balance has increased. The same has occurred with the Company Statement; except the invoices have been removed, and their value added to the current balance.  Refreshing the Invoice Register shows that all the invoices have been set to Paid.
 
@@ -301,7 +301,7 @@ The Task Explorer is the go-to place for:
 There are two document systems for communicating with other organisations:
 
 - A Document Manager, which presents the document types in a traditional way, monitors if they have been sent, and can spool multiple orders in one generation.
-- [Word VSTO Templates]({{ site.url }}/tutorials/installing-vsto) that can be modified to match your business style, populated from XML schema.
+- [Word VSTO Templates](./installing-vsto) that can be modified to match your business style, populated from XML schema.
 
 Both can email a pdf document to the contact's address directly from within the client. Reports in the Document Manager are more flexible. In manufacturing, you would probably need a Supplier Schedule, instead of lots of single line Purchase Orders. 
 
@@ -341,11 +341,11 @@ In a real factory, you must do a lot more than that - exciting duties like stock
 
 ### Supply-Chains
 
-Trade Control instances are nodes that can be connected, such that BOM-like workflows can operate over supply-chains. Install the [Trade Control Network]({{ site.url }}/tutorials/network) and try out the tutorial. It shows you how to schedule the entire supply chain for both customers and suppliers of the assembly.
+Trade Control instances are nodes that can be connected, such that BOM-like workflows can operate over supply-chains. Install the [Trade Control Network](./network) and try out the tutorial. It shows you how to schedule the entire supply chain for both customers and suppliers of the assembly.
 
 ### Bitcoin
 
-Install the [bitcoin wallet]({{ site.url }}/tutorials/bitcoin) and follow the tutorial, replacing the [payment system](#payments) with payments from an HD Wallet.
+Install the [bitcoin wallet](./bitcoin) and follow the tutorial, replacing the [payment system](#payments) with payments from an HD Wallet.
 
 ## Licence
 

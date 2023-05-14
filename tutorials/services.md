@@ -81,7 +81,7 @@ list of properties (Attributes) and a schedule of the individual processes (Oper
 be set to create automatic timings (in whole days) working back from a defined completion date. 
 This tutorial shows you how to set up and manage these processes. 
 
-[tutorial installation]({{ site.url }}/tutorials/installing-sqlnode#services-tutorial)
+[tutorial installation](./installing-sqlnode#services-tutorial)
 
 ## Home Page
 
@@ -387,7 +387,7 @@ cash leaves the bank account, so your Cash Statement will reflect the exact orde
 
 ### Network Allocations and Invoicing
  
-Network Allocation and Invoices are advanced features which are covered in the tutorial on [connecting supply-chains]({{ site.url }}/tutorials/network).
+Network Allocation and Invoices are advanced features which are covered in the tutorial on [connecting supply-chains](./network).
 
 Trade Control is capable of connecting multiple companies using the system to share data by exporting and importing
 tasks to drive automated sales and purchase task creation. The system's unique programming using simple negative and positive
@@ -483,7 +483,7 @@ been checked in Administration - otherwise the invoice will be printed without p
 ### Transfers
 
 Selecting Transfers from the Workflow menu will open the Transfers tab. This feature enables money to be 
-transferred from one business bank account to another. The [basic setup]({{ site.url }}/tutorials/installing-sqlnode#basic-setup) has a current account and a reserve account 
+transferred from one business bank account to another. The [basic setup](./installing-sqlnode#basic-setup) has a current account and a reserve account 
 and payments in can be created by selecting the receiving account and selecting 'Transfer Receipt' as the Cash Code. 
 Payments out use the Cash Code 'Account Payment'. TC recognises the polarity of these Cash Codes, so if the amount 
 for a payment in was entered incorrectly in the Paid Out instead of the Paid in column, selecting Transfer Receipt 
@@ -660,7 +660,7 @@ account, with a valid Cash Code, will impact on the Cash Statement.
 
 #### Cash Categories
 
-[Cash Categories]({{ site.url }}/tutorials/cash-codes) are the top-level cash management codes. Once the Cash Categories are set up, Cash Codes can be 
+[Cash Categories](./cash-codes) are the top-level cash management codes. Once the Cash Categories are set up, Cash Codes can be 
 created which will feed up into the selected Cash Category. Each Category must have a Mode (Expense/Income/Neutral), 
 and a Type (Bank/Trade/External). Checking the Enabled box will post all transactions for that Cash Category into 
 the Cash Flow forecast spreadsheet, leaving it unchecked will exclude the category from the forecast.
@@ -675,7 +675,7 @@ cannot be deleted if they are associated with an old Activity.
 
 #### Cash Totals
 
-Totals are explained in a separate section on the general structure of [Cash Codes]({{ site.url }}/tutorials/cash-codes)
+Totals are explained in a separate section on the general structure of [Cash Codes](./cash-codes)
 
 #### Totals and Expressions
 
@@ -784,7 +784,7 @@ The Mirrors tab allows users to connect specified aspects of the system to anoth
 Opening Assets from the Maintenance menu will enable users to post asset adjustments onto the system which will in turn affect depreciation calculations.
 Selecting the required Cash Code from the dropdown menu will allocate the asset to the designated code e.g. Stock Movement, Share Capital etc.
 
-Refer to the tutorial on [balance sheets]({{ site.url }}/tutorials/balance-sheet) for more details.
+Refer to the tutorial on [balance sheets](./balance-sheet) for more details.
 
 ### Budget
 
@@ -1167,7 +1167,7 @@ and Invoice Register Summary showing purchases, sales and margin by month.
 
 ## Install Options
 
-Returning to the [installation]({{ site.url }}/tutorials/installing-sqlnode#services-tutorial), there are four modes, allowing you to review how the system is constructed and 
+Returning to the [installation](./installing-sqlnode#services-tutorial), there are four modes, allowing you to review how the system is constructed and 
 deployed. If you select 'Activities Only' when installing the test database, you can see the pre-set 
 activities in Activity and Workflow Setup and existing organisations and create your own entries from 
 Task Explorer/New Task. You can see how the schedules can be automatically generated working back 
