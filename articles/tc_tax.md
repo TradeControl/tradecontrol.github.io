@@ -23,7 +23,7 @@ The Companies Act (**A**) is an instance of [Primary Law](tc_commerce#primary-an
 
 The law-making right of the Company is used to define the relations between its employees and customers. The mechanisms of [polarity inversion](tc_profit_and_loss#polarity-inversion) are caused by the fact that the company is on the master side of Tertiary Law and the slave side of the owner's territorial force-field projected through Primary Law. Because the State does not care which party is which, it can establish tax extraction points on both sides of the inversion (**A**) and on either side of the labour/output juncture (**B**/**C**).
 
-### Example
+### Tax Example
 
 Serviced offices are big business, with some publicly listed corporations having a global presence, turning over billions. Maybe post-pandemic their services will prove less appealing, but they offer a clear example. Firstly, everyone knows what a tenancy agreement is. It is represented by contract **C** in **Figure 1**, where the Owner is the landlord, and the Customer is the tenant. Secondly, their business model has roots in [the capitalisation of land](tc_assets#agriculture) that set the stage for the [recursive complexities](tc_production#component-definition) of the [Industrial Revolution](tc_assets#industry) (IR), presenting a simple case.
 

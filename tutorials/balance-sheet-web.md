@@ -6,8 +6,6 @@ permalink: /tutorials/balance-sheet-web
 
 ## Index
 
-### Instructions
-
 - [Basic Company Accounts](#basic-accounts)
 - [Configuration](#configuration)
 - [Current Assets](#current-assets)

@@ -15,7 +15,7 @@ The literature on capitalism is vast, but seldom are balance sheets even mention
 
 To fully digest the following, it would help if you had carried out the [Balance Sheet Tutorial](../tutorials/balance-sheet-web), or even better, [implemented Trade Control](../tutorials/installing-web) in your own business. If the latter, you could automatically obtain a balance sheet without needing an accountant. 
 
-## Background
+## Purpose and Method
 
 It is a statutory requirement for every company to present a [Profit and Loss Account (P&L)](tc_profit_and_loss) and Balance Sheet to the government authorities.
 

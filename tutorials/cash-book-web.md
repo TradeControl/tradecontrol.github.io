@@ -8,8 +8,6 @@ The web app detects the device upon which it is running. In this tutorial we wil
 
 ## Index
 
-### Instructions
-
 - [System Initialisation](#setup)
 - [Going Concerns](#going-concerns)
 - [Injecting Capital](#capital-injection)
@@ -23,7 +21,7 @@ The web app detects the device upon which it is running. In this tutorial we wil
 - [Advanced Balance Sheet]({{ site.url}}/tutorials/balance-sheet-web)
 - [Cash Boxes]({{ site.url}}/tutorials/balance-sheet-web#cash-box)
 
-### Information
+## Background
 
 - [Organisations](#organisations)
 - [Tax](#tax)
@@ -246,9 +244,9 @@ We then make sure that CASH + BANK on the balance sheet matches our bank stateme
 
 ![audit]({{ site.url }}/images/web_debtors_and_creditors2.png)
 
-# INFORMATION
+# Cash Book Information
 
-#### The following sections provide informational and technical guidance for generating your company accounts.
+    The following sections provide informational and technical guidance for generating your company accounts.
 
 ## Organisations
 

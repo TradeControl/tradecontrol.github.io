@@ -8,12 +8,12 @@ Authored by Steve Wicks, [Greenprint Consultancy Ltd](http://www.green-print.net
 
 ## Index
 
-### Introduction
+**Introduction**
 
 - [Overview](#overview)
 - [Home Page](#home-page)
 
-### Tasks
+**Tasks**
 
 - [Task Explorer](#task-explorer)
 - [Creating a New Task](#creating-a-new-task)
@@ -25,7 +25,7 @@ Authored by Steve Wicks, [Greenprint Consultancy Ltd](http://www.green-print.net
 - [Documents](#task-documents)
 - [Task Invoices](#task-invoices)
 
-### Workflow
+**Workflow**
 
 - [Document Manager](#document-manager)
 - [Expenses](#expenses)
@@ -35,7 +35,7 @@ Authored by Steve Wicks, [Greenprint Consultancy Ltd](http://www.green-print.net
 - [Task Explorer](#task-explorer)
 - [Bank Account Transfers](#transfers)
 
-### System Settings
+**System Settings**
 
 - [Administration](#administration)
 - [Definitions](#definitions)
@@ -43,14 +43,14 @@ Authored by Steve Wicks, [Greenprint Consultancy Ltd](http://www.green-print.net
 - [Cash Accounts](#cash-accounts)
 - [SQL Connections](#sql-connect)
 
-### Maintenance
+**Maintenance**
 
 - [Activities](#activities)
 - [Assets](#assets)
 - [Budgeting](#budget)
 - [Organisations](#organisations)
 
-### Information
+**Information**
 
 - [Audit Reports](#audit-reports)
 - [Cash Statements](#cash-statements)
@@ -60,12 +60,7 @@ Authored by Steve Wicks, [Greenprint Consultancy Ltd](http://www.green-print.net
 - [Job Profit](#job-profit-status-by-month)
 - [Organisation Enquiry](#organisation-enquiry)
 - [Status Graphs](#status-graphs)
-
-### Tutorial
-
 - [Install Options](#install-options)
-
-# Instructions
 
 ## Overview
 

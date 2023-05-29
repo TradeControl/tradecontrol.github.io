@@ -6,8 +6,6 @@ permalink: /tutorials/balance-sheet-365
 
 ## Index
 
-### Instructions
-
 - [Basic Company Accounts](#basic-accounts)
 - [Configuration](#configuration)
 - [Current Assets](#current-assets)
@@ -18,7 +16,7 @@ permalink: /tutorials/balance-sheet-365
 - [Profit and Loss](#profit-and-loss)
 - [Accruals and Prepayments](#accruals-and-prepayments)
 
-### Information
+## Background
 
 - [Cash Statement](#cash-statement)
 - [VAT and Corporation Tax](#tax)

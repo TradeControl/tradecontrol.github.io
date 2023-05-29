@@ -6,7 +6,7 @@ permalink: /
 ## Welcome!
 
 - [Supporting Theory and Articles](./articles/tc_intro)
-- [Technical Documentation](./tutorials/tc_overview)
+- [Technical Documentation](./tutorials/overview)
 
 ## Project Goals
 

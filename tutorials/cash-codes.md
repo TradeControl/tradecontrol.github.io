@@ -38,7 +38,7 @@ Debit Note | NEG | POS | Credit Note | POS | NEG
 
 ### Advantages
 
-Using polarity, the node can simply switch the polarity to turn an input into an output. In so doing, nodes can be easily connected together into a [trading network]({{ site.url }}/network) of supply-chains. Furthermore, simply adding up live tasks obtains the order book profit or adding up the entire payment entries yields the current balance. That means data integrity can be confirmed on a transaction-grained basis, as well as [business intelligence](./powerbi) being easily obtainable and aggregated.
+Using polarity, the node can simply switch the polarity to turn an input into an output. In so doing, nodes can be easily connected together into a [trading network](network_overview) of supply-chains. Furthermore, simply adding up live tasks obtains the order book profit or adding up the entire payment entries yields the current balance. That means data integrity can be confirmed on a transaction-grained basis, as well as [business intelligence](./powerbi) being easily obtainable and aggregated.
 
 ## Categories and Cash Codes
 
@@ -72,7 +72,7 @@ You can add any kind of Cash Total, but Net Profit is a legal obligation due to 
 
 In the Cash Total page of Definitions, Net and Gross Profit are defined. From the + button, the Gross Profit consists of one positive polarity category and two negatives. These categories are linked to Cash Codes, a few of which are shown in the diagram below. The Net Profit, however, has only two categories: Indirect Costs and the Gross Profit. The resulting hierarchy of Cash Codes is assigned to the Net Profit category in the main page of the Administrator.
 
-![Net Profit]({{ site.url }}/images/cash_net_profit.jpg)
+![Net Profit](../images/cash_net_profit.jpg)
 
 To obtain the Net and Gross Profit, Trade Control firstly recurses over the hierarchy to find the set of Cash Codes it contains. It then gets all the transactions assigned to them; and because income is positive and expenditure is negative, it only needs to add them up to get the profit. In this way, since Corporation Tax is just a percentage of Net Profit, Trade Control can also calculate that tax for thousands of transactions almost instantaneously. 
 
@@ -88,7 +88,7 @@ Because there are no hard-coded values for profits, purchases and sales etc, inf
 
 The format can be any specifier that is recognised by Excel. In this case **0%** expresses the result as a percentage. The snapshot of the VSTO Cash Flow statement shows how both the Cash Totals and Expressions are rendered in the spreadsheet. The formula bar contains an example of a Gross Profit % cell derived from the above expression. The yellow column represents the current period, so you can see that your expressions can also apply to future accruals as well. 
 
-![Expressions]({{ site.url }}/images//cash_expressions.jpg)
+![Expressions](../images//cash_expressions.jpg)
 
 ## Licence
 

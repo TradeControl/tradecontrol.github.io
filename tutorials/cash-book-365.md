@@ -6,8 +6,6 @@ permalink: /tutorials/cash-book-365
 
 ## Index
 
-### Instructions
-
 - [System Initialisation](#initialisation)
 - [Going Concerns](#going-concerns)
 - [Injecting Capital](#capital-injection)
@@ -20,7 +18,7 @@ permalink: /tutorials/cash-book-365
 - [Finalised Accounts](#finalised-accounts)
 - [Filing your accounts with HMRC](./accounts-filing)
 
-### Information
+## Background
 
 - [Organisations](#organisations)
 - [Trade Statement](#trade-statement)
@@ -220,9 +218,9 @@ From the Home menu, open the Balance Sheet Audit, which will present a list of d
 
 Follow the tutorial on [filing your accounts with HMRC](./accounts-filing) for a step-by-step guide on submitting your annual tax return.
 
-# INFORMATION
+# Cash Book Information
 
-#### The following sections provide informational and technical guidance for generating your company accounts.
+	The following sections provide informational and technical guidance for generating your company accounts.
 
 ## Organisations
 
