@@ -23,21 +23,21 @@ The Companies Act (**A**) is an instance of [Primary Law](tc_commerce#primary-an
 
 The law-making right of the Company is used to define the relations between its employees and customers. The mechanisms of [polarity inversion](tc_profit_and_loss#polarity-inversion) are caused by the fact that the company is on the master side of Tertiary Law and the slave side of the owner's territorial force-field projected through Primary Law. Because the State does not care which party is which, it can establish tax extraction points on both sides of the inversion (**A**) and on either side of the labour/output juncture (**B**/**C**).
 
-### Tax Example
+## Tax Example
 
 Serviced offices are big business, with some publicly listed corporations having a global presence, turning over billions. Maybe post-pandemic their services will prove less appealing, but they offer a clear example. Firstly, everyone knows what a tenancy agreement is. It is represented by contract **C** in **Figure 1**, where the Owner is the landlord, and the Customer is the tenant. Secondly, their business model has roots in [the capitalisation of land](tc_assets#agriculture) that set the stage for the [recursive complexities](tc_production#component-definition) of the [Industrial Revolution](tc_assets#industry) (IR), presenting a simple case.
 
-#### Tribute
+### Tribute
 
 Tenancy agreements are clearly products of a master/slave relation between landlord (as sovereign law-giver) and tenant (as subjugated law-taker). Concentration of [wealth and power](tc_commerce#wealth-and-power) creates artificial scarcity. Therefore, the contract embodies a set of rules that the tenant must accept to obtain access to the property they need. The rules ensure that the property's interface is preserved and [monetary rights](tc_assets#money) are passed continuously from tenant to landlord. That gateway is a product of the unitary interface projection behind the [ancient cadastral](tc_assets#cadastral), which has no objective existence. It is a virtual map that must be enforced into being by a third-party. In consequence, a natural bifurcation formed at the dawn of civilisation between the enforcing agent and the beneficiaries of the unitary projection. In return for a system of laws and means of enforcement, the landowner paid tribute to the State in accordance with their means. The modern incarnation of such tribute is [corporation tax](#corporation-tax).
 
-#### Spatial Folding
+### Spatial Folding
 
 Tenancy agreements are rooted in the [Agricultural Revolution](tc_assets#agriculture) (AR). Ancient history may illuminate the RHS of **Figure 1**, but what about the rest? It is a strange fact that a farmhouse in C15th England would have had only one chimney, but by the C17th it would likely have had several[^1]. Around the same time as the capitalisation of land and the Enclosure Acts, farmers began to enclose their own space into private compartments that required these extra chimneys. By folding up space into new planes of abstraction, they discovered that they could create more space by increasing the number of [interfaces](tc_production#interfaces) it could support. The spatial folding of the pre-industrial farmhouse is replicated in the construction of a modern Serviced Office.  
 
 Combining spatial folding with the post-IR state-backed corporate entity, the Serviced Office can scale the age-old exploitation of property to global dimensions. A precondition to scaling is therefore [incorporation](tc_profit_and_loss#incorporation), which provides the legislative framework presented in **Figure 1**. To do so with working capital, funds must be transferred across the cadastral of the [asset layer](tc_assets#asset-layer) and secured on the [balance sheet](tc_balance_sheet). Then the company needs to find a plot of land upon which to project a unitary interface, like the patio on [Darwin's Square](tc_assets#darwins-square), and it is ready to go. 
 
-#### Scaling
+### Scaling
 
 The mentality behind the company's relation to its new plot will be identical to that of Odysseus upon finding land *never disturbed by foot of man*[^2], except it will be applied in multiple dimensions. Once the lawyers secure planning permission from the State for their Community Business Centre, the [Production Network](tc_production#production-network) is financed to begin the construction process. The land is wiped of Darwinian complexity by bulldozers to create a smooth, abstract surface upon which to build. Then space is folded up to inflate the interfaces available for unitary projection from one (AR) to many (IR). I have described the structures and process behind the construction of the building, its components, systems and connectivity, in my [Theory of Production](tc_production#workflow).  
 
@@ -58,7 +58,7 @@ Each namespace is assigned a gateway contract (Type **C**). Only when customers 
 
 Because a company is also a fiefdom, owners can make up the by-laws of public access to their private resources. Lawyers apply their skill in contract construction to ensure that rights and obligations preserve the master/slave relation and integrity of the property. A clever lawyer embeds contracts inside contracts, so over time the tenant slips down those snakes into ever increasing rents and service charges. It will be difficult to resist. Once corporations reach a certain scale, there is no legal redress for tenants to resolve disputes, since commercial cases are decided by [who runs out of financial steam](tc_commerce#tertiary-law-execution). Should you request assistance directly from the State, you will be told that the contracts are business-to-business arrangements and nothing to do with them. Which, returning to **Figure 1**, is untrue since they enforce the framework in which they are the principal beneficiary. They collect their taxes by attaching to exchanges over a master/slave divide, leaving the slave-side exposed. 
 
-#### Taxing Output
+### Taxing Output
 
 The outputs of the Serviced Office are the interfaces presented by their buildings, where the licence (**C**) is embodied in the tenancy agreement. Outputs are subject to a [Value Added Tax rate](#value-added-tax) determined by the goods or services sold. The only exception is the exemptions. Commercial letting of property is VAT exempt because this pre-industrial form of trade is not connected to any supply chain where production adds value. Yet these businesses are still connected to the [Production Network](tc_production#production-network) in the provision of service. Direct, indirect and overhead costs will incur VAT. Tax exemption from their primary service means that the VAT accumulated in the Production Network must be absorbed by the business, not the taxman. 
 

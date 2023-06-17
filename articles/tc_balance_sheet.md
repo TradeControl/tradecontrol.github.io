@@ -11,9 +11,10 @@ Balance sheets have been generated in the same way for hundreds of years, being 
 
 The literature on capitalism is vast, but seldom are balance sheets even mentioned. This is a remarkable fact because capital is calculated on the balance sheet. Without balance sheets, financial markets would lose their purpose and the rich would lose access to much of their wealth. The concepts behind capitalism must be implemented functionally, and the calculation of capital is its central pillar. Therefore, to understand how it works, the balance sheet is the place to start. 
 
-## Requirements
+## Background
 
-To fully digest the following, it would help if you had carried out the [Balance Sheet Tutorial](../tutorials/balance-sheet-web), or even better, [implemented Trade Control](../tutorials/installing-web) in your own business. If the latter, you could automatically obtain a balance sheet without needing an accountant. 
+- [Balance Sheet Tutorial](../tutorials/balance-sheet-web)
+- [Trade Control Implementation](../tutorials/installing-web)
 
 ## Purpose and Method
 

@@ -301,7 +301,7 @@ A Cash Account is a set of dated paid in/out transactions, each with a correspon
 
 CASH type accounts are vital to the effective running of any business. ASSET types do not apply to sole traders, only corporations. The DUMMY type is administrative only, for example, to correct a supplier invoice without a credit note, or vat anomalies.
 
-#### Cash Statement
+### Cash Statement
 
 Because your bank account is mirrored by a cash account, the statement is a useful reference for locating historical transactions. It also allows you to edit and delete any transaction. Modifying cash payments triggers a discrete re-build on the effected organisation, ensuring invoice status matches the projected SvD balance.
 

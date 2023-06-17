@@ -137,6 +137,6 @@ What is likely to happen if you became a creator, on the margins of society, and
 
 Licenced by Ian Monnox under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/) 
 
-## Notes
+## References
 
 [^1]: Contract Law by Richard Stone 1992

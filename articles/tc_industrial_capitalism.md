@@ -61,13 +61,13 @@ Determining the cost of a product is not straight forward for many reasons, such
 
 The following section describes the method by which costs have been traditionally calculated. I explain the flaws and present the ideas behind [my alternative approach](../tutorials/manufacturing#job-costing).
 
-#### Cost Accounting
+### Cost Accounting
 
 Cost Accounting is derived from the Asset Layer. Therefore it is an implementation that serves a [Unitary Interface Projection](tc_assets#unitary-interface-projection), visible in its use for the [evaluation of stock](../tutorials/balance-sheet#current-assets) on the balance sheet, but also in the techniques by which cost is ascertained. Different techniques exist but having designed and coded several cost accounting systems in the past, they are all riffs on the same theme. 
 
 Traditional costing adds purchases to the cost of production. To calculate the latter, hourly rates for each resource are multiplied by the amount of time spent producing the job. There are many issues that relate to this approach, but the principal problem is in the setting of the rates. Many business costs are not directly attributable to the service or product sold, but these must be absorbed in the cost for price discovery. The hourly rate therefore is dependent upon either historical or budgeted productive time and costs. The latter can be verified and is therefore useful for assessing the asset value of stock (taken at a point in time when productive workflow is stopped). However, the future never mirrors the past. Not only are prices set by traditional budgeted costing likely to be proven wrong by time, but they are often fixed inflexibly by accountants for entire financial years. Therefore, the financial source of the rates is either historical (called *fitting* in Machine Learning), or an inflexible budget drawn from trial accounts (a crystal ball).
 
-#### Gestalt Costing
+### Gestalt Costing
 
 During the 80s I was responsible for supplying the cost framework for price discovery in a factory. I bought the CIMA manuals and, just as I did for DEBK, I worked out the rates and costs manually on paper so I could see exactly how it worked. I then wrote code that traversed the entire MRP system to reconcile the calculated costs with the accounts. No matter how hard I tried, I could never get to the truth. I concluded that there is no true cost that can be assigned directly to an individual component or assembly. It is a myth. 
 

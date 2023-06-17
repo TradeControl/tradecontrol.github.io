@@ -4,7 +4,7 @@ title: XML Price Lists for Customer Quotations
 permalink: /tutorials/quotations_overview
 ---
 
-#### Product and service prices for customer generated quotations
+Product and service prices for customer generated quotations
 
 ## Documentation
 

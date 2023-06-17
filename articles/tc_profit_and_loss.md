@@ -20,7 +20,7 @@ To replicate the services provided by Chartered Accounting I must provide an alt
 
 The first question is answered by the Balance Sheet; the second by the P&L. Chartered Accounting constructs them from the medieval practice of double-entry book-keeping (DEBK), originating around c13. From the DEBK ledgers they first construct a P&L, then derive the Balance Sheet by adding the profit to the capital account. In so doing, not only do all accounting packages work off DEBK, the whole edifice of the modern financial markets and world trade still rest upon its ancient and humble shoulders. Although that is the case, like the capital calculation on the balance sheet, DEBK is seldom mentioned in the literature on capitalism. Trade Control is able to dispense with DEBK yet still answer these two questions.
 
-### Double-Entry Book-Keeping
+## Double-Entry Book-Keeping
 
 Business transactions are separated from personal transactions by the business entity. DEBK records the transactions of the business entity so that its position can be reported upon, to its owners and the government, through the presentation of accounts. When a business entity is formed, a personal transaction by the owner is made into the business entity, constituting the owner's initial capital. 
 
@@ -30,13 +30,13 @@ Capital is the amount a business is worth to its owner. The P&L calculates the a
 
 Assets can be current or fixed, the latter being tangible such as buildings and equipment, or intangible such as the value of a brand name. Current assets are also known as circulating assets because they are the objects of trade and cash. The sale and purchase of current assets is indelibly recorded in the DEBK records and cannot be altered.  Fixed assets are so described because they must remain locked in the business to facilitate trade. When a fixed asset is purchased, it is entered on the DEBK ledgers as an asset but balanced against a capital or cash liability. Net capital gain is therefore zero. When a current asset is manufactured but not yet sold, it cannot be entered on any ledger, so again no net capital gain. To resolve this shortcoming, various capital instruments have been evolved to manipulate the assets on the Balance Sheet. In this way, accountants can, at the behest of business owners, apply their dark arts to inflate or deflate capital by redefining the assets of their businesses.
 
-#### Business Entity
+### Business Entity
 
 The first act in forming a business entity is to clearly demarcate the territorial boundaries of production and consumption. This is orchestrated by the State, whereby it issues productive rights to its subjects and lends them coercive capacity to enforce a territorial force field on their consumers (such as T&C). The conditions for obtaining the State's coercive power are laid out in Company Law. A territorial interface is projected upon some potentially productive domain inside a [Spatial Workflow](tc_production#object-structure). In so doing, a plot of territory is brought into being, its extent defined by the amount of money outlaid. The amount can be divvied up among one or more owners, describing the amount of territory they own, called a share.  A share, therefore, is a measure of territorialisation: like land divided into lots of small plots, each of which can be owned separately. Owners, therefore, do not need to be present in or contribute to the productive domain to benefit from its output. Like landlords, they exist outside the interface of their territory. Ownership of a productive resource is equivalent to an infinite debt (one that can never be paid off), like rent.
 
 The territorial boundaries of the Business Entity determine a [trading node](../tutorials/installing-sqlnode) and how it must [network](../tutorials/network_overview).
 
-#### Incorporation
+### Incorporation
 
 In Britain, a business entity must be initially registered with the State at Companies House who assign a unique reference to its Company Name, called the Company Number. Trade Control's number is 07569044.  The business entity is an [Organisation](tc_production#organisations). It must be associated with a specific location, called the registered address; its owners listed with their opening share capital; then accompanied by a list of Directors who are legally responsible for serving the interest of these owners. Every business entity must first submit a Memorandum of Association according to the Companies Act. This legal document specifies the company name and registered address, and then a section called “The Objects for which the Company is established”, describing the intended extent and type of commercial operations, which are normally very vague. Following are lots of clauses about shares, property, patents and loans etc, to territorialise the entity. The Memorandum declares that the liability of its members is limited, how many shares are being issued at what price, and a statement of right to modify the share structure and how to pay out dividends in the future.
 
@@ -46,7 +46,7 @@ Finally, the subscriber must sign the memorandum with something like my declarat
 
 Once you pay a small administration fee, you have got yourself a little plot of commercial territory upon which you can plant your company logo. Unfortunately, if you have only purchased one pounds worth of rights to produce, like company number 07569044, the initial application of your newfound rights will be far more limited than any of your potential liabilities. Nevertheless, your new organisation, like [the Bell Foundry](tc_production#organisation-structure) encountered in my Production Theory, is now a subject set to project its intended purpose into the world.
 
-#### Debt
+### Debt
 
 The Balance Sheet is calculated by deducting liabilities from assets and is therefore described by property and debt. Asset comes from Latin _ad satis_ which means _to have enough_, so it is the amount of property that can be used to cover debt. Liability comes from _ligare_, to bind, so a liability is the binding of responsibility to a debt. Thus, the accounting system does not serve the business as a productive resource, but the capital of its owners: calculating how much they can withdraw from the business, sell their property for, or leverage its value to obtain business loans. 
 
@@ -72,7 +72,7 @@ Capital is an asset to the Owner, but a liability to the business. Production pu
 
 Because capital is the debt a business owes to its owner, Capitalism is the technology by which that debt is ceaselessly increased.
 
-#### Capital Extraction
+### Capital Extraction
 
 Once a [business entity](#business-entity) is defined, owners can enact their own legislation regarding the business entities interfaces, issuing contractual rights to their users. Consumers do not emit a territorial force field. They obtain value in acts of monetary exchange where they sacrifice some of their accrued earnings in exchange for connection to a specific interface. In other words, in accordance with polarity, rights to consume are passed down the Consumption Network, whilst the objects of consumption are handed over in the opposite direction. Since industrial production is the art of making something for less than you get for it, the seller's rights to consume increase.
 
@@ -95,11 +95,11 @@ The diagram in **Figure 1** assumes that no profit is being taken out of the bus
 
 The yellow dot represents the capital that would be recorded on the Balance Sheet were there to be no extraction. It follows the same curve presented in **Figure 1**. That would be great for the productive domain because it is not leaking its accrued earnings, and the money can be spent on improving itself. However, that can never be the case, because the taxman will always take a slice of any increase in territory through the legal obligation to pay corporation tax. Also, it can never be, because the domain has only borrowed its rights; they are all owned by the owners who decide how much of the remaining profit they want to extract. The actual capital growth curve is traced by the red dots in the diagram. If the closing balance is below that in the previous year, the business is in a loss-making position and no extraction is possible. Moreover, the owners are not allowed to skim more capital than can be supported by that year’s growth. To continue with the farming analogy, the State allows owners to harvest their crop, but not the soil, lest they kill the lands capacity to provide in the following season.
 
-### Polarity Inversion
+## Polarity Inversion
 
 It is the external ownership of the productive resource that causes the polarity shift of profit inside the business entity. I depict the inversion in **Figure 3**.
 
-![Polarity Shift](../images/profit_and_loss_figure_2.svg)
+![Polarity Shift](../images/profit_and_loss_figure_3.svg)
 
 The box to the left of the asset recording surface is the production system implementation up to [version 3.28.5](https://github.com/iamonnox/tradecontrol/blob/master/changelogs.md#3.28.5). Trading Profit is price minus cost which must yield a positive value so that the business entity can buy tools and labour for production, plus materials and components for consumption in transformational processes. The entity in this form could borrow money from an external source, but that would not invert the polarity of its profits. A finite debt is of the same order as a material input paid in instalments. The debt is equivalent to a purchased good, and the cost is interest on the loan. 
 
@@ -113,7 +113,7 @@ The [Company Statement](https://github.com/tradecontrol/sqlnode/blob/master/src/
 
 If we remove the [asset charge algorithm](tc_balance_sheet#asset-charge) from the transaction data, the formula is identical to the calculation of profits inside the Trading Statement, except polarity is inverted. Only an owner’s territorial force field is sufficiently powerful to do that. Capital is defended with the same determination as land because the underlying mentality is the same. 
 
-### Credere
+## Credere
 
 The word _credit_ is the neuter past participle (_creditum_) of the Latin word _credere_ which means to trust. If you have a credit card, it means the banks give you rights to consume before receiving the money to back that consumption up. They trust that you will repay them, meaning that you have credit.  If you were to naïvely record that trust in your own neat and tidy books, you would enter the following into the purchase ledger:
 

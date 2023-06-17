@@ -120,7 +120,7 @@ Install the [tutorial](./manufacturing) using the [Trade Control Configurator](#
 
 There are four modes of installation, allowing you to review how the Bill of Materials (BoM) is constructed and deployed. First install with the Activities selected, which will create the BoM. Re-running the installation, setting each option on in turn, re-creates the BoM and activates the instruction. In so doing, you can obtain a vital understanding of accruals from the Company Statement.
 
-## Services Tutorial
+### Services Tutorial
 
 Install the [tutorial](./services) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below.
 

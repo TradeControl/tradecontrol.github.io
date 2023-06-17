@@ -28,7 +28,7 @@ A useful way to understand the unfolding history of the financial markets since 
 
 The last stage is both uncertain and yet to occur. But following the logic of an asset-based mentality it does make sense.
 
-### Capital Debt
+## Capital Debt
 
 Infinite debt is nothing new. It is the founding instrument behind slavery and rent - debts to an owner that can never be paid off. Industrial Capitalism is a technique for applying infinite debt to a productive entity. From previous articles you will know that to pay off infinite debt [polarity shift](tc_profit_and_loss#polarity-inversion) occurs inside the [Capital Layer](tc_assets#capital-layer) - the producer/owner rift defined by Company Law. There is [no legal or practical obligation](tc_profit_and_loss#capital-extraction) for the business to pay out the debt, because that is up to the owner of its shares. It is why Industrial Capitalism is not responsible for the dynamics of [exponential growth](tc_industrial_capitalism#growth).
 
@@ -45,7 +45,7 @@ Since banks and all their ancillaries (hedge funds, asset management firms, VCs 
 
 We could redraw [the positive feedback loop](tc_industrial_capitalism#producer-price) of Industrial Capitalism, instead showing the negative feedback loop of financial capitalism. There is no point, however, because it would merely show the financial markets sucking the rights to capital out of the production layer. Over time, the economy becomes de-industrialised, and all the money ends up in the banks. Therefore, capital servicing finite debt repayments, not investments, is a kind of anti-capitalism, because Industrial Capital is being systematically eroded by its negative feedback loop.
 
-### Infinite Territory
+## Infinite Territory
 
 Money creation issues infinite territory not infinite debt. For example, you [own finite territory](tc_assets#unitary-interface-projection) in the form of property and this bestows a right to legislate upon its use. You draw up a rental agreement which details the terms by which a tenant can obtain access to your territory. Once these laws are accepted by a tenant, they begin to pay off a debt that is without termination. If the debt is not paid, eviction follows, and another tenant takes up the responsibility. Therefore, your tenant must connect to the production layer to service the rent, which is normally via an employment contract issued by a business entity. Both contracts are manifestations of an owner's [UIP](tc_assets#unitary-interface-projection), the one [swapping rights to consume](tc_assets#money) for labour and the other taking away those rights for providing a home. Your tenant wants to break this cycle by going self-employed but needs start-up funds to buy a van. You offer to lend back the money you obtained from your finite territory in the form of a long-term loan, and issue another contract describing the repayment terms. This capital debt gives your tenant the right to produce, hopefully generating sufficient income to pay the rent. Here, the money supply is tied inextricably to finitude and there is no way you can change that. But central banks, who issue money, can. 
 
@@ -53,7 +53,7 @@ The source of infinite debt is finite territory. Where territory is finite, incr
 
 Because all this infinite territory is in the future, what happens when the burden of the future exceeds the bearing capacity of the present? This future is a unitary projection and therefore cannot be maintained save through a force field of supreme violence (such as the US military, financed from the infinite territory of US bonds[^1]). How can the debtors write off their own debts except down the barrel of a gun? Or through the tried and tested methods of warfare, plunder and theft? But perhaps there is another way.
 
-### Exodus
+## Exodus
 
 Even though the derivatives and capital bond markets are so immense, they are nevertheless credited against the Production Layer, because where else are these debts going to be ultimately paid off? That means every tradable asset in the financial system (whether bonds, derivatives or equity) are still either dependent upon, or paid through, capital on the balance sheet. You can stoke the market by increasing the amount of debt available for property assets. But how are these debts going to be paid off except through wages, which is again off the balance sheet, since capital is [assets minus liabilities](tc_balance_sheet#capital), and wages are the latter. Thus, finite debts are underpinned and financed by infinite debt, comparable to the age-old ownership of land. For the endgame, as the capital markets are systematically privatised, the many below the Asset Layer will by default be in debt to those few who remain above it, infinitely.
 
