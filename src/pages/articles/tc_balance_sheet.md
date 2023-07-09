@@ -17,7 +17,7 @@ To fully digest the following, it would help if you had carried out the [Balance
 
 ## Purpose and Method
 
-It is a statutory requirement for every company to present a [Profit and Loss Account (P&L)](tc_profit_and_loss) and Balance Sheet to the government authorities.
+It is a statutory requirement for every company to present a [Profit and Loss Account (P&L)](/articles/tc_profit_and_loss) and Balance Sheet to the government authorities.
 
 The purpose of the balance sheet is to report to shareholders the total capital value of their holdings. That is because shareholders may or may not have an involvement in the business, so they are treated separately (like the public stock market). HMRC, the UK tax collector, does not need a balance sheet, only a P&L, because that tells them the total profit over the financial year on which they can levy corporation tax. Hence Trade Control has always had a P&L to calculate the company tax position.
 
@@ -71,7 +71,7 @@ A classic balance sheet takes the following form:
 
 ### Asset Accounts
 
-If you have followed the [Balance Sheet Demo](/tutorials/balance-sheet-365#configuration), you will know my solution, which is to model assets in cash accounts. When the cash account is of type ASSET, it does not map to a bank account or bitcoin wallet and nor do payments into the account generate a corresponding invoice, since there is no accompanying exchange. Cash Accounts consist of time-stamped entries with either a pay in or out value, and a dynamically calculated projected balance. Using [Cash Polarity](tc_production#cash-polarity) and the formula for capital calculation, we can obtain the live capital value of any business by summating two things:
+If you have followed the [Balance Sheet Demo](/tutorials/balance-sheet-365#configuration), you will know my solution, which is to model assets in cash accounts. When the cash account is of type ASSET, it does not map to a bank account or bitcoin wallet and nor do payments into the account generate a corresponding invoice, since there is no accompanying exchange. Cash Accounts consist of time-stamped entries with either a pay in or out value, and a dynamically calculated projected balance. Using [Cash Polarity](/articles/tc_production#cash-polarity) and the formula for capital calculation, we can obtain the live capital value of any business by summating two things:
 
 1. the current balances of all trade and asset cash accounts (money and assets)
 2. the current balances (*-1) of all organisation statements (debtors and creditors) 
@@ -196,7 +196,7 @@ To obtain the asset value of debtors and creditors, the [asset charge](#asset-ch
 
 #### Bank and Cash
 
-Banks can be replaced with the [Trade Control HD Wallet](/tutorials/bitcoin), which has more advanced features than a bank account, such as [namespacing](tc_production#namespaces). However, although there is no technological obstacle standing in your way, for political reasons, it is not a practical solution at this time. When your Unit of Account is set by the wallet, your balance sheet will be automatically generated for Companies House in bitcoin. You can do that now, but unfortunately, they will not accept it.
+Banks can be replaced with the [Trade Control HD Wallet](/tutorials/bitcoin), which has more advanced features than a bank account, such as [namespacing](/articles/tc_production#namespaces). However, although there is no technological obstacle standing in your way, for political reasons, it is not a practical solution at this time. When your Unit of Account is set by the wallet, your balance sheet will be automatically generated for Companies House in bitcoin. You can do that now, but unfortunately, they will not accept it.
 
 By law, balance sheets must record the fiat money held in your current and reserve accounts, including physical cash. [How to create a cash box](/tutorials/balance-sheet-365#cash-box) is explained in the demo. The [Cash Account Statement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwAccountStatement.sql) presents cash, bank and assets together.
 
@@ -279,7 +279,7 @@ Therefore, any anomalies or changes to the statement at any point in time would 
 
 #### Organisation Statement
 
-The [Org.vwStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Org/Views/vwStatement.sql) matches invoices to payments using [cash polarity](tc_production#cash-polarity). Invoices with a positive polarity are deducted from the organisation's statement (because they owe you) and added when negative (because you owe them). Payments are the other way around. Because the entry is based on polarity rather than invoice type, debit and credit notes are treated in the same way.  Whenever a payment is received without a corresponding cash code, the algorithm matches the amount to invoices outstanding on a FIFO basis and sets them to partial or totally paid. Adopting the belt and braces approach by [running a rebuild](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/App/Stored%20Procedures/proc_SystemRebuild.sql) from Cash Statements at period-end, the same algorithm is applied, but from the opening balances of each organisation. 
+The [Org.vwStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Org/Views/vwStatement.sql) matches invoices to payments using [cash polarity](/articles/tc_production#cash-polarity). Invoices with a positive polarity are deducted from the organisation's statement (because they owe you) and added when negative (because you owe them). Payments are the other way around. Because the entry is based on polarity rather than invoice type, debit and credit notes are treated in the same way.  Whenever a payment is received without a corresponding cash code, the algorithm matches the amount to invoices outstanding on a FIFO basis and sets them to partial or totally paid. Adopting the belt and braces approach by [running a rebuild](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/App/Stored%20Procedures/proc_SystemRebuild.sql) from Cash Statements at period-end, the same algorithm is applied, but from the opening balances of each organisation. 
 
 Therefore, any incorrect obligations will show up in the current set of unpaid or partially paid invoices. These can be easily reviewed from within the Invoice Register and rectified by consulting the organisation's statement.
 
