@@ -1,0 +1,991 @@
+ /**************************/
+ // GLOBAL
+ /**************************/
+ // Trade Control Orange 
+ $tc: #EC7D31;
+
+ html,
+ body {
+   margin: 0;
+   background-color: white;
+ }
+
+ * {
+   font-family: scandia-web, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+ }
+
+ a {
+   text-decoration: underline !important;
+   color: #717070 !important;
+ }
+
+ img[alt="Creative Commons"] {
+   width: 70px !important;
+   text-align: left !important;
+   display: inline !important;
+ }
+
+
+
+ /**************************/
+ // HEADER
+ /**************************/
+ #tc-header {
+   border-bottom: 1px solid lightgray !important;
+   box-shadow: 0 4px 6px -6px #222;
+   display: flex;
+   align-items: center;
+
+   #tc-logo {
+     flex: 1;
+     margin: 0 !important;
+     padding: 0 !important;
+
+     img {
+       max-width: 100%;
+       height: auto;
+       width: 500px;
+       margin: 0 !important;
+       box-shadow: none !important;
+     }
+   }
+
+   #hamburger {
+     margin-right: 1rem;
+   }
+ }
+
+
+ /**************************/
+ // SIDE NAVBAR
+ // RESPONSIVE
+ /**************************/
+ @media (max-width: 1000px) {
+   #tc-nav-sidebar {
+     display: none;
+     position: absolute;
+   }
+ }
+
+
+ #tc-nav-sidebar,
+ #tc-nav-fullscreen {
+   width: 350px;
+   background-color: #efefef;
+   background-image: linear-gradient(to bottom, #efefef, #e7e7e7 );
+   margin: 0;
+   padding: 0;
+
+   & ul {
+     list-style: none;
+     margin: inherit 0;
+     padding: 0 15px;
+   }
+
+   li {
+     padding: .5rem 0 !important;
+     border-bottom: 1px solid lightgray;
+     border-top: 1px solid white;
+
+     &.divider,
+     li.dropdown {
+       border: none !important;
+       padding: 0 !important;
+       margin: 0 !important;
+     }
+
+     a {
+       text-decoration: none !important;
+
+       &:hover {
+         text-decoration: underline !important;
+         cursor: pointer;
+       }
+     }
+   }
+
+ }
+
+ #tc-nav-sidebar div ul.nav>li>a,
+ #tc-nav-fullscreen div ul.nav>li>a {
+   display: block;
+   font-weight: bolder;
+   font-size: 1.5rem;
+   color: $tc !important;
+   // color: red !important; 
+   padding-bottom: 10px !important;
+ }
+
+ #tc-nav-sidebar div ul.nav>li,
+ #tc-nav-fullscreen div ul.nav>li
+ {
+   border: none;
+   padding-top: 2rem !important;
+ }
+
+ #tc-nav-sidebar div ul.nav>li:first-child,
+ #tc-nav-fullscreen div ul.nav>li:first-child  {
+   padding-top: 0 !important;
+ }
+
+
+
+ /**************************/
+ // MAIN
+ /**************************/
+ #doc-wrapper #tc-main>p>img {
+   max-width: 60vw !important;
+ }
+
+
+#doc-wrapper #tc-main > p > img[src*="jpeg"] {
+  // outline: 4px solid red;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+ #tc-main code,
+ #tc-main code>* {
+   font-family: monospace !important;
+ }
+
+ #tc-main {
+   flex: 1;
+   padding: 0 1rem;
+   font-size: 16px;
+   line-height: 29px;
+   //  max-width: 100%;
+   //  margin: 0 8.5rem !important;
+   //  outline: 2px dashed green;
+
+
+   img {
+     max-width: 80% !important;
+     display: block;
+     text-align: center;
+   }
+
+   pre {
+     max-width: 70vw !important;
+     display: block;
+   }
+
+
+
+   blockquote {
+     padding: 1rem;
+   }
+
+   code,
+   code span {
+     font-family: monospace !important;
+     font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New !important;
+   }
+
+   h2 {
+     margin: 0 1rem;
+     font-size: 1.5rem !important;
+     color: #555 !important;
+   }
+
+   p {
+     color: #717070 !important;
+     margin-bottom: 16px !important;
+   }
+
+   img {
+     // box-shadow: 5px 10px 10px #888888 !important;
+     box-shadow: 0 20px 30px -16px rgba(9, 9, 16, .7);
+     //  margin: 0em 0px 5em 0;
+     text-align: center;
+     margin: 0 auto !important;
+     width: 100%;
+   }
+
+
+   .h1,
+   h1 {
+     background-color: #EC7D31;
+     color: white !important;
+     font-size: 28px !important;
+     font-weight: lighter !important;
+     letter-spacing: 0.05px !important;
+     line-height: 1.2 !important;
+     padding-left: 30px;
+     padding-top: 20px;
+     padding-right: 30px;
+     padding-bottom: 20px;
+     margin-top: 30px !important;
+     margin-bottom: 0px !important;
+     // margin-left: -2em !important;
+     // margin-right: -2em !important;
+     border-radius: 4px;
+     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+   }
+
+   .h2,
+   h2 {
+     position: relative;
+     right: .9em;
+     color: #333;
+     font-size: 18px;
+     line-height: 1.2;
+     // margin-bottom: 2em;
+     margin-top: 2em;
+   }
+
+   .h2:before,
+   h2:before {
+     color: $tc;
+     content: "# ";
+     font-weight: lighter;
+     pointer-events: all;
+   }
+
+   // Light background box
+   .h3,
+   h3 {
+     margin-top: 2em;
+     border-radius: 4px;
+     color: #333;
+     font-size: 18px !important;
+     font-weight: 500 !important;
+     line-height: 1.2 !important;
+   }
+
+   .h4,
+   h4 {
+     position: relative;
+     right: .9em;
+     color: #333;
+     font-size: 16px;
+     line-height: 1.2;
+     // margin-bottom: 2em;
+     margin-top: 2em;
+   }
+
+   .h4:before,
+   h4:before {
+     color: $tc;
+     content: "# ";
+     font-weight: lighter;
+     pointer-events: all;
+   }
+
+   // A h4 is used as a comment/tip block:
+   /*  .h4, h4 {
+    color: $tc !important;
+    font-size: 1em !important;
+    font-weight: bolder !important;
+    margin-top: 3em !important;
+    margin-bottom: 20px !important;
+    padding-left: .25em;
+    border-left: 2px solid #a8a8a8 !important;
+
+  }*/
+   // A h5 is used as a code 'note:' block:
+   .h5,
+   h5 {
+     color: #333 !important;
+     margin-top: 20px !important;
+     margin-bottom: 20px !important;
+     border-left: 2px solid #6d8ac5;
+     padding-left: 16px;
+     line-height: 1.42857143 !important;
+   }
+
+   .li,
+   li {
+     margin: 5px 0 !important;
+   }
+
+   // Used to display output from a command (so the output of something wrapped in a h5)
+   .console-output {
+     white-space: pre-wrap;
+     margin-bottom: 15px;
+     font-weight: bold;
+     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+     padding-left: 17px;
+     word-break: break-all !important;
+   }
+
+   // Override page-content
+   .page-content {
+     padding: 0px 0;
+     flex: 1;
+   }
+
+   // Table theme (e.g. when | col1 | col2 | is used in markdown)
+   table {
+     border-collapse: collapse;
+     color: #333 !important;
+     font-family: Open Sans, sans-serif;
+     //font-weight: 300 !important;
+     //letter-spacing: 0.5px !important;
+     line-height: 1.2 !important;
+     border: 1px solid gray;
+     margin-left: 18px;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+   }
+
+   table th {
+     text-align: left;
+     padding-right: .5rem;
+     padding-left: .5rem;
+     background-color: white;
+     color: #ff0000;
+     font-family: Open Sans, sans-serif;
+     font-size: 18px !important;
+     font-weight: lighter !important;
+     line-height: 1.2 !important;
+     border-bottom: 1px solid #c9c9c9;
+     border-top: none;
+     border-right: 1px solid gray;
+     border-left: none;
+   }
+
+   table td {
+     border: 1px solid gray;
+     padding-right: .5rem;
+     padding-left: .5rem;
+     //  vertical-align: top;
+     line-height: 1.42857143 !important;
+   }
+
+   table tr:nth-child(even) {
+     background-color: white;
+   }
+
+   table tr:nth-child(1)>td:nth-child(1) {
+     //  padding-top: 20px;
+   }
+
+   table tr:nth-child(1)>td:nth-child(2) {
+     //  padding-top: 20px;
+   }
+
+   table td:nth-child(1) {
+     //  padding-left: 0px;
+     //  padding-right: 10px;
+   }
+
+   table td:nth-child(2) {
+     //  padding-left: 10px;
+     //  padding-right: 0px;
+   }
+
+   table th:nth-child(2) {
+     //  padding-left: 10px;
+   }
+
+   // Add a bit more room around a hr
+   hr {
+     margin-top: 40px !important;
+     margin-bottom: 40px !important;
+   }
+
+   ul>li {
+     margin-left: 6px;
+   }
+
+   // Code blocks used via the ~~~~ wrapper
+   pre {
+     padding-left: 17px !important;
+     padding-right: 17px !important;
+     padding-top: 8px !important;
+     padding-bottom: 6px !important;
+     margin-bottom: 20px !important;
+     font-size: 13px !important;
+   }
+
+   // In-text code used via the ` character wrapper. Please note that syntax_highlighter_opts have been disabled in _config.yml
+   code {
+     color: #333 !important;
+     padding-top: 3px !important;
+     padding-bottom: 2px !important;
+     font-size: 13px !important;
+   }
+
+   blockquote {
+     color: $tc;
+     border-left: 5px solid $tc !important;
+     background-color: rgb(242, 242, 242) !important;
+     font-weight: normal;
+     font-style: normal;
+   }
+ }
+
+
+
+
+ nav#nav-main {
+   // background-color: green !important;
+   // Color of drop down nav item when clicked and showing sub items
+
+   &.navbar {
+     margin-bottom: 0;
+   }
+
+   .navbar-nav>.open>a {
+     background-color: #f5f5f5;
+     border-radius: 4px;
+     border: 1px white;
+   }
+
+   // Highlight current active page on nav bar
+   .navbar-nav>.active>a {
+     background-color: #ff0000;
+     color: white;
+     border-radius: 4px;
+     border: 1px white !important;
+   }
+
+
+   // Highlight current active page in nav drop down
+   .dropdown-menu>.active>a {
+     background-color: #ff0000 !important;
+     color: white !important;
+   }
+
+   .dropdown-sub-header {
+     padding-left: 24px;
+     padding-right: 24px;
+   }
+
+   .dropdown-menu-wide {
+     min-width: 220px !important;
+   }
+
+   // Make the nav bar align with the site identity and logo
+   .navbar-narrow {
+     //max-width: calc(800px);  
+     position: auto;
+     margin-right: auto;
+     margin-left: auto;
+     margin-bottom: 0px !important;
+     margin-top: 10px;
+     //padding-right: 15px !important;
+     //padding-left: 15px !important;
+     background-color: white !important;
+     border: none !important;
+   }
+
+   .navbar-toggle {
+     margin-right: 0px !important;
+   }
+
+   //Make sure the drop down items aren't spaced out like normal li instances
+   .dropdown-menu>li {
+     margin-top: 4px !important;
+     margin-bottom: 4px !important;
+     margin-left: 0px !important;
+     vertical-align: middle;
+   }
+
+   .dropdown-menu>li>a {
+     padding-left: 24px !important;
+     padding-right: 24px !important;
+   }
+
+   .navbar-left>li {
+     margin-bottom: 0px !important;
+   }
+ }
+
+
+ 
+
+
+ /**************************
+*
+* END
+* 
+***************************/
+
+
+
+
+
+
+
+
+
+ // Override the site header to remove border-bottom
+ .site-header {
+   border-top: 5px solid #424242;
+   border-bottom: 0px solid #e8e8e8;
+   min-height: 55.95px;
+   position: relative;
+ }
+
+ // Size and spacing around the site logo - floated to the right
+ .logo-float-left {
+   vertical-align: bottom;
+   height: 100px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+
+ // Size and spacing around the site logo - as used in the footer
+ .logo-footer {
+   height: 40px;
+   margin-bottom: 12px;
+ }
+
+ // Additional style for the site title
+ // Note: padding-top: 4px; is top aligned with the logo 21px is bottom aligned with site text
+ .site-title {
+   padding-top: 33px;
+   float: right;
+   margin-right: 0px;
+ }
+
+
+
+ // Override site-footer to add more space above
+ .site-footer {
+   margin-top: 45px;
+ }
+
+
+
+ .footer-links {
+   margin-bottom: 0px !important;
+   margin-left: 0px !important;
+ }
+
+ .footer-col-1 {
+   width: 50% !important;
+ }
+
+ .footer-col-3 {
+   width: 50% !important;
+ }
+
+ .footer-col-3>p {
+   margin-left: 0px !important;
+   margin-right: 0px !important;
+ }
+
+ strong {
+   font-weight: 700 !important;
+   letter-spacing: 0.4px;
+ }
+
+ .doc pre {
+   word-break: break-word;
+   white-space: pre-wrap;
+ }
+
+ .wrapper {
+   max-width: 100%;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * scandia-line-web:
+ *   - http://typekit.com/eulas/00000000000000007735db08
+ *   - http://typekit.com/eulas/00000000000000007735db06
+ *   - http://typekit.com/eulas/00000000000000007735db09
+ * scandia-web:
+ *   - http://typekit.com/eulas/00000000000000007735dd24
+ *   - http://typekit.com/eulas/0000000000000000000158e4
+ *   - http://typekit.com/eulas/0000000000000000000158e6
+ *   - http://typekit.com/eulas/0000000000000000000158e7
+ *   - http://typekit.com/eulas/0000000000000000000158e8
+ * source-code-pro:
+ *   - http://typekit.com/eulas/00000000000000007735dc06
+ *   - http://typekit.com/eulas/00000000000000007735dc01
+ *
+ * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
+ */
+ /*{"last_published":"2021-03-22 16:00:55 UTC"}*/
+ @import url("https://p.typekit.net/p.css?s=1&k=ins2wgm&ht=tk&f=17454.25777.24735.24740.24741.24737.24744.24746.24747.24748&a=3993700&app=typekit&e=css");
+
+ @font-face {
+   font-family: "source-code-pro";
+   src: url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "source-code-pro";
+   src: url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 700;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 700;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"), url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"), url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ .tk-source-code-pro {
+   font-family: "source-code-pro", monospace;
+ }
+
+ .tk-scandia-line-web {
+   font-family: "scandia-line-web", sans-serif;
+ }
+
+ .tk-scandia-web {
+   font-family: "scandia-web", sans-serif;
+ }
+
+
+
+
+
+
+
+ /*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * scandia-line-web:
+ *   - http://typekit.com/eulas/00000000000000007735db08
+ *   - http://typekit.com/eulas/00000000000000007735db06
+ *   - http://typekit.com/eulas/00000000000000007735db09
+ * scandia-web:
+ *   - http://typekit.com/eulas/00000000000000007735dd24
+ *   - http://typekit.com/eulas/0000000000000000000158e4
+ *   - http://typekit.com/eulas/0000000000000000000158e6
+ *   - http://typekit.com/eulas/0000000000000000000158e7
+ *   - http://typekit.com/eulas/0000000000000000000158e8
+ * source-code-pro:
+ *   - http://typekit.com/eulas/00000000000000007735dc06
+ *   - http://typekit.com/eulas/00000000000000007735dc01
+ *
+ * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
+ */
+ /*{"last_published":"2021-03-22 16:00:55 UTC"}*/
+ @import url("https://p.typekit.net/p.css?s=1&k=ins2wgm&ht=tk&f=17454.25777.24735.24740.24741.24737.24744.24746.24747.24748&a=3993700&app=typekit&e=css");
+
+ @font-face {
+   font-family: "source-code-pro";
+   src: url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "source-code-pro";
+   src: url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 700;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 700;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"), url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"), url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ .tk-source-code-pro {
+   font-family: "source-code-pro", monospace;
+ }
+
+ .tk-scandia-line-web {
+   font-family: "scandia-line-web", sans-serif;
+ }
+
+ .tk-scandia-web {
+   font-family: "scandia-web", sans-serif;
+ }
+
+
+
+
+
+ /*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * scandia-line-web:
+ *   - http://typekit.com/eulas/00000000000000007735db08
+ *   - http://typekit.com/eulas/00000000000000007735db06
+ *   - http://typekit.com/eulas/00000000000000007735db09
+ * scandia-web:
+ *   - http://typekit.com/eulas/00000000000000007735dd24
+ *   - http://typekit.com/eulas/0000000000000000000158e4
+ *   - http://typekit.com/eulas/0000000000000000000158e6
+ *   - http://typekit.com/eulas/0000000000000000000158e7
+ *   - http://typekit.com/eulas/0000000000000000000158e8
+ * source-code-pro:
+ *   - http://typekit.com/eulas/00000000000000007735dc06
+ *   - http://typekit.com/eulas/00000000000000007735dc01
+ *
+ * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
+ */
+ /*{"last_published":"2021-03-22 16:00:55 UTC"}*/
+ @import url("https://p.typekit.net/p.css?s=1&k=ins2wgm&ht=tk&f=17454.25777.24735.24740.24741.24737.24744.24746.24747.24748&a=3993700&app=typekit&e=css");
+
+ @font-face {
+   font-family: "source-code-pro";
+   src: url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/398a64/00000000000000007735dc06/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "source-code-pro";
+   src: url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/b0fedd/00000000000000007735dc01/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/9c393a/00000000000000007735db08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 700;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/47cb70/00000000000000007735db06/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-line-web";
+   src: url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/3cdb9c/00000000000000007735db09/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/716155/00000000000000007735dd24/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 700;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/7e0390/0000000000000000000158e4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"), url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"), url("https://use.typekit.net/af/4cf72c/0000000000000000000158e6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 500;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/e3f590/0000000000000000000158e7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display: auto;
+   font-style: normal;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ @font-face {
+   font-family: "scandia-web";
+   src: url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/396f3b/0000000000000000000158e8/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display: auto;
+   font-style: italic;
+   font-weight: 400;
+   font-stretch: normal;
+ }
+
+ .tk-source-code-pro {
+   font-family: "source-code-pro", monospace;
+ }
+
+ .tk-scandia-line-web {
+   font-family: "scandia-line-web", sans-serif;
+ }
+
+ .tk-scandia-web {
+   font-family: "scandia-web", sans-serif;
+ }

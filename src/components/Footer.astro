@@ -1,0 +1,127 @@
+---
+---
+
+<div class="footer-wrapper">
+	<div class="footer-main">
+
+		<div class="footer-section tc-logo">
+			<div class="footer-item">
+				<a href="/">
+				<img src="/images/tc_logo_text_white.svg" alt="" />
+				</a>
+			</div>
+			<div class="footer-item">
+				<a
+					href="https://github.com/tradecontrol/tradecontrol.github.io"
+				>
+				</a>
+			</div>
+		</div>
+
+		<div class="footer-section tc-github">
+			<div class="footer-item">
+				<img src="/images/logo_github.svg" alt="" />
+				<a href="https://github.com/tradecontrol/"> TradeControl GitHub </a>
+			</div>
+			<div class="footer-item">
+				<img src="/images/logo_github.svg" alt="" />
+				<a href="https://github.com/TradeControl/tradecontrol.web/"> Web Interface Client</a>
+			</div>
+			<div class="footer-item">
+				<img src="/images/logo_github.svg" alt="" />
+				<a href="https://github.com/TradeControl/office/"> Office 365 Client</a>
+			</div>
+		</div>
+
+		<div class="footer-section tc-cc">
+			<div class="footer-item">
+				<img src="/images/logo_cc.svg" alt="" />
+			</div>
+			<div class="footer-item tc-cc-text">
+				Licenced by Ian Monnox under a Creative Commons
+				Attribution-NoDerivatives 4.0 International License
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<style lang="scss">
+	.footer-wrapper {
+		display: flex;
+		min-height: 120px;
+		padding: 8px;
+		background-color: #474747;
+		background-image: linear-gradient(to bottom, #a6a6a6, #4d4d4d);
+	}
+	.footer-main {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex: 1;
+		align-items: center;
+		border: 1px solid rgba(66, 66, 66, 0.5);
+		border-top: 1px solid rgba(187, 187, 187, 0.5);
+	}
+
+	.footer-section {
+		// outline: 1px dotted red;
+	}
+
+	.footer-section.tc-logo {
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+		img {
+			height: 75px;
+			display: inline-block;
+		}
+	}
+	.footer-section.tc-github {
+		display: flex;
+		flex-direction: column;
+		flex: 3;
+		text-align: left;
+		img {
+			height: 20px;
+			padding-right: 3px;
+		}
+		div.footer-item {
+			display: flex;
+			justify-content: start;
+			padding: 3px;
+			font-size: .75rem;
+			text-decoration: underline;
+			text-decoration-color: white;
+			 
+			// outline: 1px dotted purple;
+		}
+		// outline: 1px dotted white;
+	}
+	.footer-section.tc-cc {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		text-align: center;
+		color: white;
+		font-size: 0.75rem;
+		.tc-cc-text {
+			padding-top: 10px;
+		}
+	}
+
+	.footer-item {
+		display: flex;
+		padding: 0 0.25rem;
+		justify-content: center;
+		align-items: center;
+		a {
+			color: white !important;
+			text-decoration: none !important;
+		}
+		img {
+			height: 40px;
+			display: inline-block;
+		}
+	}
+</style>

@@ -1,0 +1,237 @@
+---
+import Nav_Fullscreen from "./Nav_Fullscreen.astro";
+---
+
+<div id="hamburger-icon" style="position:relative; z-index:999">
+	<button class="menu-toggle" id="menu-toggle" aria-expanded="false"
+		><span class="screen-reader-text">Menu</span>
+		<svg
+			class="icon icon-menu-toggle"
+			aria-hidden="true"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			x="0px"
+			y="0px"
+			viewBox="0 0 100 100"
+		>
+			<g class="svg-menu-toggle">
+				<path class="line line-1" d="M5 13h90v14H5z" style="fill:white"
+				></path>
+				<path class="line line-2" d="M5 43h90v14H5z" style="fill:white"
+				></path>
+				<path class="line line-3" d="M5 73h90v14H5z" style="fill:white"
+				></path>
+			</g>
+		</svg>
+	</button>
+</div>
+
+<!-- The overlay -->
+<div id="menu-fullscreen" class="overlay">
+	<!-- Button to close the overlay navigation -->
+	<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+		>&times;</a
+	> -->
+
+	<!-- Overlay content -->
+	<div class="overlay-content">
+		<Nav_Fullscreen />
+	</div>
+</div>
+
+<script>
+	// Set button to click.
+	var button = document.getElementById("menu-toggle");
+
+	// Click the button.
+	button.onclick = function () {
+		// Toggle class "opened". Set also aria-expanded to true or false.
+		if (-1 !== button.className.indexOf("opened")) {
+			button.className = button.className.replace(" opened", "");
+			button.setAttribute("aria-expanded", "false");
+			document.getElementById("menu-fullscreen").style.width = "0%";
+		} else {
+			button.className += " opened";
+			button.setAttribute("aria-expanded", "true");
+			document.getElementById("menu-fullscreen").style.width = "100%";
+		}
+	};
+</script>
+
+<style lang="scss">
+	$tc: #ec7d31;
+
+	button,
+	input[type="button"] {
+		border: none;
+		border-radius: 0;
+		background: $tc;
+		cursor: pointer;
+		display: inline-block;
+		padding: 1em 1.5em;
+		text-transform: uppercase;
+		transition: all 0.25s ease-in-out;
+	}
+
+	.menu-toggle {
+		font-size: 0.875em;
+		padding: 1em;
+	}
+	.menu-toggle:focus {
+		outline: thin dotted;
+		outline-offset: -2px;
+	}
+
+	.icon {
+		display: inline-block;
+		/* fill: white; */
+		color: white;
+		height: 1em;
+		width: 1em;
+		vertical-align: middle;
+		position: relative; /* Align more nicely with capital letters */
+		top: -0.0625em;
+	}
+
+	/* Menu toggle styles. */
+
+	.icon-menu-toggle {
+		width: 2em;
+		height: 2em;
+		top: 0;
+	}
+
+	/* Animate menu icon (lines). */
+
+	.svg-menu-toggle .line {
+		opacity: 1;
+		transform: rotate(0) translateY(0) translateX(0);
+		transform-origin: 1em 1em;
+		transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+	}
+	.svg-menu-toggle .line-1 {
+		transform-origin: 1em 2.5em;
+	}
+	.svg-menu-toggle .line-3 {
+		transform-origin: 1em 4.5em;
+	}
+
+	.menu-toggle.opened .svg-menu-toggle .line-1 {
+		transform: rotate(45deg) translateY(0) translateX(0);
+	}
+	.menu-toggle.opened .svg-menu-toggle .line-2 {
+		opacity: 0;
+	}
+	.menu-toggle.opened .svg-menu-toggle .line-3 {
+		transform: rotate(-45deg) translateY(0em) translateX(0em);
+	}
+
+	/* Text meant only for screen readers. */
+	.screen-reader-text {
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute !important;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+	}
+
+	button,
+	button:active,
+	button:focus {
+		outline: none !important ;
+	}
+	#hamburger-icon {
+		width: 48px;
+		height: 48px;
+		background-color: $tc;
+		outline: none;
+		stroke-opacity: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 5px !important;
+		padding: 6px;
+	}
+
+	/* The Overlay (background) */
+	.overlay {
+		/* Height & width depends on how you want to reveal the overlay (see JS below) */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 0;
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		right: 0;
+		top: 0;
+		background-color: #e8e8e8; /* Black fallback color */
+		// background-color: rgba(77, 77, 77, 0.97); /* Black w/opacity */
+		overflow-x: hidden; /* Disable horizontal scroll */
+		transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	}
+
+	/* Position the content inside the overlay */
+	.overlay-content {
+		display: flex;
+		visibility: visible !important;
+		justify-content: center;
+		// text-align: center !important;
+		flex: 1;
+		position: relative;
+		top: 25%; /* 25% from the top */
+		width: 100%; /* 100% width */
+		text-align: center; /* Centered text/links */
+		margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	}
+
+	/* The navigation links inside the overlay */
+	.overlay a {
+		padding: 8px;
+		text-decoration: none;
+		font-size: 36px;
+		color: white;
+		display: block; /* Display block instead of inline */
+		transition: 0.3s; /* Transition effects on hover (color) */
+	}
+
+	/* When you mouse over the navigation links, change their color */
+	.overlay a:hover,
+	.overlay a:focus {
+		color: #f1f1f1;
+	}
+
+	/* Position the close button (top right corner) */
+	.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+	}
+
+	/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+	@media screen and (max-height: 450px) {
+		.overlay a {
+			font-size: 20px;
+		}
+		.overlay .closebtn {
+			font-size: 40px;
+			top: 15px;
+			right: 35px;
+		}
+	}
+
+	.line {
+		fill: none;
+		stroke: white !important;
+		stroke-width: 2;
+	}
+
+	.line {
+		fill: none;
+		stroke: black;
+		stroke-width: 2;
+	}
+</style>

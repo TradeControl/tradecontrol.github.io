@@ -1,0 +1,43 @@
+---
+import "../styles/main.scss";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Nav_Sidebar from "../components/Nav_Sidebar.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body>
+		<Header />
+		<div id="doc-wrapper">
+			<Nav_Sidebar />
+			<div id="tc-main">
+				<!-- <h1>{frontmatter.title}</h1> -->
+				<slot />
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	#doc-wrapper {
+		display: flex;
+		flex-wrap: nowrap;
+		max-width: 100vw !important;
+	}
+</style>
+
+
+
+ 

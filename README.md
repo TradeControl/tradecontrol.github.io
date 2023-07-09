@@ -1,30 +1,41 @@
-# Trade Control - Website
 
-The tradecontrol.online website is provided by [Github Pages](https://pages.github.com/).
+## 🚀 Project Structure
 
-## Installation
+Inside of your Astro project, you'll see the following folders and files:
 
-If missing:
+```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-    gem install jekyll bundler
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Compile the website:
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-    cd tradecontrol.github.io
-    bundle install
+Any static assets, like images, can be placed in the `public/` directory.
 
-Run the server:
+## 🧞 Commands
 
-    bundle exec jekyll serve 
+All commands are run from the root of the project, from a terminal:
 
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-Open the site at: http://127.0.0.1:4000
+## 👀 Want to learn more?
 
-## Licence
-
-Trade Control Documentation by Trade Control Ltd is licenced under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/) 
-
-![Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png) 
-
-
-
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
