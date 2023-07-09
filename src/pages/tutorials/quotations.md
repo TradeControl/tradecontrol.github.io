@@ -6,7 +6,7 @@ permalink: /tutorials/quotations
 
 The following document explains how to raise quotations from the xml price lists provided by your supplier.
 
-[overview](./quotations_overview)
+[overview](/tutorials/quotations_overview)
 
 ## Installation
 

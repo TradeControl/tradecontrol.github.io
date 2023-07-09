@@ -115,7 +115,7 @@ Secondly, we make the corresponding double-entry with the opposite polarity, fol
 
 ## Review 4
 
-We are now in a position to review how these assets have modified the balance sheet and P&L [from the previous tutorial](./cash-book-web#finalised-accounts).  [Re-generate the closed period ends](./cash-book-web#period-end) and review the accounts.
+We are now in a position to review how these assets have modified the balance sheet and P&L [from the previous tutorial](/tutorials/cash-book-web#finalised-accounts).  [Re-generate the closed period ends](/tutorials/cash-book-web#period-end) and review the accounts.
 
 The revised Profit and Loss Account for the year should be:
 
@@ -125,7 +125,7 @@ And the corresponding balance sheet:
 
 ![balance sheet](/images/web_balance_sheet4.png) 
 
-Re-applying the [error checking process](./cash-book-web#error-checking) to these figures confirms its continued correctness.
+Re-applying the [error checking process](/tutorials/cash-book-web#error-checking) to these figures confirms its continued correctness.
 
 ## Cash Box
 
@@ -151,9 +151,9 @@ The balance sheet will now show a new cash balance. However, we should periodica
 
 ## Review 5
 
-The new transactions alter the amount of cash we have and affect the company tax and VAT owing. This changes the capital value of the business. Open the [Period End](./cash-book-web#period-end) and re-build the retrospectively altered financial year. 
+The new transactions alter the amount of cash we have and affect the company tax and VAT owing. This changes the capital value of the business. Open the [Period End](/tutorials/cash-book-web#period-end) and re-build the retrospectively altered financial year. 
 
-There are three components to your annual accounts - the balance sheet, the profit and loss account and the company tax return. For a detailed explanation, consult the tutorial on [filing your accounts](./accounts-filing).
+There are three components to your annual accounts - the balance sheet, the profit and loss account and the company tax return. For a detailed explanation, consult the tutorial on [filing your accounts](/tutorials/accounts-filing).
 
 ### Balance Sheet
 
@@ -199,7 +199,7 @@ When you pay off the VAT, the balance is reduced accordingly. You can adjust the
 
 ![vat totals](/images/web_vat_totals.png)
 
-The information button opens the page that provides the quarterly totals you need to communicate to the taxman. If you are below the VAT threshold, you can apparently still use the government portal to enter these values. There is no functional reason therefore why a business must use a third-party accounting package provided by the banks. You can, however, work round that with a [simple export service](./digital-tax).
+The information button opens the page that provides the quarterly totals you need to communicate to the taxman. If you are below the VAT threshold, you can apparently still use the government portal to enter these values. There is no functional reason therefore why a business must use a third-party accounting package provided by the banks. You can, however, work round that with a [simple export service](/tutorials/digital-tax).
 
 ### Company Tax
 
@@ -215,7 +215,7 @@ If the company has made losses in previous financial years, the Company Tax stat
 
 ## Filing
 
-Follow the instructions for [filing company accounts](./accounts-filing#instructions)
+Follow the instructions for [filing company accounts](/tutorials/accounts-filing#instructions)
 
 ## Licence
 

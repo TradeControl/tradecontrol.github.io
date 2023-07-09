@@ -54,7 +54,7 @@ When you test the connection, a series of checks are applied to assess its curre
 
 The details below are all you need to install an instance that can be used by clients. However, if you have never used Trade Control before, it will be difficult to know how to proceed. Either you can accept these defaults and try out the tutorials; or enter the correct information, add yourself as a data user and then install a [basic setup](#basic-setup).
 
-Trade Control supports both fiat and bitcoin as your Unit of Account. If you select bitcoin, the configuration process will be slightly different. Consult the [bitcoin wallet](./installing-bitcoin) documentation for details.
+Trade Control supports both fiat and bitcoin as your Unit of Account. If you select bitcoin, the configuration process will be slightly different. Consult the [bitcoin wallet](/tutorials/installing-bitcoin) documentation for details.
 
 ![Business Details](/images/tc_config_business_details.png)
 
@@ -114,7 +114,7 @@ You are now able to install the services or manufacturing tutorials.
 
 ### BOM Tutorial
 
-Install the [tutorial](./manufacturing) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below. If you want, you can replace the fiat payment system with a [bitcoin wallet](./bitcoin).
+Install the [tutorial](/tutorials/manufacturing) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below. If you want, you can replace the fiat payment system with a [bitcoin wallet](/tutorials/bitcoin).
 
 ![Tutorial Install](/images/bom_install.png)
 
@@ -122,9 +122,9 @@ There are four modes of installation, allowing you to review how the Bill of Mat
 
 ## Services Tutorial
 
-Install the [tutorial](./services) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below.
+Install the [tutorial](/tutorials/services) using the [Trade Control Configurator](#node-configurator). Follow the instructions until you get to the screen below.
 
 ![Tutorial Install](/images/services_install.png)
 
-Select the Pay Invoices option first, then [try out the other options](./services#install-options) at the end of the tutorial.
+Select the Pay Invoices option first, then [try out the other options](/tutorials/services#install-options) at the end of the tutorial.
 

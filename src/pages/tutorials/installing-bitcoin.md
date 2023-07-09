@@ -4,7 +4,7 @@ title: Setting up a bitcoin wallet
 permalink: /tutorials/installing-bitcoin
 ---
 
-The installation builds upon the [Network tutorial](./network) to show how supply chains can be financed using bitcoin. 
+The installation builds upon the [Network tutorial](/tutorials/network) to show how supply chains can be financed using bitcoin. 
 
 ## Preparation
 
@@ -16,13 +16,13 @@ The client Administration page shows the company settings, where you can see how
 
 ![Administration](/images/btc_admin.png)
 
-Work through the network tutorial until you reach [the section on events and transmissions](./network#events-and-transmissions), but don't bother to change the quantities. In so doing, you will have created three companies, connected in a supply chain: Retail -> Secondary Industry -> Primary Industry. Quantity flows up the network (PI -> SI -> RETAIL) whereas value flows down (RETAIL -> SI -> PI). We are going to use the bitcoin blockchain to transact the latter.
+Work through the network tutorial until you reach [the section on events and transmissions](/tutorials/network#events-and-transmissions), but don't bother to change the quantities. In so doing, you will have created three companies, connected in a supply chain: Retail -> Secondary Industry -> Primary Industry. Quantity flows up the network (PI -> SI -> RETAIL) whereas value flows down (RETAIL -> SI -> PI). We are going to use the bitcoin blockchain to transact the latter.
 
 Open the Company Statement of the manufacturer (SI) and you will see their transaction-grained balance sheet measured in bitcoin (**mBTC**):
 
 ![Company Statement](/images/btc_company_statement.png)
 
-Because they are a start-up company, initially there are no funds to purchase the materials needed to manufacture the product. If you scroll down the statement, you can see how over time the profits are translated into accumulated funds that can finance inputs without credit. This delay in financing is why some customers in trading networks demand a 30-90-day window to pay for services and materials. Our manufacturer requests a 30-day payment term from its suppliers, and Cash With Order from its customer. That way they can purchase the materials to manufacture the goods, despatch and receive payment, then pass the cash down the supply chain so they are up and running. This is what we are going to carry out in the [bitcoin tutorial](./bitcoin).
+Because they are a start-up company, initially there are no funds to purchase the materials needed to manufacture the product. If you scroll down the statement, you can see how over time the profits are translated into accumulated funds that can finance inputs without credit. This delay in financing is why some customers in trading networks demand a 30-90-day window to pay for services and materials. Our manufacturer requests a 30-day payment term from its suppliers, and Cash With Order from its customer. That way they can purchase the materials to manufacture the goods, despatch and receive payment, then pass the cash down the supply chain so they are up and running. This is what we are going to carry out in the [bitcoin tutorial](/tutorials/bitcoin).
 
 ## Installation
 
@@ -92,7 +92,7 @@ Firstly, each of these keys are hardened, meaning that there is a private key as
 
 Secondly, the Sales key is selected in the wallet that fully expresses a namespace. The balance is 7.6192 mBTC, which is the sum of all the keys inside its namespace. The transactions listed are in the Sales.Home namespace, so there are no coins to spend in the selected key, which is communicated by the (0) balance. This applies to every key. Therefore, if you select the root key (The Business in this wallet), you can see all the transactions inside the entire wallet, and the current balance that can be spent (like a bank account).
 
-Now the wallets in the supply-chain have been set up, you can [work through the tutorial](./bitcoin).
+Now the wallets in the supply-chain have been set up, you can [work through the tutorial](/tutorials/bitcoin).
 
 ## Licence
 

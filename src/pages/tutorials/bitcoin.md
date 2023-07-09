@@ -4,17 +4,17 @@ title: Using bitcoin as a UOA
 permalink: /tutorials/bitcoin
 ---
 
-[overview](./bitcoin_overview)
+[overview](/tutorials/bitcoin_overview)
 
 In the tutorial, we work through a hypothetical scenario whereby goods are passed through a supply chain that inhabits the three main industrial landscapes of primary, secondary and retail. In practice, your customers and suppliers do not need to be connected to [the network](/network) for you to use the wallet instead of a bank account. Even if they pay into your fiat account, you can easily transfer these funds into the wallet from an exchange.
 
-[wallet installation](./installing-bitcoin)
+[wallet installation](/tutorials/installing-bitcoin)
 
 ## Supply Chain
 
 ### Delivery
 
-Let's start delivering stuff.  Return to the [network tutorial](./network#events-and-transmissions) by logging onto the Plastic Provider and invoicing the first material consignment. From the Providers wallet, create a new payment address for the invoice. This address will be sent over the Ethereum blockchain to the customer.
+Let's start delivering stuff.  Return to the [network tutorial](/tutorials/network#events-and-transmissions) by logging onto the Plastic Provider and invoicing the first material consignment. From the Providers wallet, create a new payment address for the invoice. This address will be sent over the Ethereum blockchain to the customer.
 
 ![Payment Address](/images/btc_payment_address.png)
 
@@ -22,7 +22,7 @@ Only the owner of the Invoice Contract on the Ethereum blockchain can assign a p
 
 ![Invoice Mirror](/images/btc_invoice_mirror.png)
 
-Now the manufacturer has the plastic needed to manufacture the boxes. This process is described in the [BOM Tutorial](./manufacturing). Here, we are only interested in the financial transaction, so we are going to skip through the production process and forthwith despatch the boxes to the customer. The method is identical to that carried out by the Plastic Provider and is described in the network tutorial. Once you have despatched and invoiced the boxes, connect to the tcTHEBUS node and open their wallet (from a file or mnemonic). Choose the namespace into which you want payment:
+Now the manufacturer has the plastic needed to manufacture the boxes. This process is described in the [BOM Tutorial](/tutorials/manufacturing). Here, we are only interested in the financial transaction, so we are going to skip through the production process and forthwith despatch the boxes to the customer. The method is identical to that carried out by the Plastic Provider and is described in the network tutorial. Once you have despatched and invoiced the boxes, connect to the tcTHEBUS node and open their wallet (from a file or mnemonic). Choose the namespace into which you want payment:
 
 ![Payment Address2](/images/btc_payment_address2.png)
 
@@ -30,7 +30,7 @@ You now have an invoice in the To Pay page and another in the To Receive, but no
 
 ### Funding
 
-Connecting to the Storage Box Company wallet, we see there is an invoice to pay but no funds to do so. In the section on [Keys](./installing-bitcoin#keys), we created a key name for receiving start-up funding. We need an address for funders so they can pay in enough bitcoin for the company to get going. Select the Startup Fund keys and create a new address:
+Connecting to the Storage Box Company wallet, we see there is an invoice to pay but no funds to do so. In the section on [Keys](/tutorials/installing-bitcoin#keys), we created a key name for receiving start-up funding. We need an address for funders so they can pay in enough bitcoin for the company to get going. Select the Startup Fund keys and create a new address:
 
 ![Receipt Key](/images/btc_receipt_key.png)
 

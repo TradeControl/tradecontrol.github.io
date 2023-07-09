@@ -1,16 +1,15 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Installing an Office 365 client
-permalink: /tutorials/installing-office
 ---
 
-For an entry-level application, follow the instructions for a [basic single user install](./installing-local).
+For an entry-level application, follow the instructions for a [basic single user install](/tutorials/installing-local).
 
 ## Client
 
-The client interface is a thin Access database that uses ODBC linked tables, Pass Through Queries and ADO to interact with the business entity. The Access database does not contain any business logic or queries; these are processed by Sql Server. It is therefore both a practical tool, but also a fully specified model for future developments, such as a mobile app or ASP.NET website. The client is documented in the [tutorials](./services).
+The client interface is a thin Access database that uses ODBC linked tables, Pass Through Queries and ADO to interact with the business entity. The Access database does not contain any business logic or queries; these are processed by Sql Server. It is therefore both a practical tool, but also a fully specified model for future developments, such as a mobile app or ASP.NET website. The client is documented in the [tutorials](/tutorials/services).
 
-The first section describes how to install the client locally, [the second section](#azure-installation) sets up a connection to Azure Sql and includes the [VSTO templates](./installing-vsto).
+The first section describes how to install the client locally, [the second section](#azure-installation) sets up a connection to Azure Sql and includes the [VSTO templates](/tutorials/installing-vsto).
 
 ## Installation
 
@@ -18,7 +17,7 @@ Pre-requisite: Office 365 Business 64 bit.
 
 > If your machine is 32 bit, [clone the repository](https://github.com/tradecontrol/office)  and re-compile the solution with an alternative build target.
 
-First, if not already available, [install and configure](./installing-sqlnode) an instance of Trade Control in Azure Sql and add data users. Use Azure Portal to register your fixed IP Address with the database firewall. Install the Office Client on your machine.
+First, if not already available, [install and configure](/tutorials/installing-sqlnode) an instance of Trade Control in Azure Sql and add data users. Use Azure Portal to register your fixed IP Address with the database firewall. Install the Office Client on your machine.
 
 [office client - tcOfficeClient.zip](https://github.com/tradecontrol/office/releases)
 
@@ -26,7 +25,7 @@ First, if not already available, [install and configure](./installing-sqlnode) a
 
 ### Options
 
-The Trade Control client is installed into the user's local _AppData_ folder. There are two open modes: compiled and un-compiled. If you are using the [Bitcoin Wallet](./bitcoin), you must use the Native Version, since Bitcoin is not supported by the Windows OS as a Unit of Account and the client must re-configure itself locally.
+The Trade Control client is installed into the user's local _AppData_ folder. There are two open modes: compiled and un-compiled. If you are using the [Bitcoin Wallet](/tutorials/bitcoin), you must use the Native Version, since Bitcoin is not supported by the Windows OS as a Unit of Account and the client must re-configure itself locally.
 
 #### Native Version
 
@@ -68,7 +67,7 @@ The following is a record of the pre-release installation test for Trade Control
 1. Log into the Azure Portal and add a new Sql database called **tcNode**, configured to Basic (You may have to create a new Sql Server with an admin username and password first).
 2. Commission a new Virtual Machine: Windows Server 2019 Standard DS1 v2 (1 vcpus, 3.5 GiB memory). Networking inbound security RDP enabled.
 3. Open the **tcNode** database and add the VM IP Address to the firewall.
-4. Login and turn off IE Enhanced Security and and follow [the node configuration instructions](./installing-sqlnode) until you have installed one of the tutorials. 
+4. Login and turn off IE Enhanced Security and and follow [the node configuration instructions](/tutorials/installing-sqlnode) until you have installed one of the tutorials. 
 
 ### Frontend
 
