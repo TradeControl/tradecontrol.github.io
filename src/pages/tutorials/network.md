@@ -4,13 +4,13 @@ title: Connecting Trade Control nodes
 permalink: /tutorials/network
 ---
 
-[overview](./network_overview)
+[overview](/tutorials/network_overview)
 
 The following tutorial explains how to organise production, commerce and financial exchange across supply-chains. 
 
-It assumes you are familiar with the system or have completed the [Modelling Bills of Materials](./manufacturing) tutorial. If you are using [bitcoin](./bitcoin), the procedure is the same as that for fiat currencies, except for the [payment](#payment).
+It assumes you are familiar with the system or have completed the [Modelling Bills of Materials](/tutorials/manufacturing) tutorial. If you are using [bitcoin](/tutorials/bitcoin), the procedure is the same as that for fiat currencies, except for the [payment](#payment).
 
-[network installation](./installing-network)
+[network installation](/tutorials/installing-network)
 
 ### Activity Mirroring
 
@@ -24,7 +24,7 @@ It assumes you are familiar with the system or have completed the [Modelling Bil
 
 > **Note**
 > 
-> For simplicity, the tutorial will give us only a single product to play with. To fully understand allocations and object mirroring you would need more than one product. The [Power BI repository](./powerbi) contains a T-SQL script that will create several additional products (albeit the same product in different colours) and a corresponding order book. This makes supply-chain operation more involved, but it generates a more realistic set of allocations against the supplier and customer. To install this dataset, download the [network_data_extension.sql](http://gitgub.com/tradecontrol/network/blob/master/src/scripts/network_data_extension.sql) script and from SSMS run it against the tcTHEBUS database.
+> For simplicity, the tutorial will give us only a single product to play with. To fully understand allocations and object mirroring you would need more than one product. The [Power BI repository](/tutorials/powerbi) contains a T-SQL script that will create several additional products (albeit the same product in different colours) and a corresponding order book. This makes supply-chain operation more involved, but it generates a more realistic set of allocations against the supplier and customer. To install this dataset, download the [network_data_extension.sql](http://gitgub.com/tradecontrol/network/blob/master/src/scripts/network_data_extension.sql) script and from SSMS run it against the tcTHEBUS database.
 
 3) Switch immediately back to the three Network Interfaces. You should see transactions being written to The Business service as it deploys task contracts to the blockchain, with corresponding events emitted to the other two accounts. The Ganache accounts page will show a reduction in ETH and an increase in Tx count (around 120). Their transaction page records the contract deployments and calls.
 
@@ -151,7 +151,7 @@ If you Save/Refresh, although purchase orders must still be processed, the opera
 
 ### Payment
 
-As the goods have flowed up the supply chain, so we now go back down again, paying the invoices in exchange for their goods or service. If you are using a fiat currency, this process is controlled by the banks. Otherwise, you can pay directly from your [Bitcoin Wallet](./bitcoin).
+As the goods have flowed up the supply chain, so we now go back down again, paying the invoices in exchange for their goods or service. If you are using a fiat currency, this process is controlled by the banks. Otherwise, you can pay directly from your [Bitcoin Wallet](/tutorials/bitcoin).
 
 #### By Fiat
 
@@ -171,7 +171,7 @@ As the goods have flowed up the supply chain, so we now go back down again, payi
 
 ### Credits and Returns
 
-Normally one of two things can go wrong in a trading exchange - faulty goods or bad service and mischarges. With Trade Control, you could just send an invoice with a negative quantity or charge, but it would go against convention. For faulty goods, the customer would send them back on a return note with an accompanying debit note. Should the supplier accept this, they would mirror it with a credit note. Internally, these states [are modelled using polarity](./cash-codes#cash-polarity). Also, you can always raise invoices directly for miscellaneous charges with no supply/demand implications. For mischarges, you can also use zero quantities.
+Normally one of two things can go wrong in a trading exchange - faulty goods or bad service and mischarges. With Trade Control, you could just send an invoice with a negative quantity or charge, but it would go against convention. For faulty goods, the customer would send them back on a return note with an accompanying debit note. Should the supplier accept this, they would mirror it with a credit note. Internally, these states [are modelled using polarity](/tutorials/cash-codes#cash-polarity). Also, you can always raise invoices directly for miscellaneous charges with no supply/demand implications. For mischarges, you can also use zero quantities.
 
 1) From the Task Explorer, we know that 0.5 tonnes of plastic were used to satisfy the monthly consignment of **M/00/70/00**. However, the QC department of The Business reject a 25Kg bag of PC/999 granules due to contamination. They return it to the supplier by raising a debit/return note. 
 
@@ -201,7 +201,7 @@ To obtain a quotation, you just raise a Pending Task against the supplier, who t
 
 Although we have been manually tending to the allocations, this is at root a technique from the Material Requirements Planning algorithms developed in the manufacturing sector during the 1960s. Therefore, various techniques for automating this process could be applied to maintain positive SvD balances throughout the supply chain. Any change to the state would automatically flow down the demand side and then flow back up from the supply.  Whilst the author has coded several finite and infinite scheduling algorithms, we are not going to automate at this time. But you can understand that the process you have covered in the tutorial is a practical implementation of supply-chain scheduling.
 
-Furthermore, investigate the Network Interface transaction and event history generated by the three business nodes and trace to the Contract Calls and Deployments in the Ganache RPC Server. You can confirm how the information has been communicated over the EVM and immutably recorded in the contracts written to the blockchain. Therefore, switching to a [public blockchain](./installing-network#public-network) would mean any number of nodes can be connected and synchronised from anywhere in the world.   
+Furthermore, investigate the Network Interface transaction and event history generated by the three business nodes and trace to the Contract Calls and Deployments in the Ganache RPC Server. You can confirm how the information has been communicated over the EVM and immutably recorded in the contracts written to the blockchain. Therefore, switching to a [public blockchain](/tutorials/installing-network#public-network) would mean any number of nodes can be connected and synchronised from anywhere in the world.   
 
 ## Licence
 

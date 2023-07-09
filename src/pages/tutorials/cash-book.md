@@ -8,8 +8,8 @@ Every business must keep a cash book. This book is normally given to an accounta
 
 This tutorial explains how to maintain your cash book, raise invoices and email them. Monthly balance sheets are automatically created as you go along, but corporations are likely to need a more sophisticated way to establish capital value. For this, also follow the tutorial on [generating a balance sheet](/tutorials/balance-sheet).
 
-- [Web App](./cash-book-web)
-- [Office 365](./cash-book-365)
+- [Web App](/tutorials/cash-book-web)
+- [Office 365](/tutorials/cash-book-365)
 
 ## Licence
 

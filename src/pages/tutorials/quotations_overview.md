@@ -8,8 +8,8 @@ permalink: /tutorials/quotations_overview
 
 ## Documentation
 
-- [quotation instructions](./quotations)
-- [price list construction](./pricelists)
+- [quotation instructions](/tutorials/quotations)
+- [price list construction](/tutorials/pricelists)
 
 ## Features
 
@@ -23,13 +23,13 @@ permalink: /tutorials/quotations_overview
 
 ## Quotations
 
-XML files are opened in [an interface](./quotations) that allows quotations to be saved and copied to the clipboard for export.
+XML files are opened in [an interface](/tutorials/quotations) that allows quotations to be saved and copied to the clipboard for export.
 
 ![viewer](/images/quotation_ui.png)
 
 ## Price Lists
 
-Whilst it is possible to contruct an xml file in a text editor, it is not very convenient, especially if you are storing images. There is an [xml generation app](./pricelists) that allows you to easily create price list files, add your logo, product images and terms.
+Whilst it is possible to contruct an xml file in a text editor, it is not very convenient, especially if you are storing images. There is an [xml generation app](/tutorials/pricelists) that allows you to easily create price list files, add your logo, product images and terms.
 
 ![generator](/images/quotation_gen.png)
 

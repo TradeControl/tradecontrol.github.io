@@ -4,9 +4,9 @@ title: Generating XML Price Lists
 permalink: /tutorials/pricelists
 ---
 
-Before [quotations](./quotations) can be raised, an xml file needs to be distrubuted to the customer. The easiest way to generate the xml is by using the Price List Generator.
+Before [quotations](/tutorials/quotations) can be raised, an xml file needs to be distrubuted to the customer. The easiest way to generate the xml is by using the Price List Generator.
 
-[overview](/quotation)
+[overview](/tutorials/quotations)
 
 ## Installation
 
@@ -22,7 +22,7 @@ Because the price list is stored in a text file, it can be copied and modified, 
 
 ![new price list](/images/quotation_new.png)
 
-The customer shows in the title of the [quotation app](./quotations). Here we have specified the xml file is a standard price list.
+The customer shows in the title of the [quotation app](/tutorials/quotations). Here we have specified the xml file is a standard price list.
 
 ## Products
 
@@ -50,4 +50,4 @@ There are prices for the quantities and additional costs for the extras. When yo
 
 ## Distribution
 
-All you need to do is email the XML file to the customer along with a link to the [quotations](./quotations) page.
+All you need to do is email the XML file to the customer along with a link to the [quotations](/tutorials/quotations) page.

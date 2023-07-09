@@ -17,7 +17,7 @@ The web app detects the device upon which it is running. In this tutorial we wil
 - [Processing credit](#crediting-accounts)
 - [Period and Year End](#period-end)
 - [Finalised Accounts](#finalised-accounts)
-- [Filing your accounts with HMRC](./accounts-filing)
+- [Filing your accounts with HMRC](/tutorials/accounts-filing)
 - [Advanced Balance Sheet](/tutorials/balance-sheet-web)
 - [Cash Boxes](/tutorials/balance-sheet-web#cash-box)
 
@@ -70,7 +70,7 @@ Reference [Cash Accounts](#cash-accounts)
 
 ### Classifying Transactions
 
-If you accept the default cash codes, you can start trading straight away. However, companies that have pre-existing accounts should classify transactions in the same way for historical comparison. In DEBK accounts, nominal codes classify transactions. Trade Control does not have a nominal ledger, but you can translate nominal into cash codes very easily. However, cash codes are [structured by categories](./cash-codes#categories-and-cash-codes) and therefore it may involve re-configuring them.
+If you accept the default cash codes, you can start trading straight away. However, companies that have pre-existing accounts should classify transactions in the same way for historical comparison. In DEBK accounts, nominal codes classify transactions. Trade Control does not have a nominal ledger, but you can translate nominal into cash codes very easily. However, cash codes are [structured by categories](/tutorials/cash-codes#categories-and-cash-codes) and therefore it may involve re-configuring them.
 
 Reference [Cash Codes](#cash-codes)
 
@@ -118,9 +118,9 @@ Open the Balance Sheet on the Accounts menu. The Cash Account Statement will sho
 
 ## Invoicing
 
-You do not have to invoice in order to use the cash book, you can just make [miscellaneous payments](#miscellaneous-payments) which will automatically create invoices for each transaction. However, corporations have a legal obligation to record their asset value rather than current cash position, and invoices are integral to that. Moreover, most companies will want to invoice their customers. If you do not have a separate system for order processing, you can [email invoices](./installing-web#mail-host) from the cash book and they will be paid off based on their due dates.  
+You do not have to invoice in order to use the cash book, you can just make [miscellaneous payments](#miscellaneous-payments) which will automatically create invoices for each transaction. However, corporations have a legal obligation to record their asset value rather than current cash position, and invoices are integral to that. Moreover, most companies will want to invoice their customers. If you do not have a separate system for order processing, you can [email invoices](/tutorials/installing-web#mail-host) from the cash book and they will be paid off based on their due dates.  
 
-Invoices are based on [document templates](./installing-web#document-templates) which can be profiled with style sheets, images and pdf attachments. There are default templates provided by the app, but most companies have their own profile. Please [contact us](/contact) for assistance.
+Invoices are based on [document templates](/tutorials/installing-web#document-templates) which can be profiled with style sheets, images and pdf attachments. There are default templates provided by the app, but most companies have their own profile. Please [contact us](/contact) for assistance.
 
 ### Raising Invoices
 
@@ -232,7 +232,7 @@ And here is the associated balance sheet:
 
 ![balance sheet](/images/web_balance_sheet3.png) 
 
-Follow the tutorial on [filing your accounts with HMRC](./accounts-filing) for a step-by-step guide on submitting your annual tax return.
+Follow the tutorial on [filing your accounts with HMRC](/tutorials/accounts-filing) for a step-by-step guide on submitting your annual tax return.
 
 ### Error Checking
 
