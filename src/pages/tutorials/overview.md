@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Technical Documentation
-permalink: tutorials/overview
 ---
 
 ## Installation
