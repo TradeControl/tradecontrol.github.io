@@ -160,7 +160,7 @@ import Nav_Fullscreen from "./Nav_Fullscreen.astro";
 		/* Height & width depends on how you want to reveal the overlay (see JS below) */
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		// align-items: center;
 		height: 100%;
 		width: 0;
 		position: fixed; /* Stay in place */
@@ -178,13 +178,14 @@ import Nav_Fullscreen from "./Nav_Fullscreen.astro";
 		display: flex;
 		visibility: visible !important;
 		justify-content: center;
-		// text-align: center !important;
+		text-align: center !important;
 		flex: 1;
 		position: relative;
-		top: 25%; /* 25% from the top */
+		// top: 25%; /* 25% from the top */
 		width: 100%; /* 100% width */
 		text-align: center; /* Centered text/links */
-		margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+		// margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+		background-color: #eeeeee !important; /* Black fallback color */
 	}
 
 	/* The navigation links inside the overlay */
