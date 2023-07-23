@@ -5,7 +5,9 @@ permalink: /
 ---
 ![A Trade Control node](/images/dales.jpeg)
 
-## Welcome!!!!
+## Welcome!
+
+Trade Control is a unique business system, re-writing the book on how [ERP applications](https://en.wikipedia.org/wiki/Enterprise_resource_planning) are designed and implemented. Traditional architectures have evolved from paper-based operations and the demands of capital to serve business owners, whether private or public. By jettisoning this mind-set, the design offers innovative opportunities to break out of these entrenched systems. Offered to the community as free software, you can explore how the core algorithms of capitalism can be calculated differently, or how businesses may be connected by seamless supply-chains or even trade easily in crypto currencies as their Unit of Account. The app is accompanied by a free book which explains the workings of the commercial world and the modelling of its processes and structure by the schema design.
 
 - [Supporting Theory and Articles](./articles/tc_intro)
 - [Technical Documentation](./tutorials/overview)
