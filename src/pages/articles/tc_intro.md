@@ -20,7 +20,7 @@ In part, I have coded a wallet because Bitcoin, or something similar, could beco
 There were two things I wanted to demonstrate:
 
 1. The Trade Control schema design can effortlessly use Bitcoin as a Unit of Account for both trading and statutory accounts.
-2. Although superior to a business bank account in every way, the wallet is unusable.
+2. Although superior to a business bank account in every way, the wallet is unusable in the current economy. 
 
 I also take the opportunity to briefly demonstrate how my production theory can be simply applied to commercial activity generally.
 
@@ -28,7 +28,7 @@ I also take the opportunity to briefly demonstrate how my production theory can 
 
 ## Company Accounts
 
-Trade Control is a nascent production system with the implemented capacity to replace an accounting system. It could therefore be the cornerstone for a true 21st Century ERP solution presented in free software. A production system is the opposite of an accounting system. The former relates to the orchestration of real transactions that transform inputs into outputs at higher levels of abstraction or abstract potential.  The latter relates to the recording of financial transactions as assets to report their value to owners. Nevertheless, I have been able to replicate the necessary accounting outputs for legal compliance. The following articles on the two components of statutory Company Accounts explain how.
+Trade Control is a nascent production system with the implemented capacity to replace an accounting system. It could therefore be the cornerstone for a true 21st Century ERP solution presented in free software. A production system is the opposite of an accounting system. The former relates to the orchestration of real transactions that transform inputs into outputs at higher levels of abstraction or abstract potential. The latter relates to the recording of financial transactions as assets to report their value to owners. Nevertheless, I have been able to replicate the necessary accounting outputs for legal compliance. The following articles on the two components of statutory Company Accounts explain how.
 
 - [The Balance Sheet](/articles/tc_balance_sheet)
 - [The Profit and Loss Account](/articles/tc_profit_and_loss)

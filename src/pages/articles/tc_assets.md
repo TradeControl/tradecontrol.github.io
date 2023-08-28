@@ -46,11 +46,11 @@ The corresponding code that reflects the value-chain inside the Production Layer
 
 | Statement | T-Sql |
 | -- | -- |
-| Organisation | [Org.vwStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Org/Views/vwStatement.sql) |
-| Cash Account | [Cash.vwAccountStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwAccountStatement.sql) |
-| Corporation Tax | [Cash.vwTaxCorpStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwTaxCorpStatement.sql) |
-| VAT | [Cash.vwTaxVatStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwTaxVatStatement.sql) |
-| Trade Profits | [Cash.fnFlowCategory(CashType.Trade)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Functions/fnFlowCategory.sql) |
+| Subjects | [Subject.vwStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Subject/Views/vwStatement.sql) |
+| Cash Account | [Cash.vwAccountStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwAccountStatement.sql) |
+| Corporation Tax | [Cash.vwTaxCorpStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwTaxCorpStatement.sql) |
+| VAT | [Cash.vwTaxVatStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwTaxVatStatement.sql) |
+| Trade Profits | [Cash.fnFlowCategory(CashType.Trade)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
 
 ### Recording Surface
 
@@ -60,12 +60,12 @@ To create a recording surface that serves the Asset Layer, we either apply asset
 
 | Statement | T-Sql |
 | -- | -- |
-| Creditors and Debtors | [Cash.vwBalanceSheetOrgs](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwBalanceSheetOrgs.sql) |
-| Bank and Cash | [Cash.vwBalanceSheetAccounts](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwBalanceSheetAccounts.sql) |
-| Assets and Liabilities | [Cash.vwBalanceSheetAssets](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwBalanceSheetAssets.sql) |
-| Corporation Tax | [Cash.vwBalanceSheetTax](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwBalanceSheetTax.sql) |
-| VAT | [Cash.vwBalanceSheetVat](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwBalanceSheetVat.sql) |
-| Asset Profits | [Cash.fnFlowCategory(CashType.Money)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Functions/fnFlowCategory.sql) |
+| Creditors and Debtors | [Cash.vwBalanceSheetSubjects](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetSubjects.sql) |
+| Bank and Cash | [Cash.vwBalanceSheetAccounts](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetAccounts.sql) |
+| Assets and Liabilities | [Cash.vwBalanceSheetAssets](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetAssets.sql) |
+| Corporation Tax | [Cash.vwBalanceSheetTax](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql) |
+| VAT | [Cash.vwBalanceSheetVat](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetVat.sql) |
+| Asset Profits | [Cash.fnFlowCategory(CashType.Money)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
 
 ### Capital Layer
 
@@ -147,12 +147,12 @@ According to my production theory, it is not possible to model productive proces
 
 | Schema | T-Sql |
 | -- | -- |
-| Subjects | [Org.tbOrg](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Org/Tables/tbOrg.sql) |
-| Objects | [Activity.tbActivity](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Activity/Tables/tbActivity.sql) |
-| Quantity | [Task.tbTask](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Task/Tables/tbTask.sql) |
-| Value | [Invoice.tbInvoice](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Invoice/Tables/tbInvoice.sql) |
-| Physical Connector | [Task.tbAllocation](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Task/Tables/tbAllocation.sql) |
-| Financial Connector | [Invoice.tbMirror](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Invoice/Tables/tbMirror.sql) |
+| Subjects | [Subject.tbSubject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Subject/Tables/tbSubject.sql) |
+| Objects | [Object.tbObject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Object/Tables/tbObject.sql) |
+| Quantity | [Project.tbProject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbProject.sql) |
+| Value | [Invoice.tbInvoice](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Invoice/Tables/tbInvoice.sql) |
+| Physical Connector | [Project.tbAllocation](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbAllocation.sql) |
+| Financial Connector | [Invoice.tbMirror](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Invoice/Tables/tbMirror.sql) |
 
 If we remove Projects from the schema, you are left with subjects and objects, like the mind/body, consciousness/matter dualism. In so doing, the code will still be able to model assets, but not production. With this cut-down schema you could model spatial workflows from objects, as presented in the [Bill of Materials tutorial](/tutorials/manufacturing#bom-specification). You also have subjects that can project a User Interface, so the Business Entity preserves its debtor/creditor relations. In other words, the schema can still implement [my definition of an asset](#asset-layer). A DEBK recording surface may then attach to this schema and derive the Company Accounts. Unfortunately, the schema is no longer a node because it [lacks the connectors](https://tradcontrol.github.io/tutorials/network) needed to form supply-chains. Worse still, how is it going to produce stuff without re-inventing the Projects schema (whether implicitly in practice or explicitly in code)? So where are your assets going to come from in the first place? The only assets this schema design can incorporate are already provided by the earth, which economists call Natural Capital. Without functional interface projection, the Industrial Revolution could not have happened. Which begs the question, if a factory cannot produce a single component of any kind under this dualistic model, how is it an appropriate framework for [describing biological evolution](/articles/tc_production#life) and embryonic development?
 

@@ -11,13 +11,13 @@ A VSTO is an Office 365 document coded in C# that functions as an automated temp
 
 Download the templates from the [latest office client release - tcOfficeTemplates.zip and tcOfficeCashFlow.zip](https://github.com/tradecontrol/office/releases).
 
-### Cash Flow
+## Cash Flow
 
 The VSTO Excel P&L and Balance Sheet should automatically request installation when opened for the first time, or just run setup.exe.
 
 To the right of the spread sheet is an Action Pane. Upon first use, specify the server name (e.g. tradecontrol.database.windows.net), the authentication mode and credentials. If the connection is successful, save the document so you will only need to enter your password next time around.
 
-### Templates
+## Templates
 
 1. Copy the Templates folder onto a shared drive
 2. Open System Admin from the client and select the Documents page

@@ -19,7 +19,7 @@ Bob’s Café is not building ships, but nevertheless it is connected to all the
 
 ## Ownership
 
-Now Bitcoin has been [successfully mapped onto the Cash Account](https://tradecontrol.github.io/bitcoin), as UOA, we can ask the following question:
+Now Bitcoin has been [successfully mapped onto the Cash Account](https://github.com/tradecontrol/bitcoin), as UOA, we can ask the following question:
 
 > Who owns this wallet and under what conditions?
 

@@ -73,15 +73,15 @@ During the 80s I was responsible for supplying the cost framework for price disc
 
 My solution to this problem begins by replacing the [recording surface projected by the Asset Layer](/articles/tc_balance_sheet#double-entry-book-keeping) with a recording surface from production rooted in [Supply and Demand](../tutorials/manufacturing#organisation-statement) (SvD). This re-connects the disassociation of Asset and Production Layer recording (Chartered/Management Accounting), speeding everything up to transaction-grained levels of sensitivity. 
  
-Turning to the [Bill of Materials tutorial](../tutorials/manufacturing#project-schedule), you can model any kind of workflow, from a simple service to an aeroplane. But what is its cost? The [job costing code](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Task/Views/vwProfit.sql) recurses over the workflow and establishes the direct cost of purchases, which is a true cost defining throughput. But how do you ascribe cost to its production?  When hypothetical workflows are dropped onto the SvD recording surface, like the aeroplane with its many components and materials, the overall business plan is more-or-less instantaneously modified to communicate affordability.
+Turning to the [Bill of Materials tutorial](../tutorials/manufacturing#project-schedule), you can model any kind of workflow, from a simple service to an aeroplane. But what is its cost? The [job costing code](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Project/Views/vwProfit.sql) recurses over the workflow and establishes the direct cost of purchases, which is a true cost defining throughput. But how do you ascribe cost to its production?  When hypothetical workflows are dropped onto the SvD recording surface, like the aeroplane with its many components and materials, the overall business plan is more-or-less instantaneously modified to communicate affordability.
 
 Firstly, I create a base from which to derive both live and hypothetical scenarios:
 
-- [Cash.vwStatementBase](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwStatementBase.sql)
+- [Cash.vwStatementBase](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwStatementBase.sql)
 
 Then I integrate the quotations, their vat and company tax, into the company statement:
 
-- [Cash.vwStatementWhatIf](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwStatementWhatIf.sql) 
+- [Cash.vwStatementWhatIf](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwStatementWhatIf.sql) 
 
 Let us say sales cease abruptly (due to a pandemic) and you were asked to quote for just one job. The [Trade Control costing system](../tutorials/manufacturing#pricing-and-scheduling) immediately communicates the true cost of that one job, whereas the hourly rates would yield a false result.  It also means that this recording surface would allow me to apply finite scheduling algorithms on production capacity and purchasing in relation to a company's overall financial commitments in real time. And because each business is also modelled as a node, it could also traverse the supply-chain.  
 

@@ -109,7 +109,7 @@ It is a spatial representation of time that must begin in earth’s geology, wit
 
 Looking down upon this vision of the humble car, as though from a mountain top, we have a very different vision of its true nature. Below us dwells the flayed body of a transforming, interconnected earth. At our feet, wide open cast mines paraded by driverless trucks with 5 metre wheels; dark caverns deep below ground where diamond encrusted drills are boring out a million tons of rock. Oil rigs float on icy seas, their proboscis dug in, sucking up crude from the depths. In the far distance you discern a speck of dust: your vehicle emerging onto the forecourt, perched on the ledge of a new horizon. It may be for racing: bright light in the firmament burning with desire; or just a delivery van: inconspicuous white cell pottering down the asphalt arteries of the world. Its interface is now connected to the user’s world. We, however, have entered an engineered reality where the possibilities for process and object creation are effectively infinite.
 
-The Spatial Workflow is modelled in the TC-Node by the **Activity** schema; the Temporal Workflow by the **Task** schema.
+The Spatial Workflow is modelled in the [sqlNode](https://github.com/tradecontrol/sqlnode) by the [Object](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Object.sql) schema; the Temporal Workflow by the [Project](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Project.sql) schema.
 
 #### Production Environment
 
@@ -224,7 +224,7 @@ The American inventor, Benjamin Franklin, said that man is the tool making anima
 
 ![Production Network](/images/production_figure_7.svg)
 
-The Production Network has two placeholders in the Trade Control schema design: **Activity.tbOp** and **Task.tbOp** for the Spatial and Temporal Workflows respectively.
+The Production Network has two placeholders in the Trade Control schema design: [Object.tbOp](https://github.com/TradeControl/sqlnode/blob/master/src/tcNodeDb4/Object/Tables/tbOp.sql) and [Project.tbOp](https://github.com/TradeControl/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbOp.sql) for the Spatial and Temporal Workflows respectively.
 
 ### Technological Strata
 
@@ -249,7 +249,7 @@ This intersection of product and tool around transformational demand is the reas
 
 #### Interfaces
 
-As you have learnt, technological interfaces conceal the underlying structure and processes of a technological object so that a higher level of abstraction can be obtained. Component and user interfaces are technologically equivalent, except the latter intersects with a desired user process. This was demonstrated in the [car manufacturing example](#assemblages), but more formally in the [Component Definition](#component-definition). Although the components cut out from the [MDF board](#materials) are not highly transformed, they can nevertheless service a multiplicity of designs and conceal themselves in the interfaces of their assemblages (such as a common draw front). Material interfaces, on the other hand, whilst being physical and non-abstract, are formed to offer the maximum possibility for component-based transformations (like the piece of paper or MDF board in the example). These can all be present in the Trade Control schema design and are summarised below:
+As you have learnt, technological interfaces conceal the underlying structure and processes of a technological object so that a higher level of abstraction can be obtained. Component and user interfaces are technologically equivalent, except the latter intersects with a desired user process. This was demonstrated in the [car manufacturing example](#assemblages), but more formally in the [Component Definition](#component-definition). Although the components cut out from the [MDF board](#materials) are not highly transformed, they can nevertheless service a multiplicity of designs and conceal themselves in the interfaces of their assemblages (such as a common draw front). Material interfaces, on the other hand, whilst being physical and non-abstract, are formed to offer the maximum possibility for component-based transformations (like the piece of paper or MDF board in the example). These can all be present in the [Trade Control schema design](https://github.com/tradecontrol/sqlnode) and are summarised below:
 
 Interface |     | Spatial | Temporal | Network | Description
 -- | -- | -- | -- | -- | --
@@ -370,7 +370,7 @@ These are complicated words with disputed interpretations and usages that are bo
 
 > Technological object production supplies the User Interfaces projected by its subjects.
 
-So, there are three _jacere_ (Latin for _to throw_) in our definition: Ob, Sub and Pro. We need all three to model and process component production. The object is the Spatial Workflow, project is the Temporal Workflow, and subjects are Organisations. These are explicitly modelled by the [Trade Control Node](https://github.com/tradecontrol/sqlnode) in schemas **Activity**, **Org** and **Task** respectively. It is, however, possible to encapsulate all three _jacere_ inside a recursive component network, as was the case in the [sharpNode](https://github.com/iamonnox/tradecontrol/blob/master/src/scripts/sharpNode/sharp_node_2002_03.sql) schema. User comprehension aside, there are good reasons for doing that. For example, we could easily reverse the sample usages above: (the subjective universe contains objects...) or (the subject of our discussion is the following object...).
+So, there are three _jacere_ (Latin for _to throw_) in our definition: Ob, Sub and Pro. We need all three to model and process component production. The object is the Spatial Workflow, project is the Temporal Workflow, and subjects are Organisations. These are explicitly modelled by the [Trade Control Node](https://github.com/tradecontrol/sqlnode) in schemas [Object](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Object.sql), [Subject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Subject.sql) and [Project](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Project.sql) respectively. It is, however, possible to encapsulate all three _jacere_ inside a recursive component network, as was the case in the [sharpNode](https://github.com/iamonnox/tradecontrol/blob/master/src/scripts/sharpNode/sharp_node_2002_03.sql) schema. User comprehension aside, there are good reasons for doing that. For example, we could easily reverse the sample usages above: (the subjective universe contains objects...) or (the subject of our discussion is the following object...).
 
 Objects are generally considered to be either physical or psychical, with no third term. The former exists in the Objective Universe, whilst the latter exists in Subjective Minds. This dualism is not present in the above definition, and yet still we are able to functionally express their relation. In so doing, like the bell foundry, subjects too can be engineered by projecting interfaces onto themselves.
 
