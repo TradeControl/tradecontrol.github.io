@@ -218,11 +218,11 @@ From the Home menu, open the Balance Sheet Audit, which will present a list of d
 
 Follow the tutorial on [filing your accounts with HMRC](/tutorials/accounts-filing) for a step-by-step guide on submitting your annual tax return.
 
-# Cash Book Information
+## Cash Book Information
 
 	The following sections provide informational and technical guidance for generating your company accounts.
 
-## Organisations
+### Organisations
 
 If you have read the tutorial on [cash polarity](/tutorials/cash-codes#cash-polarity), you will already know that there are no customers or suppliers in Trade Control, but you can add them. Open Definitions from the toolbar and the page on Lookup Data allows you to create your own classifications. The organisation types below were created during the basic setup routine. These types and their associated polarity are more important when you upgrade to the multi-user MIS, since employees will want to view only the organisations for which they are responsible.
 
@@ -253,7 +253,7 @@ The current balance of the debtor or creditor is also used to set the payment st
 
 ![invoice status](/images/accounts_invoice_status.png)
 
-## Trade Statement
+### Trade Statement
 
 The Trade Statement communicates Cash Performance, Profit and Loss and a Balance Sheet. It is also used by the MIS for forward planning and accruals that do not apply in Accounts Mode. For reviewing your accounts, the settings in the XLS Action Pane should be the same as that used for generating a balance sheet.
 
@@ -269,9 +269,7 @@ Run the budget using the action pane. We are planning to turnover 3K GBP per mon
 
 ![budget review](/images/accounts_budget_review.png)
 
-## Tax
-
-### Settings
+### Tax Settings
 
 Once you have established the correct settings, they will remain fixed unless there is some structural change to the business. The offset days is used to distinguish tax liability from payment due date. VAT is 1 month, and corporation tax is 9 months. The Tax Horizon is used as a threshold for calculating projected tax on the order book. Since Accounts Mode does not maintain an order book, this setting is not used. The cash codes assigned to control tax types must be assigned to an EXTERNAL Category. The default settings below were configured during the setup process.
 
@@ -307,7 +305,7 @@ A Cash Account is a set of dated paid in/out transactions, each with a correspon
 
 CASH type accounts are vital to the effective running of any business. ASSET types do not apply to sole traders, only corporations. The DUMMY type is administrative only, for example, to correct a supplier invoice without a credit note, or vat anomalies.
 
-#### Cash Statement
+### Cash Statement
 
 Because your bank account is mirrored by a cash account, the statement is a useful reference for locating historical transactions. It also allows you to edit and delete any transaction. Modifying cash payments triggers a discrete re-build on the effected organisation, ensuring invoice status matches the projected SvD balance.
 

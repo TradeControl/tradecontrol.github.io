@@ -500,15 +500,15 @@ The Administration tab can be opened from the System Settings menu on the Home s
 button in the main Header tab. 
 Administration is where all the company settings are created. There are multiple tabs:
 
-#### Company
+### Company
 
 This section is quite self-explanatory. There are multiple tabs to set up your company's details.
 
-#### Users
+### Users
     
 Multiple users can be created here, and administrator rights assigned.
 
-#### Period End
+### Period End
 
 Here the Financial Years and periods are set up. The initial view when opening the Period End tab show the months 
 condensed, with only the year view shown. Clicking on the + button to the left of the Year expands the tree to show 
@@ -521,7 +521,7 @@ into the period. You will see that this snapshot was taken in July 2019 and show
 April-June showing as Closed as all transactions for these months have been posted and reconciled before clicking 
 on the 'Period End' button on the right to close the current period. All future months are set as Forecast.
 
-#### Tax
+### Tax
 
 The Tax tab enables administrators to set a Tax Horizon, which will define how far forward tax payments are 
 calculated and shown in Company Statement. The test system is set to 2 years (730 days).
@@ -545,7 +545,7 @@ If the items have been ordered on TC as one total task, the VAT will be calculat
 total cost and this cannot be amended within the purchase invoice, leading to a small discrepancy in the VAT for 
 the period in question. Entering a balancing value in VAT Adjust will correct the VAT calculation.
 
-#### Documents
+### Documents
 
 The Invoice Numbering Register within Documents is where the starting number range is set for Sales Invoices, 
 Credit Notes, Purchase Invoices and Debit Notes. The Task Numbering Register is where the number range is set for 
@@ -594,18 +594,18 @@ as 'Acknowledgement - no contact', then enter the filename 'docAcknowledgementno
 the Folder Name path from the row above. When Document Manager opens, you will see this template as an available 
 option.
 
-#### Time Buckets
+### Time Buckets
 
 It is not necessary to adjust Time Buckets as the parameters are set to define how TC manages current and forecast 
 calculations, but this tab enables advanced users to set up time periods by day, week or month and to define how 
 tasks which fall within these time buckets to be reported in Task Explorer.
 
-#### Menu System
+### Menu System
 
 The Menu System enables administrators to control which areas of the system individual users can access and whether 
 they can Read Only, Add or Edit entries within the modules they have access to.
 
-#### Event Log/Task Log/Invoice Log
+### Event Log/Task Log/Invoice Log
 
 These last three tabs are a system record of all events and actions, designed primarily for problem-solving by 
 Administrators in the event of a posting query or where unexpected results or discrepancies have been found on the system.
@@ -613,27 +613,27 @@ Administrators in the event of a posting query or where unexpected results or di
 NB there is no x/close button on the Administration tab. To close this section, click on either the 'OK' or 'Cancel' 
 buttons on the right-hand side of the screen.
 
-### Definitions
+## Definitions
 
 Clicking on Definitions from within the System Settings menu opens the Definitions tab within which
 there are multiple tabs as listed below:
 
-#### Lookup Data
+### Lookup Data
 
 The first tab is Lookup Data where the following parameters are set:
 
-#### Tax Codes
+### Tax Codes
 
 VAT, National Insurance and other tax codes can be created in this table. NB once a code has been allocated to an 
 Activity, it must not be deleted. So, if tax rates change, a new code must be created and the original code and value 
 must remain in the table.
 
-#### Organisation Types
+### Organisation Types
 
 Here, the Organisation Types are created, and the polarity of each type is set by defining whether it generates 
 Expense, Income or is Neutral.
 
-#### Unit of Measure 
+### Unit of Measure 
 Any Unit of Measure (UoM) defined in this table can be selected when creating Activities. The selected UoM will be 
 displayed in Edit Task and will print out on any documents where the XML tag inserts this value.
 
@@ -643,7 +643,7 @@ One the Calendar tab the working days of the standard week are set by ticking th
 '+' button and entering the holiday/non-working dates. These will be factored into any automatic scheduling by TC when 
 looking at Operations offset days to determine Operation dates working back from the defined Call-Off (Action On) date. 
 
-### Cash Accounts
+## Cash Accounts
 
 Cash Accounts is where bank accounts, loan accounts etc. are created and opening balances entered when setting up the 
 system for the first time. In the Test System, there is a Dummy Bank Account which has no Cash Code allocated to it. 
@@ -653,14 +653,14 @@ existing system. There is a check box 'Dummy Account' which must be selected to 
 showing in the Company Statement. Cash can be transferred between a live Cash Account and a dummy one and only the live 
 account, with a valid Cash Code, will impact on the Cash Statement. 
 
-#### Cash Categories
+### Cash Categories
 
 [Cash Categories](/tutorials/cash-codes) are the top-level cash management codes. Once the Cash Categories are set up, Cash Codes can be 
 created which will feed up into the selected Cash Category. Each Category must have a Mode (Expense/Income/Neutral), 
 and a Type (Bank/Trade/External). Checking the Enabled box will post all transactions for that Cash Category into 
 the Cash Flow forecast spreadsheet, leaving it unchecked will exclude the category from the forecast.
 
-#### Cash Codes
+### Cash Codes
 
 Every Activity which has a financial impact on the company must be assigned a Cash Code to determine the polarity of 
 any transaction by linking it to the Cash Category and to assign the required Tax Code. The 'Enabled' box must be 
@@ -668,11 +668,11 @@ checked to utilise a Cash Code. Leaving it unchecked means that it will not appe
 Cash Codes when creating an Activity. This feature enables redundant Cash Codes to be effectively archived, where they 
 cannot be deleted if they are associated with an old Activity.
 
-#### Cash Totals
+### Cash Totals
 
 Totals are explained in a separate section on the general structure of [Cash Codes](/tutorials/cash-codes)
 
-#### Totals and Expressions
+### Totals and Expressions
 
 Administrators can create Cash Expressions using Excel formulae which will appear in the Cashflow Forecast linked 
 spreadsheet. Two examples are shown, Gross Margin and Wages Ratio. The formula for each can be seen in the Formula 
@@ -687,10 +687,6 @@ add to the power of the system without having to revert back to developers or em
 Opening SQL Connect either via the System Setting section of the Home Page menu or via the shortcut on the Header tab 
 will open a settings screen enabling admins to connect to various data sources. If more than one database has been set up then 
 these can be accessed by scrolling across and selecting the required source. 
-
-
-
-
 
 
 ## Maintenance
@@ -878,11 +874,11 @@ Information button will reveal the following modules:
 ## Audit Reports
 There are four sections relating to auditing and accruals with the Audit Reports module, as follows:
 
-#### Balance Sheet Audit
+### Balance Sheet Audit
 Clicking on this menu item opens a report screen which shows any income or expenditure which has not been included in any
 Balance Sheet value of the company.  It shows transactions for the current year to date, month by month up to the most recently closed monthly period. 
 
-#### Corporation Tax Accruals
+### Corporation Tax Accruals
 
 Selecting Audit Accruals - Corporation Tax from the Information tree will open the Audit Accruals - Corporation Tax
 tab. The system calculates Corporation Tax based on invoiced transactions, so when viewing the Corporation Tax tab 
@@ -898,7 +894,7 @@ be added to the Corporation Tax totals found in the Invoice Register to arrive a
 Statement helpfully incorporates both values and shows two adjacent values - the top one being calculated on 
 invoiced values and the one below based on the Audit Accruals values.
 
-#### VAT Accruals
+### VAT Accruals
 
 Selecting VAT Accruals from the Audit Reports menu will open the VAT Accruals tab. 
 This section works in the same way as Corporation Tax Accruals (see above). Un-invoiced tasks are listed here 
@@ -906,7 +902,7 @@ and a VAT calculation is shown by month which must be added to the VAT Totals va
 The Company Statement helpfully shows both values when they fall due for payment - the top one being calculated on 
 invoiced values and the one below based on the Audit Accruals values.
 
-### Cash Statements
+## Cash Statements
 
 Selecting Cash Statements from the Information section of the Home Page menu will open the Cash Statement tab. 
 The default Bank Account will open and the current month's financial transactions will be loaded. Selecting another month or a different Bank 
@@ -923,31 +919,31 @@ The Current Balance will feed into the Company Statement for cashflow forecastin
 ensure that it is accurate. If a discrepancy is found, users can make adjustments by clicking on the buttons at 
 the bottom of the screen:
 
-#### Cash Statement - Edit
+### Cash Statement - Edit
 
 The Paid On Date, Payment Reference, Cash Code and Organisation can be edited in this section, or selecting 'Cancel' 
 will delete the posting.
 
-#### Cash Statement - Move
+### Cash Statement - Move
 
 Transactions can be moved from one account to another if they have been mis-posted, to save having to delete the 
 original transaction and post a new one. Simple select the Bank Account from the dropdown list and click 'Move'.
 
-#### Cash Statement - Pay
+### Cash Statement - Pay
 
 Clicking the 'Pay' button opens the Payment Recharge section where Organisation, Cash Code, transaction value and VAT 
 status can be edited.
 
 The next two buttons on this screen are simply shortcuts: 'Add Payment' opens Payment Entry and 'Transfers' opens Cash Transfers
 
-#### Cash Statement - Rebuild
+### Cash Statement - Rebuild
 
 You should not need to run the Re-build function, but if you do, under normal conditions it will have no effect. 
 It is useful to integrate imported data into the system, repair corrupted data, an impacting upgrade or because 
 certain essential information has been changed (like moving the financial year). Rebuilding is very resource-hungry 
 so it is good practice to close all open tabs apart from Cash Statement before rebuilding.
 
-#### Financial Year
+### Financial Year
 
 The 'Financial Year' button opens a printable report showing all financial transactions by month for the current financial 
 year.
@@ -1004,11 +1000,11 @@ you can either press F5 or re-check the 'Auto Refresh' button once you have fini
 
 The buttons at the bottom of the screen allow a range of options to edit or post payments against a selected task:
 
-#### Company Statement - Edit
+### Company Statement - Edit
 
 Simply opens the task in Edit Task mode to enable adjustments, date changes or a shortcut to invoicing.
 
-#### Company Statement - Payment
+### Company Statement - Payment
 
 Opens the Payment Entry screen and brings through the selected task for payment. NB see the Payment Entry section 
 to ensure that you are aware of the way the system will bring through total values due and allocates them by 
@@ -1016,58 +1012,58 @@ expected payment date. Always check that the value you are paying is the value s
 may include later payments due. If an error is made, it can be corrected within Cash Statement by either cancelling 
 and reposting the transaction or by editing the value (see Cash Statement)
 
-#### Company Statement - Reschedule
+### Company Statement - Reschedule
 
 Open the invoice details and allows the expected payment date to be quickly and easily adjusted.
 
-#### Company Statement - Org Enquiry
+### Company Statement - Org Enquiry
 
 Opens the Organisation Enquiry screen to enable a detailed view of unpaid invoices, current balances and open orders.
 
-#### Company Statement - Org Edit
+### Company Statement - Org Edit
 
 Opens the Organisation Edit screen to enable a quick rebuild of the individual account should this be required as a 
 result of any reallocation of payments or retrospective modification of the invoice register.
 
-### Data Warehouse
+## Data Warehouse
 
 Selecting Data Warehouse from the Information tree will open the Data Warehouse tab.  Here all documents and images 
 held on the system can be located and viewed, by Organisation or by Task.
  
-### Invoice Register
+## Invoice Register
 
 Selecting Invoice Register from the Information menu will open the Invoice Register tab. Users can explore every 
 invoiced task by month, with the current month selected by default. There are multiple tabs which are explained 
 below:
 
-#### Sales Invoices
+### Sales Invoices
 
 A list of all external sales invoices 
 
-#### Sales Items
+### Sales Items
 
 Sales Items includes any internal sales (i.e. any positive cash transactions such as transfers in from other internal 
 sources). Also, the associated task can be opened from here using the 'Edit' button at the bottom of the screen.
 
-#### Purchase Invoices
+### Purchase Invoices
 
 A list of all external purchase invoices which can be edited using the 'Edit' button at the bottom of the screen.
 
-#### Purchase Items
+### Purchase Items
 
 Purchase Items includes any internal purchases (i.e. any outgoing cash transactions such as transfers in from other 
 internal sources). Also, the associated task can be opened from here using the 'Edit' button at the bottom of the 
 screen.
 
-#### Cash Codes
+### Cash Codes
 
 A summary of invoices by cash code can be viewed here for the selected month.
 
-#### VAT Detail
+### VAT Detail
 
 Selecting the desired month from the list on the left-hand side of the screen will load the VAT details by VAT code.  
 
-#### VAT Totals
+### VAT Totals
 
 VAT Totals summarises the totals for the VAT quarter as defined in Administration. The VAT Detail totals for the 
 quarter will be summated and displayed alongside the last month of the quarter, creating the basis for a VAT return. 
@@ -1076,19 +1072,19 @@ csv file containing all the data required to submit an electronic VAT return und
 Tax Digital scheme. Clicking on the 'Generate csv export file' button at the bottom of the VAT Totals page will 
 generate the required file which can then be linked to an inexpensive third party MTD approved software provider.
 
-#### Corporation Tax
+### Corporation Tax
 
 Corporation Tax shows the historical and projected Corporation tax calculations for the current financial year.
 
-#### Unpaid Sales
+### Unpaid Sales
 
 Shows a list of all unpaid sales invoices which can be sorted by date/organisation/value.
 
-#### Unpaid Purchases
+### Unpaid Purchases
 
 Shows a list of all unpaid purchase invoices which can be sorted by date/organisation/value.
 
-#### Expenses
+### Expenses
 
 Shows a list of Expense invoices which can be sorted by date/organisation/value. All Activities with an Expense 
 Cash Code will appear in this section, enabling direct and indirect costs to be separated.
@@ -1099,7 +1095,7 @@ Selecting Job Profit Status by Month from the Information menu will open the Job
 month will display all invoiced income and outgoings and will show a gross profit total. Listed tasks can be edited 
 using the 'Edit Task' button and reports can be generated using the 'Period' and 'Financial Year' buttons.
 
-### Organisation Enquiry
+## Organisation Enquiry
 
 Selecting Organisation Enquiry from the Information menu will open the Organisation Enquiry tab. This module can 
 also be accessed via a button within Organisations, but it will not display the list of organisations which can be 
@@ -1107,49 +1103,49 @@ selected on the left-hand side of the screen, it will just load the current orga
 
 When opening from the Information menu, select the desired organisation and then select a tab from the following list:
 
-#### Org Enquiry - Details
+### Org Enquiry - Details
 
 Displays organisation information as created in Organisations. To amend any data click the 'Edit' button to open the 
 Organisation Edit screen.
 
-#### Org Enquiry - Payments
+### Org Enquiry - Payments
 
 Displays all payments in and out of the account with any tax contained within the payment shown separately. To edit a 
 payment you would need to open Cash Statements and trace the date of the entry (see Cash Statements).
 
-#### Org Enquiry - Statement
+### Org Enquiry - Statement
 
 Displays invoices and payments. To edit a payment, you would need to open Cash Statements and trace the date of the entry 
 (see Cash Statements) or to edit an invoice you would need to open Invoice Register and locate the invoice in either 
 the Sales or Purchases within the month it was posted (see Invoice Register).
 
-#### Org Enquiry - Tasks
+### Org Enquiry - Tasks
 
 Displays all Tasks and their Task Status. On all previous tabs, clicking the Edit button would simply open the 
 Organisation Edit screen, but within the Tasks tab you can select an entry by clicking on the row and clicking the Edit 
 button will open the Edit Task screen to enable viewing and editing as required. 
 
-#### Org Enquiry - Sales Orders
+### Org Enquiry - Sales Orders
 
 Displays all Sales Orders (Tasks) for the selected organisation. You can select an entry by clicking on the row and 
 clicking the Edit button will open the Edit Task screen to enable viewing and editing as required
 
-#### Org Enquiry - Sales Invoices
+### Org Enquiry - Sales Invoices
 
 Displays all Sales Invoices for the selected organisation. you can select an entry by clicking on the row and clicking 
 the Edit button will open the Invoice Register to enable viewing and editing as required.
 
-#### Org Enquiry - Purchase Orders
+### Org Enquiry - Purchase Orders
 
 Displays all Purchase Orders (Tasks) for the selected organisation. You can select an entry by clicking on the row and 
 clicking the Edit button will open the Edit Task screen to enable viewing and editing as required
 
-#### Org Enquiry - Purchase Invoices
+### Org Enquiry - Purchase Invoices
 
 Displays all Purchase Invoices for the selected organisation. You can select an entry by clicking on the row and 
 clicking the Edit button will open the Invoice Register to enable viewing and editing as required.
 
-#### Org Enquiry - Item Invoices
+### Org Enquiry - Item Invoices
 
 Displays all Expense Invoices for the selected Organisation. You can select an entry by clicking on the row and 
 clicking the Edit button will open the Expense Invoice to enable viewing and editing as required.

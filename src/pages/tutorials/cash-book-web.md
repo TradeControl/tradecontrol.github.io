@@ -244,11 +244,11 @@ We then make sure that CASH + BANK on the balance sheet matches our bank stateme
 
 ![audit](/images/web_debtors_and_creditors2.png)
 
-# Cash Book Information
+## Cash Book Information
 
     The following sections provide informational and technical guidance for generating your company accounts.
 
-## Organisations
+### Organisations
 
 If you have read the tutorial on [cash polarity](/tutorials/cash-codes#cash-polarity), you will already know that there are no customers or suppliers in Trade Control, but users with Administrator privileges can add them. The **Types** page on the **Organisation** menu allows you to create your own classifications. The organisation types below were created during the basic setup routine. 
 
@@ -275,9 +275,7 @@ The current balance of the debtor or creditor is also used to set the payment st
 
 ![invoice status](/images/web_invoice_status.png)
 
-## Tax
-
-### Settings
+### Tax Settings
 
 The default settings for tax are configured during the setup process. The **Tax Settings** page on the **Accounts** menu allows administrators to modify how taxes are calculated. Once the correct settings are established, they remain fixed unless there is some structural change to the business. The offset days is used to distinguish tax liability from payment due date. VAT is normally 1 month, and corporation tax 9 months. The cash codes assigned to control tax types must be assigned to an EXTERNAL Category. The Corporation Tax and Vat category codes assign the corresponding hierarchy in [Cash Totals](#cash-codes).
 
@@ -301,7 +299,7 @@ A Cash Account is a set of dated paid in/out transactions, each with a correspon
 
 CASH type accounts are vital to the effective running of any business. ASSET types do not apply to sole traders, only corporations. The DUMMY type is administrative only, for example, to correct a supplier invoice without a credit note, or vat anomalies.
 
-#### Cash Statement
+### Cash Statement
 
 Because your bank account is mirrored by a cash account, the statement is a useful reference for locating historical transactions. It also allows you to edit and delete any transaction. Modifying cash payments triggers a discrete re-build on the effected organisation, ensuring invoice status matches the projected SvD balance.
 

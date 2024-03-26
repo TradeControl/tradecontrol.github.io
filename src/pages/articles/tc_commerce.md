@@ -99,7 +99,7 @@ Although commercial courts adjudicate over Tertiary Law made by the master side 
 
 ## Sovereignty
 
-The second reason why I have coded a [bitcoin wallet](https://github.com/tradecontrol/bitcoin) concerns sovereignty. A sovereign is a rule-maker by virtue of reigning over the subjects within its territorial boundaries. A Rule is a Law if it can be enforced by the State. In the Asset Layer, when trading across territories, exchange is accompanied by the transmission of associated laws. Because Bitcoin is a stateless technology that digitises cash over a distributed network, it is often marketed as a means for conveying sovereignty, either individual or financial. My [commercial wallet](/articles/tc_bitcoin) demonstrates that when you plug the currency into the [Production Layer](/articles/tc_assets#production-layer) this is untrue.
+The second reason why I have coded a [bitcoin wallet](https://github.com/tradecontrol/bitcoin) concerns sovereignty. A sovereign is a rule-maker by virtue of reigning over the subjects within its territorial boundaries. A Rule is a Law if it can be enforced by the State. In the Asset Layer, when trading across territories, exchange is accompanied by the transmission of associated laws. Because Bitcoin is a stateless technology that digitises cash over a distributed network, it is often marketed as a means for conveying sovereignty, either individual or financial. My commercial wallet demonstrates that when you plug the currency into the [Production Layer](/articles/tc_assets#production-layer) this is untrue.
 
 > The rules that underpin the bitcoin design are accepted by consensus. Their source is not sovereignty, which requires the application of a unitary projection. 
 

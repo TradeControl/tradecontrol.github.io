@@ -6,6 +6,8 @@ permalink: /tutorials/balance-sheet
 
 It is a statutory requirement for all companies to submit both a P&L and Balance Sheet to the government. Trade Control can generate legally compliant, auditable versions of both. Because it is not a statutory requirement to be represented by a chartered accountant, it is possible to present these documents yourself.  The following tutorial shows you how to prepare your balance sheet so that you can do this.
 
+## Version Selection
+
 - [Web App](/tutorials/balance-sheet-web)
 - [Office 365](/tutorials/balance-sheet-365)
 

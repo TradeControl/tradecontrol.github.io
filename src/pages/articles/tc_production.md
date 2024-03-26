@@ -27,7 +27,7 @@ Examining this Supply Chain example:
 
 ### Cash Polarity
 
-The figure below is exchange expressed in the perspective of Workflow Polarity; the Sales Order is the same as a Purchase Order, except with reverse polarities (i.e. direction of goods and money).
+The figure below presents how polarity works in workflow exchanges; the Sales Order is the same as a Purchase Order, except with reverse polarities (i.e. direction of goods and money).
 
 ![ExchangePolarity](/images/production_figure_1.svg)
 

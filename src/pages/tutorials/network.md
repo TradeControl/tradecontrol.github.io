@@ -12,7 +12,7 @@ It assumes you are familiar with the system or have completed the [Modelling Bil
 
 [network installation](/tutorials/installing-network)
 
-### Activity Mirroring
+## Activity Mirroring
 
 1) With the three instances of the Network Interface connected to the RPC Server, start each Watch Service in Passive Mode and view the Transactions page: 
 
@@ -44,7 +44,7 @@ It assumes you are familiar with the system or have completed the [Modelling Bil
  
 ![New Activity](/images/network_new_activity_buy.png)
 
-### Network Transactions
+## Network Transactions
 
 Now that the consortium has been created and activities mirrored, order books can be exchanged over the network. However, it is not possible to mirror order books in many circumstances; instead, we employ the manufacturing systems solution of allocations. It is the set of all allocations that become mirrored by either party. To understand how that works practically, it is best to start with the Plastic Supplier.
 
@@ -98,7 +98,7 @@ The Tx hashes identify each transaction on the blockchain. Because we are using 
 
 ![ganache transactions](/images/network_ganache.png)
 
-### Events and Transmissions
+## Events and Transmissions
 
 In manufacturing, despatches are made on a delivery note raised by the Despatch Department and subsequently invoiced by Admin. The reason for this is that delivery notes were once signed with a pen by the customer's Goods Inwards storeman, and the invoice was mailed to their Accounts Department. However, the Trade Control invoice doubles up as a despatch note; therefore, we need to raise invoices to despatch goods (or more generally, deliver a service).
 
@@ -149,11 +149,11 @@ If you Save/Refresh, although purchase orders must still be processed, the opera
 13) The invoice mirror will be sent to The Storage Box Company. Repeat steps 5 - 11, only this time The Business is the supplier. If you have not included carriage, only step 9 is required - open The Storage Box Company Network Invoices, click Mirror and Accept.
 
 
-### Payment
+## Payment
 
 As the goods have flowed up the supply chain, so we now go back down again, paying the invoices in exchange for their goods or service. If you are using a fiat currency, this process is controlled by the banks. Otherwise, you can pay directly from your [Bitcoin Wallet](/tutorials/bitcoin).
 
-#### By Fiat
+### By Fiat
 
 1) From The Storage Box Company, look at the Company Statement. Open Payment Entry and pay the supplier (assuming an overdraft). You only need to select the organisation and post the defaults. The current balance of the Company Statement is reduced accordingly, and the invoices removed. A payment event is sent to the supplier notifying them that you have paid up, but their mirror invoice remains unpaid.
 
@@ -169,7 +169,7 @@ As the goods have flowed up the supply chain, so we now go back down again, payi
 
 ![Company Statement](/images/network_company_statement.png)
 
-### Credits and Returns
+## Credits and Returns
 
 Normally one of two things can go wrong in a trading exchange - faulty goods or bad service and mischarges. With Trade Control, you could just send an invoice with a negative quantity or charge, but it would go against convention. For faulty goods, the customer would send them back on a return note with an accompanying debit note. Should the supplier accept this, they would mirror it with a credit note. Internally, these states [are modelled using polarity](/tutorials/cash-codes#cash-polarity). Also, you can always raise invoices directly for miscellaneous charges with no supply/demand implications. For mischarges, you can also use zero quantities.
 
@@ -193,11 +193,11 @@ Delete/edit the invoice lines to debit 25Kg. Leave the defaulted carriage charge
 
 4) Should the network service have failed for technical reasons, you can doctor the status of allocations and invoice mirrors or change the Transmit Status to re-send changes. If all else fails, Trade Control works fine in stand-alone mode.  Therefore, you can always email organisations from the Document Manager or Word Templates and they can sort it out their end.
 
-### Quotations
+## Quotations
 
 To obtain a quotation, you just raise a Pending Task against the supplier, who then mirror it with their cost. If you accept the cost, you amend the Unit/Total Charge and set the status to Open. It will then automatically transfer to the supply versus demand listings of both parties.
 
-### Finally
+## Finally
 
 Although we have been manually tending to the allocations, this is at root a technique from the Material Requirements Planning algorithms developed in the manufacturing sector during the 1960s. Therefore, various techniques for automating this process could be applied to maintain positive SvD balances throughout the supply chain. Any change to the state would automatically flow down the demand side and then flow back up from the supply.  Whilst the author has coded several finite and infinite scheduling algorithms, we are not going to automate at this time. But you can understand that the process you have covered in the tutorial is a practical implementation of supply-chain scheduling.
 
