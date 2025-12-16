@@ -3,36 +3,64 @@ layout: ../layouts/Home_Page.astro
 title: TRADE CONTROL
 permalink: /
 ---
-![A Trade Control node](/images/dales.jpeg)
 
-## Welcome!
+<div style="max-width: 900px; margin: 1rem 0;">
+  <a href="./strategy/strategy-overview" title="Forge of Thought — click to explore">
+    <img
+      src="/images/forge-of-thought.png"
+      alt="A Trade Control node"
+      style="width: 100%; height: auto; display: block; border-radius: 8px;"
+    />
+  </a>
+</div>
 
-> **Trade Control is a unique business system, re-writing the book on how [ERP applications](https://en.wikipedia.org/wiki/Enterprise_resource_planning) are designed and implemented.** 
+## A new foundation for ERP design
 
-Traditional architectures have evolved from paper-based operations and the demands of capital to serve business owners, whether private or public. By jettisoning this mind-set, the design offers innovative opportunities to break out of these entrenched systems. 
+Trade Control is a unique business system, re-writing the book on how [ERP applications](https://en.wikipedia.org/wiki/Enterprise_resource_planning) are designed and implemented. Trade Control introduces a unified model that replaces centuries‑old [DEBC ledgers](./articles/tc_balance_sheet#double-entry-book-keeping) and [ERP orders](./articles/tc_cash_codes#cash-polarity) by treating both money and goods as flows with polarity.  
 
-Offered to the community as free software, you can explore how the core algorithms of capitalism can be calculated more efficiently, or how businesses can be connected and scheduled by seamless supply-chains or trade easily in crypto currencies as their Unit of Account. 
+This site is the home of:
+- **Theory and Strategy**: production and financial systems, new horizons
+- **Guides and Documentation**: user, technical, and “getting around”  
+- **Proofs and Examples**: reconciles the maths with statutory requirements  
 
-The app is accompanied by a free book which explains the workings of the commercial world, the re-modelling of its processes and structure by the app’s schema design, and why doing so is such a good idea.
+---
 
-- [Supporting Theory and Articles](./articles/tc_intro)
-- [Technical Documentation](./tutorials/overview)
+## Current Status — December 2025
 
-## Project Goals
+<p/>
+<div style="background-color:#fff3cd; border:1px solid #ffeeba; padding:0.75rem; border-radius:6px; font-weight:bold; color:#856404; margin-bottom:1rem;">
+⚠️ Trade Control is in development — first release not yet deployed.
+</div>
 
-Trade Control is a global trading platform published under an Open Source licence. The app’s functionality and architecture are derived from [Manufacturing Systems Engineering](./articles/tc_production). Materialised and tested in live environments, the project goals are as follows:
 
-- Replace the traditional ERP architecture of purchasing->production->sales with [a node based schema design](./tutorials/cash-codes#cash-polarity) where inputs match outputs.
-- Replace the asset-based recording surface of financial accounting (Double-Entry Book-keeping) with the [transaction-based recording surface of production](./tutorials/cash-book-web#organisation-enquiry) (Supply and Demand).
-- Implement a project management system inside the business-level node where task-level nodes can be freely [connected to form workflows](./tutorials/manufacturing#project-schedule).
-- Replace asset-based accounting methods by algorithmically deriving [capital and profit](./tutorials/balance-sheet-web#basic-accounts) from the transaction-based recording surface.
-- Eliminate the need for G/L postings and trial balances so account statement validitity [can be checked by anyone](./tutorials/cash-book-web#error-checking).
-- Algorithmically generate [VAT](./tutorials/balance-sheet-web#vat), [Corporation Tax](./tutorials/balance-sheet-web#company-tax), [Company Accounts](./tutorials/cash-book-web#finalised-accounts), [Debtors and Creditors](./tutorials/cash-book-web#paying-invoices) from the genesis transaction in real time for fraud resistance.
-- Provide the algorithms for instantaneous [Gestalt Costing](./tutorials/manufacturing#job-costing), replacing Job Costing with an evaluation model rooted in [all future business commitments](./tutorials/manufacturing#company-statement).
-- Integrate business nodes using the blockchain Ethereum to implement [supply-chain scheduling](./tutorials/network_overview) and contract-level integration.
-- Finance supply-chains using the crypto-currency Bitcoin by attaching [a commercial wallet](./tutorials/bitcoin_overview) to the transaction-based recording surface.
+Trade Control is **in active re-development** as a free software AI‑native ERP system.  
+The prototype worked but was not commercially delivered; we have archived those repos as prototypes for AI development. What remains is the **Seed Code** and the **Production Theory**, now aligned with a deployment framework.
 
-To verify that the goals have been achieved, please follow the instructions in the tutorials. Because the app is Open Source you also have access to every algorithm. To understand the benefits obtained from attaining these goals, you will need to [read the articles](./articles/tc_intro).
+Progress so far:
+- Schema design brought into explicit alignment with Production Theory  
+- Framework for deployment established  
+- Deprecated prototype‑targeted instructions from the website  
+- ASP.NET app undergoing AI‑ification — the **Category Tree** is the first sapling in the levelled garden of creation  
+
+Although Trade Control is **not yet ready for deployment**, the first milestones are clear: 
+
+- **Phase 1 Accounts Mode release**, replacing DEBC ledgers with polarity‑based flows of money. 
+- **Phase 2 MIS Mode release**, replacing ERP Orders with polarity-based flows of goods and service.
+
+By Phase 1, this homepage will feature a **Deploy button** to [activate Accounts Mode](./deployment/web-deployment-mobile).
+
+---
+
+## Next Steps
+
+- Numerical proofs (capital, VAT, transaction‑grained control)  
+- Operational proofs (node polarity, supply chain scheduling)  
+- Technical artefacts (spreadsheets, guides, Codex entries)  
+- User Guides (cashbook, accounts, HMRC Digital filing)  
+
+Stay tuned as we move toward the first milestone release.
+
+---
 
 ## Licence
 

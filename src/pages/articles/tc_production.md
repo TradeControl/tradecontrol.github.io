@@ -9,7 +9,7 @@ Providing insight into the functional dimensions of the schema design and busine
 
 ## Exchange
 
-A central pillar of the design is the way in which [cash polarity](/tutorials/cash-codes#cash-polarity) functions in acts of exchange. 
+A central pillar of the design is the way in which [cash polarity](/articles/tc_cash_codes#cash-polarity) functions in acts of exchange. 
 
 By tradition, there are separate divisions for buying and selling, called Purchasing and Sales Departments respectively. This made sense, because they involve very different kinds of people with different motivations. Software systems have then naturally evolved to serve the interests of these two groups, resulting in separate Customer Relations Management and/or Procurement modules. This practice creates different interfaces to each activity; and in so doing seals them off, both internally from each other, and externally from their customers and suppliers. To overcome the sealed interfaces problem, various formal procedures have evolved to communicate across the divide. This is visibly apparent in the schema design of ERP systems such as [Dynamics NAV](https://dynamicsdocs.com/nav/2018/w1/).
 
@@ -27,7 +27,7 @@ Examining this Supply Chain example:
 
 ### Cash Polarity
 
-The figure below presents how polarity works in workflow exchanges; the Sales Order is the same as a Purchase Order, except with reverse polarities (i.e. direction of goods and money).
+The figure below presents [how polarity works](/articles/tc_cash_codes) in workflow exchanges; the Sales Order is the same as a Purchase Order, except with reverse polarities (i.e. direction of goods and money).
 
 ![ExchangePolarity](/images/production_figure_1.svg)
 
@@ -44,10 +44,9 @@ From this we can deduce two things:
  
 In row 1 the polarity of the cash for organisation A is negative and so money is going from A -> B. Because there is an exchange, the Quantity for A must be positive, and Organisation B must have opposite polarities. So, goods and services are passing from B -> A. Once you know that, you know the roles played by the various identities and their associated order types.
 
-
 ## Workflow 
 
-The Supply Chain in the above example is a sub-set, or instance, of Workflow. The Workflow implementation is explained in the demo [Modelling a Bill of Materials](/tutorials/manufacturing). Before proceeding, unless you are an engineer, it is recommended that you look at the demo to obtain a practical appreciation of what follows.  
+The Supply Chain in the above example is a sub-set, or instance, of Workflow. The Workflow implementation is explained in the demo [Modelling a Bill of Materials](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md). Before proceeding, unless you are an engineer, it is recommended that you look at the demo to obtain a practical appreciation of what follows.  
 
 ### Production
 
@@ -109,7 +108,7 @@ It is a spatial representation of time that must begin in earth’s geology, wit
 
 Looking down upon this vision of the humble car, as though from a mountain top, we have a very different vision of its true nature. Below us dwells the flayed body of a transforming, interconnected earth. At our feet, wide open cast mines paraded by driverless trucks with 5 metre wheels; dark caverns deep below ground where diamond encrusted drills are boring out a million tons of rock. Oil rigs float on icy seas, their proboscis dug in, sucking up crude from the depths. In the far distance you discern a speck of dust: your vehicle emerging onto the forecourt, perched on the ledge of a new horizon. It may be for racing: bright light in the firmament burning with desire; or just a delivery van: inconspicuous white cell pottering down the asphalt arteries of the world. Its interface is now connected to the user’s world. We, however, have entered an engineered reality where the possibilities for process and object creation are effectively infinite.
 
-The Spatial Workflow is modelled in the [sqlNode](https://github.com/tradecontrol/sqlnode) by the [Object](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Object.sql) schema; the Temporal Workflow by the [Project](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Project.sql) schema.
+The Spatial Workflow is modelled in the [sqlNode](https://github.com/tradecontrol/sqlnode) by the [Object](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Object.sql) schema; the Temporal Workflow by the [Project](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Project.sql) schema.
 
 #### Production Environment
 
@@ -182,7 +181,7 @@ The blue line is the production of component structure following the direction o
 
 In the section on [Assemblages](#assemblages) we imagined the entire structure and processes that make up a car modelled in a single Bill of Materials. In theory, you could render this model inside the Node, although in practice this is unrealistic; principally because of the fundamental nature of components, but also due to commercial techniques that exploit this. 
 
-The [Trade Control Network](https://tradecontrol.github.io/network) is implemented in Ethereum.
+The [Trade Control Network](https://github.com/TradeControl/network/blob/HEAD/docs/overview.md) is implemented in Ethereum.
 
 ### Consumption Networks
 
@@ -202,7 +201,7 @@ If we map the [Cash Polarity Principle](#cash-polarity) onto [Workflow](#workflo
 
 The fiscal value is flowing down the Consumption Network, pulling the goods up the chain. The path it takes is determined by the Spatial Workflow that specifies technological structure. When the value has cascaded to the outer-most leaves, the materials, production value begins to flow up the supply chain. The path it takes is determined by the Temporal Workflow that specifies manufacturing process.
 
-In the section on [Assemblages](#assemblages) we saw how it was possible to model the entirety of the car's structure as if it were being made in one enormous factory. If you have completed the [BoM demo](/tutorials/manufacturing), you will know that you can convert the spatial structure into a temporal process by simply ordering it. This action generates a schedule for required material arrivals and component production. Orders can be modified and re-scheduled, recalculating the costs and quantities of the entire Workflow. In [Components](#components) you learnt about the production of interfaces through abstraction, and how they concealed inner structure. Looking at **Figure 6**, the engine is no longer being made by the car manufacturer, but by a specialist. This branch of the Workflow is cut off (concealed) and transferred to the engine factory. What remains of that branch is a single order that specifies the engine model, its quantity and price. The polarity of the price is negative and therefore we know [the exact role](#cash-polarity) of that order in the supply chain. The engine factory will create a Workflow for engine manufacture. Its root node will be a mirror image of the car manufacturers order, with opposite polarity. The engine provider in **Figure 6** subcontracts the component production to several providers, so it repeats the actions of the car manufacture on its own Workflow, and it cascades on downstream.  Any change to the Temporal Workflow could then trigger a series of recursive events that ripple down the supply chain as if it were occupying a single domain.
+In the section on [Assemblages](#assemblages) we saw how it was possible to model the entirety of the car's structure as if it were being made in one enormous factory. If you have completed the [BoM demo](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md), you will know that you can convert the spatial structure into a temporal process by simply ordering it. This action generates a schedule for required material arrivals and component production. Orders can be modified and re-scheduled, recalculating the costs and quantities of the entire Workflow. In [Components](#components) you learnt about the production of interfaces through abstraction, and how they concealed inner structure. Looking at **Figure 6**, the engine is no longer being made by the car manufacturer, but by a specialist. This branch of the Workflow is cut off (concealed) and transferred to the engine factory. What remains of that branch is a single order that specifies the engine model, its quantity and price. The polarity of the price is negative and therefore we know [the exact role](#cash-polarity) of that order in the supply chain. The engine factory will create a Workflow for engine manufacture. Its root node will be a mirror image of the car manufacturers order, with opposite polarity. The engine provider in **Figure 6** subcontracts the component production to several providers, so it repeats the actions of the car manufacture on its own Workflow, and it cascades on downstream.  Any change to the Temporal Workflow could then trigger a series of recursive events that ripple down the supply chain as if it were occupying a single domain.
 
 ### Production Networks
 
@@ -224,7 +223,7 @@ The American inventor, Benjamin Franklin, said that man is the tool making anima
 
 ![Production Network](/images/production_figure_7.svg)
 
-The Production Network has two placeholders in the Trade Control schema design: [Object.tbOp](https://github.com/TradeControl/sqlnode/blob/master/src/tcNodeDb4/Object/Tables/tbOp.sql) and [Project.tbOp](https://github.com/TradeControl/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbOp.sql) for the Spatial and Temporal Workflows respectively.
+The Production Network has two placeholders in the Trade Control schema design: [Object.tbOp](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Object/Tables/tbOp.sql) and [Project.tbOp](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbOp.sql) for the Spatial and Temporal Workflows respectively.
 
 ### Technological Strata
 
@@ -266,7 +265,7 @@ We of course have access to this information, because we are the users. Users pr
 
 ## Organisations
 
-In the originating [sharpNode](https://github.com/iamonnox/tradecontrol/blob/master/src/scripts/sharpNode/sharp_node_2002_03.sql) schema design of 2002, organisations and their people are expressed as components in a projected namespace. This has been removed from Trade Control because it confused the users. Instead, an organisation's namespace has been implemented in the [HD Wallet for Bitcoin](/tutorials/bitcoin_overview). 
+In the originating [sharpNode](https://github.com/iamonnox/tradecontrol/blob/master/src/scripts/sharpNode/sharp_node_2002_03.sql) schema design of 2002, organisations and their people are expressed as components in a projected namespace. This has been removed from Trade Control because it confused the users. Instead, an organisation's namespace has been implemented in the [HD Wallet for Bitcoin](https://github.com/TradeControl/bitcoin/blob/HEAD/docs/overview.md). 
 
 ### Namespaces
 
@@ -274,14 +273,13 @@ An organisation is just that - it is a subject that has organs (components) that
 
 Let's say you are standing atop Glastonbury Tor, looking out upon the Somerset Levels. To be uniquely identified, a Namespace could end with your name, prefixed with a list of place names in descending orders of abstraction. Each full stop in the namespace indicates a discrete shift in the abstract plane and an increase in finitude. 
 
+```csharp
+    World.Europe.UK.England.Somerset.Glastonbury.Tor.IAM
 ```
-World.Europe.UK.England.Somerset.Glastonbury.Tor.IAM
-```
-
 The address, however, is the _other way around_; in the same order of abstraction as a Workflow:
 
-```
-IAM.Tor.Glastonbury.Somerset.England.UK.Europe.World
+```csharp
+    IAM.Tor.Glastonbury.Somerset.England.UK.Europe.World
 ```
 
 Let's also say that you are going to receive a hand delivered letter from an arbitrary location on the planet. The Sender would first write your name on the envelope, followed by the inverted Namespace. It corresponds to demand polarity on the [Consumption Network](#consumption-networks). To deliver, the postal service must invert the demand so that it describes the actual physical path the letter must take. The letter can then be transported across the various abstract levels inhabited by the three Domains: International Post, National Post (Royal Mail) and Private Post (Local Service). Each domain applies the tools in their [Production Network](#production-networks) to transport the letter (sorting offices, planes, vans, bicycles, postmen etc).   **Figure 8** demonstrates this correspondence to the Consumption and Production Networks.
@@ -290,8 +288,8 @@ Let's also say that you are going to receive a hand delivered letter from an arb
 
 It is important to appreciate that, like the object's Spatial Workflow, the subject's Namespace is referring to structural relations, not physical space. You could just as easily have a Namespace that describes a person's role:
 
-```
-Company.Division.Department.Role.FullName
+```csharp
+    Company.Division.Department.Role.FullName
 ```
 
 The reason for this fluidity is that namespaces, whilst rooted in the objective world, describe abstractions projected by subjects. Take for example Somerset in the sample namespace: it is an ancient county in England, bordering Gloucestershire to the north, Dorset and Devon to the south. If we were to interpret its reality in traditional dualistic terms, we must conclude that Somerset is a fiction. We could visit its borders and, like lines drawn in the desert sand, there is no way to determine what county we are in from its physical information alone. There might be the meandering River Avon, or some leafy hedgerow, but there is no red dragon on any of its cells or molecules. Does this mean the information that identifies Somerset is just in people's heads, a belief recorded in Latin on some old parchment? An understanding of technological production informs us that this assumption is false. Somerset is not a physical space; it just occupies one. 
@@ -304,37 +302,37 @@ The set of all namespaces projected from any given abstract plane constitutes it
 
 Returning to the namespace that might identify a person’s role inside any given organisation:
 
-```
-Company.Division.Department.Role.FullName
+```csharp
+    Company.Division.Department.Role.FullName
 ```
 
 By way of example, a bell making foundry might have the following management team:
 
-```
-BellMaker.Roles.MD.Allan
-BellMaker.R&D.Roles.Chief.George
-BellMaker.Foundry.Production.Roles.Manager.Alice
-BellMaker.Foundry.Production.Maintenance.Head.Roles.Brian
-BellMaker.Foundry.Quality.Roles.Manager.Caroline
-BellMaker.Office.Buyer.Roles.Manager.Jenifer
-BellMaker.Office.Sales.Roles.Director.John
-BellMaker.Office.Finance.Roles.Head.Samantha
-BellMaker.Office.Admin.Roles.Manager.Dorothy
+```csharp
+    BellMaker.Roles.MD.Allan
+    BellMaker.R&D.Roles.Chief.George
+    BellMaker.Foundry.Production.Roles.Manager.Alice
+    BellMaker.Foundry.Production.Maintenance.Head.Roles.Brian
+    BellMaker.Foundry.Quality.Roles.Manager.Caroline
+    BellMaker.Office.Buyer.Roles.Manager.Jenifer
+    BellMaker.Office.Sales.Roles.Director.John
+    BellMaker.Office.Finance.Roles.Head.Samantha
+    BellMaker.Office.Admin.Roles.Manager.Dorothy
 ```
 
 The first name in each space is the organisation, while the others designate a structure, function or role that it needs to process its inputs and produce the required outputs. Roles can be attached at any level; so, Allan, as Managing Director, oversees the whole show, and therefore his role is associated with the entire namespace. There are three main divisions, the Foundry itself, Office and Research & Development. In this case, George heads the team that applies material science to improve both product and production techniques. The other roles are associated with further sub-divisions. The foundry is divided into Production and Quality departments, run by Alice and Caroline respectively; whilst Brian heads the sub-department responsible for fixing and maintaining the plant. 
 
 This is just a sketch of reality. We could improve the clarity of any namespace by further refining its structure:
 
-```
-BellMaker.Foundry.Production
-BellMaker.Foundry.Production.Maintenance
-BellMaker.Foundry.Production.Stores.PrimaryMaterials
-BellMaker.Foundry.Production.Stores.Components
-BellMaker.Foundry.Production.ToolRoom
-BellMaker.Foundry.Production.ShopFloor
-BellMaker.Foundry.Production.Warehouse.GoodsInwards
-BellMaker.Foundry.Production.Warehouse.Despatch
+```csharp
+    BellMaker.Foundry.Production
+    BellMaker.Foundry.Production.Maintenance
+    BellMaker.Foundry.Production.Stores.PrimaryMaterials
+    BellMaker.Foundry.Production.Stores.Components
+    BellMaker.Foundry.Production.ToolRoom
+    BellMaker.Foundry.Production.ShopFloor
+    BellMaker.Foundry.Production.Warehouse.GoodsInwards
+    BellMaker.Foundry.Production.Warehouse.Despatch
 ```
 
 In this way the set of all namespaces describes the internal structure of the organisation, its organs, their plane of abstraction and how they interrelate. Exactly like the [Component Definition](#component-definition), each plane is concealed behind its interfaces and therefore operations are isolated within their own abstract plane. Below is an example of how you can translate that fact into computer code in c#.  In this case, you call the program with a list of job numbers that identify completed maintenance tasks.  The code gets the collection of jobs assigned to the department, finds each job and sets it to complete. The code executes inside the ```BellMaker.Foundry.Production``` namespace.
@@ -370,7 +368,7 @@ These are complicated words with disputed interpretations and usages that are bo
 
 > Technological object production supplies the User Interfaces projected by its subjects.
 
-So, there are three _jacere_ (Latin for _to throw_) in our definition: Ob, Sub and Pro. We need all three to model and process component production. The object is the Spatial Workflow, project is the Temporal Workflow, and subjects are Organisations. These are explicitly modelled by the [Trade Control Node](https://github.com/tradecontrol/sqlnode) in schemas [Object](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Object.sql), [Subject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Subject.sql) and [Project](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Project.sql) respectively. It is, however, possible to encapsulate all three _jacere_ inside a recursive component network, as was the case in the [sharpNode](https://github.com/iamonnox/tradecontrol/blob/master/src/scripts/sharpNode/sharp_node_2002_03.sql) schema. User comprehension aside, there are good reasons for doing that. For example, we could easily reverse the sample usages above: (the subjective universe contains objects...) or (the subject of our discussion is the following object...).
+So, there are three _jacere_ (Latin for _to throw_) in our definition: Ob, Sub and Pro. We need all three to model and process component production. The object is the Spatial Workflow, project is the Temporal Workflow, and subjects are Organisations. These are explicitly modelled by the [Trade Control Node](https://github.com/tradecontrol/sqlnode) in schemas [Object](https://github.com/TradeControl/tradecontrol.web/tree/HEAD/src/Schema/tcNodeDb4/Object), [Subject](https://github.com/TradeControl/tradecontrol.web/tree/HEAD/src/Schema/tcNodeDb4/Subject) and [Project](https://github.com/TradeControl/tradecontrol.web/tree/HEAD/src/Schema/tcNodeDb4/Project) respectively. It is, however, possible to encapsulate all three _jacere_ inside a recursive component network, as was the case in the [sharpNode](https://github.com/iamonnox/tradecontrol/blob/master/src/scripts/sharpNode/sharp_node_2002_03.sql) schema. User comprehension aside, there are good reasons for doing that. For example, we could easily reverse the sample usages above: (the subjective universe contains objects...) or (the subject of our discussion is the following object...).
 
 Objects are generally considered to be either physical or psychical, with no third term. The former exists in the Objective Universe, whilst the latter exists in Subjective Minds. This dualism is not present in the above definition, and yet still we are able to functionally express their relation. In so doing, like the bell foundry, subjects too can be engineered by projecting interfaces onto themselves.
 

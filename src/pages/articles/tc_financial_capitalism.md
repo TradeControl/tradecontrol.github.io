@@ -9,7 +9,7 @@ Since the 1980's we have experienced the relentless financialisation of our econ
 
 ## Background
 
-- [Commercial Wallet](/tutorials/bitcoin)
+- [Commercial Wallet](https://github.com/TradeControl/bitcoin/blob/HEAD/docs/overview.md)
 - [Industrial Capitalism](/articles/tc_industrial_capitalism)
 
 ## Late Capitalism

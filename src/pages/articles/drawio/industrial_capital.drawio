@@ -1,0 +1,175 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.4" pages="2">
+  <diagram name="Figure 1" id="G26BW5w3X1dj_RIwUbVB">
+    <mxGraphModel dx="1418" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;noLabel=1;strokeColor=#d6b656;fillColor=#fff2cc;" value="" vertex="1">
+          <mxGeometry height="600" width="810" x="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;fillColor=#E6FFCC;strokeColor=#CCCCCC;" value="" vertex="1">
+          <mxGeometry height="260" width="610" x="20" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-5" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#0066CC;" target="iCi7iLacYEDGNaA9iKVC-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="COAL MINING Co." vertex="1">
+          <mxGeometry height="60" width="150" x="250" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-4" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" target="iCi7iLacYEDGNaA9iKVC-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="280" />
+              <mxPoint x="230" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#000000;strokeColor=#666666;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="MORE&lt;br&gt;COAL&lt;br&gt;MINES" vertex="1">
+          <mxGeometry height="120" width="150" x="60" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-7" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-3" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#000000;strokeColor=#666666;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="COAL &lt;br&gt;MINES" vertex="1">
+          <mxGeometry height="60" width="150" x="250" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-26" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-6" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="PROFITS" vertex="1">
+          <mxGeometry height="60" width="150" x="250" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-9" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-8" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="SUPERIOR&lt;br&gt;PUMPS" vertex="1">
+          <mxGeometry height="120" width="150" x="460" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;fontStyle=1" value="PRODUCTION LAYER" vertex="1">
+          <mxGeometry height="30" width="180" x="430" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-17" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-12" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;endArrow=classic;fontStyle=1" target="iCi7iLacYEDGNaA9iKVC-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-18" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-12" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;endArrow=classic;fontStyle=1" target="iCi7iLacYEDGNaA9iKVC-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-25" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-12" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;endArrow=classic;fontStyle=1" target="iCi7iLacYEDGNaA9iKVC-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontStyle=1;fontSize=13;labelBackgroundColor=none;fontColor=#FFFFFF;" value="NEW CAPITAL" vertex="1">
+          <mxGeometry height="60" width="160" x="245" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-19" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-13" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;endArrow=classic;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="iCi7iLacYEDGNaA9iKVC-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="540" />
+              <mxPoint x="30" y="170" />
+            </Array>
+            <mxPoint x="180" y="540" as="sourcePoint" />
+            <mxPoint x="40" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;labelBackgroundColor=none;fontColor=#FFFFFF;" value="TAX" vertex="1">
+          <mxGeometry height="60" width="160" x="245" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-16" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-14" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;fontStyle=1;fontSize=13;labelBackgroundColor=none;fontColor=#B3B3B3;" value="RETENTION" vertex="1">
+          <mxGeometry height="60" width="150" x="60" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;fontStyle=1;fontSize=13;labelBackgroundColor=none;fontColor=#FFFFFF;" value="INFRASTRUCTURE" vertex="1">
+          <mxGeometry height="60" width="150" x="60" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;fontStyle=1;fontSize=13;labelBackgroundColor=none;fontColor=#FFFFFF;" value="EXTRACTION" vertex="1">
+          <mxGeometry height="60" width="160" x="450" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-23" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontStyle=1;labelBackgroundColor=none;fillColor=#FFFF33;gradientColor=#97d077;strokeColor=#82b366;fontColor=#FFFFFF;" value="Private Wealth" vertex="1">
+          <mxGeometry height="60" width="150" x="455" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-24" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-21" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;endArrow=classic;fontStyle=1" target="iCi7iLacYEDGNaA9iKVC-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-28" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-27" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;fontStyle=1;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;" value="STEAM PUMPS Co." vertex="1">
+          <mxGeometry height="60" width="150" x="650" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-31" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-29" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-29" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=none;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#B3B3B3;" value="PUBLIC&lt;br&gt;SHARES" vertex="1">
+          <mxGeometry height="70" width="150" x="650" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-30" edge="1" parent="1" source="iCi7iLacYEDGNaA9iKVC-23" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#0066CC;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="iCi7iLacYEDGNaA9iKVC-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;fontStyle=1" value="ASSET LAYER" vertex="1">
+          <mxGeometry height="30" width="180" x="550" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iCi7iLacYEDGNaA9iKVC-34" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=13;fontColor=#000000;fontStyle=1;labelBackgroundColor=default;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;Figure 1: Industrial Capitalism&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Here we depict the primordial relationship between industrial production and capital. There are four dimensions: 1. Generation of new capital from the mining profits; 2. Extraction of private wealth for consumption. 3. Reallocation of wealth to stimulate innovation in related supply chains; 4. State attachment for supporting infrastructure. Note that the relationship between the Steam Pumps and Coal Mining Company is inside a Production Network.&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="130" width="803" x="17" y="630" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="VkiVAiQztUL7LDPXE32S" name="Figure 2">
+    <mxGraphModel dx="1418" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="360" width="254" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="360" width="254" x="294" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-17" edge="1" parent="1" source="2Hb-bCw1jh30xwg--VFq-1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=6;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="W_xLFlrwEe1QgmhEhEHk-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Hb-bCw1jh30xwg--VFq-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;fontStyle=1;fontSize=13;fontColor=#FFFFFF;labelBackgroundColor=none;" value="STEAM PUMPS Co." vertex="1">
+          <mxGeometry height="120" width="160" x="354" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-16" edge="1" parent="1" source="VdriEWD03I_rAlBvGcNW-1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0066CC;strokeWidth=6;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="2Hb-bCw1jh30xwg--VFq-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdriEWD03I_rAlBvGcNW-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="SUPERIOR&lt;br&gt;PUMPS" vertex="1">
+          <mxGeometry height="120" width="160" x="354" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-18" edge="1" parent="1" source="W_xLFlrwEe1QgmhEhEHk-1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0066CC;strokeWidth=6;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="Jmz_OXBF0QdFtSBHiCMD-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontStyle=1;fontSize=13;labelBackgroundColor=none;fontColor=#FFFFFF;" value="NEW CAPITAL" vertex="1">
+          <mxGeometry height="120" width="160" x="74" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-15" edge="1" parent="1" source="Jmz_OXBF0QdFtSBHiCMD-1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;strokeWidth=6;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="VdriEWD03I_rAlBvGcNW-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Jmz_OXBF0QdFtSBHiCMD-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#000000;strokeColor=#666666;fontStyle=1;fontSize=14;fontColor=#FFFFFF;" value="COAL &lt;br&gt;MINING Co." vertex="1">
+          <mxGeometry height="120" width="160" x="74" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="W_xLFlrwEe1QgmhEhEHk-3" edge="1" parent="1" source="W_xLFlrwEe1QgmhEhEHk-13" style="endArrow=none;html=1;rounded=0;strokeColor=#82b366;strokeWidth=11;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#d5e8d4;gradientColor=#97d077;exitX=0;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="294" y="50" as="sourcePoint" />
+            <mxPoint x="291" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mTMlIolbYDNzAzR32Lzm-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;fontStyle=1" value="PRIMARY INDUSTRY" vertex="1">
+          <mxGeometry height="30" width="170" x="80" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mTMlIolbYDNzAzR32Lzm-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;fontStyle=1" value="SECONDARY INDUSTRY" vertex="1">
+          <mxGeometry height="30" width="180" x="334" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jGpsT8nzJhn58k7UmbC3-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=13;fontColor=#000000;fontStyle=1;labelBackgroundColor=default;align=left;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;Figure 2: Industrial Capital - Positive Feedback&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;This is just a simplified version of Fig. 1 to highlight the positive feedback loop of capital in the relationship between the primary and secondary industry sectors. If you wanted to replace capitalism with another market driven form of trade then you would need to replicate this feedback loop to compete. Fig 7. of my Production Theory shows you where to do that by presenting the functional connection that has always existed between different supply chains.&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="722" x="38" y="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

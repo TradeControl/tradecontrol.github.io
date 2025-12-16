@@ -47,7 +47,75 @@ Tertiary Law in [the pre-IR era](/articles/tc_assets#agriculture) was issued fro
 
 The Table of Assets below is provided so that you can find out which side you are on in our ubiquitously territorialised world.
 
-![Relations](/images/commerce_table_1.png)
+<table>
+  <thead>
+    <!-- Row 1: group bands -->
+    <tr class="band-row">
+      <th></th>
+      <th colspan="2">MASTER SIDE</th>
+      <th class="contract-col" colspan="1">CONTRACT</th>
+      <th colspan="2">SLAVE SIDE</th>
+    </tr>
+    <!-- Row 2: titles  -->
+    <tr class="title-row">
+      <th>SECTOR</th>
+      <th>AUTHORITY</th>
+      <th>ROLE</th>
+      <th class="contract-col">RELATION</th>
+      <th>ROLE</th>
+      <th>OBLIGATION</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td rowspan="4">PRIVATE TERTIARY LAW</td>
+      <td>Deeds</td>
+      <td>Landlord</td>
+      <td class="contract-col">Lease</td>
+      <td>Tenant</td>
+      <td>Rents</td>
+    </tr>
+    <tr>
+      <td>Shares</td>
+      <td>Employer</td>
+      <td class="contract-col">Employment Contract</td>
+      <td>Employee</td>
+      <td>Profits/Labour</td>
+    </tr>
+    <tr>
+      <td>Intellectual Property</td>
+      <td>IP Owner</td>
+      <td class="contract-col">Licence/T&amp;C</td>
+      <td>IP Rights</td>
+      <td>Fees</td>
+    </tr>
+    <tr>
+      <td>Financial Assets</td>
+      <td>Creditor</td>
+      <td class="contract-col">Loan Security</td>
+      <td>Debtor</td>
+      <td>Interest</td>
+    </tr>
+    <tr>
+      <td rowspan="2">PUBLIC PRIMARY LAW</td>
+      <td>Sovereignty</td>
+      <td>Law Maker</td>
+      <td class="contract-col">Legislation</td>
+      <td>Citizen</td>
+      <td>Taxes</td>
+    </tr>
+    <tr>
+      <td>Governance</td>
+      <td>Governor</td>
+      <td class="contract-col">Judgement</td>
+      <td>Governed</td>
+      <td>Assets/Time</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ### Tertiary Law Implementation
 

@@ -6,23 +6,23 @@ permalink: articles/tc_assets
 
 Published on 31 December 2020.
 
-The [schema design](https://github.com/tradecontrol/sqlnode) of Trade Control demonstrates how a production system functions independently from the calculation of assets. Commercial assets are dependent upon production and that is why I can calculate capital algorithmically from its input and output transactions alone. In so doing, I am able to deliver a [transaction-grained balance sheet](/tutorials/manufacturing#company-statement). However, I must impose [artificial time periods](/articles/tc_profit_and_loss#capital-extraction) onto the transactions to derive tax obligations and generate [statutory accounts](/tutorials/accounts-filing) . Accountants do the opposite; they create the periods then fill them with [double-entry transactions](/articles/tc_profit_and_loss#double-entry-book-keeping) because their goal is to calculate the net worth of a productive resource, called its asset value. Assets naturally arise from a mentality which is in fact very ancient. Whilst I do not have that mentality myself, I have studied it because of its critical bearing on how [production systems work](/articles/tc_production#workflow). The reason I re-wrote the algorithms of capitalism from the vantage of production rather than its owners relates to what an asset is and the conditions under which it comes into being. 
+The [schema design](https://github.com/tradecontrol/sqlnode) of Trade Control demonstrates how a production system functions independently from the calculation of assets. Commercial assets are dependent upon production and that is why I can calculate capital algorithmically from its input and output transactions alone. In so doing, I am able to deliver a [transaction-grained balance sheet](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md#company-statement). However, I must impose [artificial time periods](/articles/tc_profit_and_loss#capital-extraction) onto the transactions to derive tax obligations and generate [statutory accounts](/tutorials/accounts-filing) . Accountants do the opposite; they create the periods then fill them with [double-entry transactions](/articles/tc_profit_and_loss#double-entry-book-keeping) because their goal is to calculate the net worth of a productive resource, called its asset value. Assets naturally arise from a mentality which is in fact very ancient. Whilst I do not have that mentality myself, I have studied it because of its critical bearing on how [production systems work](/articles/tc_production#workflow). The reason I re-wrote the algorithms of capitalism from the vantage of production rather than its owners relates to what an asset is and the conditions under which it comes into being. 
 
 ## Background
 
 - [Production Theory](/articles/tc_production)
-- [A Trade Control node](/tutorials/installing-sqlnode)
-- [BoM tutorial](/tutorials/manufacturing)
+- [A Trade Control node](https://github.com/TradeControl/sqlnode/blob/HEAD/docs/installation.md)
+- [BoM tutorial](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md)
 - [Balance Sheets](/articles/tc_balance_sheet)
 - [Profit and Loss](/articles/tc_profit_and_loss)
 
 ## System Implementation
 
-Were you to have followed the development path of the app on Trade Control's [GitHub site](https://github.com/tradecontrol), the sequence of the unfolding will have communicated an important fact about the commercial world. **Figure 1a** illustrates the implementation of the theory in sequence up to [version 3.28.5](https://github.com/iamonnox/tradecontrol/blob/master/changelogs.md#3.28.5).
+Were you to have followed the development path of the app on Trade Control's [GitHub site](https://github.com/tradecontrol), the sequence of the unfolding will have communicated an important fact about the commercial world. **Figure 1** illustrates the implementation of the theory in sequence up to [version 3.28.5](https://github.com/iamonnox/tradecontrol/blob/master/changelogs.md#3.28.5).
 
 > GitHub allows you to retrospectively trace a repos development history by cloning the projects in Visual Studio or GitHub Desktop.
 
-![Implementation](/images/assets_figure_1a.svg)
+![Implementation](/images/assets_figure_1.svg)
 
 Looking closely at this diagram, you can see how version **3.28.5** has both fully implemented the production theory and provides all the elements required for trade. You can model the production of material interfaces into components to any level of abstraction and complexity. By connecting nodes together into supply-chains, you may then orchestrate their production, distribution and sale from material to finished product.
 
@@ -40,17 +40,17 @@ The mechanics are best understood by visualising the transition from production 
 
 ### Production Layer
 
-The Production Layer is illustrated in **Figure 1a** and is covered [by the paper on production theory](/articles/tc_production). The data sources for the Asset Recording Layer are described in the [construction section](/articles/tc_balance_sheet#construction) of the balance sheet documentation. The [Trade Statement](https://github.com/TradeControl/office/blob/master/src/excel/xltCashFlow/Biz/DataLoader.cs) is the P&L without asset recording or the task-based accruals that controllers can optionally use for scheduling workflow financing. It is important to understand that the Production Layer is not connected to the Asset Recording Surface and can therefore work independently. Without the Production Layer, you will die. The other layers are grafted onto production in order to define ownership and distribute value.
+The Production Layer is illustrated in **Figure 1** and is covered [by the paper on production theory](/articles/tc_production). The data sources for the Asset Recording Layer are described in the [construction section](/articles/tc_balance_sheet#construction) of the balance sheet documentation. The [Trade Statement](https://github.com/TradeControl/office/blob/master/src/excel/xltCashFlow/Biz/DataLoader.cs) is the P&L without asset recording or the task-based accruals that controllers can optionally use for scheduling workflow financing. It is important to understand that the Production Layer is not connected to the Asset Recording Surface and can therefore work independently. Without the Production Layer, you will die. The other layers are grafted onto production in order to define ownership and distribute value.
 
 The corresponding code that reflects the value-chain inside the Production Layer is as follows:
 
 | Statement | T-Sql |
 | -- | -- |
-| Subjects | [Subject.vwStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Subject/Views/vwStatement.sql) |
-| Cash Account | [Cash.vwAccountStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwAccountStatement.sql) |
-| Corporation Tax | [Cash.vwTaxCorpStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwTaxCorpStatement.sql) |
-| VAT | [Cash.vwTaxVatStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwTaxVatStatement.sql) |
-| Trade Profits | [Cash.fnFlowCategory(CashType.Trade)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
+| Subjects | [Subject.vwStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Subject/Views/vwStatement.sql) |
+| Cash Account | [Cash.vwAccountStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwAccountStatement.sql) |
+| Corporation Tax | [Cash.vwTaxCorpStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwTaxCorpStatement.sql) |
+| VAT | [Cash.vwTaxVatStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwTaxVatStatement.sql) |
+| Trade Profits | [Cash.fnFlowCategory(CashType.Trade)](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
 
 ### Recording Surface
 
@@ -60,12 +60,12 @@ To create a recording surface that serves the Asset Layer, we either apply asset
 
 | Statement | T-Sql |
 | -- | -- |
-| Creditors and Debtors | [Cash.vwBalanceSheetSubjects](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetSubjects.sql) |
-| Bank and Cash | [Cash.vwBalanceSheetAccounts](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetAccounts.sql) |
-| Assets and Liabilities | [Cash.vwBalanceSheetAssets](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetAssets.sql) |
-| Corporation Tax | [Cash.vwBalanceSheetTax](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql) |
-| VAT | [Cash.vwBalanceSheetVat](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwBalanceSheetVat.sql) |
-| Asset Profits | [Cash.fnFlowCategory(CashType.Money)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
+| Creditors and Debtors | [Cash.vwBalanceSheetSubjects](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetSubjects.sql) |
+| Bank and Cash | [Cash.vwBalanceSheetAccounts](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetAccounts.sql) |
+| Assets and Liabilities | [Cash.vwBalanceSheetAssets](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetAssets.sql) |
+| Corporation Tax | [Cash.vwBalanceSheetTax](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql) |
+| VAT | [Cash.vwBalanceSheetVat](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetVat.sql) |
+| Asset Profits | [Cash.fnFlowCategory(CashType.Money)](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
 
 ### Capital Layer
 
@@ -75,7 +75,7 @@ The asset recording surface provides an abstract interface from which capital ca
 
 ### Asset Layer
 
-Capital services the Asset Layer, which embodies a different mentality and ruleset to that required by production. The Asset Layer, therefore, marks the threshold over which the Trade Control model cannot pass. This layer is demarked by the [business entity](/articles/tc_profit_and_loss#business-entity) defined by Company Law. A functional description of production does not need to include the Asset Layer. This is demonstrated in version **3.28.5** (**Figure 1a**), which can orchestrate the productive and commercial process without it. 
+Capital services the Asset Layer, which embodies a different mentality and ruleset to that required by production. The Asset Layer, therefore, marks the threshold over which the Trade Control model cannot pass. This layer is demarked by the [business entity](/articles/tc_profit_and_loss#business-entity) defined by Company Law. A functional description of production does not need to include the Asset Layer. This is demonstrated in version **3.28.5** (**Figure 1**), which can orchestrate the productive and commercial process without it. 
 
 A functional explanation of technological production applies equally to the manufacture of particle accelerators and atomic bombs. Manufacture whatever you like, the process is the same. However, whilst these projects are carried out by the same people, clearly their nature is very different. How that difference can be defined is related to the Asset Layer by virtue of their shared mentality. 
 
@@ -141,20 +141,20 @@ The impact of this appropriation is as severe as it is transformative. Not only 
 
 According to my production theory, it is not possible to model productive processes in a universe that consist of only objects and subjects. I point out that there were two kinds of processes going on - the production of component interfaces and their consumption through a user interface. The latter connects to the value-stream. For example, a half-finished car has no viable UI and therefore is without value to the user. However, the business entity itself is an asset, and therefore its components are evaluated as stock and their value transferred onto the balance sheet. But how is that value assessed? The material value of any component is known from the UOQ and the unit purchase price. But cost also includes the amount of work invested in its transformation. The techniques of Cost Accounting evaluate the cost of a given slice of time by spatialising the temporal workflow. Thus, asset value can be assigned to units of productive time, turning projects into objects. The Business Entity is a concept of the Asset Layer dependent upon the function of production. To become an asset, the Business Entity must remove these productive processes and cast itself as a set of subjects (debtors, creditors...) and objects (fixed assets, stock...). 
 
-**Figure 1b** is the underlying schema design of the production system implementation in **Figure 1a**.  
+**Figure 7** is the underlying schema design of the production system implementation in **Figure 1**.  
 
-![Node Schema](/images/assets_figure_1b.svg)
+![Node Schema](/images/assets_figure_7.svg)
+
+If we remove Projects from the schema, you are left with subjects and objects, like the mind/body, consciousness/matter dualism. In so doing, the code will still be able to model assets, but not production. With this cut-down schema you could model spatial workflows from objects, as presented in the [Bill of Materials tutorial](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md#bom-specification). You also have subjects that can project a User Interface, so the Business Entity preserves its debtor/creditor relations. In other words, the schema can still implement [my definition of an asset](#asset-layer). A DEBK recording surface may then attach to this schema and derive the Company Accounts. Unfortunately, the schema is no longer a node because it [lacks the connectors](https://github.com/TradeControl/network/blob/HEAD/docs/overview.md) needed to form supply-chains. Worse still, how is it going to produce stuff without re-inventing the Projects schema (whether implicitly in practice or explicitly in code)? So where are your assets going to come from in the first place? The only assets this schema design can incorporate are already provided by the earth, which economists call Natural Capital. Without functional interface projection, the Industrial Revolution could not have happened. Which begs the question, if a factory cannot produce a single component of any kind under this dualistic model, how is it an appropriate framework for [describing biological evolution](/articles/tc_production#life) and embryonic development?
 
 | Schema | T-Sql |
 | -- | -- |
-| Subjects | [Subject.tbSubject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Subject/Tables/tbSubject.sql) |
-| Objects | [Object.tbObject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Object/Tables/tbObject.sql) |
-| Quantity | [Project.tbProject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbProject.sql) |
-| Value | [Invoice.tbInvoice](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Invoice/Tables/tbInvoice.sql) |
-| Physical Connector | [Project.tbAllocation](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbAllocation.sql) |
-| Financial Connector | [Invoice.tbMirror](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Invoice/Tables/tbMirror.sql) |
-
-If we remove Projects from the schema, you are left with subjects and objects, like the mind/body, consciousness/matter dualism. In so doing, the code will still be able to model assets, but not production. With this cut-down schema you could model spatial workflows from objects, as presented in the [Bill of Materials tutorial](/tutorials/manufacturing#bom-specification). You also have subjects that can project a User Interface, so the Business Entity preserves its debtor/creditor relations. In other words, the schema can still implement [my definition of an asset](#asset-layer). A DEBK recording surface may then attach to this schema and derive the Company Accounts. Unfortunately, the schema is no longer a node because it [lacks the connectors](https://tradcontrol.github.io/tutorials/network) needed to form supply-chains. Worse still, how is it going to produce stuff without re-inventing the Projects schema (whether implicitly in practice or explicitly in code)? So where are your assets going to come from in the first place? The only assets this schema design can incorporate are already provided by the earth, which economists call Natural Capital. Without functional interface projection, the Industrial Revolution could not have happened. Which begs the question, if a factory cannot produce a single component of any kind under this dualistic model, how is it an appropriate framework for [describing biological evolution](/articles/tc_production#life) and embryonic development?
+| Subjects | [Subject.tbSubject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Subject/Tables/tbSubject.sql) |
+| Objects | [Object.tbObject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Object/Tables/tbObject.sql) |
+| Quantity | [Project.tbProject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbProject.sql) |
+| Value | [Invoice.tbInvoice](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Invoice/Tables/tbInvoice.sql) |
+| Physical Connector | [Project.tbAllocation](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbAllocation.sql) |
+| Financial Connector | [Invoice.tbMirror](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Invoice/Tables/tbMirror.sql) |
 
 When we re-apply the schema derived from my description of the [technological object](/articles/tc_production#subjects-and-objects), we can start producing again and forming supply-chains. But we can also apply interface projection to the asset-based world view in a very simple yet informative way. 
 
@@ -203,7 +203,7 @@ These rights bestowed by the Asset Layer are obtained in exchange for money obje
 
 When money is conceived as an Allocation of Rights, the currency must be hard so that rights cannot be simply materialised by fiat. When dominant powers increase the money supply, through pure unitary projection in the form of credit/debt, they are bestowing rights to resources without reference to its production, which is a kind of theft. With hard money that is not possible. Money supply increases in accordance with market demand; for, whilst the overall pool of rights is finite, the allocation can be infinitely divisible. In practice, for example, the divisibility of bitcoin is the satoshi, which currently stands at GBP 0.00014, or 0.014 pence (although it can be yet further sub-divided on a sidechain). 
 
-Connecting a hard currency to the Production Layer is the first reason why I have coded a [commercial bitcoin wallet](https://tradecontrol.github.io/bitcoin).
+Connecting a hard currency to the Production Layer is the first reason why I have coded a [commercial bitcoin wallet](https://github.com/TradeControl/bitcoin/blob/HEAD/docs/overview.md).
 
 ## Asset Implementation
 
@@ -213,11 +213,11 @@ This fact is demonstrated in the practice of High Frequency Trading, where HFT p
 
 The Asset Layer is a vast enterprise, for once a unitary projection is applied to the output of a productive workflow, owners can maximise exploitation by abstracting its interfaces, thereby deriving new meta-layers of connectivity (such as financial instruments and products). These extensions are non-foundational, and therefore I will only example [a simple case](#cadastral).
 
-**Figure 7** depicts the Asset Layer as it is presented to financial investors in the form of a cadastral: 
+**Figure 8** depicts the Asset Layer as it is presented to financial investors in the form of a cadastral: 
 
 > The *cadastral* is an official map of assets recording size, value and ownership.
 
-![Cadastral Recording](/images/assets_figure_7.svg)
+![Cadastral Recording](/images/assets_figure_8.svg)
 
 Each business is like a plot of publicly or privately owned land divided into shares of equal value. Beneath the business is the concealed Production Layer feeding surplus value to the unitary projection. The collective territory is a surface that expands and contracts in relation to the economic performance of the Production Layer. It is equivalent to the patio on [Darwin's Square](#darwins-square), but linked to the temporal workflows of IR production.  Business **A** may very well be in a supply-chain with **B**, and that is obviously visible inside the workflows of the Production Layer, but there is nothing in the cadastral that connects them. For public stocks, shareholders **1** and **2** can buy whatever shares they want on the 2d map, provided they are willing to pay the latest price on the exchange.
 
@@ -228,7 +228,7 @@ There are two ways to extract money directly from the share:
 1. Dividend payments off the balance sheet, the value of which is reflected in the share price
 2. Buying the share at a low price and selling it high
 
-Business **A** decides it needs to raise capital, so it issues an additional 12 shares. That means the number of squares in **A** goes up accordingly (6x4). Shareholder **2** might decide to increase investment in **A**'s stock, as their Balance Sheet at Companies House is continuously growing. The shareholder buys the shares from Business **A**, injecting capital into the company. Shareholder **2** either holds the stock to accept dividend payments or sells the share later to cash in on the escalating share price. Let us say Shareholder **1** buys the shares. The transaction makes no difference to the Production Layer, since rights are simply re-allocated to a different party who will receive the dividends instead. In **Figure 7**, a red square turns grey. Only shares bought from a business issuing capital will inject money into the Production Layer. The vast majority of financial transactions purchase share price rather than inject capital, which just shift rights allocations around the cadastral. That is why buying stocks and shares does not necessarily contribute to capital investment. Rather than capital creation, player rights are just being re-allocated.
+Business **A** decides it needs to raise capital, so it issues an additional 12 shares. That means the number of squares in **A** goes up accordingly (6x4). Shareholder **2** might decide to increase investment in **A**'s stock, as their Balance Sheet at Companies House is continuously growing. The shareholder buys the shares from Business **A**, injecting capital into the company. Shareholder **2** either holds the stock to accept dividend payments or sells the share later to cash in on the escalating share price. Let us say Shareholder **1** buys the shares. The transaction makes no difference to the Production Layer, since rights are simply re-allocated to a different party who will receive the dividends instead. In **Figure 8**, a red square turns grey. Only shares bought from a business issuing capital will inject money into the Production Layer. The vast majority of financial transactions purchase share price rather than inject capital, which just shift rights allocations around the cadastral. That is why buying stocks and shares does not necessarily contribute to capital investment. Rather than capital creation, player rights are just being re-allocated.
 
 Sometimes businesses can even decide to destroy capital by repurchasing their own shares, which is capitalism in reverse. By such means, they can increase the share price and dividend payments of remaining holders or facilitate insider trading. Either way, it disinvests the Production Layer. 
 
@@ -238,9 +238,9 @@ The cadastral of the LSE and NYSE are plugged directly into the Production Layer
 
 A similar cadastral to the stock market is also imposed upon hard money by the Asset Layer; except the territorial border is fixed, each plot occupies the same area (in units of 1 satoshi), there are no servicing workflows and hence no surpluses to extract. But it looks the same. 
 
-Variants of the cadastral are everywhere because it is ancient and engrained. **Figure 7** is like an aerial view of the farmlands on the Nile Delta at the dawn of civilisation, marked out with the boundary stones laid down by knot-tying rope-stretchers. Each year, after the life-bearing floodwaters recede from the delta, the rope-stretchers would redraw their map upon the plain. Those servants of Pharaoh would have recognised the Somerset Levels of today, presented in **Figure 8**, because Satellite View is also a map. This cadastral is imposed upon the Level's ecosystems by the unitary projection of the meat and dairy industry.
+Variants of the cadastral are everywhere because it is ancient and engrained. **Figure 9** is like an aerial view of the farmlands on the Nile Delta at the dawn of civilisation, marked out with the boundary stones laid down by knot-tying rope-stretchers. Each year, after the life-bearing floodwaters recede from the delta, the rope-stretchers would redraw their map upon the plain. Those servants of Pharaoh would have recognised the Somerset Levels of today, presented in **Figure 9**, because Satellite View is also a map. This cadastral is imposed upon the Level's ecosystems by the unitary projection of the meat and dairy industry.
 
-![Google Maps](/images/assets_agricultural_cadastral.png)
+![Google Maps](/images/assets_figure_9.svg)
 
 Companies House is thus the modern equivalent of the cadastral of antiquity. The shareholders of today [must pay taxes](/articles/tc_profit_and_loss#capital-extraction) to the State from their surpluses, just as those ancient tillers of land were obliged to pay theirs in tribute to the Royal Court. Whether modern state or royal court, the rulers proliferate a system to record and monitor the assets within their jurisdiction, to ensure compliance and impose a legal framework for punishing transgression. The cornerstone for the formation of these laws and their execution is, and has always been, the projection of unitary interfaces.
 

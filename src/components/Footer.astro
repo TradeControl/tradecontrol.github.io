@@ -25,11 +25,11 @@
 			</div>
 			<div class="footer-item">
 				<img src="/images/logo_github.svg" alt="" />
-				<a href="https://github.com/TradeControl/tradecontrol.web/"> Web Interface Client</a>
+				<a href="https://github.com/TradeControl/tradecontrol.web/"> ASP.NET App</a>
 			</div>
 			<div class="footer-item">
 				<img src="/images/logo_github.svg" alt="" />
-				<a href="https://github.com/TradeControl/office/"> Office 365 Client</a>
+				<a href="https://github.com/TradeControl/tradecontrol.github.io"> Website Source Code</a>
 			</div>
 		</div>
 
@@ -38,7 +38,7 @@
 				<img src="/images/logo_cc.svg" alt="" />
 			</div>
 			<div class="footer-item tc-cc-text">
-				Licenced by Ian Monnox under a Creative Commons
+				Licenced by Trade Control under a Creative Commons
 				Attribution-NoDerivatives 4.0 International License
 			</div>
 		</div>
@@ -53,6 +53,13 @@
 		padding: 8px;
 		background-color: #474747;
 		background-image: linear-gradient(to bottom, #a6a6a6, #4d4d4d);
+		margin-top: auto;    /* push footer to bottom in flex column */
+		width: 100%;
+	}
+	@media (max-width: 1000px) {
+		.footer-wrapper {
+		display: none;     /* hide footer on mobile */
+		}
 	}
 	.footer-main {
 		display: flex;

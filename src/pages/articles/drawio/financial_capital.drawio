@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.4" pages="2">
+  <diagram name="Figure 1" id="9Y10bIX3AhxuC_L6sMxJ">
+    <mxGraphModel dx="1418" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hytUTCfbVql_GjoLJWdH-11" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.36;dx=29;direction=north;notch=0;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="70" width="50" x="160" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="CREDITOR" vertex="1">
+          <mxGeometry height="60" width="160" x="100" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-21" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-3" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="hytUTCfbVql_GjoLJWdH-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="20" />
+              <mxPoint x="60" y="20" />
+              <mxPoint x="60" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#0000FF;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="INVESTOR" vertex="1">
+          <mxGeometry height="60" width="160" x="460" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="MONEY IN" vertex="1">
+          <mxGeometry height="60" width="160" x="100" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-20" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-5" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;fillColor=#d5e8d4;" target="hytUTCfbVql_GjoLJWdH-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="400" />
+              <mxPoint x="20" y="400" />
+              <mxPoint x="20" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="CAPTIAL IN" vertex="1">
+          <mxGeometry height="60" width="160" x="190" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-15" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-6" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#FFFFFF;labelBackgroundColor=default;endArrow=classic;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="hytUTCfbVql_GjoLJWdH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="DEBT" vertex="1">
+          <mxGeometry height="60" width="160" x="280" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-14" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-7" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#FFFFFF;labelBackgroundColor=default;endArrow=classic;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="hytUTCfbVql_GjoLJWdH-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="160" />
+              <mxPoint x="660" y="160" />
+              <mxPoint x="660" y="100" />
+            </Array>
+            <mxPoint x="440" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="EQUITIES" vertex="1">
+          <mxGeometry height="60" width="160" x="460" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-12" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-8" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#FFFFFF;labelBackgroundColor=default;endArrow=classic;" target="hytUTCfbVql_GjoLJWdH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-13" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-8" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#FFFFFF;labelBackgroundColor=default;endArrow=classic;" target="hytUTCfbVql_GjoLJWdH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;fontStyle=1;fontSize=13;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontColor=#FFFFFF;" value="CAPITAL OUT" vertex="1">
+          <mxGeometry height="60" width="160" x="370" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-22" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-17" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="hytUTCfbVql_GjoLJWdH-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="450" />
+              <mxPoint x="690" y="400" />
+              <mxPoint x="450" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=17;labelBackgroundColor=none;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontColor=#FFFFFF;fontStyle=1" value="PRODUCTION LAYER" vertex="1">
+          <mxGeometry height="60" width="600" x="60" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=#ffffff;labelBackgroundColor=default;fillColor=#008a00;strokeColor=#005700;" value="" vertex="1">
+          <mxGeometry height="10" width="600" x="60" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-19" edge="1" parent="1" source="hytUTCfbVql_GjoLJWdH-2" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#FFFFFF;labelBackgroundColor=default;endArrow=classic;fillColor=#ffcd28;gradientColor=#ffa500;" target="hytUTCfbVql_GjoLJWdH-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="50" />
+              <mxPoint x="420" y="50" />
+              <mxPoint x="420" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hytUTCfbVql_GjoLJWdH-23" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Figure 1: Financial Capitalism&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 11px; font-weight: 400;&quot;&gt;In the context of Industrial Capitalism, all debt is infinite because it is bound to production that has no determinable beginning or end. The amount of debt is calculated at year end, as previously described, from productivity levels. Although the debt can never be paid off, its finitude is enforced by reality. To increase this debt is to issue more shares, so funds can be transferred from other supply chains. Financial Capitalism breaks this connection with productive reality by also raising capital in the form of finite debt. In this context, each debt may be finite, but the capacity to issue such debt becomes bound by economic rather than productivity constraints, creating a crucible for the Financial Markets and its unbounded money supply.&lt;/p&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="120" width="760" x="20" y="500" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="QdAjD4QSt0dwQOu6Yf0B" name="Figure 2">
+    <mxGraphModel dx="1418" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-6" edge="1" parent="1" source="Zfc9tshxT3APCkfjLnVp-1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="Zfc9tshxT3APCkfjLnVp-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=14;labelBackgroundColor=none;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontStyle=1;fontColor=#FFFFFF;" value="MONEY&lt;br&gt;SUPPLY" vertex="1">
+          <mxGeometry height="80" width="120" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-17" edge="1" parent="1" source="Zfc9tshxT3APCkfjLnVp-3" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="Zfc9tshxT3APCkfjLnVp-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="230" />
+              <mxPoint x="570" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=none;strokeColor=#d6b656;fillColor=#fff2cc;gradientColor=#ffd966;fontColor=#FFFFFF;fontStyle=1" value="RICH" vertex="1">
+          <mxGeometry height="80" width="180" x="190" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=none;textDirection=vertical-lr;strokeColor=#82b366;fontStyle=1;fillColor=#d5e8d4;gradientColor=#97d077;" value="POOR" vertex="1">
+          <mxGeometry height="80" width="90" x="380" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=15;fontColor=#ffffff;labelBackgroundColor=none;strokeColor=#2D7600;fontStyle=1;fillColor=#60a917;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="370" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=none;strokeColor=#d6b656;fillColor=#fff2cc;gradientColor=#ffd966;fontColor=#FFFFFF;fontStyle=1" value="RICH" vertex="1">
+          <mxGeometry height="80" width="180" x="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=none;textDirection=vertical-lr;strokeColor=#82b366;fontStyle=1;fillColor=#d5e8d4;gradientColor=#97d077;" value="POOR" vertex="1">
+          <mxGeometry height="80" width="100" x="660" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=15;fontColor=#ffffff;labelBackgroundColor=none;strokeColor=#2D7600;fontStyle=1;fillColor=#60a917;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="650" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-10" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.52;dx=32;flipH=1;notch=0;fontFamily=Helvetica;fontSize=11;fontColor=#ffffff;labelBackgroundColor=default;fillColor=#1ba1e2;strokeColor=#006EAF;" value="" vertex="1">
+          <mxGeometry height="50" width="40" x="330" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-14" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.52;dx=32;flipH=1;notch=0;fontFamily=Helvetica;fontSize=11;fontColor=#ffffff;labelBackgroundColor=default;fillColor=#1ba1e2;strokeColor=#006EAF;rotation=-180;" value="" vertex="1">
+          <mxGeometry height="50" width="40" x="660" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-23" edge="1" parent="1" source="Zfc9tshxT3APCkfjLnVp-20" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#66B2FF;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="Zfc9tshxT3APCkfjLnVp-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="60" />
+              <mxPoint x="330" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fontStyle=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" value="FINITE TERRITORY" vertex="1">
+          <mxGeometry height="30" width="280" x="480" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;fontStyle=1" value="INFINITE TERRITORY" vertex="1">
+          <mxGeometry height="30" width="280" x="190" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;fontStyle=1" value="Increasing Exchange Rate" vertex="1">
+          <mxGeometry height="30" width="170" x="380" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Zfc9tshxT3APCkfjLnVp-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;fontStyle=1" value="Money Transfer" vertex="1">
+          <mxGeometry height="30" width="170" x="360" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n0MfuJT7myOblKyYEUse-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Figure 2: Store of Value&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;The fantasy is a return to finitude, but this would likely lead to further consolidations of wealth and power from which there is no escape.&amp;nbsp; The store of value as a mighty cadastral disconnected from production forever. Exploitation solidifying into the perfect parasite. Gold that transmutes into the fragility of glass.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="110" width="720" x="40" y="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -11,7 +11,7 @@ Although the tax system threads itself indelibly throughout the [Trade Control s
 
 - [Theory of Production](/articles/tc_production)
 - [Commercial Law](/articles/tc_commerce)
-- The [tutorials](/tutorials/overview) will help
+- The [cash book tutorial](/tutorials/overview[link text](https://github.com/TradeControl/office/blob/master/docs/cash-book-365.md)) will help
 
 ## Overview
 
@@ -43,7 +43,7 @@ The mentality behind the company's relation to its new plot will be identical to
 
 Production necessitates a hierarchy of [interfaces](/articles/tc_production#interfaces), manifest in the components that engineer [the product](/articles/tc_production#assemblage-definition), or in a proliferation of productive units across a [supply-chain](/articles/tc_production#consumer-networks). Because the output of a Serviced Office is fully embodied in the rights issued to use its private space, no production is required to supply a User Interface to the tenants, leading to [VAT exemption](#taxing-output). Instead, it proliferates a [namespace of services](/articles/tc_production#namespaces) from the spatial folding:
 
-```
+``` csharp
 Office1.FirstFloor.OpenPlan.Desk1
 Office1.FirstFloor.OpenPlan.Desk2...
 Office1.FirstFloor.Office1....
@@ -80,14 +80,14 @@ When defining tax types it is necessary to specify when they are to be paid and 
 
 ![tax schema](/images/tax_schema.png)
 
-The [Cash.tbTaxType](https://github.com/TradeControl/sqlnode/blob/master/src/tcNodeDb4/Cash/Tables/tbTaxType.sql) table assigns a month number and recurrence code (yearly, quarterly etc.) to the tax type, with a CashCode for payment to the taxman using the AccountCode.  The App.tbTaxCode table lists one or more tax codes for each type (such as T1 Standard VAT) with a tax rate. The TaxCode is defaulted across the application schemas ([Project](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Project.sql), [Subject](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Subject.sql), [Cash](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Cash.sql)), but ultimately specifies the actual tax rate in the Invoice schema from which VAT and Corporation Tax are calculated.
+The [Cash.tbTaxType](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Tables/tbTaxType.sql) table assigns a month number and recurrence code (yearly, quarterly etc.) to the tax type, with a CashCode for payment to the taxman using the AccountCode.  The App.tbTaxCode table lists one or more tax codes for each type (such as T1 Standard VAT) with a tax rate. The TaxCode is defaulted across the application schemas ([Project](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Project.sql), [Subject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Subject.sql), [Cash](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Cash.sql)), but ultimately specifies the actual tax rate in the Invoice schema from which VAT and Corporation Tax are calculated.
 
 ### Classification
 
-Next, the tax algorithms need to know what transactions apply to the relevant type. For this, I can use the same technique for classifying and processing any other set of transactions. A [hierarchy of cash categories](/tutorials/cash-codes#net-profit) is assigned to the VatCategoryCode and NetProfitCode fields in [App.tbOptions](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/App/Tables/tbOptions.sql). Applying the ```UNION ALL``` CTE statement, I recurse over the hierarchy and obtain every CashCode for the tax type:
+Next, the tax algorithms need to know what transactions apply to the relevant type. For this, I can use the same technique for classifying and processing any other set of transactions. A [hierarchy of cash categories](/articles/tc_cash_codes#net-profit) is assigned to the VatCategoryCode and NetProfitCode fields in [App.tbOptions](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Tables/tbOptions.sql). Applying the ```UNION ALL``` CTE statement, I recurse over the hierarchy and obtain every CashCode for the tax type:
 
-- [Corporation Tax Cash Codes](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/App/Views/vwCorpTaxCashCodes.sql)
-- [VAT Cash Codes](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/App/Views/vwVatTaxCashCodes.sql)
+- [Corporation Tax Cash Codes](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Views/vwCorpTaxCashCodes.sql)
+- [VAT Cash Codes](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Views/vwVatTaxCashCodes.sql)
 
 I then call the table-valued function [Cash.fnTaxTypeDueDates(@TaxTypeCode)](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Functions/fnTaxTypeDueDates.sql) to return the payment due dates for the type based on the MonthNumber and RecurrenceCode. This process will take only a few a milliseconds. I can therefore apply [Cash Polarity](/articles/tc_production#cash-polarity) to the dataset to re-calculate these taxes on a transaction-grained basis.
 
@@ -188,9 +188,9 @@ WHERE StartOn >= (SELECT MIN(StartOn) FROM App.tbYearPeriod p JOIN App.tbYear y 
 
 To obtain a true bank balance, I could assign a Tax Code to each transaction in the bank statement and extract the VAT content; but that would only work for the simple case. Many customers pay off invoices at month end, sometimes even every quarter, and these invoices can contain many different classifications of cost and tax. My solution is to forward-project the current bank balance from the order book, slotting in the VAT due from the above code, and accruing future VAT liabilities on sales and purchases. Here are the accruals:
 
-[Cash.vwTaxVatAccruals](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwTaxVatAccruals.sql)
+[Cash.vwTaxVatAccruals](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwTaxVatAccruals.sql)
 
-I then integrate the results into the [Company Statement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwStatement.sql):
+I then integrate the results into the [Company Statement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwStatement.sql):
 
 ``` sql
 WITH vat_dates AS
@@ -235,13 +235,13 @@ Note that it is the employer who both calculates and pays the tax, not the emplo
 
 ### Taxing Employers
 
-The State strategy for taxing employees is the reason why income tax is not automatically calculated in the [Company Statement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Cash/Views/vwStatement.sql), as it is with VAT and Corporation Tax. To do so, I would have to re-code that black box in **Figure 2** and constantly update the parameters in accordance with changes in tax rates and laws. A task way beyond the call of duty. If the State were not seeking to manipulate its citizens through tax incentives, income tax could be transferred to the master side of the employment contract. Employee wages **Y** would then equal the income **X** on their contract. The employer applies rate **Z** based on a simple lookup table that could be easily encoded into the schema design. **Figure 3** shows how this would work. HMRC just need to clock total earnings of the employee rather than tax for linking employment contracts to NI contributions. 
+The State strategy for taxing employees is the reason why income tax is not automatically calculated in the [Company Statement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwStatement.sql), as it is with VAT and Corporation Tax. To do so, I would have to re-code that black box in **Figure 2** and constantly update the parameters in accordance with changes in tax rates and laws. A task way beyond the call of duty. If the State were not seeking to manipulate its citizens through tax incentives, income tax could be transferred to the master side of the employment contract. Employee wages **Y** would then equal the income **X** on their contract. The employer applies rate **Z** based on a simple lookup table that could be easily encoded into the schema design. **Figure 3** shows how this would work. HMRC just need to clock total earnings of the employee rather than tax for linking employment contracts to NI contributions. 
 
 ![payroll tax](/images/tax_figure_3.svg)
 
 ### Implementation
 
-The way to account for forward payroll commitments is to accrue total payments (**X**) in a [Project](https://github.com/TradeControl/sqlnode/blob/master/src/tcNodeDb4/Project/Tables/tbProject.sql), associated with another task to cover employer NI contributions. These values are stored in the [Project schema](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/Security/Project.sql) and paid off like any other expense. It is not ideal, for the reasons explained, but because the burden of tax is on the employee, the only variable is the employers NI. If you modify the invoice to the amount calculated by your PAYE software, the invoice and order amounts will be synchronised.
+The way to account for forward payroll commitments is to accrue total payments (**X**) in a [Project](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbProject.sql), associated with another task to cover employer NI contributions. These values are stored in the [Project schema](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Project.sql) and paid off like any other expense. It is not ideal, for the reasons explained, but because the burden of tax is on the employee, the only variable is the employers NI. If you modify the invoice to the amount calculated by your PAYE software, the invoice and order amounts will be synchronised.
 
 ## Corporation Tax
 
@@ -258,7 +258,7 @@ I had two integrated objectives when coding for corporation tax:
 1. Nullify the accounting year by instantly calculating the tax 
 2. Integrate future taxes into a transaction-grained forward-looking balance sheet
 
-The advantage of meeting these objectives is tax integration into the price discovery process and job scheduling. Traditional cost accounting excludes tax because it is concealed behind its asset recording surface. My approach, however, considers tax implementations when planning and evaluating workflow. This is explained, with references to the code, in the article on [Cost Accounting](/articles/tc_industrial_capitalism#cost-accounting). Originally, my design in 2002 was motivated by a wish to include tax as a constraint in the finite scheduling algorithms applied to production. I lost access to the manpower required for such an endeavour, but it is easy to see how that would work. Because the recording surface used to calculate capital is connected to production, I could ceaselessly re-schedule production to minimise the company tax burden. Users can already do this manually by modifying the entry transaction dates on their [Company Statement](/tutorials/manufacturing#company-statement). In so doing, they would also be sealing off all fiscal output through the [Asset Layer](/articles/tc_assets#capital-creation).
+The advantage of meeting these objectives is tax integration into the price discovery process and job scheduling. Traditional cost accounting excludes tax because it is concealed behind its asset recording surface. My approach, however, considers tax implementations when planning and evaluating workflow. This is explained, with references to the code, in the article on [Cost Accounting](/articles/tc_industrial_capitalism#cost-accounting). Originally, my design in 2002 was motivated by a wish to include tax as a constraint in the finite scheduling algorithms applied to production. I lost access to the manpower required for such an endeavour, but it is easy to see how that would work. Because the recording surface used to calculate capital is connected to production, I could ceaselessly re-schedule production to minimise the company tax burden. Users can already do this manually by modifying the entry transaction dates on their [Company Statement](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md#company-statement). In so doing, they would also be sealing off all fiscal output through the [Asset Layer](/articles/tc_assets#capital-creation).
 
 ## Licence
 

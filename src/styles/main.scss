@@ -4,11 +4,18 @@
  // Trade Control Orange 
  $tc: #EC7D31;
 
- html,
- body {
-   margin: 0;
-   background-color: white;
- }
+html,
+body {
+  margin: 0;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#doc-wrapper { 
+  flex: 1 0 auto;
+}
 
  * {
    font-family: scandia-web, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;

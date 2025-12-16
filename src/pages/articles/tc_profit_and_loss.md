@@ -9,7 +9,7 @@ On the [Balance Sheet](/articles/tc_balance_sheet), there is a polarity shift be
 
 1. The Asset Recording Surface of accounting systems is implemented using double-entry book-keeping (DEBK) and has been for hundreds of years. I replicate this recording surface by deriving it from productive transactions.
 2. I calculate capital value directly, but accounting systems obtain changes to capital from the Profit and Loss Account (P&L) 
-3. The perimeter of a [Trade Control node](/tutorials/installing-sqlnode) is defined as a Business Entity by Company Law. Each entity is an externally owned asset. When you connect them together in [a trading network](/tutorials/network_overview), transactions occur across their respective interfaces. Accountants transcribe these transactions onto their Asset Recording Surface and thereby calculate the value of the business to its owners. 
+3. The perimeter of a [Trade Control node](https://github.com/TradeControl/sqlnode/blob/HEAD/docs/installation.md) is defined as a Business Entity by Company Law. Each entity is an externally owned asset. When you connect them together in [a trading network](https://github.com/TradeControl/network/blob/HEAD/docs/overview.md), transactions occur across their respective interfaces. Accountants transcribe these transactions onto their Asset Recording Surface and thereby calculate the value of the business to its owners. 
 
 ## Chartered Accounting
 
@@ -34,7 +34,7 @@ Assets can be current or fixed, the latter being tangible such as buildings and 
 
 The first act in forming a business entity is to clearly demarcate the territorial boundaries of production and consumption. This is orchestrated by the State, whereby it issues productive rights to its subjects and lends them coercive capacity to enforce a territorial force field on their consumers (such as T&C). The conditions for obtaining the State's coercive power are laid out in Company Law. A territorial interface is projected upon some potentially productive domain inside a [Spatial Workflow](/articles/tc_production#object-structure). In so doing, a plot of territory is brought into being, its extent defined by the amount of money outlaid. The amount can be divvied up among one or more owners, describing the amount of territory they own, called a share.  A share, therefore, is a measure of territorialisation: like land divided into lots of small plots, each of which can be owned separately. Owners, therefore, do not need to be present in or contribute to the productive domain to benefit from its output. Like landlords, they exist outside the interface of their territory. Ownership of a productive resource is equivalent to an infinite debt (one that can never be paid off), like rent.
 
-The territorial boundaries of the Business Entity determine a [trading node](/tutorials/installing-sqlnode) and how it must [network](/tutorials/network_overview).
+The territorial boundaries of the Business Entity determine a [trading node](https://github.com/TradeControl/sqlnode/blob/HEAD/docs/installation.md) and how it must [network](https://github.com/TradeControl/network/blob/HEAD/docs/overview.md).
 
 #### Incorporation
 
@@ -78,7 +78,7 @@ Once a [business entity](#business-entity) is defined, owners can enact their ow
 
 Commercial rights are expressed in money and are therefore utterly portable. However, because production unfolds in time, unlike land, it is a highly volatile, discrete value, subject to transaction level changes. This is solved by imposing spatial territory onto the [Temporal Workflow](/articles/tc_production#production-process) called the Financial Year; but unlike the yearly unit of agriculture, the Financial Year is an arbitrary time span since technological production is not tied to the earth's spatial orbit. 
 
-Time is modelled in [App.tbYear](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/App/Tables/tbYear.sql) and [App.tbYearPeriod](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb4/App/Tables/tbYearPeriod.sql), which can start at any month. The periods are used for the calculation of profit and loss, capital, vat and corporation tax. I also use them for presenting the Invoice Register, Cash Statements, Job Profit and BI reporting.
+Time is modelled in [App.tbYear](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Tables/tbYear.sql) and [App.tbYearPeriod](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Tables/tbYearPeriod.sql), which can start at any month. The periods are used for the calculation of profit and loss, capital, vat and corporation tax. I also use them for presenting the Invoice Register, Cash Statements, Job Profit and BI reporting.
 
 The Financial Year has now become a legal obligation imposed upon every business by the State. The reason for its universal application is simply that, in exchange for the coercive force field required by the shareholder to secure territory, the State takes a cut of the surpluses over the Financial Year by grafting itself onto the annual harvest of the business's capital. This is the tax that accountants seek to avoid by applying the dark arts of tax avoidance. Ironically, it is also the tax that anti-capitalist campaigners complain about when the accountants of big business are successful.
 
@@ -99,7 +99,7 @@ The yellow dot represents the capital that would be recorded on the Balance Shee
 
 It is the external ownership of the productive resource that causes the polarity shift of profit inside the business entity. I depict the inversion in **Figure 3**.
 
-![Polarity Shift](/images/profit_and_loss_figure_2.svg)
+![Polarity Shift](/images/profit_and_loss_figure_3.svg)
 
 The box to the left of the asset recording surface is the production system implementation up to [version 3.28.5](https://github.com/iamonnox/tradecontrol/blob/master/changelogs.md#3.28.5). Trading Profit is price minus cost which must yield a positive value so that the business entity can buy tools and labour for production, plus materials and components for consumption in transformational processes. The entity in this form could borrow money from an external source, but that would not invert the polarity of its profits. A finite debt is of the same order as a material input paid in instalments. The debt is equivalent to a purchased good, and the cost is interest on the loan. 
 
@@ -109,7 +109,7 @@ If you do not have any assets, then you can accept the Corporation Tax calculati
 
 The [Company Statement](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Cash/Views/vwStatement.sql) is a forward-looking, transaction-grained balance sheet, where the polarity is in the direction of Production, not the Owner. Returning to the formula for [calculating capital](/articles/tc_balance_sheet#capital):
 
-    CAPITAL = ASSETS - LIABILITIES
+> **CAPITAL = ASSETS - LIABILITIES**
 
 If we remove the [asset charge algorithm](/articles/tc_balance_sheet#asset-charge) from the transaction data, the formula is identical to the calculation of profits inside the Trading Statement, except polarity is inverted. Only an owner’s territorial force field is sufficiently powerful to do that. Capital is defended with the same determination as land because the underlying mentality is the same. 
 

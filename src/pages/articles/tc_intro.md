@@ -1,11 +1,15 @@
 ﻿---
 layout: ../../layouts/Documentation.astro
-title: Articles Overview
+title: Theory Overview
 permalink: articles/tc_intro
 ---
-[Trade Control](https://github.com/tradecontrol) is an Open Source business control system first released on 24 September 2019. It is an empirical implementation of the ideas I communicate here. Each stage of development has been accompanied by [a tutorial](/tutorials/overview) that you can freely work through yourself to test for correctness. 
+[Trade Control](https://github.com/tradecontrol) is an Open Source business control system first released on 24 September 2019. It is an empirical implementation of the ideas I communicate here. Each stage of development has been accompanied by a tutorial that you can freely work through yourself to test for correctness. 
 
 The project embodies two key aspects associated with trade: the functional modelling of technological production and the conceptual implementation of commercial imperatives. Therefore, I present my theory of production as it is embodied in the [schema design](https://github.com/tradecontrol/sqlnode). I then follow that up with various articles relating to the commercial dimensions of the application. These were initially written and published [in my own repo](https://github.com/iamonnox/tradecontrol) during the 2020-21 pandemic lockdown, but are now deleted. The original publication incorporated historical references and poetic outros that have been removed.
+
+> **Note:** This introduction and the core ideas it describes were written by the project’s founder, not AI.  
+> They form the seed code and conceptual foundation on which everything else now unfolds.  
+> As the system grows, new pages and elaborations will be AI‑generated, but this section remains unchanged — a historical marker of the original vision.
 
 ## Technological Production
 
@@ -32,7 +36,7 @@ So far, I have only explored the external impact of capitalism on the system des
 
 - [Industrial Capitalism](/articles/tc_industrial_capitalism)
 
-Capitalism was crystalised during the Industrial Revolution, where capital drove industrial production. Today, capital drives asset acquisition. This is perfectly reflected in the technological interfaces to bitcoin. [My interface](/tutorials/bitcoin_overview) is [to production](/articles/tc_production#production), whereas all other interfaces are [to assets](/articles/tc_assets#asset-layer). Here I explain why that is.
+Capitalism was crystalised during the Industrial Revolution, where capital drove industrial production. Today, capital drives asset acquisition. This is perfectly reflected in the technological interfaces to bitcoin. [My interface](https://github.com/TradeControl/bitcoin/blob/HEAD/docs/overview.md) is [to production](/articles/tc_production#production), whereas all other interfaces are [to assets](/articles/tc_assets#asset-layer). Here I explain why that is.
 
 - [Financial Capitalism](/articles/tc_financial_capitalism)
 
