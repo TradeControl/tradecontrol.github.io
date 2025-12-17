@@ -68,7 +68,6 @@ Trade Control treats cash as a directional signal that drives operational logic.
 Cash is not abstract. It is embedded, directional, and operational. Trade Control treats it as a signal—not a possession.
 
 ---
-[^1]: [Cash Classification](../articles/tc_cash_codes)
-[^2]: [Cash Polarity](../articles/tc_production#cash-polarity)
-[^3]: [Cash Categories](../docs/cash-configuration)
-
+[^1]: [Cash Classification](/articles/tc_cash_codes)
+[^2]: [Cash Polarity](/articles/tc_production#cash-polarity)
+[^3]: [Cash Categories](/docs/cash-configuration)

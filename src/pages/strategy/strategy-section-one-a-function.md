@@ -30,10 +30,10 @@ Sales Orders, Work Orders, Purchase Orders, Warehouse Receipts, and more are mod
 
 Trade Control doesn’t simulate production—it **functions as production**, using schema logic to describe and control real-world workflows. It models both the act of making and the transactional flow, with minimal abstraction and maximal precision.
 
-[Next](./strategy-section-one-b-concept-money)
+[Next](/strategy/strategy-section-one-b-concept-money)
 
 ---
 
-[^1]: [Subjects and Objects](../articles/tc_production#subjects-and-objects)
-[^2]: [Namespaces](../articles/tc_production#namespaces)
-[^3]: [Cash Polarity](../articles/tc_production#cash-polarity)
+[^1]: [Subjects and Objects](/articles/tc_production#subjects-and-objects)
+[^2]: [Namespaces](/articles/tc_production#namespaces)
+[^3]: [Cash Polarity](/articles/tc_production#cash-polarity)

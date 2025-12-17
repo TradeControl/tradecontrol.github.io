@@ -42,16 +42,16 @@ In conventional systems, profit is a reward. In Trade Control, it’s a **liabil
 
 Trade Control’s financial logic is not an abstraction layered over production—it is **production**. Money is modelled as a schema-native projection, enabling real-time calculation of net worth and extractable profit. This reconfigures the relationship between business entities, owners, and the State, replacing medieval accounting logic with a recursive, polarity-driven model of economic agency.
 
-[Next](./strategy-section-one-b-concept-assets)
+[Next](/strategy/strategy-section-one-b-concept-assets)
 
 -----
-[^1]: [Balance Sheets](../articles/tc_balance_sheet)
-[^2]: [Profit & Loss Accounts](../articles/tc_profit_and_loss)
-[^3]: [Money as Projection](../articles/tc_assets#money)
-[^4]: [Double-Entry Book-Keeping](../articles/tc_balance_sheet#double-entry-book-keeping)
-[^5]: [Capital Formula](../articles/tc_balance_sheet#capital)
-[^6]: [Cash Accounts](../articles/tc_balance_sheet#BNK-AND-CASH)
-[^7]: [Organisation Statements](../articles/tc_balance_sheet#organisation-statements)
-[^8]: [Asset Charge Algorithm](../articles/tc_balance_sheet#asset-charge)
-[^9]: [Supply and Demand](../articles/tc_production#supply-and-demand)
-[^10]: [Polarity Inversion](../articles/tc_profit_and_loss#polarity-inversion)
+[^1]: [Balance Sheets](/articles/tc_balance_sheet)
+[^2]: [Profit & Loss Accounts](/articles/tc_profit_and_loss)
+[^3]: [Money as Projection](/articles/tc_assets#money)
+[^4]: [Double-Entry Book-Keeping](/articles/tc_balance_sheet#double-entry-book-keeping)
+[^5]: [Capital Formula](/articles/tc_balance_sheet#capital)
+[^6]: [Cash Accounts](/articles/tc_balance_sheet#BNK-AND-CASH)
+[^7]: [Organisation Statements](/articles/tc_balance_sheet#organisation-statements)
+[^8]: [Asset Charge Algorithm](/articles/tc_balance_sheet#asset-charge)
+[^9]: [Supply and Demand](/articles/tc_production#supply-and-demand)
+[^10]: [Polarity Inversion](/articles/tc_profit_and_loss#polarity-inversion)

@@ -24,3 +24,11 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 src/env.d.ts
+
+# IDE
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates

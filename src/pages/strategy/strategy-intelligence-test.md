@@ -25,9 +25,9 @@ Then the system must be alive. It must be recursive. It must declare its own com
 
 Trade Control models production using a triadic schema[^2]:
 
-- **Subject** – the agent of change ([Real or virtual beings](../articles/tc_production#organisations))  
-- **Object** – the entity being transformed ([Assemblages](../articles/tc_production#components))  
-- **Project** – the interface binding them ([Production and Distribution](../articles/tc_production#networks))  
+- **Subject** – the agent of change ([Real or virtual beings](/articles/tc_production#organisations))  
+- **Object** – the entity being transformed ([Assemblages](/articles/tc_production#components))  
+- **Project** – the interface binding them ([Production and Distribution](/articles/tc_production#networks))  
 
 This schema enables recursive modelling. It allows the system to declare, traverse, and complete itself. Completion becomes a signal—not of simulation, but of internal design.
 
@@ -72,5 +72,5 @@ See [Example Application](/strategy/strategy-section-two-example).
 The intelligence test is a principle of recursive production. It applies wherever interfaces are projected and completion must be declared. Trade Control offers a schema-native sandbox for this test, but the challenge is broader: to build systems that are alive, declarative, and capable of projecting their own interface from within—not by imitation, not by evolution, but by design.
 
 ---
-[^1]: [Intelligence Test](../articles/tc_production#intelligence-test)
-[^2]: [Triadic Schema](../articles/tc_production#subjects-and-objects)
+[^1]: [Intelligence Test](/articles/tc_production#intelligence-test)
+[^2]: [Triadic Schema](/articles/tc_production#subjects-and-objects)

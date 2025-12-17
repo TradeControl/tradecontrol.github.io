@@ -92,6 +92,6 @@ Trade Control treats tax as a transaction-grained constraint, not a periodic abs
 This is not just compliance—it’s architecture. Tax becomes a navigable surface for intelligence, not a retrospective burden.
 
 ---
-[^1]: [Tax Schema](../articles/tc_tax#tax-schema)
-[^2]: [Value Added Tax](../articles/tc_tax#value-added-tax)
-[^3]: [Corporation Tax](../articles/tc_tax#corporation-tax)
+[^1]: [Tax Schema](/articles/tc_tax#tax-schema)
+[^2]: [Value Added Tax](/articles/tc_tax#value-added-tax)
+[^3]: [Corporation Tax](/articles/tc_tax#corporation-tax)

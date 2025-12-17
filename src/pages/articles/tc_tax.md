@@ -11,7 +11,7 @@ Although the tax system threads itself indelibly throughout the [Trade Control s
 
 - [Theory of Production](/articles/tc_production)
 - [Commercial Law](/articles/tc_commerce)
-- The [cash book tutorial](/tutorials/overview[link text](https://github.com/TradeControl/office/blob/master/docs/cash-book-365.md)) will help
+- [Cash Book Instructions](https://github.com/TradeControl/office/blob/master/docs/cash-book-365.md)
 
 ## Overview
 
@@ -41,7 +41,7 @@ Combining spatial folding with the post-IR state-backed corporate entity, the Se
 
 The mentality behind the company's relation to its new plot will be identical to that of Odysseus upon finding land *never disturbed by foot of man*[^2], except it will be applied in multiple dimensions. Once the lawyers secure planning permission from the State for their Community Business Centre, the [Production Network](/articles/tc_production#production-network) is financed to begin the construction process. The land is wiped of Darwinian complexity by bulldozers to create a smooth, abstract surface upon which to build. Then space is folded up to inflate the interfaces available for unitary projection from one (AR) to many (IR). I have described the structures and process behind the construction of the building, its components, systems and connectivity, in my [Theory of Production](/articles/tc_production#workflow).  
 
-Production necessitates a hierarchy of [interfaces](/articles/tc_production#interfaces), manifest in the components that engineer [the product](/articles/tc_production#assemblage-definition), or in a proliferation of productive units across a [supply-chain](/articles/tc_production#consumer-networks). Because the output of a Serviced Office is fully embodied in the rights issued to use its private space, no production is required to supply a User Interface to the tenants, leading to [VAT exemption](#taxing-output). Instead, it proliferates a [namespace of services](/articles/tc_production#namespaces) from the spatial folding:
+Production necessitates a hierarchy of [interfaces](/articles/tc_production#interfaces), manifest in the components that engineer [the product](/articles/tc_production#assemblage-definition), or in a proliferation of productive units across a [supply-chain](/articles/tc_production#consumption-networks). Because the output of a Serviced Office is fully embodied in the rights issued to use its private space, no production is required to supply a User Interface to the tenants, leading to [VAT exemption](#taxing-output). Instead, it proliferates a [namespace of services](/articles/tc_production#namespaces) from the spatial folding:
 
 ``` csharp
 Office1.FirstFloor.OpenPlan.Desk1
@@ -98,7 +98,7 @@ VAT is how government levies money on the increase in the value of outputs from 
 
 ### Taxing Supply-Chains
 
-A supply chain is an instance of the [Consumption Network](/articles/tc_production#consumer-networks). Inputs from a supplier are consumed by production and passed onto the customer with a more [abstract interface](/articles/tc_production#components). The suppliers connect to form a chain, terminating at the [User Interface](/articles/tc_production#interfaces), traditionally processed by Retail. 
+A supply chain is an instance of the [Consumption Network](/articles/tc_production#consumption-networks). Inputs from a supplier are consumed by production and passed onto the customer with a more [abstract interface](/articles/tc_production#components). The suppliers connect to form a chain, terminating at the [User Interface](/articles/tc_production#interfaces), traditionally processed by Retail. 
 
 Here is an example VAT trail over a supply chain levied on a 20 percent tax rate. For simplicity, I assume the first production has zero cost. In a real life scenario, you would have to trace the supply chain back to fossil fuel extraction. 
 

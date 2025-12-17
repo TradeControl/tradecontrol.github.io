@@ -68,10 +68,10 @@ One endgame is a return to finitude[^7]: crypto replacing gold, rights reallocat
 Trade Control separates commerce into industrial and financial domains, exposing the layered logic of production and extraction. It models price discovery, capital creation, and asset projection as schema-native processes. By calculating capital from a mentality that is not of it, Trade Control de-territorialises the financial interface and restores agency to production.
 
 ---
-[^1]: [Industry](../articles/tc_industrial_capitalism)
-[^2]: [Finance](../articles/tc_financial_capitalism)
-[^3]: [Consumer Price](../articles/tc_industrial_capitalism#consumer-price)
-[^4]: [Producer Price](../articles/tc_industrial_capitalism#producer-price)
-[^5]: [Gestalt Costing](../articles/tc_industrial_capitalism#gestalt-costing)
-[^6]: [Infinite Debt](../articles/tc_financial_capitalism#capital-debt)
-[^7]: [Store of Value](../articles/tc_financial_capitalism#exodus)
+[^1]: [Industry](/articles/tc_industrial_capitalism)
+[^2]: [Finance](/articles/tc_financial_capitalism)
+[^3]: [Consumer Price](/articles/tc_industrial_capitalism#consumer-price)
+[^4]: [Producer Price](/articles/tc_industrial_capitalism#producer-price)
+[^5]: [Gestalt Costing](/articles/tc_industrial_capitalism#gestalt-costing)
+[^6]: [Infinite Debt](/articles/tc_financial_capitalism#capital-debt)
+[^7]: [Store of Value](/articles/tc_financial_capitalism#exodus)

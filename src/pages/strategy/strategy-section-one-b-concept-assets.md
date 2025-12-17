@@ -57,11 +57,11 @@ Trade Control will revisit this integration. The goal is not to restore Bitcoinâ
 Trade Control redefines assets as schema-native projections layered over production. It exposes the territorial logic of conventional ERP and offers a recursive model of capital creation that resists capture. By modelling asset charge, layered projection, and unitary interface logic, it transforms the ERP from a ledger into a living systemâ€”one where production speaks in its own voice, and ownership is no longer the Master of Design.
 
 ---
-[^1]: [Agriculatural and Industrial Revolution](../articles/tc_assets#revolution)
-[^2]: [Capital Creation](../articles/tc_assets#capital-creation)
-[^3]: [Darwin's Square](../articles/tc_assets#darwins-square)
-[^4]: [Unitary Interface Projection](../articles/tc_assets#unitary-interface-projection)
-[^5]: [Double-Entry Book-Keeping](../articles/tc_profit_and_loss#double-entry-book-keeping)
-[^6]: [Allocation of Rights](../articles/tc_assets#money)
+[^1]: [Agriculatural and Industrial Revolution](/articles/tc_assets#revolution)
+[^2]: [Capital Creation](/articles/tc_assets#capital-creation)
+[^3]: [Darwin's Square](/articles/tc_assets#darwins-square)
+[^4]: [Unitary Interface Projection](/articles/tc_assets#unitary-interface-projection)
+[^5]: [Double-Entry Book-Keeping](/articles/tc_profit_and_loss#double-entry-book-keeping)
+[^6]: [Allocation of Rights](/articles/tc_assets#money)
 [^7]: [Commercial Bitcoin Wallet](https://github.com/TradeControl/bitcoin/blob/HEAD/docs/overview.md)
-[^8]: [Cadastral](../articles/tc_assets#cadastral)
+[^8]: [Cadastral](/articles/tc_assets#cadastral)
