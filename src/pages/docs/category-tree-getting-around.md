@@ -6,8 +6,8 @@ permalink: /docs/category-tree-getting-around
 
 A quick orientation for using and understanding the Category Tree. This page links the “what/how” User Guide and the deeper “how it works” Technical Guide.
 
-- User Guide (why/what/how, business-focused): [User Guide — Category Tree](./category-tree-userguide)
-- Technical Guide (mechanics, roles, handlers, shortcuts): [Technical Guide — Category Tree](./category-tree-technical)
+- User Guide (why/what/how, business-focused): [User Guide — Category Tree](/docs/category-tree-userguide)
+- Technical Guide (mechanics, roles, handlers, shortcuts): [Technical Guide — Category Tree](/docs/category-tree-technical)
 
 ## Overview
 
@@ -37,16 +37,16 @@ Jump to:
 
 - Map Disconnected categories:
   - Find orphans under “Disconnected” and attach them under the right Totals.
-  - See: [User Guide — How: Configure step by step](./category-tree-userguide#how-configure-step-by-step)
+  - See: [User Guide — How: Configure step by step](/docs/category-tree-userguide#how-configure-step-by-step)
 - Create core Totals:
   - Sales, Direct Costs, Indirect Costs under Root. Set Profit/VAT Roots when ready.
-  - See: [User Guide — How: Configure step by step](./category-tree-userguide#how-configure-step-by-step)
+  - See: [User Guide — How: Configure step by step](/docs/category-tree-userguide#how-configure-step-by-step)
 - Add Cash Codes:
   - Under Cash Code Categories: “New Cash Code” or “New Cash Code like this…” to copy sensible defaults.
-  - See: [User Guide — How: Configure step by step](./category-tree-userguide#how-configure-step-by-step)
+  - See: [User Guide — How: Configure step by step](/docs/category-tree-userguide#how-configure-step-by-step)
 - Define Expressions:
   - In Expressions root: formulas like `IF([Sales]=0,0,([Gross Profit]/[Sales]))` with formats (e.g., `0%`).
-  - See: [User Guide — What: Categories, Cash Codes, Totals, Expressions](./category-tree-userguide#what-categories-cash-codes-totals-expressions)
+  - See: [User Guide — What: Categories, Cash Codes, Totals, Expressions](/docs/category-tree-userguide#what-categories-cash-codes-totals-expressions)
 
 ## Page anatomy
 
@@ -93,7 +93,7 @@ Jump to:
   - URLs support `?select=<key>&expand=<parentKey>` for post-create navigation and bookmarks.
   - Example: `...?select=code:ABC123&expand=Sales`
 
-For keyboard and drag/drop rules (admin): see [Technical Guide — Reorder mechanics](./category-tree-technical#6-reorder-mechanics).
+For keyboard and drag/drop rules (admin): see [Technical Guide — Reorder mechanics](/docs/category-tree-technical#6-reorder-mechanics).
 
 ## Tips
 
@@ -106,6 +106,6 @@ For keyboard and drag/drop rules (admin): see [Technical Guide — Reorder mecha
 ## Where to learn more
 
 - Business-first overview and step-by-step configuration:
-  - [Category Tree — User Guide](./category-tree-userguide)
+  - [Category Tree — User Guide](/docs/category-tree-userguide)
 - Detailed mechanics (roles, handlers, antiforgery, shortcuts, JSON responses):
-  - [Category Tree — Technical Guide](./category-tree-technical)
+  - [Category Tree — Technical Guide](/docs/category-tree-technical)

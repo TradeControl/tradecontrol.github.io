@@ -58,7 +58,7 @@ There is no theoretical limit to the number of users who can register or use the
 
 ### Mail Host
 
-The web app uses a mail host to send system-generated emails—such as password resets, invoice deliveries, and user notifications. This allows the app to communicate with users directly, without relying on external email clients.
+The web app uses a mail host to send system-generated emailsâ€”such as password resets, invoice deliveries, and user notifications. This allows the app to communicate with users directly, without relying on external email clients.
 
 To configure email delivery, you'll need the **SMTP server address** and **SSL port** for your chosen email provider. Most email accounts are compatible, including Gmail, Outlook, and business domains.
 
@@ -93,7 +93,7 @@ To personalise your templates, select **Images** and upload your company logo us
 
 ### Document Templates
 
-A document template is an HTML file containing **[Tags]**. These tags are replaced with live data when constructing a document. Images referenced in the HTML must be embedded in the email, and they also use tags. It's also common practice to attach PDF documents to invoices—such as policy statements—though this is optional.
+A document template is an HTML file containing **[Tags]**. These tags are replaced with live data when constructing a document. Images referenced in the HTML must be embedded in the email, and they also use tags. It's also common practice to attach PDF documents to invoicesâ€”such as policy statementsâ€”though this is optional.
 
 Refer to the full <a href="https://github.com/tradecontrol/tradecontrol.web/blob/master/docs/template_tags.md" target="_blank" rel="noopener noreferrer">Template Tag Listing</a> for supported tags.
 
