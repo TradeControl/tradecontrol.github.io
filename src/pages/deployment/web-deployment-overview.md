@@ -16,7 +16,7 @@ Start instantly from your phone. Tap **Deploy** and choose your hosting model.
 - No technical knowledge required
 - Ideal for sole traders and freelancers
 
-[Get Started](web-deployment-mobile)
+[Get Started](/deployment/web-deployment-mobile)
 
 ---
 
@@ -27,7 +27,7 @@ Choose your hosting model—cloud, hosted—after tapping Deploy.
 - Clarifies hosting and billing responsibilities
 - Links to all deployment guides
 
-[Go to Deployment Selector](web-deployment-selector)
+[Go to Deployment Selector](/deployment/web-deployment-selector)
 
 ---
 
@@ -39,7 +39,7 @@ Deploy into your own Azure subscription. You manage infrastructure, billing, and
 - Azure bills you directly
 - Manual updates required
 
-[Cloud Deployment Guide](web-deployment-cloud)
+[Cloud Deployment Guide](/deployment/web-deployment-cloud)
 
 ---
 
@@ -51,21 +51,20 @@ Let us host your business node in our secure multi-tenant environment. You get a
 - Simple monthly pricing
 - Automatic upgrades included
 
-[Multi-Tenant Hosting Portal](https://tradecontrol.github.io/signup)  
-[Multi-Tenant Deployment Guide](web-deployment-multi-tenant)
+[Multi-Tenant Hosting Portal](/deployment/web-deployment-signup)  
+[Multi-Tenant Deployment Guide](/deployment/web-deployment-multi-tenant)
 
 ---
 
 ## 🖥️ Local Deployment
 
-Install Trade Control Web on your own PC using the Web Deploy package.
+Install Trade Control Web on your own PC using the [Web Deploy package](https://github.com/TradeControl/tradecontrol.web/releases).
 
 - Zero hosting cost
 - Full control over data and updates
 - Ideal for IT-savvy users
 
-[Download Web Deploy Package](../../deploy/webdeploy)  
-[Local Deployment Guide](web-deployment-local)
+[Local Deployment Guide](/deployment/web-deployment-local)
 
 ---
 
@@ -77,12 +76,12 @@ Deploy into your own infrastructure—on-premises, private cloud, or behind a ha
 - Ideal for businesses with internal IT teams
 - Compatible with IIS, SQL Server, and custom SMTP
 
-[Production Deployment Guide](web-deployment-production)
+[Production Deployment Guide](/deployment/web-deployment-production)
 
 ---
 
 ## 🔓 Coming Soon: Open Source Edition
 
-We’re [migrating to PostgreSQL](../dev) to support fully open-source hosting. This will allow self-hosted deployments on Linux, Docker, or any cloud provider—no licensing fees, no proprietary lock-in.
+We’re [migrating to PostgreSQL](/dev) to support fully open-source hosting. This will allow self-hosted deployments on Linux, Docker, or any cloud provider—no licensing fees, no proprietary lock-in.
 
 Stay tuned for updates.

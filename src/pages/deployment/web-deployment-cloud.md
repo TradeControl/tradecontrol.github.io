@@ -27,13 +27,13 @@ Cloud deployment gives you full control over hosting, billing, and infrastructur
 
 ## Steps to Deploy
 
-1. Tap **Deploy** from the homepage
+1. 🌐 Tap the [**Deploy** button](/deployment/web-deployment-signup) to initiate the install
 2. Choose **Host in Your Own Cloud**
 3. Sign in with your Azure account
 4. Select a pricing tier (e.g. Free, Basic, Standard)
 5. The app provisions automatically into your subscription
 6. Once the homepage loads, register your email and password
-7. Proceed to the [Initialisation form](web-initialisation) to set up your business
+7. Proceed to the [Initialisation form](/deployment/web-initialisation) to set up your business
 
 ## Billing
 
@@ -57,4 +57,4 @@ You can migrate to hosted multi-tenant deployment later if needed, or switch bet
 
 ---
 
-[Return to Mobile Deployment](web-deployment-mobile)
+[Return to Mobile Deployment](/deployment/web-deployment-mobile)

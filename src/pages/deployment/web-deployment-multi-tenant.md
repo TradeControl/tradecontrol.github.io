@@ -6,12 +6,13 @@ permalink: /deployment/web-deployment-multi-tenant
 
 Trade Control Web supports multi-tenant hosting, allowing multiple businesses to run securely on shared infrastructure. This guide explains how to join the hosted community and start trading—without needing an Azure account or technical setup.
 
-🌐 Ready to join? Visit the [Multi-Tenant Hosting Portal](https://tradecontrol.github.io/signup) to create your business node.
+🌐 Ready to join? Visit the [deployment page](/deployment/web-deployment-signup) to create your business node.
 
 Includes:
 - Automatic updates
 - Secure hosting
 - Usage-based pricing
+- Supply-chain integrations
 
 ## Overview
 
@@ -39,7 +40,7 @@ Most small businesses use less than 100MB of data. Hosting costs are modest, and
 2. Choose **Join the Hosted Community**
 3. Enter your email and password to register
 4. You’ll be assigned the **Administrator role**
-5. Proceed to the [Initialisation form](web-initialisation) to set up your business
+5. Proceed to the [Initialisation form](/deployment/web-initialisation) to set up your business
 
 Your node is provisioned instantly, and you can start trading within minutes.
 
@@ -54,4 +55,4 @@ You can migrate to a self-hosted deployment later if needed, but most users find
 
 ---
 
-[Return to Mobile Deployment](web-deployment-mobile)
+[Return to Mobile Deployment](/deployment/web-deployment-mobile)

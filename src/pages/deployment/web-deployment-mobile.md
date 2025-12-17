@@ -8,14 +8,14 @@ This guide is for small business owners who want to deploy Trade Control Web qui
 
 ## Overview
 
-Trade Control Web supports **one-click deployment** directly from your mobile browser. Once deployed, the app connects to a secure database and loads the homepage. From there, you proceed to [Initialisation](web-initialisation), where you enter your business identity and start trading.
+Trade Control Web supports **one-click deployment** directly from your mobile browser. Once deployed, the app connects to a secure database and loads the homepage. From there, you proceed to [Initialisation](/deployment/web-initialisation), where you enter your business identity and start trading.
 
 No servers, no downloads, no configuration files—just tap and go.
 
 ## Steps to Deploy
 
 1. **Visit the Trade Control website** on your mobile phone.
-2. Tap the **Deploy** button.
+2. 🌐  Tap the [**Deploy** button](/deployment/web-deployment-signup) to create your account.
 3. Wait a few moments while the system provisions your business node.
 4. Once the homepage loads, enter your email and password to register.
 5. You’ll be assigned the **Administrator role** automatically.
@@ -44,4 +44,4 @@ You don’t need to be a tech expert—you just need to tap **Deploy**.
 
 ---
 
-[Choose Your Deployment Path](web-deployment-selector)
+[Choose Your Deployment Path](/deployment/web-deployment-selector)

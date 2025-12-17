@@ -16,7 +16,7 @@ Deploy the app into your own Azure subscription. You manage hosting, billing, an
 - Azure bills you directly based on usage
 - You apply updates manually
 
-[Learn More](web-deployment-cloud)
+[Learn More](/deployment/web-deployment-cloud)
 
 ---
 
@@ -28,4 +28,4 @@ Let us host your business node in our secure multi-tenant environment. You get a
 - Simple monthly fee (typically £5/month)
 - Automatic upgrades and full feature access
 
-[Learn More](web-deployment-multi-tenant)
+[Learn More](/deployment/web-deployment-multi-tenant)

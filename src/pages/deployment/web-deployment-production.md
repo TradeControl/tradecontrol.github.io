@@ -39,14 +39,14 @@ Here’s how most infrastructure teams approach it:
    - Restrict external access as needed
 
 5. **Deploy the App**
-   - Use the [Web Deploy package (or build from source)](web-deployment-local)
+   - Use the [Web Deploy package (or build from source)](/deployment/web-deployment-local)
    - Import into IIS and configure `appsettings.json`
    - Point to your SQL Server and SMTP credentials
 
 6. **Initialise the Business Node**
    - Launch the app in a browser
    - Register the first user (Administrator role)
-   - Complete the [Initialisation form](web-initialisation)
+   - Complete the [Initialisation form](/deployment/web-initialisation)
 
 ---
 
@@ -67,4 +67,4 @@ You can migrate to:
 
 ---
 
-[Return to Deployment Overview](web-deployment-overview)
+[Return to Deployment Overview](/deployment/web-deployment-overview)

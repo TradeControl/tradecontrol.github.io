@@ -42,7 +42,7 @@ Before deploying, make sure your PC has:
 - SQL Server Express or full edition
 - SMTP credentials (optional, for email delivery)
 
-📦 Download the latest Web Deploy package from the [Web Deploy folder](https://github.com/TradeControl/tradecontrol.web)
+📦 Download the latest Web Deploy package from the [Web Deploy folder](https://github.com/TradeControl/tradecontrol.web/releases)
 
 Includes:
 - IIS-ready `.zip` package
@@ -72,7 +72,7 @@ Includes:
 ### 4. Launch the App
 - Navigate to the deployed site in your browser
 - Register your first user (you’ll be assigned the Administrator role)
-- Proceed to the [Initialisation form](web-initialisation) to set up your business
+- Proceed to the [Initialisation form](/deployment/web-initialisation) to set up your business
 
 ---
 
@@ -93,4 +93,4 @@ You can migrate to:
 
 ---
 
-[Return to Deployment Overview](web-deployment-overview)
+[Return to Deployment Overview](/deployment/web-deployment-overview)
