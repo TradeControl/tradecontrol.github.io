@@ -4,6 +4,16 @@ title: Business Initialisation
 permalink: /deployment/web-initialisation
 ---
 
+<div style="max-width: 900px; margin: 1rem 0;">
+<!--  <a href="/deployment/web-deployment-overview" title="Deployment Options — click to explore">-->
+    <img
+      src="/images/gallery-initialisation.png"
+      alt="Trade Control initialisation"
+      style="width: 100%; height: auto; display: block; border-radius: 8px;"
+    />
+  </a>
+</div>
+
 Instructions for initialising the Trade Control business entity node.
 
 ## Start-up

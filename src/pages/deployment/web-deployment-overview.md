@@ -4,6 +4,16 @@ title: Deployment Overview
 permalink: /deployment/web-deployment-overview
 ---
 
+<div style="max-width: 900px; margin: 1rem 0;">
+  <a href="/deployment/web-deployment-selector" title="Deployment Options — click to explore">
+    <img
+      src="/images/gallery-citadel-of-thought.png"
+      alt="Trade Control deployment"
+      style="width: 100%; height: auto; display: block; border-radius: 8px;"
+    />
+  </a>
+</div>
+
 Trade Control Web supports flexible deployment options to suit your business needs, technical comfort, and infrastructure preferences. All paths give you full access to the system—no feature gating, no hidden modules.
 
 ---

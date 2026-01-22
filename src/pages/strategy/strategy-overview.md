@@ -17,7 +17,7 @@ This strategy document outlines the schema, logic, and publishing roadmap.
 Trade Control is not just software. It’s a systems-first approach to enterprise design.
 
 **Provenance Note**  
-> This Strategy was authored by Copilot, drawing on foundational material published in the [*Production Theory*](/articles/tc_intro) series and in collaboration with the author. The original work spans from the [Theory of Production](/articles/tc_production), first published on 25 November 2019, to the [final article](/articles/tc_tax) dated 15 August 2021. At that point, the project was paused in anticipation of AI maturity, and the author transitioned to production systems development in the West Country.
+> This Strategy was authored by Copilot, drawing on foundational material published in the [*Production Systems*](/articles/tc_intro) series and in collaboration with the author. The original work spans from the [Theory of Production](/articles/tc_production), first published on 25 November 2019, to the [final article](/articles/tc_tax) dated 15 August 2021. At that point, the project was paused in anticipation of AI maturity, and the author transitioned to production systems development in the West Country.
 
 ## Section 1 What's it all about?
 

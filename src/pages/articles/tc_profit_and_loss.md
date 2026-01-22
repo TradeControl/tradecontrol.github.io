@@ -84,14 +84,52 @@ The Financial Year has now become a legal obligation imposed upon every business
 
 **Figure 1** illustrates the connection between capital, the Balance Sheet and the P&L extracted from the DEBK derived accounts. The graph represents the first three years trading of a business start-up. The Y Axis is in money, the X Axis in time. 
 
-![DEBK Accounts](/images/profit_and_loss_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/profit_and_loss_figure_1.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/profit_and_loss_figure_1.svg"
+      alt="DEBK Accounts"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The business begins at time zero with some of the owner's money. It receives this seed in exchange for the total territorialisation of its every possible future. That is the red dot. At the close of the first financial year, the P&L deducts all expenditure over that period from all income, giving the profit. At the same time, the Balance Sheet takes a snapshot of assets against liabilities to calculate the capital. If we add the profit from the P&L to the initial capital, we arrive at the current capital recorded on the Balance Sheet. This process repeats the following year, only the initial capital seed is replaced with the seeds at Y1. In this way, each year, the amount of seeds you can sow keeps growing, resulting in ever greater harvests at seasons end.
 What you expect to see is an exponential curve until the outputs of the productive domain have saturated the market or been subsumed by competing products with similar technological interfaces. By analogy, capital growth is restricted by the environment in which production occurs and competition between the same types (species) of technology.
 
 The diagram in **Figure 1** assumes that no profit is being taken out of the business, which is unrealistic. Profits are always taken by the State in the form of Corporation Tax. The remainder is made available to the shareholders.  Dividends are the method by which their capital is extracted from a productive domain. As illustrated, they are like high interest payments on a loan that never gets paid off, and where the amount owed just keeps going up. Often the owners choose not to exercise their right, because either the business needs capital to compete in the marketplace, or they want to stoke up the equity in preparation for a sale. **Figure 2** shows how the Balance Sheet is affected by capital extractions.
 
-![Capital Extraction](/images/profit_and_loss_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/profit_and_loss_figure_2.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/profit_and_loss_figure_2.svg"
+      alt="Capital Extraction"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The yellow dot represents the capital that would be recorded on the Balance Sheet were there to be no extraction. It follows the same curve presented in **Figure 1**. That would be great for the productive domain because it is not leaking its accrued earnings, and the money can be spent on improving itself. However, that can never be the case, because the taxman will always take a slice of any increase in territory through the legal obligation to pay corporation tax. Also, it can never be, because the domain has only borrowed its rights; they are all owned by the owners who decide how much of the remaining profit they want to extract. The actual capital growth curve is traced by the red dots in the diagram. If the closing balance is below that in the previous year, the business is in a loss-making position and no extraction is possible. Moreover, the owners are not allowed to skim more capital than can be supported by that year’s growth. To continue with the farming analogy, the State allows owners to harvest their crop, but not the soil, lest they kill the lands capacity to provide in the following season.
 
@@ -99,7 +137,26 @@ The yellow dot represents the capital that would be recorded on the Balance Shee
 
 It is the external ownership of the productive resource that causes the polarity shift of profit inside the business entity. I depict the inversion in **Figure 3**.
 
-![Polarity Shift](/images/profit_and_loss_figure_3.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/profit_and_loss_figure_3.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/profit_and_loss_figure_3.svg"
+      alt="Polarity Inversion"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The box to the left of the asset recording surface is the production system implementation up to [version 3.28.5](https://github.com/iamonnox/tradecontrol/blob/master/changelogs.md#3.28.5). Trading Profit is price minus cost which must yield a positive value so that the business entity can buy tools and labour for production, plus materials and components for consumption in transformational processes. The entity in this form could borrow money from an external source, but that would not invert the polarity of its profits. A finite debt is of the same order as a material input paid in instalments. The debt is equivalent to a purchased good, and the cost is interest on the loan. 
 
@@ -155,7 +212,11 @@ The territorial force field projected by the business owner operates like a magn
 
 The obligation of the business entity to serve an exernal owner clarifies why the polarity in Trade Control is in the direction of the business, but switches to its opposite when [overloading assets](/articles/tc_balance_sheet#construction). But also why Trade Control can natively communicate [the profitability of a job](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Task/Views/vwProfit.sql), no matter how complex the [workflow](/articles/tc_production#workflow), but DEBK cannot. 
 
-## Licence
+## Next Step
+
+[Assets](/articles/tc_assets)
+
+### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 

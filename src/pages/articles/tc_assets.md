@@ -22,7 +22,26 @@ Were you to have followed the development path of the app on Trade Control's [Gi
 
 > GitHub allows you to retrospectively trace a repos development history by cloning the projects in Visual Studio or GitHub Desktop.
 
-![Implementation](/images/assets_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_1.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_1.svg"
+      alt="System Implementation"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Looking closely at this diagram, you can see how version **3.28.5** has both fully implemented the production theory and provides all the elements required for trade. You can model the production of material interfaces into components to any level of abstraction and complexity. By connecting nodes together into supply-chains, you may then orchestrate their production, distribution and sale from material to finished product.
 
@@ -36,11 +55,30 @@ During the 80's, financial markets began maximising private wealth through deriv
 
 The mechanics are best understood by visualising the transition from production to capital asset in terms of layers. **Figure 2** presents these layers as I have modelled them in the Trade Control node. They are not my interpretation or opinion; it is how the world works. The layers are embodied in the code because otherwise it could not function, either to [model workflows](/articles/tc_production#workflow) or calculate capital and present accounts.   
 
-![Capital Creation](/images/assets_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_2.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_2.svg"
+      alt="Capital Creation"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 ### Production Layer
 
-The Production Layer is illustrated in **Figure 1** and is covered [by the paper on production theory](/articles/tc_production). The data sources for the Asset Recording Layer are described in the [construction section](/articles/tc_balance_sheet#construction) of the balance sheet documentation. The [Trade Statement](https://github.com/TradeControl/office/blob/master/src/excel/xltCashFlow/Biz/DataLoader.cs) is the P&L without asset recording or the task-based accruals that controllers can optionally use for scheduling workflow financing. It is important to understand that the Production Layer is not connected to the Asset Recording Surface and can therefore work independently. Without the Production Layer, you will die. The other layers are grafted onto production in order to define ownership and distribute value.
+The Production Layer is illustrated in **Figure 1** and is covered [by the Production Theory](/articles/tc_production). The data sources for the Asset Recording Layer are described in the [construction section](/articles/tc_balance_sheet#construction) of the balance sheet documentation. The [Trade Statement](https://github.com/TradeControl/office/blob/master/src/excel/xltCashFlow/Biz/DataLoader.cs) is the P&L without asset recording or the task-based accruals that controllers can optionally use for scheduling workflow financing. It is important to understand that the Production Layer is not connected to the Asset Recording Surface and can therefore work independently. Without the Production Layer, you will die. The other layers are grafted onto production in order to define ownership and distribute value.
 
 The corresponding code that reflects the value-chain inside the Production Layer is as follows:
 
@@ -71,7 +109,26 @@ To create a recording surface that serves the Asset Layer, we either apply asset
 
 The asset recording surface provides an abstract interface from which capital can be extracted. The mechanics of the capital calculation already covered in the article on [Balance Sheets](/articles/tc_balance_sheet). The Profit and Loss Account (P&L) in the Capital Layer must include movement in assets as well as the income and expenditure of trade. Looking at the Trade Statement of Trade Control, there are now two sections. The first is in the Production Layer and has therefore been present since the beginning. I added the second with the introduction of the Balance Sheet. Now, the profit is calculated as the difference between two capital values during a given accounting period. So, deducting last year's capital from current year-end should equal the profit on the corresponding P&L. Here are the two sections on the Trade Statement, showing production then assets:
 
-![Profit and Loss](/images/assets_profit_and_loss.png)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_profit_and_loss.png" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_profit_and_loss.png"
+      alt="Profit and Loss"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 ### Asset Layer
 
@@ -100,13 +157,51 @@ The mentality behind the definition of a [Business Entity](/articles/tc_profit_a
 
 The first ever farmer projects an abstract plane onto the open field, initialising the Agricultural Revolution (AR). His projected interface destroys its native ecological state by ploughing the soil and planting his crop. He tends to his territory, protects it and watches it grow. Then at seasons end, a fine harvest and festivities; crop failure and starvation; or something in between. So, this farmer wants to know one thing: how much has he harvested (P&L)? The agrarian process is depicted in **Figure 3**.
 
-![Agricultural Revolution](/images/assets_figure_3.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_3.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_3.svg"
+      alt="Agricultural Revolution"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Ricardo understood that the Enclosure Acts changed this ten-thousand-year-old bucolic situation. Looking at **Figure 3**, if you were a farmer trying to purchase the land, you might think that its value is in the wealth it is able to generate. The value will be determined by productive output (supply) and how much the market is prepared to pay for the produce (demand). However, calculating land value does not mean much if it is commonly owned. Enclosure was not imposed by farmers trying to privately own the land they tilled, but merchants and aristocrats. Their corrupt MPs and lawyers created legislation for the state backed theft of the Commons from the British people and pushed it through Parliament. But instead of turning the peasants into serfs, they created artificial scarcity. Land, not crops, became the tradable commodity, the source of wealth, and the land was rented out.
 
 By the end of the IR, three quarters of all farmers were tenants. Tenant farmers organised food production in accordance with **Figure 4**, which was the same as before, only now they had to pay rent to their landlord who was nowhere to be seen. Increases in rent could only be paid for by increases in productive output.  
 
-![Land Capitalisation](/images/assets_figure_4.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_4.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_4.svg"
+      alt="Land Capitalisation"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Once all the land had been stolen by the Enclosure Acts and become a tradable commodity, the landowner would want to know two things:
 
@@ -123,7 +218,26 @@ The Industrial Revolution is responsible for the technological landscape we have
 
 The functional foundation for industrial production is expressed in **Figure 5**, which presents a factory to match the [component definition](/articles/tc_production#component-definition). Like **Figure 3** there are inputs, transformations and outputs. However, the big difference between factory and farm is that productive units in the IR connect to Workflows. Each feedback loop is the consequence of component production, delivering new products and increased productivity.
 
-![Industrial Revolution](/images/assets_figure_5.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_5.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_5.svg"
+      alt="Industrial Revolution"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The capitalisation of production exploits every productive process by treating it as a plot of land. This is not straight forward, because land is 2D, whilst production is multi-dimensional. To overcome the problem, capitalism territorialises, not just the space of the AR, but also [productive time](/articles/tc_profit_and_loss#capital-extraction). The Revolution, however, was not the territorialisation of time, because that is only a continuation of land ownership. It was the discovery, that life had already discovered many millions of years before, of [interface projection itself](/articles/tc_production#interfaces) and how it worked. 
 
@@ -131,7 +245,26 @@ This knowledge enabled British engineers to harness energy with machines and ext
 
 The arrangement is derived from the more primitive capitalisation of land. You can see the addition of the IR feedback loop in **Figure 6**. Also, note how private wealth's direct access to political power has been removed. Whilst the IR opened the door to limitless technological creativity, private wealth created its own legal system and courts to exploit it. 
 
-![Production Capitalisation](/images/assets_figure_6.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_6.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_6.svg"
+      alt="Production Capitalisation"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The impact of this appropriation is as severe as it is transformative. Not only are the projected interfaces distorted and simplified by the finite conditions of territorialisation; it maxes out production levels in the consuming demand for surplus; and it collectively escalates the degree to which the exploitation of resources can be applied globally. Most importantly, the IR handed unlimited transformational power to the dominant occupants of the State from the Agricultural Revolution that preceded it. This is beautifully described by Andro Linklater in his great book[^1]. 
 
@@ -143,7 +276,26 @@ According to my production theory, it is not possible to model productive proces
 
 **Figure 7** is the underlying schema design of the production system implementation in **Figure 1**.  
 
-![Node Schema](/images/assets_figure_7.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_7.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_7.svg"
+      alt="Node Schema"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 If we remove Projects from the schema, you are left with subjects and objects, like the mind/body, consciousness/matter dualism. In so doing, the code will still be able to model assets, but not production. With this cut-down schema you could model spatial workflows from objects, as presented in the [Bill of Materials tutorial](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md#bom-specification). You also have subjects that can project a User Interface, so the Business Entity preserves its debtor/creditor relations. In other words, the schema can still implement [my definition of an asset](#asset-layer). A DEBK recording surface may then attach to this schema and derive the Company Accounts. Unfortunately, the schema is no longer a node because it [lacks the connectors](https://github.com/TradeControl/network/blob/HEAD/docs/overview.md) needed to form supply-chains. Worse still, how is it going to produce stuff without re-inventing the Projects schema (whether implicitly in practice or explicitly in code)? So where are your assets going to come from in the first place? The only assets this schema design can incorporate are already provided by the earth, which economists call Natural Capital. Without functional interface projection, the Industrial Revolution could not have happened. Which begs the question, if a factory cannot produce a single component of any kind under this dualistic model, how is it an appropriate framework for [describing biological evolution](/articles/tc_production#life) and embryonic development?
 
@@ -217,7 +369,26 @@ The Asset Layer is a vast enterprise, for once a unitary projection is applied t
 
 > The *cadastral* is an official map of assets recording size, value and ownership.
 
-![Cadastral Recording](/images/assets_figure_8.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_8.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_8.svg"
+      alt="Cadastral Recording"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Each business is like a plot of publicly or privately owned land divided into shares of equal value. Beneath the business is the concealed Production Layer feeding surplus value to the unitary projection. The collective territory is a surface that expands and contracts in relation to the economic performance of the Production Layer. It is equivalent to the patio on [Darwin's Square](#darwins-square), but linked to the temporal workflows of IR production.  Business **A** may very well be in a supply-chain with **B**, and that is obviously visible inside the workflows of the Production Layer, but there is nothing in the cadastral that connects them. For public stocks, shareholders **1** and **2** can buy whatever shares they want on the 2d map, provided they are willing to pay the latest price on the exchange.
 
@@ -240,17 +411,39 @@ A similar cadastral to the stock market is also imposed upon hard money by the A
 
 Variants of the cadastral are everywhere because it is ancient and engrained. **Figure 9** is like an aerial view of the farmlands on the Nile Delta at the dawn of civilisation, marked out with the boundary stones laid down by knot-tying rope-stretchers. Each year, after the life-bearing floodwaters recede from the delta, the rope-stretchers would redraw their map upon the plain. Those servants of Pharaoh would have recognised the Somerset Levels of today, presented in **Figure 9**, because Satellite View is also a map. This cadastral is imposed upon the Level's ecosystems by the unitary projection of the meat and dairy industry.
 
-![Google Maps](/images/assets_figure_9.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/assets_figure_9.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/assets_figure_9.svg"
+      alt="Google Maps"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Companies House is thus the modern equivalent of the cadastral of antiquity. The shareholders of today [must pay taxes](/articles/tc_profit_and_loss#capital-extraction) to the State from their surpluses, just as those ancient tillers of land were obliged to pay theirs in tribute to the Royal Court. Whether modern state or royal court, the rulers proliferate a system to record and monitor the assets within their jurisdiction, to ensure compliance and impose a legal framework for punishing transgression. The cornerstone for the formation of these laws and their execution is, and has always been, the projection of unitary interfaces.
 
-## Licence
+## Next Step
+
+[Industrial Capitalism](/articles/tc_industrial_capitalism)
+
+### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 
 Licenced by Ian Monnox under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/) 
 
-## References
 
 [^1]: Owning the Earth. Andro Linklater 2014. 
 

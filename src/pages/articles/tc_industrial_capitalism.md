@@ -5,7 +5,7 @@ permalink: articles/tc_industrial_capitalism
 ---
 Published on 26 March 2021
 
-The functional and conceptual dimensions of capitalism are rooted in the [Industrial Revolution](/articles/tc_assets#industry) (IR). Firstly, industry applies science and engineering to produce functioning technology (modelled by [workflows](/articles/tc_production#workflow)); and secondly, it must apply commercial instruments to create the markets where they can be distributed and sold (orchestrated in [supply-chains](/articles/tc_production#supply-and-demand)). The market is fuelled by splitting into two: one for exchanging goods and services, the other for [trading shares in stock](/articles/tc_financial_capitalism#capital-debt). This arrangement is called Industrial Capitalism, clearly serviced in the Trade Control node. Therefore, you can obtain practical knowledge of these three requirements from the following tutorials: 
+The functional and conceptual dimensions of capitalism are rooted in the [Industrial Revolution](/articles/tc_assets#industry) (IR). Firstly, industry applies science and engineering to produce functioning technology (modelled by [workflows](/articles/tc_production#workflow)); and secondly, it must apply commercial instruments to create the markets where they can be distributed and sold (orchestrated in [supply-chains](/articles/tc_production#supply-and-demand)). The market is fuelled by splitting into two: one for exchanging goods and services, the other for [trading shares in stock](/articles/tc_financial_capitalism#capital-debt). This arrangement is called Industrial Capitalism, clearly serviced in the Trade Control node. Therefore, you can obtain practical knowledge of these three requirements from the following tutorials:
 
 1. Workflow - [bills of materials](https://github.com/TradeControl/office/blob/HEAD/docs/manufacturing.md)
 2. Supply Chains - [networking nodes](https://github.com/TradeControl/network/blob/HEAD/docs/overview.md) 
@@ -24,7 +24,26 @@ If you research into capitalism, you will discover many different incarnations. 
 
 **Figure 1** provides you with an example of Industrial Capitalism, which I take from the period.
 
-![Industrial Capitalism](/images/industrial_capital_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/industrial_capital_figure_1.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/industrial_capital_figure_1.svg"
+      alt="Industrial Capitalism"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 One of the problems before the IR was mine flooding. Without pumps, the water would have to be winched out in buckets, rendering many seams inaccessible. The invention of Industrial Capitalism could help solve this problem by connecting supply chains, such that surpluses from the [Primary Industry](/articles/tc_production#materials) could finance innovations in the [Secondary](/articles/tc_production#consumption-networks) and vice versa. In **Figure 1**, you can see how this works. The best place to start is [Company Profit](/articles/tc_profit_and_loss) because that is where the wealth is initially generated. Profit is dependent upon getting a good price for your wares.
 
@@ -112,7 +131,26 @@ Overcoming this problem is where capitalism comes into its own. Price discovery 
 
 Shares in the pump company are made publicly available. The owners of the coal mines can then transfer some of their extracted wealth into the other supply-chain to stimulate innovation in steam pump technology. As the benefits of improved water extraction to the mining industry are easy to appreciate, the stock price will increase as investors from other supply-chains (and wealthy landowners) purchase more shares, accelerating the innovation process. Once the pumps are being traded, the shareholders can extract dividends off the balance sheet. The output of the coal mine increases, yielding more capital that can either be retained to grow the Coal Company (infrastructure, more mines etc.) or extracted for private wealth and further investment (maybe rail stock next time). You end up with the positive feedback loop represented in **Figure 2**, which is just another representation of **Figure 1**; a kind of unvirtuous circle.  
 
-![Investment](/images/industrial_capital_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/industrial_capital_figure_2.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/industrial_capital_figure_2.svg"
+      alt="Investment"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 ### Growth
 
@@ -124,7 +162,11 @@ Growth stimulation occurs in Industrial Capitalism when [Consumer Price Discover
 
 If we compare [the positive feedback loop](#producer-price) of Industrial Capitalism to the corresponding [Figure 7](/articles/tc_production#tools) in my theory that describes the Production Network. It reveals how there is in fact a functional connection between supply-chains inside the Production Layer. It is capitalism itself that keeps the [consumer price](#consumer-price) too low. Therefore, with a different mentality, you could implement a virtuous circle to replace the key purpose of Industrial Capitalism - financing innovation.
 
-## Licence
+## Next Step
+
+[Financial Capitalism](/articles/tc_financial_capitalism)
+
+### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 

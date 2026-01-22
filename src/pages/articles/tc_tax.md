@@ -17,7 +17,26 @@ Although the tax system threads itself indelibly throughout the [Trade Control s
 
 In **Figure 1**, I present an overview of how the tax collection system relates to business structure and operations. You will note that each of the four monetary extraction points also intersect with the [commercial law](/articles/tc_commerce) that defines a relationship between the company and an external party. Contract type **C** is mirrored on the inputs and outputs, so there are only three relevant tax types: on income, profits and sales.
 
-![tax overview](/images/tax_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/tax_figure_1.svg"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/tax_figure_1.svg"
+      alt="Tax Overview"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The Companies Act (**A**) is an instance of [Primary Law](/articles/tc_commerce#primary-and-secondary-law), because it is the State itself that lends its overriding coercive power to the owner in exchange for a share in profits. For this reason, the initial investment is untaxed. Because the owner is the product of a [unitary projection](/articles/tc_assets#unitary-interface-projection), to avoid disputes, the legal framework must be defined in terms of a master/slave relation (represented by black/red in the figure); placing the productive resource in a state of [infinite debt](/articles/tc_profit_and_loss#debt) to the owner. The [Memorandum of Association](/articles/tc_profit_and_loss#incorporation) and shareholder documents that describe the owner, however, are examples of [Tertiary Law](/articles/tc_commerce#tertiary-law). These are private laws defining how a productive resource can be accessed. The Company becomes a kind of feudal replication of the State, in that it is subjugated by the territorial force field of a sovereign power that can never be overthrown (from garage to the stars). 
 
@@ -35,7 +54,7 @@ Tenancy agreements are clearly products of a master/slave relation between landl
 
 Tenancy agreements are rooted in the [Agricultural Revolution](/articles/tc_assets#agriculture) (AR). Ancient history may illuminate the RHS of **Figure 1**, but what about the rest? It is a strange fact that a farmhouse in C15th England would have had only one chimney, but by the C17th it would likely have had several[^1]. Around the same time as the capitalisation of land and the Enclosure Acts, farmers began to enclose their own space into private compartments that required these extra chimneys. By folding up space into new planes of abstraction, they discovered that they could create more space by increasing the number of [interfaces](/articles/tc_production#interfaces) it could support. The spatial folding of the pre-industrial farmhouse is replicated in the construction of a modern Serviced Office.  
 
-Combining spatial folding with the post-IR state-backed corporate entity, the Serviced Office can scale the age-old exploitation of property to global dimensions. A precondition to scaling is therefore [incorporation](/articles/tc_profit_and_loss#incorporation), which provides the legislative framework presented in **Figure 1**. To do so with working capital, funds must be transferred across the cadastral of the [asset layer](/articles/tc_assets#asset-layer) and secured on the [balance sheet](/articles/tc_balance_sheet). Then the company needs to find a plot of land upon which to project a unitary interface, like the patio on [Darwin's Square](/articles/tc_assets#darwins-square), and it is ready to go. 
+Combining spatial folding with the post-IR state-backed corporate entity, the Serviced Office can scale the age-old exploitation of property to global dimensions. A precondition to scaling is therefore [incorporation](/articles/tc_profit_and_loss#incorporation), which provides the legislative framework presented in **Figure 1**. To do so with working capital, funds must be transferred across the cadastral of the [asset layer](/articles/tc_assets#asset-layer) and secured on the [balance sheet](/articles/tc_balance_sheet). Then the company needs to find a plot of land upon which to project a unitary interface, like the patio on [Darwin's Square](/articles/tc_assets#darwins-square), and it is ready to go.
 
 #### Scaling
 
@@ -78,7 +97,26 @@ My schema design resolves the VAT and Corporation Tax challenge. Income tax, how
 
 When defining tax types it is necessary to specify when they are to be paid and how frequently, then connect them to the [exchange model](/articles/tc_production#exchange), presented in **Figure 2**. 
 
-![tax schema](/images/tax_schema.png)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/tax_schema.png"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/tax_schema.png"
+      alt="Tax Schema"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The [Cash.tbTaxType](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Tables/tbTaxType.sql) table assigns a month number and recurrence code (yearly, quarterly etc.) to the tax type, with a CashCode for payment to the taxman using the AccountCode.  The App.tbTaxCode table lists one or more tax codes for each type (such as T1 Standard VAT) with a tax rate. The TaxCode is defaulted across the application schemas ([Project](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Project.sql), [Subject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Subject.sql), [Cash](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Cash.sql)), but ultimately specifies the actual tax rate in the Invoice schema from which VAT and Corporation Tax are calculated.
 
@@ -223,21 +261,59 @@ FROM vat_accrual_totals
 
 ## Income Tax
 
-[Extraction point](#overview) **B** in **Figure 1** marks the gateway of [tertiary law](/articles/tc_commerce#tertiary-law-defined) through which all employees must pass to earn their right to consume. In exchange for their labour, they receive an agreed sum in accordance with the terms of the contract. The government does not tax the corporation's payroll. Instead, it taxes the slave side of the relation, such that income tax is taken off the employee's wages. The complexity of coding income tax is thereby increased dramatically. 
+[Extraction point](#overview) **B** in **Figure 1** marks the gateway of [tertiary law](/articles/tc_commerce#tertiary-law-defined) through which all employees must pass to earn their right to consume. In exchange for their labour, they receive an agreed sum in accordance with the terms of the contract. The government does not tax the corporation's payroll. Instead, it taxes the slave side of the relation, such that income tax is taken off the employee's wages. The complexity of coding income tax is thereby increased dramatically.
 
 ### Taxing Employees
 
 The reason for taxing the employee rather than the employer is so that citizens can be individually manipulated by the State. Referring to **Figure 2**, for each active employment contract we input the agreed income into the black box. The Tax Calculator applies the various rates to the employee’s tax code, outputting the amount of NI and income tax for each employee.  Deducting the tax from the agreed income gives the wages due, which the employer transfers into the employee's bank account. Once all employees are paid, the aggregated tax bill is transferred to HMRC.
 
-![income tax](/images/tax_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/tax_figure_2.svg"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/tax_figure_2.svg"
+      alt="Income Tax"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Note that it is the employer who both calculates and pays the tax, not the employee. The employees just receive the amount they can spend on themselves. From **Figure 2**, the aggregated income of all the employment contracts is **X**, which is the total cost to the business (plus employers NI). The total employee wage is **Y**. The tax percentage on payroll is therefore **Z = (X-Y)/X**. Although **ZX** gives **Y**, the percentage **Z** is unknown in advance. Each time income **X** is injected into the black box, output **Y** will be derived from the specific circumstances of every employee at the time, thereby yielding a fluctuating tax rate on payroll.
 
 ### Taxing Employers
 
-The State strategy for taxing employees is the reason why income tax is not automatically calculated in the [Company Statement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwStatement.sql), as it is with VAT and Corporation Tax. To do so, I would have to re-code that black box in **Figure 2** and constantly update the parameters in accordance with changes in tax rates and laws. A task way beyond the call of duty. If the State were not seeking to manipulate its citizens through tax incentives, income tax could be transferred to the master side of the employment contract. Employee wages **Y** would then equal the income **X** on their contract. The employer applies rate **Z** based on a simple lookup table that could be easily encoded into the schema design. **Figure 3** shows how this would work. HMRC just need to clock total earnings of the employee rather than tax for linking employment contracts to NI contributions. 
+The State strategy for taxing employees is the reason why income tax is not automatically calculated in the [Company Statement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwStatement.sql), as it is with VAT and Corporation Tax. To do so, I would have to re-code that black box in **Figure 2** and constantly update the parameters in accordance with changes in tax rates and laws. A task way beyond the call of duty. If the State were not seeking to manipulate its citizens through tax incentives, income tax could be transferred to the master side of the employment contract. Employee wages **Y** would then equal the income **X** on their contract. The employer applies rate **Z** based on a simple lookup table that could be easily encoded into the schema design. **Figure 3** shows how this would work. HMRC just need to clock total earnings of the employee rather than tax for linking employment contracts to NI contributions.
 
-![payroll tax](/images/tax_figure_3.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/tax_figure_3.svg"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/tax_figure_3.svg"
+      alt="Payroll Tax"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 ### Implementation
 

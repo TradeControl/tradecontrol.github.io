@@ -4,16 +4,6 @@ title: Deployment Signup
 permalink: /deployment/web-deployment-signup
 ---
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <a href="/deployment/web-deployment-overview" title="Deployment Options — click to explore">
-    <img
-      src="/images/citadel-of-thought.png"
-      alt="Trade Control deployment"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-  </a>
-</div>
-
 ## Join the Hosted Community
 
 Trade Control will soon offer hosted deployment — a simple way to run your ERP tools without managing infrastructure.
@@ -29,4 +19,3 @@ We’ll provide everything you need to deploy the app in your own cloud — incl
 This option gives you full control over your infrastructure while keeping the ERP logic intact.
 
 > Self-hosted deployment will be documented once the hosted version is live.
-

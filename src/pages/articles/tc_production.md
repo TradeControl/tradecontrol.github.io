@@ -29,7 +29,26 @@ Examining this Supply Chain example:
 
 The figure below presents [how polarity works](/articles/tc_cash_codes) in workflow exchanges; the Sales Order is the same as a Purchase Order, except with reverse polarities (i.e. direction of goods and money).
 
-![ExchangePolarity](/images/production_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_1.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_1.svg"
+      alt="Exchange Polarity"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 From this we can deduce two things:
 
@@ -82,11 +101,49 @@ To answer these questions, we will further explore the concrete example of car p
 
 The internal structure of a car is represented in **Figure 2** by a Bill of Materials (BOM). This is only a sketch of the real thing, which is of course massive for something as complicated as a car with over 10,000 components, where each node in the tree would represent a unique part with associated properties.
 
-![BOMLevel2](/images/production_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_2.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_2.svg"
+      alt="Bill of Materials (Level 2)"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 **Figure 2** states that a car requires at least five major assemblages: an engine to provide power; a transmission mechanism to convert that power into propulsion; electrics for requisite electrical systems and equipment; a chassis to support it all, with its wheels and brakes; and finally a cabin, housing the UI.  Each one of these is a layer of abstraction and can therefore be broken down into its own inner machines and systems.  As we are not interested here in describing automotive technology, only assemblage production generally, we explode the BOM a single level more for just one of these assemblages, the engine.  
 
-![BOMLevel3](/images/production_figure_3.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_3.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_3.svg"
+      alt="Bill of Materials (Level 3)"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 **Figure 3** separates machines from system components, although likely that would not be done in a real life BOM. In use, machines transform raw inputs into useful output, but structurally they are a collection of components bound into assemblages that can themselves become components. Technological systems bind different machines together allowing new, higher level, assemblages to form or function. That is why machines can contain systems, such as the fuel injection system of a car engine; and systems contain machines, like the pump in the engine’s cooling system.
 
@@ -145,7 +202,26 @@ To understand the material supply loop, we need a more complex process; so let's
 
 It is not the only plant required, and they all look similar: chimney stacks, piping, tanks and so on, like a chemical laboratory for giants.  These plants are supplied by the Secondary Industry, folded back around its inputs (the green arrow in **Figure 5**). **Figure 4** describes how the Primary Industry puts together this ubiquitous material.
 
-![MDF Production](/images/production_figure_4.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_4.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_4.svg"
+      alt="MDF Production"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Several points are worth mentioning:
 
@@ -166,7 +242,26 @@ Components are the fundamental building blocks of any technological infrastructu
 
 In **Figure 5** the technological component is specified in its most simplified form.
 
-![Component](/images/production_figure_5.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_5.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_5.svg"
+      alt="Component Definition"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The production loops demonstrate that the component is deeply recursive: components are made from other components, materials from other materials. The MI   is provided by the Primary Industry, the UI by the Secondary. The UI is a Component Interface (CI) with two additional qualities:
 
@@ -197,7 +292,26 @@ According to Lean thinking, there are two kinds of chain, taking the form of sup
 
 If we map the [Cash Polarity Principle](#cash-polarity) onto [Workflow](#workflow), you get these two chains, only they are now flowing over the Bill of Materials (or more generally, any kind of workflow). **Figure 6** is a sketched re-statement of the car's BoM in the form of a supply chain. As each factory assimilates a component interface, its inner structure is concealed, and a polarity shift occurs. 
 
-![Supply Chain](/images/production_figure_6.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_6.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_6.svg"
+      alt="Supply Chain"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The fiscal value is flowing down the Consumption Network, pulling the goods up the chain. The path it takes is determined by the Spatial Workflow that specifies technological structure. When the value has cascaded to the outer-most leaves, the materials, production value begins to flow up the supply chain. The path it takes is determined by the Temporal Workflow that specifies manufacturing process.
 
@@ -221,7 +335,26 @@ How do these transformations occur?
 
 The American inventor, Benjamin Franklin, said that man is the tool making animal. That may be a bit harsh if you’re just a ‘dumb user' and don’t make tools, but he does have a point. Transformations drive temporal Workflows, and tools are needed to do the work. Because tools are manufactured in Consumption Networks, they bridge different supply chains with a real functional connection. A tool is inside the Consumption Network when it is being produced for a consumer, and a Production Network when it is involved in acts of transformation.  The information streams that make specific products flow in a Consumption Network, whilst those streams that constitute acts of production flow through Production Networks, wherein both networks intersect.  This is a fundamental feature of the [Component Definition](#component-definition) and is illustrated in **Figure 7**, wherein it is easily visible that tool use effectively plugs one supply chain into another.
 
-![Production Network](/images/production_figure_7.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_7.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_7.svg"
+      alt="Production Network"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The Production Network has two placeholders in the Trade Control schema design: [Object.tbOp](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Object/Tables/tbOp.sql) and [Project.tbOp](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbOp.sql) for the Spatial and Temporal Workflows respectively.
 
@@ -284,7 +417,26 @@ The address, however, is the _other way around_; in the same order of abstractio
 
 Let's also say that you are going to receive a hand delivered letter from an arbitrary location on the planet. The Sender would first write your name on the envelope, followed by the inverted Namespace. It corresponds to demand polarity on the [Consumption Network](#consumption-networks). To deliver, the postal service must invert the demand so that it describes the actual physical path the letter must take. The letter can then be transported across the various abstract levels inhabited by the three Domains: International Post, National Post (Royal Mail) and Private Post (Local Service). Each domain applies the tools in their [Production Network](#production-networks) to transport the letter (sorting offices, planes, vans, bicycles, postmen etc).   **Figure 8** demonstrates this correspondence to the Consumption and Production Networks.
 
-![Namespace](/images/production_figure_8.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_8.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_8.svg"
+      alt="Namespace"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 It is important to appreciate that, like the object's Spatial Workflow, the subject's Namespace is referring to structural relations, not physical space. You could just as easily have a Namespace that describes a person's role:
 
@@ -358,7 +510,26 @@ namespace BellMaker.Foundry.Production
 
 Here is the organisational structure of the Bell Maker, deduced from its namespace collection:
 
-![Namespace Structure](/images/production_figure_9.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/production_figure_9.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/production_figure_9.svg"
+      alt="Namespace Structure"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 It looks like the [object structure](#object-structure) of a Workflow. That is because it occupies the same reality, but it is in fact very different. There is no Consumption or Production Network flowing through these abstract planes, despite being produced by and processing them. Instead, the organisation as subject brings its structure into being by projecting itself into the technological world.
 
@@ -405,13 +576,15 @@ How can you manufacture technology that projects its own User Interface? In othe
 
 Such technology, like life, cannot be a simulation; because it is a force that is projecting from outside its abstract plane. You should therefore understand that every living thing can also pass this alternative to the Turing Test, which is not the case for the original, or any technology produced to date.
 
+## Next Step
+
+[Balance Sheets](/articles/tc_balance_sheet)
+
 ### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 
 Licenced by Ian Monnox under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/) 
-
-## References
 
 [^1]:. The Machine that Changed the World. Womack, Jones, Roos and Carpenter 1990.
 [^2]: Computing Machinery and Intelligence. Alan Turing 1950.

@@ -7,7 +7,7 @@ permalink: /
 <div style="max-width: 900px; margin: 1rem 0;">
   <a href="./strategy/strategy-overview" title="Forge of Thought — click to explore">
     <img
-      src="/images/forge-of-thought.png"
+      src="/images/gallery-forge-of-thought.png"
       alt="A Trade Control node"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />

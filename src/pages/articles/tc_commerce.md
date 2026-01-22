@@ -149,7 +149,26 @@ Because wealth [is a right](#money), realising a true democracy would involve re
 
 **Figure 1** diagrammatically represents how Tertiary Laws are translated into Primary:
 
-![Tertary Law](/images/commerce_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/commerce_figure_1.svg"
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/commerce_figure_1.svg"
+      alt="Tertary Law"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Because signatories on the slave side of contracts have much to complain about, the translation of Tertiary into Primary Law is an intentionally expensive process, way out of reach for the clear majority of the State's citizens. You can issue as much Tertiary Law as you like, but for anything other than trivial disputes in a Small Claims Court, you will not be able to enforce them. 
 
@@ -173,7 +192,26 @@ The second reason why I have coded a [bitcoin wallet](https://github.com/tradeco
 
 The Trade Control [schema design](https://github.com/tradecontrol/sqlnode) works on a principle of [cash polarity](/articles/tc_production#cash-polarity). Goods flow up the [supply-chain](/articles/tc_production#supply-and-demand), whilst value in the form of money flows down. Inside the node, by flipping polarity I can mirror transaction types. I only need one [Task.tbTask](https://github.com/tradecontrol/sqlnode/blob/master/src/tcNodeDb/Task/Tables/tbTask.sql) table to model sales, works, purchase, projects and miscellaneous tasks. Between nodes, inputs match outputs, and I can plug them together [in a network](https://github.com/tradecontrol/network) to form a globally available trading platform, which I depict in [Figure 6](/articles/tc_production#supply-and-demand) of my Production Theory. Because trade is territorialised, we could change the red arrow in that figure from Goods to Laws and it would still work. I simplify this in **Figure 2**.
 
-![Sovereignty](/images/commerce_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/commerce_figure_2.svg"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/commerce_figure_2.svg"
+      alt="Sovereignty"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The figure depicts how Laws are passed up the supply chain with the Goods in exchange for Cash being handed down. This is easily understood by every consumer due to the number of T&Cs they must accept each day whenever they buy stuff online. For clarity, let us make it a purely financial transaction. 
 
@@ -187,7 +225,26 @@ It is well-known that the wealthy influence the legislative process in their fav
 
 Another well-known fact is the inverse relationship between wealth and population. This is represented in **Figure 3**. The golden segment could represent money, but that is only the most liquid asset. Instead, it represents an increase in territory - a ratio of all corporate and personal assets available. Territory is a [Unitary Interface Projection](/articles/tc_assets#unitary-interface-projection), and that is why its value extraction must be enforced in terms of master/slave relations. Therefore, the more you succeed in accruing wealth, the more territory you can obtain and the more you legislate to exploit. This vicious circle is the inexorable march of inequality and concentration of wealth described by Chomsky.
 
-![Wealth and Power](/images/commerce_figure_3.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a
+    href="/images/commerce_figure_3.svg"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/commerce_figure_3.svg"
+      alt="Wealth and Power"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Although **Figure 3** could be equally applied to the Roman Empire, two thousand years later, it is still overwhelmingly accepted without question. When environmentalists appeal to the rich and powerful to stop exploiting the planet (at Global Summits, Davos etc.), they are appealing to those whose entire existence is founded upon the very pillars they are being asked to destroy. What chance, therefore, of success? As with the Romans, they will be delighted to address your concerns. After all, those masters live to serve and serve to live; they make the laws to secure your interest that only they can enforce; and all the rights to human and natural resources end up with them. Good luck with that!
 
@@ -199,12 +256,14 @@ This system is so entrenched and pervasive that we must spend our whole lives in
 
 What is likely to happen if you became a creator, on the margins of society, and from nothing, began to materialise a productive zone of great value - raise its wave and push it out into the commercial world? Unless you are in the Arts, where a direct connection to your audience offers some protection, you will have only two options: either territorialise that wave yourself and patiently watch it capitalise; or watch others ceaselessly territorialise it for you; big fish devouring little fish, until you are a slave in your own product. And should you resist this force, the application of legal violence will fall heavily upon you. One by one all your projections into the world [will be taken away](/articles/tc_production#life) and your last possession cast onto the shoes of bankrupt men.
 
-## Licence
+## Next Step
+
+[Tax](/articles/tc_tax)
+
+### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 
 Licenced by Ian Monnox under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/) 
-
-## Notes
 
 [^1]: Contract Law by Richard Stone 1992

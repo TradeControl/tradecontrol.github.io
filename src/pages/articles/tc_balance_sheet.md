@@ -160,7 +160,26 @@ The Tx column is equivalent to the value stated on the trading P&L, whilst the A
 
 Here is the balance sheet from the demo:
 
-![Balance Sheet](/images/accounts_balance_sheet_final.png)
+<div style="max-width: 800px; margin: 1rem 0;">
+  <a 
+    href="/images/accounts_balance_sheet_final.png" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/accounts_balance_sheet_final.png"
+      alt="Balance Sheet"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 We see that a balance sheet is presented at each month end. The last period in the financial year is used by the annual accounts. These balance sheets used to be called *photographs*, since they take a picture of the business at a single instance in time. Here, the photograph is taken on the last second of each period end, communicating the asset value/charge at that point. The first step, therefore, in the construction of our balance sheet is the imposition of time periods.
 
@@ -186,7 +205,26 @@ From these statements we add four elements to the balance sheet:
 
 The Organisation Statement is presented in the Enquiry form, showing invoices against payments and the projected balance. This is the expense account of the business owner in the Services Demo, where the current balance is zero:
 
-![Org Statement](/images/accounts_org_statement.png)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/accounts_org_statement.png" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/accounts_org_statement.png"
+      alt="Organisation Statement"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 The last balance in each month contains the asset value, but also tax. To subtract the tax, the corresponding period-end balance on the [Vat Statement](#tax) is also entered on the balance sheet. 
 
@@ -200,7 +238,26 @@ Banks can be replaced with the [Trade Control HD Wallet](https://github.com/Trad
 
 By law, balance sheets must record the fiat money held in your current and reserve accounts, including physical cash. [How to create a cash box](https://github.com/TradeControl/office/blob/HEAD/docs/balance-sheet-365.md#cash-box) is explained in the demo. The [Cash Account Statement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwAccountStatement.sql) presents cash, bank and assets together.
 
-![Cash Statement](/images/accounts_cash_statement.png)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/accounts_cash_statement.png" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/accounts_cash_statement.png"
+      alt="Cash Statement"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Firstly, we extract the cash accounts of type CASH. For each account, we locate the last balance in each period and summate them by Cash Code. That gives us the current funds (which is classed as CASH on the balance sheet) and reserves (classed as BANK). When the balance is negative, the bank is in overdraft and the [cash polarity](/articles/tc_cash_codes) is set to EXPENSE. It will then be listed as a liability at the bottom of the balance sheet. 
 
@@ -283,8 +340,11 @@ The [Org.vwStatement](https://github.com/tradecontrol/sqlnode/blob/master/src/tc
 
 Therefore, any incorrect obligations will show up in the current set of unpaid or partially paid invoices. These can be easily reviewed from within the Invoice Register and rectified by consulting the organisation's statement.
 
+## Next Step
 
-## Licence
+[Profit and Loss](/articles/tc_profit_and_loss)
+
+### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 

@@ -5,7 +5,7 @@ permalink: articles/tc_financial_capitalism
 ---
 Published on 14 April 2021
 
-Since the 1980's we have experienced the relentless financialisation of our economy. However, Industrial Capitalism has not been superseded, since the instruments of financial capitalism are still, directly or indirectly, funded off the [balance sheet](/articles/tc_balance_sheet.md). 
+Since the 1980's we have experienced the relentless financialisation of our economy. However, [Industrial Capitalism](/articles/tc_industrial_capitalism) has not been superseded, since the instruments of financial capitalism are still, directly or indirectly, funded off the [balance sheet](/articles/tc_balance_sheet.md). 
 
 ## Background
 
@@ -39,7 +39,26 @@ With finite debt, the polarity shift occurs over the [Asset Layers](/articles/tc
 
 The more capital is syphoned off, the more debt can be issued at an increasingly competitive price, reducing equity capital in proportion to the amount of capital debt. Because this process is orchestrated by the banks, they can accelerate the process by increasing the fiat money supply. In so doing, industry serves the stock market, who are forced to raise capital on the worst possible terms. This negative feedback loop is represented in **Figure 1**.
 
-![Financial Capitalism](/images/financial_capital_figure_1.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/financial_capital_figure_1.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/financial_capital_figure_1.svg"
+      alt="Financial Capitalism"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 Since banks and all their ancillaries (hedge funds, asset management firms, VCs etc), are also capitalist entities, they too have an Asset Layer that is owned externally and must declare their balance sheet like everyone else. The capital on the banks’ balance sheet is owned by the shareholders. Therefore, the process of financialising industrial capital is in fact a technique for enriching these owners and the asset portfolios of their clients.
 
@@ -65,7 +84,26 @@ Here is another way to look at the three stages:
 
 The third stage is often characterised by a return to some kind of gold standard. I think the reason for the return is a simple one - the need to terminate the unending escalation of debt caused by territorial infinitude. 
 
-![Store of Value](/images/financial_capital_figure_2.svg)
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <a 
+    href="/images/financial_capital_figure_2.svg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style="display: block;"
+  >
+    <img
+      src="/images/financial_capital_figure_2.svg"
+      alt="Store of Value"
+      style="
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: zoom-in;
+      "
+    />
+  </a>
+</div>
 
 **Figure 2** is a process. As the allocation of rights are transferred into finitude, it pushes out the poor. The poor then obtain more rights to an infinite territory which is increasingly worthless (because it is falling into the past).
 
@@ -73,13 +111,15 @@ Crypto currencies are finite and superior to gold in that they have no physical 
 
 In the Production Layer, transformations across [spatial](/articles/tc_production#object-structure) and [temporal](/articles/tc_production#production-process) workflows never converge in a single point of connectivity. The networks of [production](/articles/tc_production#production-networks) and [consumption](/articles/tc_production#consumption-networks) are an ecology of ever evolving relations. It is incredible to think that the controlling forces of our world are the exact opposite of this arrangement. 
 
-## Licence
+## Next Step
+
+[Commercial Frameworks](/articles/tc_commerce)
+
+### Licence
 
 ![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png) 
 
 Licenced by Ian Monnox under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/)
-
-## References
 
 [^1]: Super Imperialism. Michael Hudson 1972.
 
