@@ -131,8 +131,40 @@ A practical way to use the Cash Statement:
 - If numbers look “wrong”, do not edit transactions first.
   Check category mapping and rollups first, because the structure controls interpretation.
 
+## Fixing past periods (why periods are closed)
+
+The Cash Statement is designed to be trustworthy over time. For that reason, financial periods are “closed” after period-end.
+
+A closed period protects your reporting history:
+
+- It keeps past months stable once they have been reviewed.
+- It prevents accidental changes to earlier results when you are working in the current month.
+- It makes it easier to reconcile your reports with bank activity, tax totals, and supporting documents.
+
+Mistakes still happen, and you will usually notice them first in the Cash Statement.
+
+Common causes:
+
+- An invoice has the wrong date, so it appears in the wrong month.
+- A payment has the wrong date (including cases where the system generates an invoice from a payment).
+- Asset or depreciation entries were posted incorrectly.
+- A cash code or category mapping was changed after documents were posted.
+
+When you correct underlying data that affects a closed period, the statement may need a rebuild so the corrected values are reflected in the right month.
+
+Suggested workflow:
+
+- Use the Cash Statement to identify the line and period(s) affected.
+- Correct the underlying data.
+- Run a rebuild to refresh totals.
+- Re-run the Cash Statement to confirm the corrected periods now match expectation.
+
+Rebuild options:
+
+- If the issue is limited to one customer or supplier, use the Rebuild option from that organisation’s maintenance screen.
+- If the issue affects multiple areas or results look inconsistent, use System Rebuild from Admin > Periods.
+
 ## Next
 
 - [Cash Statement Overview](/docs/cash-statement-overview)
 - [Cash Statement Configuration](/docs/cash-statement-configuration)
-

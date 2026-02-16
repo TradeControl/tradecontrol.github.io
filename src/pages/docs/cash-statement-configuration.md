@@ -21,7 +21,7 @@ A template provides a working baseline:
 
 You can then tailor the structure to match your business without losing clarity.
 
-See: [**Business Node Initialization → Templates**](/deployment/web-deployment-templates) for how templates are selected and what they install.
+See: [**Business Node Initialization → Templates**](/admin/admin-manager-init) for how templates are selected and what they install.
 
 ## 1) The building blocks
 

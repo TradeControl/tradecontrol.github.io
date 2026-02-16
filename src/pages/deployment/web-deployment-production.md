@@ -46,7 +46,7 @@ Here’s how most infrastructure teams approach it:
 6. **Initialise the Business Node**
    - Launch the app in a browser
    - Register the first user (Administrator role)
-   - Complete the [Initialisation form](/deployment/web-initialisation)
+   - Complete the [Initialisation form](/admin/admin-manager-init)
 
 ---
 
@@ -61,6 +61,7 @@ Here’s how most infrastructure teams approach it:
 ## 🔄 Migration Options
 
 You can migrate to:
+
 - PostgreSQL (coming soon) for open-source compliance
 - Cloud hosting for scalability
 - Multi-tenant hosting for simplicity

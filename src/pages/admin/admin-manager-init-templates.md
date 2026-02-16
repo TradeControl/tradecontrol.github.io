@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Initialisation Templates
-permalink: /deployment/web-deployment-templates
+permalink: /admin/admin-manager-init-templates
 ---
 
 Templates provide a pre-configured starting point for a UK business node: a Category Tree, rollups, Cash Codes, and related defaults.

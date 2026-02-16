@@ -16,7 +16,7 @@ permalink: /docs/cash-configuration
 
 Instructions for configuring and classifying cash transactions in Trade Control.
 
-> The [Initialisation Process](/deployment/web-initialisation) installs a classification template depending on your business type. The following documentation is a user guide for further configuration and fine tuning.
+> The [Initialisation Process](/admin/admin-manager-init) installs a classification template depending on your business type. The following documentation is a user guide for further configuration and fine tuning.
 
 ## How Cash is Classified in Trade Control
 

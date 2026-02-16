@@ -33,7 +33,7 @@ Cloud deployment gives you full control over hosting, billing, and infrastructur
 4. Select a pricing tier (e.g. Free, Basic, Standard)
 5. The app provisions automatically into your subscription
 6. Once the homepage loads, register your email and password
-7. Proceed to the [Initialisation form](/deployment/web-initialisation) to set up your business
+7. Proceed to the [Initialisation form](/admin-manager/admin-manager-init) to set up your business
 
 ## Billing
 

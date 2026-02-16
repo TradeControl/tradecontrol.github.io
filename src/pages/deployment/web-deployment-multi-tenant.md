@@ -9,6 +9,7 @@ Trade Control Web supports multi-tenant hosting, allowing multiple businesses to
 🌐 Ready to join? Visit the [deployment page](/deployment/web-deployment-signup) to create your business node.
 
 Includes:
+
 - Automatic updates
 - Secure hosting
 - Usage-based pricing
@@ -40,7 +41,7 @@ Most small businesses use less than 100MB of data. Hosting costs are modest, and
 2. Choose **Join the Hosted Community**
 3. Enter your email and password to register
 4. You’ll be assigned the **Administrator role**
-5. Proceed to the [Initialisation form](/deployment/web-initialisation) to set up your business
+5. Proceed to the [Initialisation form](/admin/admin-manager-init) to set up your business
 
 Your node is provisioned instantly, and you can start trading within minutes.
 
