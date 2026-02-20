@@ -873,10 +873,6 @@ img[src$=".svg"] {
    font-family: "scandia-web", sans-serif;
  }
 
-
-
-
-
  /*
  * The Typekit service used to deliver this font or fonts for use on websites
  * is provided by Adobe and is subject to these Terms of Use
@@ -1003,3 +999,36 @@ img[src$=".svg"] {
  .tk-scandia-web {
    font-family: "scandia-web", sans-serif;
  }
+
+/* Mermaid diagrams: keep readable sizing */
+#tc-main .mermaid {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+}
+
+/* Inner wrapper gets a real pixel width so scrollWidth is correct */
+#tc-main .mermaid .mermaid-diagram {
+    display: block;
+}
+
+/* Override global rules that cause SVG to shrink-to-fit */
+#tc-main .mermaid svg {
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+}
+
+/* If Mermaid sets inline width/height attributes, this helps too */
+#tc-main .mermaid svg[width],
+#tc-main .mermaid svg[style*="width"] {
+    width: max-content !important;
+    max-width: none !important;
+}
+
+/* Do not clip horizontally; Mermaid diagrams may need scroll */
+#doc-wrapper,
+#tc-main {
+    overflow-x: visible;
+}

@@ -50,6 +50,16 @@ This index will expand as additional modules are integrated.
   - Assign HTML templates per template type.
   - Manage embedded `.tpl` fragments and template images.
   - Parse templates to validate output rendering.
+- [Mail Host](/admin/admin-manager-mail-host)
+  - Manage SMTP host profiles and select the active sender.
+  - Send a test email and review the result in Event Logs.
+  - Rotate encryption keys used for stored mail passwords.
+- [Users - Registration process](/admin/admin-manager-user-registration)
+  - Registration states and the end-to-end workflow.
+  - Troubleshoot missing emails and pending approval.
+- [Users](/admin/admin-manager-users)
+  - Process confirmed registrations by creating `Usr.tbUser`.
+  - Assign roles and delete users safely.
 
 ## Related deployment documentation
 

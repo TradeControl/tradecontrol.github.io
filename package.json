@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.6.4"
+    "astro": "^2.6.4",
+    "mermaid": "^11.3.0"
   },
   "devDependencies": {
     "sass": "^1.96.0"
