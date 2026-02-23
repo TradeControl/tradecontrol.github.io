@@ -60,6 +60,9 @@ This index will expand as additional modules are integrated.
 - [Users](/admin/admin-manager-users)
   - Process confirmed registrations by creating `Usr.tbUser`.
   - Assign roles and delete users safely.
+- [Financial Periods](/admin/admin-manager-periods)
+  - Set the financial year and monthly boundaries.
+  - Close months (Period End) and rebuild closed periods after historic changes.
 
 ## Related deployment documentation
 

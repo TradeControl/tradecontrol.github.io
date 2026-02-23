@@ -1,3 +1,5 @@
+import mermaid from "mermaid";
+
 const looksLikeMermaid = (text) => {
 	const t = (text ?? "").trimStart();
 
@@ -57,7 +59,7 @@ const run = async () => {
 
 	if (mermaidCandidates.length === 0) return;
 
-	const { default: mermaid } = await import("mermaid");
+	//const { default: mermaid } = await import("mermaid");
 
 	mermaid.initialize({
 		startOnLoad: false,
