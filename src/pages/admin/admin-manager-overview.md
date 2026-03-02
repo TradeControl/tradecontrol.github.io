@@ -63,6 +63,13 @@ This index will expand as additional modules are integrated.
 - [Financial Periods](/admin/admin-manager-periods)
   - Set the financial year and monthly boundaries.
   - Close months (Period End) and rebuild closed periods after historic changes.
+- [Tax Configuration](/admin/admin-manager-tax-config)
+  - Tax Settings: due rules and scheduling per tax type.
+  - Tax Codes: VAT codes and rounding rules used in transactions.
+  - Tax Rates & Adjustments: corporation tax rates over time and windowed adjustments.
+- [Classifications](/admin/admin-manager-classifications)
+  - Invoice Settings: set the next document numbers per invoice type.
+  - Subject Types: classify organizations (customers, suppliers, banks, etc.) using cash polarity.
 
 ## Related deployment documentation
 

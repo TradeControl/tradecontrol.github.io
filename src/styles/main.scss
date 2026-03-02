@@ -447,100 +447,115 @@ img[src$=".svg"] {
    }
  }
 
+/* Render SVG diagrams at intrinsic size (no shrink-to-fit); allow scrolling if wider than viewport */
+#tc-main img.tc-diagram-full {
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+    margin: 1rem 0;
+    box-shadow: none !important;
+}
+
+/* Provide a horizontal scroll container for large diagrams */
+#tc-main img.tc-diagram-full {
+    overflow: visible;
+}
+
+/* Scroll container for large diagrams */
+#tc-main .tc-diagram-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* Render SVG diagram at intrinsic size (no responsive fitting) */
+#tc-main .tc-diagram-scroll > img.tc-diagram-full {
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    /* Override existing centering + shadow rules under #tc-main img */
+    margin: 0 !important;
+    box-shadow: none !important;
+    /* Avoid it behaving like a centered block that can look "small" */
+    display: inline-block !important;
+}
 
 
+nav#nav-main {
+// background-color: green !important;
+// Color of drop down nav item when clicked and showing sub items
 
- nav#nav-main {
-   // background-color: green !important;
-   // Color of drop down nav item when clicked and showing sub items
+    &.navbar {
+        margin-bottom: 0;
+    }
 
-   &.navbar {
-     margin-bottom: 0;
-   }
+    .navbar-nav>.open>a {
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        border: 1px white;
+    }
 
-   .navbar-nav>.open>a {
-     background-color: #f5f5f5;
-     border-radius: 4px;
-     border: 1px white;
-   }
-
-   // Highlight current active page on nav bar
-   .navbar-nav>.active>a {
-     background-color: #ff0000;
-     color: white;
-     border-radius: 4px;
-     border: 1px white !important;
-   }
-
-
-   // Highlight current active page in nav drop down
-   .dropdown-menu>.active>a {
-     background-color: #ff0000 !important;
-     color: white !important;
-   }
-
-   .dropdown-sub-header {
-     padding-left: 24px;
-     padding-right: 24px;
-   }
-
-   .dropdown-menu-wide {
-     min-width: 220px !important;
-   }
-
-   // Make the nav bar align with the site identity and logo
-   .navbar-narrow {
-     //max-width: calc(800px);  
-     position: auto;
-     margin-right: auto;
-     margin-left: auto;
-     margin-bottom: 0px !important;
-     margin-top: 10px;
-     //padding-right: 15px !important;
-     //padding-left: 15px !important;
-     background-color: white !important;
-     border: none !important;
-   }
-
-   .navbar-toggle {
-     margin-right: 0px !important;
-   }
-
-   //Make sure the drop down items aren't spaced out like normal li instances
-   .dropdown-menu>li {
-     margin-top: 4px !important;
-     margin-bottom: 4px !important;
-     margin-left: 0px !important;
-     vertical-align: middle;
-   }
-
-   .dropdown-menu>li>a {
-     padding-left: 24px !important;
-     padding-right: 24px !important;
-   }
-
-   .navbar-left>li {
-     margin-bottom: 0px !important;
-   }
- }
+    // Highlight current active page on nav bar
+    .navbar-nav>.active>a {
+        background-color: #ff0000;
+        color: white;
+        border-radius: 4px;
+        border: 1px white !important;
+    }
 
 
- 
+    // Highlight current active page in nav drop down
+    .dropdown-menu>.active>a {
+        background-color: #ff0000 !important;
+        color: white !important;
+    }
 
+    .dropdown-sub-header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 
- /**************************
-*
-* END
-* 
-***************************/
+    .dropdown-menu-wide {
+        min-width: 220px !important;
+    }
 
+    // Make the nav bar align with the site identity and logo
+    .navbar-narrow {
+        //max-width: calc(800px);  
+        position: auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0px !important;
+        margin-top: 10px;
+        //padding-right: 15px !important;
+        //padding-left: 15px !important;
+        background-color: white !important;
+        border: none !important;
+    }
 
+    .navbar-toggle {
+        margin-right: 0px !important;
+    }
 
+    //Make sure the drop down items aren't spaced out like normal li instances
+    .dropdown-menu>li {
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        margin-left: 0px !important;
+        vertical-align: middle;
+    }
 
+    .dropdown-menu>li>a {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
 
-
-
-
+    .navbar-left>li {
+        margin-bottom: 0px !important;
+    }
+}
 
  // Override the site header to remove border-bottom
  .site-header {
@@ -999,36 +1014,3 @@ img[src$=".svg"] {
  .tk-scandia-web {
    font-family: "scandia-web", sans-serif;
  }
-
-/* Mermaid diagrams: keep readable sizing */
-#tc-main .mermaid {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 0.5rem 0;
-}
-
-/* Inner wrapper gets a real pixel width so scrollWidth is correct */
-#tc-main .mermaid .mermaid-diagram {
-    display: block;
-}
-
-/* Override global rules that cause SVG to shrink-to-fit */
-#tc-main .mermaid svg {
-    max-width: none !important;
-    height: auto !important;
-    display: block;
-}
-
-/* If Mermaid sets inline width/height attributes, this helps too */
-#tc-main .mermaid svg[width],
-#tc-main .mermaid svg[style*="width"] {
-    width: max-content !important;
-    max-width: none !important;
-}
-
-/* Do not clip horizontally; Mermaid diagrams may need scroll */
-#doc-wrapper,
-#tc-main {
-    overflow-x: visible;
-}

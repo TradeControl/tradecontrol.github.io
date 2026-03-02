@@ -21,6 +21,17 @@ Before users can register, an Administrator must configure and activate an SMTP 
 
 ## Process overview (state diagram)
 
+<div class="tc-diagram-scroll">
+  <img
+    src="/images/admin-manager-user-registration-flow.png"
+    alt="Registration process state diagram"
+    class="tc-diagram-full"
+  />
+</div>
+
+<details>
+<summary>Mermaid source (for automation/AI)</summary>
+
 ~~~mermaid
 stateDiagram-v2
     direction LR
@@ -39,6 +50,8 @@ stateDiagram-v2
     Confirmed --> Deleted : Admin deletes registration
     Registered --> Deleted : Admin deletes user
 ~~~
+
+</details>
 
 ## Step-by-step: end-user journey
 

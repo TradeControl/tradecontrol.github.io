@@ -1,10 +1,27 @@
+/**
+ * Mermaid client-side renderer (currently NOT enabled in production).
+ *
+ * Status:
+ * - Kept intentionally for a future revisit.
+ * - The documentation page currently uses a pre-rendered image instead.
+ *
+ * Why this remains / why it was disabled:
+ * - Astro layouts render in a server/build context, so any Mermaid bootstrap must be strictly browser-only
+ *   (guard all `document` usage). Several approaches caused "document is not defined" during build/SSR.
+ * - Approaches that loaded scripts via `?url` worked around SSR, but then failed in the browser because bare
+ *   imports like `import mermaid from "mermaid"` are not resolvable without bundling/import maps on GitHub Pages.
+ * - CDN “global mermaid” builds were also unreliable in this project’s environment.
+ *
+ * Re-enable strategy (if revisiting):
+ * - Ensure the init code is emitted as a bundled client module (Vite-resolved imports) and only executes in-browser.
+ */
 import mermaid from "mermaid";
 
 const looksLikeMermaid = (text) => {
 	const t = (text ?? "").trimStart();
-
 	return (
 		t.startsWith("stateDiagram") ||
+		t.startsWith("stateDiagram-v2") ||
 		t.startsWith("flowchart") ||
 		t.startsWith("sequenceDiagram") ||
 		t.startsWith("classDiagram") ||
@@ -33,13 +50,10 @@ const ensureScrollableMermaid = (rootSelector = ".mermaid") => {
 
 		if (!Number.isFinite(vbWidth) || vbWidth <= 0) continue;
 
-		// If already wrapped, just update width
 		let inner = container.querySelector(":scope > .mermaid-diagram");
 		if (!inner) {
 			inner = document.createElement("div");
 			inner.className = "mermaid-diagram";
-
-			// Move the SVG inside the inner wrapper
 			container.replaceChildren(inner);
 			inner.appendChild(svg);
 		}
@@ -49,7 +63,10 @@ const ensureScrollableMermaid = (rootSelector = ".mermaid") => {
 };
 
 const run = async () => {
-	const codeEls = Array.from(document.querySelectorAll("pre.astro-code > code"));
+	// Match Astro’s Shiki output regardless of extra classes/attrs like `is:raw`
+	const codeEls = Array.from(
+		document.querySelectorAll('pre[class*="astro-code"] > code, pre.astro-code > code')
+	);
 
 	const mermaidCandidates = codeEls.filter((code) => {
 		const cls = code.className || "";
@@ -59,15 +76,11 @@ const run = async () => {
 
 	if (mermaidCandidates.length === 0) return;
 
-	//const { default: mermaid } = await import("mermaid");
-
 	mermaid.initialize({
 		startOnLoad: false,
 		securityLevel: "strict",
 		theme: "default",
-		themeVariables: {
-			fontSize: "18px",
-		},
+		themeVariables: { fontSize: "18px" },
 	});
 
 	for (const code of mermaidCandidates) {
@@ -77,18 +90,17 @@ const run = async () => {
 		const wrapper = document.createElement("div");
 		wrapper.className = "mermaid";
 		wrapper.textContent = code.textContent ?? "";
-
 		pre.replaceWith(wrapper);
 	}
 
 	await mermaid.run({ querySelector: ".mermaid" });
-
-	// Make the diagram actually scrollable (ensures scrollWidth > clientWidth)
 	ensureScrollableMermaid(".mermaid");
 };
 
-if (document.readyState === "loading") {
-	document.addEventListener("DOMContentLoaded", run, { once: true });
-} else {
-	run();
+if (typeof document !== "undefined") {
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", run, { once: true });
+	} else {
+		run();
+	}
 }
