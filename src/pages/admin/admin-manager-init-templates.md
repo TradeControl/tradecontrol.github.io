@@ -4,87 +4,133 @@ title: Initialisation Templates
 permalink: /admin/admin-manager-init-templates
 ---
 
-Templates provide a pre-configured starting point for a UK business node: a Category Tree, rollups, Cash Codes, and related defaults.
+Templates give you a fast, reliable way to set up your business with a clear Category Tree, meaningful totals, and ready‑to‑use Cash Codes. They are optional, but they save time and provide a clean, accountant‑friendly starting point.
 
-Templates are optional. You can configure everything from scratch, but templates reduce setup time and provide accountant-friendly conventions from day one.
+## Quick Index
 
-## How templates relate to the Cash Statement
+- [What templates are](#what-templates-are)
+- [How templates help](#how-templates-help)
+- [Template options](#template-options)
+  - [Minimal Micro Company Accounts \[YEAR\]](#minimal-micro-company-accounts-year)
+  - [Standard Micro Company Accounts \[YEAR\]](#standard-micro-company-accounts-year)
+  - [Sole Trader Accounts \[YEAR\]](#sole-trader-accounts-year)
+- [VAT‑aware behaviour](#vat-aware-behaviour)
+- [Sole Trader vs Micro Entity](#sole-trader-vs-micro-entity)
+- [MTD readiness](#mtd-readiness)
+- [Abridged vs Full Accounts](#abridged-vs-full-accounts)
 
-The Cash Statement is driven by the Category Tree. A template is simply a fast way to install a usable Category Tree structure so the statement is meaningful immediately.
+## What templates are
 
-## Depth levels (UK)
+Templates provide a pre‑configured starting point for a UK business node: a Category Tree, rollups, Cash Codes, and related defaults.  
+They help your Cash Statement make sense immediately, without needing to build everything from scratch.
 
-Templates are grouped by **depth**:
+You can still customise anything afterwards — templates simply give you a strong foundation.
 
-### Basic
+## How templates help
 
-For first-time use and small operations.
+A template installs:
 
-- A small number of Categories
-- Minimal rollups
-- Designed to be easy to understand and maintain
+- a clear set of Categories  
+- meaningful totals (e.g. Turnover, Cost of Sales, Gross Profit)  
+- Cash Codes mapped into the right places  
+- VAT settings that match your business  
+- Corporation Tax settings where relevant  
+- a structure ready for Making Tax Digital (MTD)
 
-### Standard
+The result is a Cash Statement that reads like a real set of accounts from day one.
 
-For typical small/medium businesses.
+## Template options
 
-- More granular Categories
-- A fuller set of rollups (totals)
-- Suitable for routine decision-making and monthly reporting
+Below are the available templates. Each one installs a complete Category Tree and Cash Code setup tailored to a different type of business.
 
-### Detailed
+## Minimal Micro Company Accounts \[YEAR\]
 
-For finance-heavy or analysis-driven use.
+**Best for:**  
+Very small companies, simple operations, side‑hustles, or dormant companies.
 
-- More Categories and sub-structure
-- More rollups and analysis lines
-- Supports deeper cost/income visibility without changing underlying data
+**What you get:**
 
-## What a template installs (high-level)
+- A clean, minimal Profit & Loss layout  
+- One sales line, one cost line, one wages line, one admin line  
+- Corporation Tax included  
+- VAT included (can be switched off)  
+- A simple, tidy structure that can grow with your business
 
-A template typically sets up:
+This is the lightest template — ideal when you want clarity without complexity.
 
-- Categories and their order (how the statement reads)
-- Total Categories (how categories roll up)
-- Cash Codes mapped into Categories
-- Default settings required for common statutory/UK tax groupings (where applicable)
+## Standard Micro Company Accounts \[YEAR\]
 
-## Current implementation (technical note)
+**Best for:**  
+Typical small businesses that want more detail in their reporting.
 
-Templates are registered by name and executed as a stored procedure.
+**What you get:**
 
-- Registry: `App.tbTemplate` (`TemplateName`, `StoredProcedure`)
-- Example: `App.proc_TemplateCompanyHMRC2021`
+- A fuller set of Categories  
+- Sales split into labour/materials  
+- Direct costs split into materials, subcontractors, fuel, travel  
+- A more detailed admin section  
+- Depreciation categories  
+- Corporation Tax included  
+- VAT included (can be switched off)
 
-(You do not need to understand these details to use templates, but they explain why templates can be implemented and improved over time.)
+This template gives you a richer view of your business without overwhelming you.
 
-## Suggested UK template roadmap (dev objective)
+## Sole Trader Accounts \[YEAR\]
 
-Initial out-of-the-box set (proposed):
+**Best for:**  
+Self‑employed individuals, freelancers, contractors, and small sole‑trader businesses.
 
-- UK Company — Basic
-- UK Company — Standard
-- UK Company — Detailed
-- UK Sole Trader — Basic
-- UK Sole Trader — Standard
-- UK Sole Trader — Detailed
+**What you get:**
 
-## Community templates (planned)
+- A simple income/expense layout  
+- Drawings and Capital Introduced  
+- No Corporation Tax (not used by sole traders)  
+- VAT optional (off by default)  
+- A quarterly MTD update category  
+- A structure aligned with HMRC expectations
 
-In future, templates can be published for specific sectors (still UK), for example:
+This template is designed for clarity and ease of use, especially for MTD ITSA.
 
-- “Grocer — Standard”
-- “Construction — Detailed”
+## VAT‑aware behaviour
 
-A community template should clearly state:
+Every template adapts automatically based on whether your business is VAT registered.
 
-- intended business type and sector
-- the reporting intent (what the tree is trying to show)
-- any assumptions (VAT registered, payroll complexity, etc.)
+- **If you are VAT registered:**  
+  VAT categories and VAT Cash Codes appear normally.
 
-## Next
+- **If you are not VAT registered:**  
+  VAT categories are hidden, VAT control codes are disabled, and all Cash Codes default to zero‑rated VAT.
 
-If your goal is the Cash Statement, see:
+You can change your VAT status at any time in the Admin Manager — the system adjusts instantly.
 
-- [**Cash Statement Overview**](/docs/cash-statement-overview)
-- [**Cash Statement Configuration**](/docs/cash-statement-configuration)
+## Sole Trader vs Micro Entity
+
+The system supports both business types using the same underlying structure.
+
+- **Sole traders** do not use Corporation Tax.  
+  The template hides CT categories and sets the CT rate to zero.
+
+- **Companies** do use Corporation Tax.  
+  CT categories remain visible and active.
+
+Because the structure is shared, you can move from one business type to another in the future without losing data or rebuilding your setup.
+
+## MTD readiness
+
+The system includes a quarterly MTD update category for sole traders, so you are ready for Making Tax Digital when required.
+
+This sits alongside other tax groupings (such as VAT and Corporation Tax) and does not affect your day‑to‑day bookkeeping.
+
+## Abridged vs Full Accounts
+
+The system is designed so the same data can produce:
+
+- internal management reports  
+- micro‑entity accounts  
+- abridged accounts  
+- full accounts  
+
+Templates give you the structure.  
+Reporting layers — such as abridged vs full — are added on top without changing your data or your Category Tree.
+
+This means you can start simple and grow into more formal reporting when you need it.
