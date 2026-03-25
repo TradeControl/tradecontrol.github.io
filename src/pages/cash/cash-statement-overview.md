@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Cash Statement Overview
-permalink: /docs/cash-statement-overview
+permalink: /cash/cash-statement-overview
 ---
 
 ## What the Cash Statement is
@@ -139,4 +139,4 @@ Your work uses the statement to make decisions.
 
 ## Next: Configuring the Category Tree
 
-See: [**Configuring the Category Tree for Cash Statements**](/docs/cash-statement-configuration) for how Categories, Totals, and Expressions shape the final output.
+See: [**Configuring the Category Tree for Cash Statements**](/cash/cash-statement-configuration) for how Categories, Totals, and Expressions shape the final output.

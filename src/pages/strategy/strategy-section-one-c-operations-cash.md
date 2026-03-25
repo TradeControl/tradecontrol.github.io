@@ -70,4 +70,4 @@ Cash is not abstract. It is embedded, directional, and operational. Trade Contro
 ---
 [^1]: [Cash Classification](/articles/tc_cash_codes)
 [^2]: [Cash Polarity](/articles/tc_production#cash-polarity)
-[^3]: [Cash Categories](/docs/cash-configuration)
+[^3]: [Cash Categories](/cash/cash-configuration)

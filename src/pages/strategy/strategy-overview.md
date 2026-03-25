@@ -43,4 +43,10 @@ Trade Control is not just software. It’s a systems-first approach to enterpris
 - [Intelligence Test](/strategy/strategy-intelligence-test)
 - [Example Application](/strategy/strategy-section-two-example)
 
-_This overview is the first step in a recursive journey—where declarations shape outcomes, and structure becomes strategy._
+*This overview is the first step in a recursive journey—where declarations shape outcomes, and structure becomes strategy.*
+
+## Licence
+
+![Creative Commons](https://i.creativecommons.org/l/by-nd/4.0/88x31.png)
+
+Licenced by Trade Control Ltd under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/)

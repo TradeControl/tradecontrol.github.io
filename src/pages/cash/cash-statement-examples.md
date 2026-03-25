@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Cash Statement Examples (How to Read It)
-permalink: /docs/cash-statement-examples
+permalink: /cash/cash-statement-examples
 ---
 
 This page is for decision makers and finance owners who want to generate the Cash Statement and understand what it is showing.
@@ -166,5 +166,5 @@ Rebuild options:
 
 ## Next
 
-- [Cash Statement Overview](/docs/cash-statement-overview)
-- [Cash Statement Configuration](/docs/cash-statement-configuration)
+- [Cash Statement Overview](/cash/cash-statement-overview)
+- [Cash Statement Configuration](/cash/cash-statement-configuration)

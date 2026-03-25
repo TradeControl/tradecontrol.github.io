@@ -1,12 +1,13 @@
 ---
 layout: ../../layouts/Documentation.astro
-title:  Category Tree — User Guide  
-permalink: /docs/category-tree-userguide
+title:  Category Tree — User Guide
+permalink: /cash/category-tree-userguide
 ---
 
 A practical, user‑focused guide to configuring Trade Control’s Category Tree. It explains why this matters, what the key concepts are, and how to set things up quickly and safely.
 
 ## Index
+
 - [Why: A better foundation than ledgers and nominal codes](#why-a-better-foundation-than-ledgers-and-nominal-codes)
 - [What: Categories, Cash Codes, Totals, Expressions](#what-categories-cash-codes-totals-expressions)
 - [How: Configure step by step](#how-configure-step-by-step)
@@ -26,7 +27,7 @@ Trade Control replaces traditional accounting ledgers and nominal codes with a r
 
 In short, configure Categories to tell the system “how your business works,” then Trade Control calculates “what it means” (profit, tax, balances) without you juggling ledgers.
 
-Screenshot: 
+Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-desktop.png" alt="Category Tree desktop mode"
@@ -63,11 +64,13 @@ Background: [Classifying Cash Transactions](../articles/tc_cash_codes)
 ## How: Configure step by step
 
 1) Review Disconnected items
+
 - Open “Disconnected” to find categories not yet part of your main hierarchy.
 - Decide where each belongs (e.g., under Sales, Direct Costs, Indirect Costs).
 - Attach existing categories or create new ones as needed.
-- 
-Screenshot: 
+-
+
+Screenshot:
 
 <div style="max-width: 800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-disconnected.png" alt="Disconnected categories"
@@ -75,13 +78,14 @@ Screenshot:
 </div>
 
 2) Establish primary Totals at Root
+
 - Under “Root”, create or align Totals, for example:
   - Sales (positive polarity)
   - Direct Costs (negative polarity)
   - Indirect Costs (negative polarity)
 - When ready, set “Profit Root” and “VAT Root” to anchor statements.
 
-Screenshot: 
+Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-primary-total.png" alt="Set Primary Totals"
@@ -89,10 +93,11 @@ Screenshot:
 </div>
 
 3) Attach Cash Codes under Categories
+
 - Under each Cash Code Category, add existing Cash Codes or create new ones.
 - Use “New Cash Code like this…” to prefill sensible defaults from a similar code (helps consistency for tax/polarity).
 
-Screenshot: 
+Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-add-cash-code.png" alt="Add a new Cash Code"
@@ -100,11 +105,12 @@ Screenshot:
 </div>
 
 4) Organize and tidy
+
 - Reorder sibling categories for clarity and Cash Statements (by Type view or within Totals). Use Drag/drop or SHIFT+UP/DOWN.
 - Keep names clear and short; use consistent naming for Sales/Costs groups.
 - Disable item hierarchies you’re not ready to use (they stay configured but excluded from calculations). Note that Category enable/disable is recursive but does not include Cash Codes.
 
-Screenshot: 
+Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-disable.png" alt="Enable/disable hierarchies"
@@ -112,11 +118,12 @@ Screenshot:
 </div>
 
 5) Add Expressions for key ratios
+
 - In the Expressions root, define metrics such as Gross Profit %.
 - Choose Syntax Type (Both/Libre/Excel) to match your export/reporting target.
 - Apply display formats (`0%`, currency) for readability.
 
-Screenshot: 
+Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-expressions.png" alt="Cash expressions"
@@ -124,6 +131,7 @@ Screenshot:
 </div>
 
 6) Validate with a quick verification check
+
 - Ensure Sales totals carry positive values; Costs totals carry negatives.
 - Confirm VAT root includes sales and excludes salaries/other non‑VAT costs.
 - Spot‑check a few Cash Codes for correct tax type and polarity.

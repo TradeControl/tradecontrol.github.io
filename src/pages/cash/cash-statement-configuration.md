@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Cash Statement Configuration
-permalink: /docs/cash-statement-configuration
+permalink: /cash/cash-statement-configuration
 ---
 
 This page is for the people responsible for configuring the Cash Statement (often an accountant or finance lead). It explains how the **Category Tree** shapes the structure, totals, and computed lines of the Cash Statement.
@@ -125,7 +125,7 @@ Key points:
 - They are best treated as an **analysis layer**: useful for insight, but not required for a valid statement.
 - If an expression cannot be evaluated (for example due to missing references or syntax), it will be flagged so it can be corrected.
 
-See: [**Category Tree → Expressions**](/docs/category-tree-technical#8-expression-details) (how to create and register expressions).
+See: [**Category Tree → Expressions**](/cash/category-tree-technical#8-expression-details) (how to create and register expressions).
 
 ---
 
@@ -158,4 +158,4 @@ Before using the Cash Statement for decision making:
 
 ## Next: Examples
 
-See: [**Cash Statement Examples**](/docs/cash-statement-examples) for a small Category Tree, sample invoice activity, and how changing the tree changes the output.
+See: [**Cash Statement Examples**](/cash/cash-statement-examples) for a small Category Tree, sample invoice activity, and how changing the tree changes the output.

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Documentation.astro
 title: Category Tree Technical Guide
-permalink: /docs/category-tree-technical
+permalink: /cash/category-tree-technical
 ---
 
 ## Index
@@ -50,6 +50,7 @@ The Category Tree provides an interactive view over Cash Categories, Cash Codes,
 </div>
 
 Node types you will see:
+
 - "Root" — the primary hierarchy anchor (synthetic node).
 - "Disconnected" — categories that are not part of any mapping (synthetic node).
 - "Types root" — grouping by Cash Type (synthetic node).
@@ -89,7 +90,7 @@ Screenshot placeholders for annotated node types:
 <div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-anatomy.png" alt="Category Tree anatomy"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
-</div> 
+</div>
 
 ## 3. Permissions and roles
 
@@ -108,6 +109,7 @@ Most interactions are available read-only; mutations require admin privileges.
   - Mobile view button
 
 UI gating:
+
 - Buttons and menu items labeled with “admin-only” are hidden unless the user is in `AdministratorsRole`.
 - Server-side validation always checks privileges, returning JSON errors like “Insufficient privileges”.
 
@@ -144,7 +146,7 @@ Create and edit operations use Razor Pages. On desktop they load embedded into t
     - Desktop: the details pane returns a `tcEmbedResult` marker to select and focus the new `code:<CashCode>` under the correct parent.
     - Mobile: redirected to the details page of the new code.
   - Screenshot:
- 
+
  <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-add-cash-code.png" alt="Add a new Cash Code"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
@@ -154,7 +156,7 @@ Create and edit operations use Razor Pages. On desktop they load embedded into t
   - Total (CategoryType: CashTotal) creates a folder that can contain Categories or other Totals.
   - Cash Code Category (CategoryType: CashCodeCategory) creates a folder that can contain Cash Codes.
   - Edit actions route to `EditTotal`, `EditCategory`, or `EditCashCode` based on node type.
-  - Screenshot: 
+  - Screenshot:
 
  <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-add-category-code.png" alt="Add a new Category Code"
@@ -168,7 +170,7 @@ Create and edit operations use Razor Pages. On desktop they load embedded into t
   - Post-create selection:
     - Desktop: injected immediately under `__EXPRESSIONS__` and selected via `tcEmbedResult`.
     - Mobile: redirected to the expression’s view page.
-  - Screenshot: 
+  - Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-expressions.png" alt="Cash expressions"
@@ -180,13 +182,12 @@ Create and edit operations use Razor Pages. On desktop they load embedded into t
   - Admin-only actions set the primary root that drives profit and VAT statements.
   - Selection persistence:
     - The current selection is maintained; the right pane refreshes and icons update.
-  - Screenshot: 
+  - Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-primary-total.png" alt="Set Primary Totals"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
-
 
 ## 6. Reorder mechanics
 
@@ -213,13 +214,12 @@ Reordering is contextual. All reorders are admin-only and persist server-side th
 
 - Normalization
   - A maintenance action exists: `UpgradeTypeOrdering` normalizes `DisplayOrder` per Cash Type (compacts to 1..N; leaves zeros as uninitialized).
-  - Screenshot: 
+  - Screenshot:
 
 <div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-reorder.png" alt="Order statements"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
-
 
 ## 7. Enable/Disable
 
@@ -237,13 +237,12 @@ Enable/Disable toggles availability without deleting items.
 
 - Server behavior
   - Admin-only; server validates privileges and returns JSON results. UI updates immediately and refreshes top anchors as needed.
-  - Screenshot: 
+  - Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-disable.png" alt="Enable/disable hierarchies"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
-
 
 ## 8. Expression details
 
@@ -263,7 +262,7 @@ Expressions compute derived values and are maintained in a flat list under `__EX
   - Expressions are evaluated against the mapped Totals/Categories and export engine semantics.
   - Expressions are read-only in hierarchical views and do not cascade.
 
-- Screenshot: 
+- Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-expression-detail.png" alt="Cash Expression Details"
@@ -288,7 +287,7 @@ Mobile uses a single-pane tree with an adaptive action bar; edit and view action
   - Mobile navigates to dedicated pages (full Razor layout).
   - Desktop embeds forms in the right pane (`embed=1`), with `MutationObserver` detecting changes.
 
-- Screenshot: 
+- Screenshot:
 
 <div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-mobile-action-bar.png" alt="Mobile action bar"
@@ -333,13 +332,12 @@ The Disconnected subtree lists categories that are not currently mapped into the
     - Create Totals or Categories directly under Disconnected.
     - Add existing categories or codes into a mapped hierarchy.
 
-- Screenshot: 
+- Screenshot:
 
 <div style="max-width: 800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-disconnected.png" alt="Disconnected categories"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
-
 
 ## 12. Root & primary hierarchy
 
@@ -360,7 +358,7 @@ The primary hierarchy models Profit and VAT structures and anchors user navigati
   - “PrimaryKind” is surfaced via icons/badges in details and tree nodes.
   - Totals under Root may have additional controls (create/add/move) compared to nested contexts.
 
-- Screenshot: 
+- Screenshot:
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-primary-root.png" alt="Primary Roots"
@@ -413,7 +411,6 @@ Visual cues make the tree scannable and consistent.
   <img src="/images/category-tree-node-types.png" alt="Category Tree node type key"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
-
 
 ## 15. Security / antiforgery
 

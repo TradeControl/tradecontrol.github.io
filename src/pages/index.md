@@ -16,51 +16,20 @@ permalink: /
 
 ## A new foundation for ERP design
 
-Trade Control is a unique business system, re-writing the book on how [ERP applications](https://en.wikipedia.org/wiki/Enterprise_resource_planning) are designed and implemented. Trade Control introduces a unified model that replaces centuries‑old [DEBC ledgers](./articles/tc_balance_sheet#double-entry-book-keeping) and [ERP orders](./articles/tc_cash_codes#cash-polarity) by treating both money and goods as flows with polarity.  
+Trade Control rethinks how <a href="https://en.wikipedia.org/wiki/Enterprise_resource_planning" target="_blank" rel="noopener noreferrer">ERP applications</a> are designed. Instead of combining double‑entry book‑keeping with separate sales, works, and purchase order systems, Trade Control models both money and goods as flows with [polarity](/strategy/strategy-section-one-c-operations-cash). This unified structure supports operational modelling, financial reporting, and tax behaviour within a single coherent framework.
 
 This site is the home of:
-- **Theory and Strategy**: production and financial systems, new horizons
-- **Guides and Documentation**: user, technical, and “getting around”  
-- **Proofs and Examples**: reconciles the maths with statutory requirements  
 
----
+- **Theory and Strategy** — production systems, financial models, and design principles  
+- **Guides and Documentation** — user guides, technical references, and schema details  
+- **Proofs and Examples** — formal reconciliation identities and machine‑checkable outputs  
 
-## Current Status — December 2025
+Trade Control includes a synthetic dataset and [a full proof suite](/technical/cash-statement-proof) demonstrating that polarity‑driven flows produce DEBK‑consistent financial statements.
 
 <p/>
 <div style="background-color:#fff3cd; border:1px solid #ffeeba; padding:0.75rem; border-radius:6px; font-weight:bold; color:#856404; margin-bottom:1rem;">
 ⚠️ Trade Control is in development — first release not yet deployed.
 </div>
-
-
-Trade Control is **in active re-development** as a free software AI‑native ERP system.  
-The prototype worked but was not commercially delivered; we have archived those repos as prototypes for AI development. What remains is the **Seed Code** and the **Production Theory**, now aligned with a deployment framework.
-
-Progress so far:
-- Schema design brought into explicit alignment with Production Theory  
-- Framework for deployment established  
-- Deprecated prototype‑targeted instructions from the website  
-- ASP.NET app undergoing AI‑ification — the **Category Tree** is the first sapling in the levelled garden of creation  
-
-Although Trade Control is **not yet ready for deployment**, the first milestones are clear: 
-
-- **Phase 1 Accounts Mode release**, replacing DEBC ledgers with polarity‑based flows of money. 
-- **Phase 2 MIS Mode release**, replacing ERP Orders with polarity-based flows of goods and service.
-
-By Phase 1, this homepage will feature a **Deploy button** to [activate Accounts Mode](./deployment/web-deployment-mobile).
-
----
-
-## Next Steps
-
-- Numerical proofs (capital, VAT, transaction‑grained control)  
-- Operational proofs (node polarity, supply chain scheduling)  
-- Technical artefacts (spreadsheets, guides, Codex entries)  
-- User Guides (cashbook, accounts, HMRC Digital filing)  
-
-Stay tuned as we move toward the first milestone release.
-
----
 
 ## Licence
 
