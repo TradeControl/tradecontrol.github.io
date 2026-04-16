@@ -8,6 +8,54 @@ This page is for decision makers and finance owners who want to generate the Cas
 
 It also provides a minimal example illustrating how the same invoice activity can produce different statements depending on the Category Tree.
 
+## Screenshots (synthetic dataset)
+
+This documentation uses a [synthetic dataset](/technical/synthetic-dataset) so screenshots are publishable.
+
+The screenshots correspond to the Excel output produced by the Cash Statement generator.
+
+## Cash Flow sheet: Trade example
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-totals.png" alt="Cash Flow Statement Trade section"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
+## Cash Flow sheet: Summary example
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-summary.png" alt="Cash Flow Statement Summary block"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
+## Cash Flow sheet: VAT totals example
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-vat-totals.png" alt="Cash Flow Statement Tax totals block"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
+## Cash Flow sheet: Bank balances example
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-bank-balances.png" alt="Cash Flow Statement bank balances section"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
+## Cash Flow sheet: Balance sheet example
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-balance-sheet.png" alt="Cash Flow Statement balance sheet section (including capital row)"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
+## Reconciliation sheet example
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-reconciliation.png" alt="Reconciliation worksheet showing tolerance, overall status, and per-year PASS/WARN/FAIL"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
 ## 1) How to read the Cash Statement (practical)
 
 The Cash Statement is laid out as a set of sections (for example Trade, Tax, Bank), with period columns.
@@ -44,6 +92,8 @@ Your Category Tree determines the structure, but most statements will include:
   VAT and corporation tax groupings and totals, driven by category rollups.
 - Bank and Balance Sheet (optional).
   Cash position and point-in-time balances that provide context.
+- Reconciliation (optional).
+  Submission confidence checks (`PASS/WARN/FAIL`) that validate the annual equity bridge.
 
 ## 3) The generation options (what changes when you toggle things)
 
@@ -61,6 +111,8 @@ When generating the statement, these options change what is included.
   Adds accrued tax adjustments to support forecasting.
 - Include Order Book.
   Adds expected values from open projects, deducting amounts already invoiced.
+- Include Reconciliation.
+  Adds the Reconciliation worksheet where you can confirm the statement adds up before submission.
 
 Note.
 
@@ -128,6 +180,7 @@ A practical way to use the Cash Statement:
 - Generate the statement with conservative options (closed/history only).
 - Identify the top 3 positive and top 3 negative categories.
 - Re-generate with forecasting options (active periods, accruals, order book) to see the likely near-future position.
+- Use the Reconciliation workbook page before submission to confirm the statement adds up.
 - If numbers look “wrong”, do not edit transactions first.
   Check category mapping and rollups first, because the structure controls interpretation.
 

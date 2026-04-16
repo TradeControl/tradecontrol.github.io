@@ -14,7 +14,10 @@ The **Cash Statement** is a configurable financial statement generated from your
 
 The Cash Statement outputs to a **spreadsheet** with a consistent layout regardless of file format.
 
----
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-header.png" alt="Cash Flow Statement header"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
 
 ## Why this is not a traditional cashflow or P&L report
 
@@ -34,9 +37,7 @@ This has two practical consequences:
 
 > Background: This is aligned with the “Production Layer” approach described in the product—production is treated as primary, and legacy artifacts can be derived for compatibility.
 
----
-
-## Core concepts (plain language)
+## Core concepts
 
 ### Cash Code
 
@@ -64,8 +65,6 @@ Each Category has a **polarity**:
 
 Polarity is one of the key mechanisms that allows the statement to be driven by *meaning*, not by fixed “sales vs purchases” document types.
 
----
-
 ## How the Category Tree drives the statement
 
 The Category Tree is the configuration layer that turns raw operational data into a readable statement.
@@ -78,11 +77,14 @@ At a high level, it provides:
 
 The result is a statement that reads like “your model of the business”, not like a generic template.
 
----
-
 ## What you can include when generating the Cash Statement
 
 When generating the Cash Statement, you can optionally include features that change what is shown and/or how values are computed.
+
+<div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-parameters.png" alt="Cash Flow Parameters"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
 
 ### Include Active Periods
 
@@ -108,9 +110,42 @@ Adds bank balance sections for cash-position context.
 
 Adds balance sheet-oriented sections (as a point-in-time companion view).
 
+### Include Reconciliation
+
+Adds the **Reconciliation** worksheet that checks the annual equity bridge and flags `PASS/WARN/FAIL` status.
+
 > The statement remains structurally consistent; these options control the presence of specific sections and/or the inclusion of forecast and accrual components.
 
----
+## The Reconciliation page (submission confidence)
+
+If you are preparing an MTD submission (or simply want confidence in your figures), the Cash Statement can include a **Reconciliation** worksheet.
+
+This page answers the practical question:
+
+Do the Profit & Loss and Balance Sheet movement **add up** for each year?
+
+It shows:
+
+- An annual equity bridge (capital movement vs profit)
+- A per-year **Difference** and a per-year **Status**: `PASS`, `WARN`, or `FAIL`
+- An overall status for the workbook
+
+To enable it, select:
+
+- **Include Reconciliation** when generating the Cash Statement.
+
+<div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-reconciliation.png" alt="Cash Flow reconciliation worksheet (annual bridge)"
+       style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+</div>
+
+### How to interpret the status
+
+- **PASS**: the bridge balances within tolerance.
+- **WARN**: there is a difference that is small enough to normally be caused by rounding or timing edges, but should still be reviewed before submission.
+- **FAIL**: the bridge does not balance and must be corrected before submission.
+
+For technical details, consult the [algorithmic proofs](/technical/cash-statement-proof).
 
 ## Who uses what (quick guidance)
 
@@ -132,11 +167,12 @@ Your focus is:
 - selecting options (active periods, order book, accruals)
 - reading the statement as “what happened vs what is expected”
 - using the category narrative to identify drivers (growth areas, costs, cash pinch points)
+- using the **Reconciliation** page to confirm your figures add up before submission
 
 Your work uses the statement to make decisions.
 
----
-
 ## Next: Configuring the Category Tree
 
-See: [**Configuring the Category Tree for Cash Statements**](/cash/cash-statement-configuration) for how Categories, Totals, and Expressions shape the final output.
+See: [**Configuring the Category Tree for Cash Statements**](/cash/cash-statement-configuration)  provides detailed guidance on how the Category Tree shapes the Cash Statement.
+
+Also: [**Cash Statement Examples**](/cash/cash-statement-examples) for practical advice on interpreting the Cash Statement output.

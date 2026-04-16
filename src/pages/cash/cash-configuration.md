@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Documentation.astro
-title: Cash Configuration
+title: Category Configuration
 permalink: /cash/cash-configuration
 ---
 
@@ -31,11 +31,3 @@ The Category Tree is where you define how your business classifies cash transact
 [Category Tree — User Guide](/cash/category-tree-userguide) provides a practical, user‑focused guide to configuring the Category Tree.
 
 [Category Tree — Technical Guide](/cash/category-tree-technical) provides a deeper dive into the mechanics of the Category Tree.
-
-## Cash Statement
-
-[Cash Statement — Overview](/cash/cash-statement-overview) provides an introduction to the Cash Statement and how it is used to review and adjust cash classifications.
-
-[Cash Statement — Configuration](/cash/cash-statement-configuration) provides detailed guidance on how the Category Tree shapes the Cash Statement.
-
-[Cash Statement Examples (How to Read It)](/cash/cash-statement-examples) provides practical advice on interpreting the Cash Statement output.
