@@ -32,3 +32,9 @@ src/env.d.ts
 *.suo
 *.userosscache
 *.sln.docstates
+
+# public scripts
+public/scripts/*.js
+
+# katex
+public/katex/
