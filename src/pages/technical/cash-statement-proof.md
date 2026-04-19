@@ -11,7 +11,7 @@ A unified DEBK invariant for companies and sole traders
 
 ## Abstract
 
-**Trade Control** is an open‑source accounting engine built on a simple idea:  
+**Trade Control** is an open‑source production system with an accounting engine built on a simple idea:  
 that the economic reality of a business is found in its *flows* — the productive transactions that move goods, services, and cash — rather than in static snapshots of assets.
 
 In this model, every financial transaction mirrors a productive one, with quantity and cash expressed as opposite‑signed flows. This [Cash Polarity Principle](/articles/tc_production#cash-polarity) allows Trade Control to operate at the level of individual transactions, independent of arbitrary reporting periods. From this transaction‑grained representation, the engine can algorithmically reconstruct the asset‑based reporting required by conventional accounting.
@@ -53,10 +53,10 @@ The invariant uses only accounts with `BalanceConstraintCode = 2` to define capi
 
  <div> For each year \( y \): </div>
 
--  <div> CapitalPosition\(_y\): </div>
+- <div> CapitalPosition\(_y\): </div>
   the sum of balances of all accounts with `BalanceConstraintCode = 2` at the year‑end balance‑sheet date.
 
--  <div> CapitalMovement\(_y\): </div>
+- <div> CapitalMovement\(_y\): </div>
 
 <div>
 $$
@@ -79,7 +79,7 @@ This is implemented via `LAG` over the capital position by year. It is:
 
 Year 1 has no prior year. Instead, we treat:
 
-- <div>\( \text{OpeningCapital}_1 = 0 \) </div> 
+- <div>\( \text{OpeningCapital}_1 = 0 \) </div>
 - **OpeningPosition:**  
   the net of opening balances on subjects (customers, suppliers, etc.), with sign convention chosen so that a positive value increases the equity bridge.
 
@@ -88,18 +88,18 @@ Year 1 has no prior year. Instead, we treat:
 
 For year \( y > 1 \):
 
-- <div> \( \text{OpeningCapital}_y = \text{ClosingCapital}_{y-1} \) </div> 
+- <div> \( \text{OpeningCapital}_y = \text{ClosingCapital}_{y-1} \) </div>
 
 ### 2.4 Profit and tax
 
 For each year \( y \):
 
--  <div> Profit\(_y\): profit before business tax. </div>  
--  <div> BusinessTaxExpense\(_y\): business tax charged for the year.   </div>
+- <div> Profit\(_y\): profit before business tax. </div>  
+- <div> BusinessTaxExpense\(_y\): business tax charged for the year.   </div>
 
 Then:
 
-<div> 
+<div>
 $$
 \text{ProfitAfterTax}_y
 =
@@ -107,7 +107,7 @@ $$
 -
 \text{BusinessTaxExpense}_y
 $$
-</div> 
+</div>
 
 ### 2.5 Losses carried forward
 
@@ -126,8 +126,8 @@ Year 1 is special because there is no prior year capital snapshot.
 
 We enforce:
 
-- <div> \( \text{OpeningCapital}_1 = 0 \)  </div> 
-- <div> \( \text{CapitalDelta}_1 = \text{ClosingCapital}_1 \) </div> 
+- <div> \( \text{OpeningCapital}_1 = 0 \)  </div>
+- <div> \( \text{CapitalDelta}_1 = \text{ClosingCapital}_1 \) </div>
 
 The entire initial state of the business is represented by:
 
@@ -136,8 +136,8 @@ The entire initial state of the business is represented by:
 
 For \( y > 1 \):
 
-- <div> \( \text{OpeningCapital}_y = \text{ClosingCapital}_{y-1} \)  </div> 
-- <div> \( \text{CapitalDelta}_y = \text{ClosingCapital}_y - \text{OpeningCapital}_y \) </div> 
+- <div> \( \text{OpeningCapital}_y = \text{ClosingCapital}_{y-1} \)  </div>
+- <div> \( \text{CapitalDelta}_y = \text{ClosingCapital}_y - \text{OpeningCapital}_y \) </div>
 
 ## 4. The equity bridge
 
@@ -145,7 +145,7 @@ For each year \( y \), define:
 
 - <div>CapitalDelta\(_y\): </div>
 
-<div> 
+<div>
 $$
 \text{CapitalDelta}_y
 =
@@ -153,7 +153,7 @@ $$
 -
 \text{OpeningCapital}_y
 $$
-</div> 
+</div>
 
 - <div> CapitalMovement\(_y\) as in §2.2. </div>  
 
@@ -161,7 +161,7 @@ $$
 
 <div> We then define the Variance\(_y\) as the residual required to make the equity bridge hold: </div>
 
-<div> 
+<div>
 $$
 \text{CapitalDelta}_y
 =
@@ -175,11 +175,11 @@ $$
 +
 \text{Variance}_y
 $$
-</div> 
+</div>
 
 Rearranging:
 
-<div> 
+<div>
 $$
 \text{Variance}_y
 =
@@ -195,7 +195,7 @@ $$
 \text{OpeningAccountPosition}_y
 \Big)
 $$
-</div> 
+</div>
 
 Variance is a pure rounding residual, typically pennies.
 
@@ -203,7 +203,7 @@ Variance is a pure rounding residual, typically pennies.
 
 Rearranging the equity bridge gives the core invariant:
 
-<div> 
+<div>
 $$
 \text{ProfitAfterTax}_y
 =
@@ -217,7 +217,7 @@ $$
 -
 \text{Variance}_y
 $$
-</div> 
+</div>
 
 In words:
 
@@ -249,10 +249,9 @@ Trade Control uses a unified business‑tax model:
 - losses carried forward inferred from tax balance and rate  
 - business tax expense as the positive tax due for the year  
 
-<div> 
+<div>
 This logic feeds into \( \text{ProfitAfterTax}_y \) and losses carried forward but does not alter the structure of the invariant.
-</div> 
-
+</div>
 
 ## 8. Implementation
 
