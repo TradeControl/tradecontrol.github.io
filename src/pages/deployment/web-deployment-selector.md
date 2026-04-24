@@ -8,7 +8,7 @@ Trade Control Web gives you full access to all features—no modules, no restric
 
 ---
 
-## 🔹 Join the Hosted Community
+## Join the Hosted Community
 
 Let us host your business node in our secure multi-tenant environment. You get automatic updates and usage-based pricing.
 
@@ -20,7 +20,7 @@ Let us host your business node in our secure multi-tenant environment. You get a
 
 ---
 
-## 🔹 Host in Your Own Cloud
+## Host in Your Own Cloud
 
 Deploy the app into your own Azure subscription. You manage hosting, billing, and upgrades.
 

@@ -4,11 +4,11 @@ title: Production Deployment Guide
 permalink: /deployment/web-deployment-production
 ---
 
-🏢 Trade Control Web can be deployed into your own infrastructure—on-premises, private cloud, or behind a firewall that could withstand a siege. This guide is for IT teams who want full control over hosting, performance, and security.
+Trade Control Web can be deployed into your own infrastructure—on-premises, private cloud, or behind a firewall that could withstand a siege. This guide is for IT teams who want full control over hosting, performance, and security.
 
 ---
 
-## ✅ What You Get
+## What You Get
 
 - Full access to all Trade Control features
 - Private hosting and database control
@@ -17,7 +17,7 @@ permalink: /deployment/web-deployment-production
 
 ---
 
-## 🛠️ Typical Deployment Flow
+## Typical Deployment Flow
 
 Here’s how most infrastructure teams approach it:
 
@@ -50,7 +50,7 @@ Here’s how most infrastructure teams approach it:
 
 ---
 
-## 🔐 Security Notes
+## Security Notes
 
 - Trade Control Web does not require internet access once deployed
 - All data remains within your infrastructure
@@ -58,7 +58,7 @@ Here’s how most infrastructure teams approach it:
 
 ---
 
-## 🔄 Migration Options
+## Migration Options
 
 You can migrate to:
 

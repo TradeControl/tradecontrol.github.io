@@ -4,21 +4,11 @@ title: Deployment Overview
 permalink: /deployment/web-deployment-overview
 ---
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <a href="/deployment/web-deployment-selector" title="Deployment Options — click to explore">
-    <img
-      src="/images/gallery-citadel-of-thought.png"
-      alt="Trade Control deployment"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-  </a>
-</div>
-
 Trade Control Web supports flexible deployment options to suit your business needs, technical comfort, and infrastructure preferences. All paths give you full access to the system—no feature gating, no hidden modules.
 
 ---
 
-## 📱 Mobile Deployment
+## Mobile Deployment
 
 Start instantly from your phone. Tap **Deploy** and choose your hosting model.
 
@@ -30,7 +20,7 @@ Start instantly from your phone. Tap **Deploy** and choose your hosting model.
 
 ---
 
-## 🧭 Deployment Selector
+## Deployment Selector
 
 Choose your hosting model—cloud, hosted—after tapping Deploy.
 
@@ -41,7 +31,7 @@ Choose your hosting model—cloud, hosted—after tapping Deploy.
 
 ---
 
-## ☁️ Host in Your Own Cloud
+## Host in Your Own Cloud
 
 Deploy into your own Azure subscription. You manage infrastructure, billing, and upgrades.
 
@@ -53,7 +43,7 @@ Deploy into your own Azure subscription. You manage infrastructure, billing, and
 
 ---
 
-## 🏘️ Join the Hosted Community
+## Join the Hosted Community
 
 Let us host your business node in our secure multi-tenant environment. You get automatic updates and usage-based pricing.
 
@@ -66,7 +56,7 @@ Let us host your business node in our secure multi-tenant environment. You get a
 
 ---
 
-## 🖥️ Local Deployment
+## Local Deployment
 
 Install Trade Control Web on your own PC using the [Web Deploy package](https://github.com/TradeControl/tradecontrol.web/releases).
 
@@ -78,7 +68,7 @@ Install Trade Control Web on your own PC using the [Web Deploy package](https://
 
 ---
 
-## 🏢 Production Deployment
+## Production Deployment
 
 Deploy into your own infrastructure—on-premises, private cloud, or behind a hardened firewall.
 
@@ -90,7 +80,7 @@ Deploy into your own infrastructure—on-premises, private cloud, or behind a ha
 
 ---
 
-## 🔓 Coming Soon: Open Source Edition
+## Coming Soon: Open Source Edition
 
 We’re [migrating to PostgreSQL](/dev) to support fully open-source hosting. This will allow self-hosted deployments on Linux, Docker, or any cloud provider—no licensing fees, no proprietary lock-in.
 

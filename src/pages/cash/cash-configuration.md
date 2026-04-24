@@ -4,16 +4,6 @@ title: Category Configuration
 permalink: /cash/cash-configuration
 ---
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <a href="/cash/category-tree-getting-around" title="Category Tree — click to explore">
-    <img
-      src="/images/gallery-category-tree-recursion.png"
-      alt="Category Tree"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-  </a>
-</div>
-
 Instructions for configuring and classifying cash transactions in Trade Control.
 
 > The [Initialisation Process](/admin/admin-manager-init) installs a classification template depending on your business type. The following documentation is a user guide for further configuration and fine tuning.

@@ -4,16 +4,6 @@ title: Admin Manager - Overview
 permalink: /admin/admin-manager-overview
 ---
 
-<div style="max-width: 900px; margin: 1rem 0;">
-    <a href="/admin/admin-manager-overview#modules" title="Admin Manager — click to explore">
-    <img
-      src="/images/gallery-admin-gateway.png"
-      alt="Trade Control administration"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-  </a>
-</div>
-
 Admin Manager is the central place to configure the business node.
 
 It is intended for **Administrators** (business owners, directors, or delegated administrators).

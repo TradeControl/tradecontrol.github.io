@@ -4,7 +4,7 @@ title: Local Deployment Guide
 permalink: /deployment/web-deployment-local
 ---
 
-🖥️ Trade Control Web can be installed locally on your PC or laptop using the pre-built Web Deploy package. This gives you full access to the system with zero hosting costs and no cloud setup.
+Trade Control Web can be installed locally on your PC or laptop using the pre-built Web Deploy package. This gives you full access to the system with zero hosting costs and no cloud setup.
 
 Ideal for:
 
@@ -14,7 +14,7 @@ Ideal for:
 
 ---
 
-## ✅ What You Get
+## What You Get
 
 - Full access to all Trade Control features
 - No monthly fees or cloud billing
@@ -24,7 +24,7 @@ Ideal for:
 
 ---
 
-## 📦 What’s Included
+## What’s Included
 
 - Web Deploy package (`TradeControlweb-x.x.x.zip`)
 - IIS-ready deployment manifest
@@ -33,7 +33,7 @@ Ideal for:
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 Before deploying, make sure your PC has:
 
@@ -53,7 +53,7 @@ Includes:
 
 ---
 
-## 🚀 Installation Steps
+## Installation Steps
 
 ### 1. Install Prerequisites
 
@@ -82,7 +82,7 @@ Includes:
 
 ---
 
-## 🔧 Configuration Notes
+## Configuration Notes
 
 - You can run the app entirely offline if email delivery isn’t required
 - SMTP settings can be added later via the admin interface
@@ -90,7 +90,7 @@ Includes:
 
 ---
 
-## 🔄 Migration Options
+## Migration Options
 
 You can migrate to:
 
