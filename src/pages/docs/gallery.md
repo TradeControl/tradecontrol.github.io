@@ -56,7 +56,7 @@ They are **conceptual visualisations** inspired by the structure and purpose of 
     </a>
   </td>
   <td style="vertical-align: top;">
-    <b>Citadel of Thought</b>
+    <b>Deployment- Citadel of Thought</b>
     <div class="gallery-desc">
       <span class="short">
         A stacked geometry of intention — a mind made visible, suspended in the dark.

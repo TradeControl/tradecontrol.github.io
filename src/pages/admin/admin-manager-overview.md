@@ -14,7 +14,6 @@ It is intended for **Administrators** (business owners, directors, or delegated 
       alt="Admin Manager Overview"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
 ## Purpose
@@ -41,6 +40,10 @@ This index will expand as additional modules are integrated.
 - [Setup](/admin/admin-manager-setup)
   - Configure the baseline business node setup.
   - Re-initialise the business node with new settings (e.g. after a trial or tutorial).
+- [Synthetic Datasets](/admin/admin-manager-dataset)
+  - Replace the current business data with a synthetic demonstration dataset.
+  - Choose a template, VAT setting, and matching scenario.
+  - Monitor background installation status until complete.
 - [File Transfer](/admin/admin-manager-file-transfer)
   - Browse registered files by content type (Images, Documents, Templates).
   - Sync the database with the server file system.
