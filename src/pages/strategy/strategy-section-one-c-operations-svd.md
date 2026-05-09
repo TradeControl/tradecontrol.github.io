@@ -55,5 +55,5 @@ This logic is not abstract—it is operational. It renders the financial interfa
 Trade Control treats supply and demand as schema-native declarations. It models financial flow as a recursive traversal, where polarity drives fulfilment and balance emerges from structure. This enables real-time liquidity modelling, fulfilment tracking, and operational clarity—without relying on legacy accounting logic.
 
 ---
-[^1]: [Tax Calculation](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql)
-[^2]: [Company Statement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwStatementBase.sql)
+[^1]: [Tax Calculation](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql)
+[^2]: [Company Statement](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwStatementBase.sql)

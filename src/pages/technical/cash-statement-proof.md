@@ -259,7 +259,7 @@ The invariant is implemented in the open‑source Trade Control codebase.
 
 The SQL definition of the reconciliation view:
 
-[`Cash.vwEquityReconciliationByYear`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwEquityReconciliationByYear.sql)
+[`Cash.vwEquityReconciliationByYear`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwEquityReconciliationByYear.sql)
 
 computes:
 
@@ -298,24 +298,24 @@ This paper shows why it works — and why it will continue to work as the system
 
 This paper’s reference run uses the scenario runner script:
 
-- [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Scripts/EXEC_DatasetSyntheticMIS.sql)
+- [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Scripts/EXEC_DatasetSyntheticMIS.sql)
 
-The script executes four scenarios (profit/loss; VAT on/off) by running [`App.proc_DatasetSyntheticMIS`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS.sql) with configurable settings, including:
+The script executes four scenarios (profit/loss; VAT on/off) by running [`App.proc_DatasetSyntheticMIS`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS.sql) with configurable settings, including:
 
 - `@IsCompany` (set to either company or sole trader scenarios)
 - `@PriceRatio` (profit vs loss scenarios)
 - `@IsVatRegistered` (VAT on/off scenarios)
 - Major generation modules enabled/disabled
 
-For full source, see [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Scripts/EXEC_DatasetSyntheticMIS.sql).
+For full source, see [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Scripts/EXEC_DatasetSyntheticMIS.sql).
 
 ### Relevant objects
 
-- [`Cash.vwEquityReconciliationByYear`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwEquityReconciliationByYear.sql)
-- [`Cash.vwFlowReconciliationByYear`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwFlowReconcilationByYear.sql)
-- [`Cash.vwProfitAndLossByYear`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwProfitAndLossByYear.sql)
-- [`Cash.vwBalanceSheet`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheet.sql)
-- [`Cash.tbPayment`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Tables/tbPayment.sql), `Cash.tbCode`, `Cash.tbCategory`
+- [`Cash.vwEquityReconciliationByYear`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwEquityReconciliationByYear.sql)
+- [`Cash.vwFlowReconciliationByYear`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwFlowReconcilationByYear.sql)
+- [`Cash.vwProfitAndLossByYear`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwProfitAndLossByYear.sql)
+- [`Cash.vwBalanceSheet`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheet.sql)
+- [`Cash.tbPayment`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Tables/tbPayment.sql), `Cash.tbCode`, `Cash.tbCategory`
 - `Subject.tbAccount`
 - `App.tbYear`, `App.tbYearPeriod`
 
@@ -323,7 +323,7 @@ For full source, see [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeCo
 
 To prove all four synthetic scenarios (profit/loss; VAT on/off), use:
 
-- [`PROOF_CashStatementReconciliation.sql`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Scripts/PROOF_CashStatementReconciliation.sql)
+- [`PROOF_CashStatementReconciliation.sql`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Scripts/PROOF_CashStatementReconciliation.sql)
 
 This script:
 

@@ -14,8 +14,8 @@ The generator is implemented as discrete stored procedures prefixed `App.proc_Da
 
 ## Entry point procedures
 
-- Orchestrator: [`App.proc_DatasetSyntheticMIS`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS.sql)
-- Scenario runner: [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Scripts/EXEC_DatasetSyntheticMIS.sql)
+- Orchestrator: [`App.proc_DatasetSyntheticMIS`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS.sql)
+- Scenario runner: [`EXEC_DatasetSyntheticMIS.sql`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Scripts/EXEC_DatasetSyntheticMIS.sql)
 
 ## Scenario runner (how proofs exercise the generator)
 
@@ -33,7 +33,7 @@ Each scenario calls `App.proc_DatasetSyntheticMIS` with:
 - `@EnableOpeningBalance = 1`
 - all major modules enabled (projects, invoices, payments, payables, wages, expenses, assets, tax, transfers)
 
-The scenario runner then records results from [`Cash.vwEquityReconciliationByYear`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwEquityReconciliationByYear.sql) for comparison.
+The scenario runner then records results from [`Cash.vwEquityReconciliationByYear`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwEquityReconciliationByYear.sql) for comparison.
 
 ## Orchestration overview (module call order)
 
@@ -52,7 +52,7 @@ A temp table `#DatasetCodes` is created once per run and used by all nested proc
 
 ### 2) Bootstrap (mandatory)
 
-- [`App.proc_DatasetSyntheticMIS_Bootstrap`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Bootstrap.sql)
+- [`App.proc_DatasetSyntheticMIS_Bootstrap`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Bootstrap.sql)
 
 Responsibilities (high level):
 
@@ -68,11 +68,11 @@ This step is what makes runs repeatable: every scenario begins from the same bas
 
 Executed when `@EnableProjects = 1`:
 
-- [`App.proc_DatasetSyntheticMIS_ProjectInit`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectInit.sql)
-- [`App.proc_DatasetSyntheticMIS_ProjectTemplates`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectTemplates.sql)
-- [`App.proc_DatasetSyntheticMIS_ProjectTran`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectTran.sql)
-- [`App.proc_DatasetSyntheticMIS_ProjectInvoice`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectInvoice.sql) (conditional: `@EnableInvoices = 1`)
-- [`App.proc_DatasetSyntheticMIS_ProjectPay`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectPay.sql) (conditional: `@EnableProjectPayments = 1`)
+- [`App.proc_DatasetSyntheticMIS_ProjectInit`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectInit.sql)
+- [`App.proc_DatasetSyntheticMIS_ProjectTemplates`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectTemplates.sql)
+- [`App.proc_DatasetSyntheticMIS_ProjectTran`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectTran.sql)
+- [`App.proc_DatasetSyntheticMIS_ProjectInvoice`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectInvoice.sql) (conditional: `@EnableInvoices = 1`)
+- [`App.proc_DatasetSyntheticMIS_ProjectPay`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_ProjectPay.sql) (conditional: `@EnableProjectPayments = 1`)
 
 These procedures create the trading activity that drives profit/loss and therefore the annual reconciliation.
 
@@ -80,10 +80,10 @@ These procedures create the trading activity that drives profit/loss and therefo
 
 Executed when `@EnablePayables = 1`:
 
-- [`App.proc_DatasetSyntheticMIS_PayInit`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_PayInit.sql)
-- [`App.proc_DatasetSyntheticMIS_PayMisc`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_PayMisc.sql) (conditional: `@EnableMiscPayments = 1`)
-- [`App.proc_DatasetSyntheticMIS_PayWages`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_PayWages.sql) (conditional: `@EnableWages = 1` and `@IsCompany = 1`)
-- [`App.proc_DatasetSyntheticMIS_Expenses`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Expenses.sql) (conditional: `@EnableExpenses = 1`)
+- [`App.proc_DatasetSyntheticMIS_PayInit`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_PayInit.sql)
+- [`App.proc_DatasetSyntheticMIS_PayMisc`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_PayMisc.sql) (conditional: `@EnableMiscPayments = 1`)
+- [`App.proc_DatasetSyntheticMIS_PayWages`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_PayWages.sql) (conditional: `@EnableWages = 1` and `@IsCompany = 1`)
+- [`App.proc_DatasetSyntheticMIS_Expenses`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Expenses.sql) (conditional: `@EnableExpenses = 1`)
 
 These procedures generate operating cash movements and costs required for non-trivial Cash Statement coverage.
 
@@ -91,7 +91,7 @@ These procedures generate operating cash movements and costs required for non-tr
 
 Executed when `@IsCompany = 1` and `@EnableAssets = 1`:
 
-- [`App.proc_DatasetSyntheticMIS_Assets`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Assets.sql)
+- [`App.proc_DatasetSyntheticMIS_Assets`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Assets.sql)
 
 This provides asset-state behavior for balance sheet snapshotting and capital-related flows.
 
@@ -99,7 +99,7 @@ This provides asset-state behavior for balance sheet snapshotting and capital-re
 
 Executed when `@IsVatRegistered = 1` and `@EnableTax = 1`:
 
-- [`App.proc_DatasetSyntheticMIS_TaxVat`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_TaxVat.sql)
+- [`App.proc_DatasetSyntheticMIS_TaxVat`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_TaxVat.sql)
 
 This enables VAT-on scenarios and is part of proving VAT does not break the annual bridge (penny-level rounding only).
 
@@ -107,7 +107,7 @@ This enables VAT-on scenarios and is part of proving VAT does not break the annu
 
 Executed when `@EnableTransfers = 1`:
 
-- [`App.proc_DatasetSyntheticMIS_Transfers`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Transfers.sql) (internally uses transfer helpers)
+- [`App.proc_DatasetSyntheticMIS_Transfers`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_Transfers.sql) (internally uses transfer helpers)
 
 This introduces non-trade cash movements (sweeps) so bank/cash behavior is not trivial.
 
@@ -115,7 +115,7 @@ This introduces non-trade cash movements (sweeps) so bank/cash behavior is not t
 
 Executed when `@IsCompany = 1` and `@EnableTax = 1`:
 
-- [`App.proc_DatasetSyntheticMIS_TaxOnProfit`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_TaxOnProfit.sql)
+- [`App.proc_DatasetSyntheticMIS_TaxOnProfit`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_DatasetSyntheticMIS_TaxOnProfit.sql)
 
 This provides corp tax behavior required to prove:
 
@@ -124,7 +124,7 @@ This provides corp tax behavior required to prove:
 
 ### 9) Final rebuild (mandatory)
 
-- [`App.proc_SystemRebuild`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/App/Stored%20Procedures/proc_SystemRebuild.sql)
+- [`App.proc_SystemRebuild`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/App/Stored%20Procedures/proc_SystemRebuild.sql)
 
 This ensures downstream reporting surfaces (views/materializations that depend on rebuild logic) are coherent for the scenario outputs and proof script.
 
@@ -132,7 +132,7 @@ This ensures downstream reporting surfaces (views/materializations that depend o
 
 The proof paper [`/technical/cash-statement-proof`](/technical/cash-statement-proof) references:
 
-- the proof assertions script [`PROOF_CashStatementReconciliation.sql`](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Scripts/PROOF_CashStatementReconciliation.sql), and
+- the proof assertions script [`PROOF_CashStatementReconciliation.sql`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Scripts/PROOF_CashStatementReconciliation.sql), and
 - annual reconciliation views.
 
 This synthetic dataset exists specifically to provide controlled coverage of the reconciliation under:

@@ -84,11 +84,11 @@ The corresponding code that reflects the value-chain inside the Production Layer
 
 | Statement | T-Sql |
 | -- | -- |
-| Subjects | [Subject.vwStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Subject/Views/vwStatement.sql) |
-| Cash Account | [Cash.vwAccountStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwAccountStatement.sql) |
-| Corporation Tax | [Cash.vwTaxCorpStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwTaxCorpStatement.sql) |
-| VAT | [Cash.vwTaxVatStatement](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwTaxVatStatement.sql) |
-| Trade Profits | [Cash.fnFlowCategory(CashType.Trade)](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
+| Subjects | [Subject.vwStatement](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Subject/Views/vwStatement.sql) |
+| Cash Account | [Cash.vwAccountStatement](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwAccountStatement.sql) |
+| Corporation Tax | [Cash.vwTaxCorpStatement](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwTaxCorpStatement.sql) |
+| VAT | [Cash.vwTaxVatStatement](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwTaxVatStatement.sql) |
+| Trade Profits | [Cash.fnFlowCategory(CashType.Trade)](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
 
 ### Recording Surface
 
@@ -98,12 +98,12 @@ To create a recording surface that serves the Asset Layer, we either apply asset
 
 | Statement | T-Sql |
 | -- | -- |
-| Creditors and Debtors | [Cash.vwBalanceSheetSubjects](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetSubjects.sql) |
-| Bank and Cash | [Cash.vwBalanceSheetAccounts](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetAccounts.sql) |
-| Assets and Liabilities | [Cash.vwBalanceSheetAssets](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetAssets.sql) |
-| Corporation Tax | [Cash.vwBalanceSheetTax](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql) |
-| VAT | [Cash.vwBalanceSheetVat](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Views/vwBalanceSheetVat.sql) |
-| Asset Profits | [Cash.fnFlowCategory(CashType.Money)](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
+| Creditors and Debtors | [Cash.vwBalanceSheetSubjects](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheetSubjects.sql) |
+| Bank and Cash | [Cash.vwBalanceSheetAccounts](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheetAccounts.sql) |
+| Assets and Liabilities | [Cash.vwBalanceSheetAssets](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheetAssets.sql) |
+| Corporation Tax | [Cash.vwBalanceSheetTax](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheetTax.sql) |
+| VAT | [Cash.vwBalanceSheetVat](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Views/vwBalanceSheetVat.sql) |
+| Asset Profits | [Cash.fnFlowCategory(CashType.Money)](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Cash/Functions/fnFlowCategory.sql) |
 
 ### Capital Layer
 
@@ -301,12 +301,12 @@ If we remove Projects from the schema, you are left with subjects and objects, l
 
 | Schema | T-Sql |
 | -- | -- |
-| Subjects | [Subject.tbSubject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Subject/Tables/tbSubject.sql) |
-| Objects | [Object.tbObject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Object/Tables/tbObject.sql) |
-| Quantity | [Project.tbProject](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbProject.sql) |
-| Value | [Invoice.tbInvoice](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Invoice/Tables/tbInvoice.sql) |
-| Physical Connector | [Project.tbAllocation](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbAllocation.sql) |
-| Financial Connector | [Invoice.tbMirror](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Invoice/Tables/tbMirror.sql) |
+| Subjects | [Subject.tbSubject](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Subject/Tables/tbSubject.sql) |
+| Objects | [Object.tbObject](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Object/Tables/tbObject.sql) |
+| Quantity | [Project.tbProject](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Project/Tables/tbProject.sql) |
+| Value | [Invoice.tbInvoice](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Invoice/Tables/tbInvoice.sql) |
+| Physical Connector | [Project.tbAllocation](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Project/Tables/tbAllocation.sql) |
+| Financial Connector | [Invoice.tbMirror](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Invoice/Tables/tbMirror.sql) |
 
 When we re-apply the schema derived from my description of the [technological object](/articles/tc_production#subjects-and-objects), we can start producing again and forming supply-chains. But we can also apply interface projection to the asset-based world view in a very simple yet informative way. 
 

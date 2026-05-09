@@ -165,7 +165,7 @@ It is a spatial representation of time that must begin in earth’s geology, wit
 
 Looking down upon this vision of the humble car, as though from a mountain top, we have a very different vision of its true nature. Below us dwells the flayed body of a transforming, interconnected earth. At our feet, wide open cast mines paraded by driverless trucks with 5 metre wheels; dark caverns deep below ground where diamond encrusted drills are boring out a million tons of rock. Oil rigs float on icy seas, their proboscis dug in, sucking up crude from the depths. In the far distance you discern a speck of dust: your vehicle emerging onto the forecourt, perched on the ledge of a new horizon. It may be for racing: bright light in the firmament burning with desire; or just a delivery van: inconspicuous white cell pottering down the asphalt arteries of the world. Its interface is now connected to the user’s world. We, however, have entered an engineered reality where the possibilities for process and object creation are effectively infinite.
 
-The Spatial Workflow is modelled in the [sqlNode](https://github.com/tradecontrol/sqlnode) by the [Object](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Object.sql) schema; the Temporal Workflow by the [Project](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Security/Project.sql) schema.
+The Spatial Workflow is modelled in the [sqlNode](https://github.com/tradecontrol/sqlnode) by the [Object](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Security/Object.sql) schema; the Temporal Workflow by the [Project](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Security/Project.sql) schema.
 
 #### Production Environment
 
@@ -356,7 +356,7 @@ The American inventor, Benjamin Franklin, said that man is the tool making anima
   </a>
 </div>
 
-The Production Network has two placeholders in the Trade Control schema design: [Object.tbOp](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Object/Tables/tbOp.sql) and [Project.tbOp](https://github.com/TradeControl/tradecontrol.web/blob/HEAD/src/Schema/tcNodeDb4/Project/Tables/tbOp.sql) for the Spatial and Temporal Workflows respectively.
+The Production Network has two placeholders in the Trade Control schema design: [Object.tbOp](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Object/Tables/tbOp.sql) and [Project.tbOp](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Project/Tables/tbOp.sql) for the Spatial and Temporal Workflows respectively.
 
 ### Technological Strata
 
