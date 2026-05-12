@@ -9,6 +9,7 @@ Admin Manager is the central place to configure the business node.
 It is intended for **Administrators** (business owners, directors, or delegated administrators).
 
 <div style="max-width: 900px; margin: 1rem 0;">
+<a href="/admin/admin-manager-overview#modules" title="Forge of Thought — click to explore">
     <img
       src="/images/admin-manager-overview.png"
       alt="Admin Manager Overview"
@@ -34,8 +35,6 @@ On desktop, Admin Manager uses a split layout:
 On mobile devices, modules open as full pages.
 
 ## Modules
-
-This index will expand as additional modules are integrated.
 
 - [Setup](/admin/admin-manager-setup)
   - Configure the baseline business node setup.

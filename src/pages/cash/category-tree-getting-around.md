@@ -22,7 +22,7 @@ The Category Tree is where you configure your business structure: Totals (roll-u
 
 - Mobile: single pane with a context-aware action bar.
 
-<div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+<div style="max-width: 400px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-mobile.png" alt="Category Tree mobile mode"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
@@ -77,7 +77,7 @@ Jump to:
 - - Mobile action bar:
   - Context-aware buttons (View always; Edit/Delete/Toggle/Move if admin and applicable).
 
-<div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+<div style="max-width: 400px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/category-tree-mobile-action-bar.png" alt="mobile action bar"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>

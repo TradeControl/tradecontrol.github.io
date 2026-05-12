@@ -6,7 +6,14 @@ permalink: /cash/cash-configuration
 
 Instructions for configuring and classifying cash transactions in Trade Control.
 
-> The [Initialisation Process](/admin/admin-manager-init) installs a classification template depending on your business type. The following documentation is a user guide for further configuration and fine tuning.
+The [Initialisation Process](/admin/admin-manager-init) installs a classification template depending on your business type. The following documentation is a user guide for further configuration and fine tuning.
+
+<div style="max-width: 1200px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+    <a href="/cash/cash-polarity" title="Theoretical background — click to explore" >
+      <img src="/images/category-tree-overview.png" alt="Category Tree desktop mode"
+           style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
+    </a>
+</div>
 
 ## How Cash is Classified in Trade Control
 
