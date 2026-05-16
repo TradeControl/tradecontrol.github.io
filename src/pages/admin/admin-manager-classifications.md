@@ -11,14 +11,6 @@ Classifications covers two simple, foundational configuration areas:
 
 These are shared concepts across the system and rely on [**cash polarity**](/articles/tc_cash_codes) (the direction of value flow) to distinguish sales vs purchases, and customers vs suppliers.
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-classifications-tree.png"
-    alt="Admin Manager tree showing Invoice Settings and Subject Types"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
 ## Access
 
 Open:
@@ -41,14 +33,6 @@ This affects numbering only. It does not change existing invoices.
 Open:
 
 - In the tree: **Classifications > Invoice Settings**
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-invoice-settings-index.png"
-    alt="Invoice Settings page showing invoice types and their next numbers"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
 
 ### Change the next number (Administrator)
 
@@ -77,28 +61,12 @@ Open:
 
 - In the tree: **Classifications > Subject Types**
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-subject-types-index.png"
-    alt="Subject Types page showing subject type list and actions"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
 ### Create a subject type (Administrator)
 
 1. Select **New Type**.
 2. Enter a name (for example: “Customer”, “Supplier”, “Bank”, “Prospect”).
 3. Select the cash polarity.
 4. Select **Create**.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-subject-types-create.png"
-    alt="New Subject Type page showing Type name and Polarity selection"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
 
 ### Edit a subject type (Administrator)
 
@@ -113,11 +81,3 @@ You can delete a subject type only if it is not currently used by any subjects.
 1. Select **Delete**.
 2. Review the number of accounts/subjects using the type.
 3. If deletion is allowed, select **Delete** to confirm.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-subject-types-delete.png"
-    alt="Delete Subject Type confirmation page showing usage count and delete action"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>

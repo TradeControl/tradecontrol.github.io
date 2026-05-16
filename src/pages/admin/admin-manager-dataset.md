@@ -8,7 +8,7 @@ The Synthetic Datasets module replaces the current business data with a prepared
 
 <div style="max-width: 900px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-dataset-warning.png"
+      src="/images/admin-manager/dataset-warning.png"
       alt="Synthetic dataset destructive action warning"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
@@ -25,15 +25,14 @@ Use this module to:
 
 > **Important**: This is a destructive action. It re-initialises the business and replaces the current data with synthetic demo data.
 
-## Where to find it
+## Access
 
-In Admin Manager, open:
+Open:
 
-- **Setup**
-- **Synthetic Demo Data**
+- **System > Admin Manager**
+- select **Synthetic Demo Data**
 
-On desktop, the module opens in the right-hand details pane.  
-On mobile, it opens as a full page.
+On desktop, the module opens in the right-hand pane. On mobile, it opens as a full-screen view.
 
 ## Before you start
 
@@ -44,7 +43,7 @@ This process is intended for:
 - demonstrations
 - training
 - test environments
-- clean tutorial resets
+- tutorial resets
 
 It is not intended for live production data.
 
@@ -54,63 +53,49 @@ The first screen is a confirmation step. You must explicitly confirm that the cu
 
 <div style="max-width: 900px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-dataset-warning.png"
+      src="/images/admin-manager/dataset-warning.png"
       alt="Synthetic dataset confirmation screen"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
 </div>
 
-After confirming, select **Proceed to demo data setup**.
-
 ## Step 2: Choose the dataset setup
 
 The setup screen lets you choose the configuration that will be used to rebuild the node.
 
-<div style="max-width: 900px; margin: 1rem 0;">
+<div style="max-width: 1200px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-dataset-config.png"
+      src="/images/admin-manager/dataset-config.png"
       alt="Synthetic dataset setup screen"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
 </div>
 
-### Configuration Template
+Set:
 
-Choose the template that the synthetic dataset should be based on.
+- the configuration template
+- the VAT registered option
+- the synthetic dataset scenario
 
-The template controls the accounting structure that will be installed with the dataset.
-
-### VAT Registered
-
-Use the VAT toggle to match the intended VAT setting for the dataset.
-
-The available synthetic scenarios are filtered by this setting. If a scenario is not shown, it may not be valid for the current VAT state.
-
-### Synthetic Dataset Scenario
-
-Choose the dataset scenario to install.
-
-This list is populated from the selected template and filtered by the VAT setting. The notes shown on screen help explain the selected template and scenario.
+The available scenarios depend on the selected template and VAT setting.
 
 ## Step 3: Queue the synthetic dataset
 
 Select **Queue synthetic dataset** to start the process.
 
-The dataset is installed in the background. Trade Control creates an execution record and opens the status screen so you can monitor progress.
+Trade Control creates an execution record and shows the status view so you can monitor progress.
 
 ## Step 4: Monitor execution status
 
-The status screen shows the live execution state while the dataset is being installed.
-
 <div style="max-width: 900px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-dataset-status.png"
+      src="/images/admin-manager/dataset-status.png"
       alt="Synthetic dataset execution status screen"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
 </div>
 
-The status page shows:
+The status view shows:
 
 - execution status
 - progress message
@@ -121,28 +106,16 @@ The status page shows:
 - completion time
 - error details if the execution fails
 
-When the process completes successfully, the status changes to **Succeeded**.
-
-## What happens during installation
-
-When you queue a synthetic dataset, Trade Control:
-
-- re-initialises the current business node
-- applies the selected template structure
-- installs the selected synthetic scenario
-- records the execution outcome
-
-Because this rebuilds the business data, other pages may be temporarily unavailable until the process finishes.
-
 ## Tips
 
-- Review the warning carefully before proceeding.
-- If no scenarios are available, check the selected template and VAT setting.
-- Wait for the status screen to show completion before continuing with other work.
-- Use **Queue another dataset** if you want to run a different scenario after the current execution finishes.
+- review the warning carefully before proceeding
+- if no scenarios are available, check the selected template and VAT setting
+- wait for the status to show completion before continuing with other work
+- use **Queue another dataset** if you want to run a different scenario afterwards
 
 ## Related documentation
 
 - [Admin Manager - Overview](/admin/admin-manager-overview)
 - [Node Initialisation](/admin/admin-manager-init)
 - [Initialisation Templates](/admin/admin-manager-init-templates)
+- [Event Viewer](/admin/admin-manager-event-viewer)

@@ -6,24 +6,39 @@ permalink: /admin/admin-manager-user-registration
 
 User registration is a two-stage workflow:
 
-1. The user proves ownership of their email address (Identity confirmation).
-2. An Administrator provisions the user inside Trade Control (`Usr.tbUser`) and assigns roles.
+1. the user proves ownership of their email address
+2. an Administrator creates the internal Trade Control profile and assigns roles
 
-This page is written for end-users, support/Admins, and for an AI-agent to troubleshoot registration states.
+This page is intended for end users, support staff, and Administrators.
 
 ## Prerequisites
 
 Normal registration depends on email sending.
 
-Before users can register, an Administrator must configure and activate an SMTP profile:
+Before users can register, an Administrator must configure:
+
+- an active mail host
+- the user registration confirmation template
+- the user registration administrator notification template
+
+See:
 
 - [Admin Manager – Mail Host](/admin/admin-manager-mail-host)
+- [Admin Manager – HTML Templates](/admin/admin-manager-html-templates)
 
-## Process overview (state diagram)
+## Process overview
+
+The registration flow is:
+
+- user registers an Identity account
+- user confirms the email address
+- Administrators are notified
+- an Administrator creates the internal profile
+- roles are assigned
 
 <div class="tc-diagram-scroll">
   <img
-    src="/images/admin-manager-user-registration-flow.png"
+    src="/images/admin-manager/user-registration-flow.png"
     alt="Registration process state diagram"
     class="tc-diagram-full"
   />
@@ -53,71 +68,45 @@ stateDiagram-v2
 
 </details>
 
-## Step-by-step: end-user journey
+## End-user journey
 
 ### 1) Register
 
-The user registers using their email address and password.
-
-<div style="max-width: 600px; margin: 1rem 0;">
-    <img
-      src="/images/user-registration-register.png"
-      alt="Register page"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+The user creates an account with email address and password.
 
 Expected outcome:
 
-- The Identity user is created.
-- A confirmation email is sent.
-- The user is prompted to check their inbox.
+- the Identity user is created
+- a confirmation email is sent
+- the user is asked to check the inbox
 
 ### 2) Confirm email
 
-The user opens the confirmation email and selects **Confirm email address**.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/user-registration-confirm-email.png"
-      alt="Confirmation email (Outlook)"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+The user opens the confirmation email and selects the confirmation link.
 
 Expected outcome:
 
-- The user is taken to the home page page.
-- Their Identity email is marked confirmed.
+- the email address becomes confirmed
+- the registration is ready for Administrator review
 
-### 3) Admins are notified
+### 3) Administrator notification
 
-After email confirmation succeeds, Trade Control notifies Administrators that a registration is awaiting processing.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/user-registration-admin-notify-email.png"
-      alt="Admin notification - new registration request"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+After email confirmation, Trade Control notifies Administrators that a registration is awaiting processing.
 
 Expected outcome:
 
-- Admins receive a “New registration request” email.
-- In **Admin Manager > Users**, the entry appears as:
+- Administrators receive the notification
+- the user appears in **Admin Manager > Users**
+- the registration is ready for profile creation
 
-  - Confirmed: Yes
-  - Registered: No
+## Administrator provisioning
 
-## Admin provisioning step
-
-Email confirmation proves email ownership. It does not create the internal user record.
+Email confirmation proves ownership of the email address, but it does not create the internal user record.
 
 An Administrator must:
 
-- Create the user in `Usr.tbUser`.
-- Assign roles.
+- create the `Usr.tbUser` profile
+- assign one or more roles
 
 See:
 
@@ -129,31 +118,23 @@ See:
 
 Common causes:
 
-- No active Mail Host is configured.
-- SMTP settings are incorrect (host/port/auth/password).
-- The email is in junk/quarantine.
+- no active mail host is configured
+- SMTP settings are incorrect
+- the registration templates are not assigned
+- the message was filtered to junk or quarantine
 
 Actions:
 
-- Validate SMTP using **Mail Host > Test Email**.
-- Check **Event Logs** for mail send errors.
+- validate SMTP using **Mail Host > Test Email**
+- verify **Templates > System** assignments
+- inspect **Event Viewer** for mail send errors
 
 ### Confirmed user cannot sign in
 
 Cause:
 
-- Confirmed is complete, but Registered is not complete (`Usr.tbUser` has not been created yet).
+- the user is confirmed, but the internal profile has not yet been created
 
 Action:
 
-- In **Admin Manager > Users**, select **Create** for the registrant.
-
-### Confirmation button not visible in Outlook
-
-Cause:
-
-- Outlook can ignore CSS classes and some modern HTML email styling.
-
-Action:
-
-- The email template should use an Outlook-safe (table + inline styles) button and include the raw URL as a fallback.
+- in **Admin Manager > Users**, create the internal profile

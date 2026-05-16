@@ -6,17 +6,15 @@ permalink: /admin/admin-manager-tax-config
 
 Tax Configuration is where you define how Trade Control calculates and reports tax.
 
-This module is intended for **Administrators** (and some actions are available to Managers, depending on role).
+This area covers:
 
-It covers three areas:
+- Tax Settings
+- Tax Codes
+- Tax Rates & Adjustments
 
-- Tax Settings (how tax periods are defined and when tax becomes due).
-- Tax Codes (VAT codes and rounding behavior used on invoices, orders, and postings).
-- Rates & Adjustments (corporation tax rates over time and windowed adjustments for VAT and corporation tax).
-
-<div style="max-width: 900px; margin: 1rem 0;">
+<div style="max-width: 1200px; margin: 1rem 0;">
   <img
-    src="/images/admin-manager-tax-config-tree.png"
+    src="/images/admin-manager/tax-config.png"
     alt="Admin Manager tree showing Tax Settings, Tax Codes, and Tax Rates & Adjustments"
     style="width: 100%; height: auto; display: block; border-radius: 8px;"
   />
@@ -27,168 +25,50 @@ It covers three areas:
 Open:
 
 - **System > Admin Manager**
-- In the tree: **Tax**
-  - **Tax Settings**
-  - **Tax Codes**
-  - **Tax Rates & Adjustments**
+- in the tree:
+  - **Tax > Tax Settings**
+  - **Tax > Tax Codes**
+  - **Tax > Tax Rates & Adjustments**
 
-On desktop, modules open in the right-hand pane (embedded). On mobile devices, modules open as full pages.
+On desktop, these modules open in the right-hand pane. On mobile, they open as full-screen views.
 
----
+## Tax Settings
 
-## 1) Tax Settings
+Tax Settings defines the scheduling rules for each tax type.
 
-Tax Settings defines the scheduling rules for each tax type (for example: when VAT is due, or how corporation tax periods align to the financial year).
+Use it to review and maintain:
 
-Open:
+- posting behavior
+- recurrence rules
+- due month
+- offset days
+- default subject where applicable
 
-- In the tree: **Tax > Tax Settings**
+## Tax Codes
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-settings-index.png"
-    alt="Tax Settings index showing configured tax types and actions"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
+Tax Codes define VAT behavior and are referenced by invoices, orders, and other tax-sensitive transactions.
 
-### View settings (Details)
+Use this area to:
 
-1. Select **Details** for a tax type.
-2. Review:
-   - Posting behavior (cash code / description)
-   - Recurrence rules (e.g., quarterly VAT)
-   - Due month and offset days
-   - Default subject (where applicable)
+- create a tax code
+- edit an existing tax code where appropriate
+- review rate, decimals, type, and rounding
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-settings-details.png"
-    alt="Tax Settings details page"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
+### Important note
 
-### Edit settings (Administrator)
+If a VAT rate changes, it is normally better to create a new tax code rather than change a historically used code.
 
-1. Select **Edit**.
-2. Make changes.
-3. Select **Update**.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-settings-edit.png"
-    alt="Tax Settings edit page"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
----
-
-## 2) Tax Codes
-
-Tax Codes define VAT behaviors (rate/rounding/type) and are referenced by invoices, orders, and other tax-sensitive transactions.
-
-Open:
-
-- In the tree: **Tax > Tax Codes**
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-codes-index.png"
-    alt="Tax Codes index page showing tax codes list"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
-### Create a tax code
-
-1. Select **New Tax Code**.
-2. Enter a description.
-3. Optional: select **Generate** to suggest a code.
-4. Enter:
-   - Tax type
-   - Rounding
-   - Tax rate (%)
-   - Decimals
-5. Select **Create**.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-codes-create.png"
-    alt="Create Tax Code page showing editable code, percent tax rate input, and rounding/type selectors"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
-### Edit a tax code (immutability warning)
-
-Tax codes should not be changed retrospectively if they have been used historically.
-
-If a VAT rate changes, you normally create a **new** tax code rather than modifying an old one, since historic tax results can be recalculated from the origin transactions.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-codes-edit-warning.png"
-    alt="Edit Tax Code page showing the immutability warning and read-only tax code"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
----
-
-## 3) Tax Rates & Adjustments
+## Tax Rates & Adjustments
 
 Tax Rates & Adjustments is where you maintain:
 
-- Corporation tax rates over time (applied monthly in the system).
-- VAT adjustments and corporation tax adjustments, applied per tax period window.
+- corporation tax rates over time
+- VAT adjustments by period window
+- corporation tax adjustments by period window
 
-Open:
+Use this area to:
 
-- In the tree: **Tax > Tax Rates & Adjustments**
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-rates-index.png"
-    alt="Tax Rates & Adjustments index with year list and period tiles"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
-### Select a financial year
-
-Use the **Financial Year** selector to filter the list and automatically expand that year.
-
-### Open a period
-
-1. Select a month/period tile.
-2. The Period page lets you:
-   - Set VAT adjustment for the relevant VAT window
-   - Set corporation tax adjustment for the relevant corporation tax window
-   - Set the corporation tax rate for that month only
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-rates-period.png"
-    alt="Tax period page showing adjustments and monthly corporation tax rate sections"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
-
-### Set corporation tax rate by date range
-
-Use **Set by date range** to apply a rate across multiple months.
-
-1. From a Period page, select **Set by date range**.
-2. Enter Start date and End date.
-3. Enter the tax rate as a percentage (for example: 25 for 25%).
-4. Select **Set rate**.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img
-    src="/images/admin-manager-tax-rates-editrate.png"
-    alt="Set corporation tax rate by date range page"
-    style="width: 100%; height: auto; display: block; border-radius: 8px;"
-  />
-</div>
+- select a financial year
+- open a month or period
+- set adjustments for that period
+- set a corporation tax rate for a date range

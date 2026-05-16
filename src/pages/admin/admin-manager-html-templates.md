@@ -4,190 +4,133 @@ title: Admin Manager – HTML Templates
 permalink: /admin/admin-manager-html-templates
 ---
 
-HTML Templates is where you manage the HTML templates, embedded fragments, and images used by Trade Control to generate documents and emails.
+HTML Templates is where you manage the HTML resources used by Trade Control to generate invoice output and system emails.
 
 This module is intended for **Administrators**.
 
-<div style="max-width: 900px; margin: 1rem 0;">
+<div style="max-width: 1200px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-html-templates.png"
+      src="/images/admin-manager/html-templates.png"
       alt="Admin Manager HTML Templates"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
 </div>
 
-## What this module manages
-
-Use HTML Templates to:
-
-- Assign templates to a template type (for example, **Invoices** or **Orders**).
-- Manage embedded `.tpl` fragments used by templates.
-- Manage template images (linked resources), such as a logo.
-- Parse templates to validate that generated output will render correctly before use.
-
 ## Access
 
 Open:
 
-- **Admin > Manager**
-- Expand **Templates**
-- Select the template type you want to configure (for example, **Invoice Templates**).
+- **System > Admin Manager**
+- expand **Templates**
+- select either:
+  - **Invoices**
+  - **System**
 
-On desktop, the module opens in the right-hand pane. On mobile, it opens as a full page.
+On desktop, the selected template module opens in the right-hand pane. On mobile, it opens as a full-screen view.
 
-## System templates (Support Requests and User Registration)
+## Invoices
 
-Some system-generated emails are assigned under **System Templates**.
+The **Invoices** area is where you manage invoice-type templates and their related resources.
 
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-system-templates.png"
-      alt="System Templates assignments (Support Request and User Registration)"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+Use it to:
 
-This page is where the application assigns templates for:
+- select an invoice type
+- assign and remove invoice templates
+- manage attached documents
+- manage template images
+- parse templates and review parse results
 
-- Support request emails (raising support tickets)
-- User registration/verification emails (new user registration notifications)
+The Invoices module is organized into four tabs:
 
-## Configure a template type (example: Invoices)
+- **Templates**
+- **Attachments**
+- **Images**
+- **Parse**
 
-The workflow is the same pattern for any template type in Admin Manager:
+## Selecting an invoice type
 
-1. Select the template type (for example **Invoice Templates**).
-2. Select the subtype (for invoices, the **invoice type** dropdown).
-3. Assign one or more HTML templates.
-4. Assign images (if the HTML references `cid:[TAG]` images).
-5. Parse templates to validate they will render correctly.
+You can select an invoice type from the template tree or from the invoice type selector at the top of the panel.
 
-## Assign an HTML template (invoice example)
+Once selected, the module loads the assignments and options for that invoice type.
 
-1. Select the invoice type from the dropdown at the top of the page.
-2. Under **Assign a new template**, select a template file.
-3. Select **Assign**.
+## Templates tab
 
-Expected outcome:
+Use the **Templates** tab to:
 
-- The template appears under **Assigned templates** for that invoice type.
+- review assigned templates
+- assign a new template
+- open template images
+- parse one template
+- remove a template
 
-## Validate templates (Parse)
+### Assign a template
 
-Parsing identifies issues that would prevent output rendering correctly.
-
-In **Assigned templates**:
-
-- Select **Parse** for a single template, or
-- Select **Parse all** to validate every assigned template for the selected subtype (invoice type).
-
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-html-templates-parse.png"
-      alt="Parsing templates to validate output"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
-
-Parsing checks:
-
-- Invalid field tags (unknown `[Tag]` tokens)
-- Missing embedded template directives (for example `[Embed:Details=...]`, `[Embed:Tax=...]`)
-- Missing embedded `.tpl` files
-- Invalid embedded `.tpl` structure (required markers/placeholders)
-- Missing required output tags required by the renderer
-- Image usage vs assignment
-- Assigned images missing their files
+1. Select the invoice type
+2. in **Assign a New Template**, choose a template file
+3. select **Assign**
 
 Expected outcome:
 
-- Errors and warnings are shown in the parse report panel.
-- The parse status is persisted and used by Admin Manager to indicate template health.
+- the template appears in **Assigned Templates**
 
-## Embedded templates (.tpl) and required structure
+## Attachments tab
 
-HTML templates can reference embedded fragments using directives such as:
+Use the **Attachments** tab to review and maintain documents assigned to the selected invoice type.
 
-- `[Embed:Details=invoice_template_std_details]`
-- `[Embed:Tax=invoice_template_std_tax]`
+You can:
 
-These directives map to `.tpl` files in the templates folder.
+- view assigned documents
+- assign a new document
+- remove an existing document
 
-Embedded `.tpl` fragments must contain:
+## Images tab
 
-- `<!--ITEM-->` and `<!--/ITEM-->` markers (the repeating row template).
-- `[Items]` (where the rendered repeating rows are inserted).
+Use the **Images** tab to work with the images assigned to a selected template.
 
-If `[Items]` is missing, the embedded fragment exists but will not render repeating content.
+You can:
 
-## Template images (LOGO and other linked resources)
+- choose an assigned template
+- review assigned images
+- assign a new image
+- edit an image tag
+- remove an image assignment
 
-If the HTML template references an inline image, for example:
+If your HTML references an inline image such as `cid:[LOGO]`, the assigned image tag must match the tag used in the template.
 
-- `<img src="cid:[LOGO]" alt="logo">`
+## Parse tab
 
-Then `LOGO` must be assigned to an image file for that specific template.
+Use the **Parse** tab to validate templates before use.
 
-1. In **Assigned templates**, select the template name to open **Template Images**.
-2. Under **Assign a new image**, choose an image file and select **Assign**.
-3. If needed, edit the tag so it matches the tag referenced in the HTML (for example `LOGO`).
+You can:
 
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-html-template-images.png"
-      alt="Template Images management"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+- select **Parse** for a single template
+- select **Parse all** for the selected invoice type
 
-Expected outcome:
+The parse report can highlight:
 
-- The image appears under **Assigned images** for that template.
-- When output is generated, the image is embedded and renders in the document/email body.
+- invalid field tags
+- missing embed directives
+- missing embedded templates
+- invalid embedded templates
+- missing required output tags
+- image tags without assignment
+- assigned images missing files
+- assigned image tags without usage
+- unused available fields
 
-## Navigation notes
+## System
 
-- The Template Images page includes a **Back** button that returns to the correct parent configuration page.
-- When working embedded inside Admin Manager, updates trigger refresh events so the left-hand tree stays in sync.
+The **System** area is where you assign templates used by system-generated emails.
 
-## Common errors
+Use it to set templates for:
 
-### Unknown field tag
+- support request emails
+- user registration emails
+- user registration confirmation emails
+- user registration administrator notification emails
 
-Cause:
+## Notes
 
-- The template contains a token that the renderer does not support.
-
-Fix:
-
-- Remove the token or replace it with a supported field tag.
-
-### Missing embedded template directive
-
-Cause:
-
-- A required embed directive is missing from the HTML template.
-
-Fix:
-
-- Add the required embed directives for that template type.
-
-### Embedded template invalid (missing `[Items]`)
-
-Cause:
-
-- The embedded `.tpl` file is missing the `[Items]` placeholder.
-
-Fix:
-
-- Add `[Items]` outside the `<!--ITEM--> ... <!--/ITEM-->` block.
-
-### Image tag not assigned to template
-
-Cause:
-
-- The template references `cid:[TAG]` but no image with tag `TAG` is assigned.
-
-Fix:
-
-- Assign an image to the template and ensure the tag matches (case-insensitive).
+- invoice type nodes are selected directly from the template tree
+- related work is grouped inside one module instead of being spread across separate pages
+- on mobile, **Back** returns to the previous Manager node

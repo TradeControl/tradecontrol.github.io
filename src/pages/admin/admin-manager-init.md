@@ -6,34 +6,36 @@ permalink: /admin/admin-manager-init
 
 Node initialisation configures the Trade Control business entity node and creates the baseline configuration required to use the application.
 
-<div style="max-width: 900px; margin: 1rem 0;">
+<div style="max-width: 1200px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-config.png"
+      src="/images/admin-manager/init-config.png"
       alt="Configuration Screenshot"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
 ## When this page appears
 
-On first connection to a new (empty) database, Trade Control automatically redirects to the Business Setup form from `TradeControl.Web.Pages.IndexModel.OnGetAsync()`.
+On first connection to a new or empty database, Trade Control redirects to the Business Setup form.
 
 This is expected during deployment and first-run setup.
+
+The same workflow can also be reached later from:
+
+- [Admin Manager - Setup](/admin/admin-manager-setup)
 
 ## What the form does
 
 When you submit the form, Trade Control runs the node configuration and baseline setup procedures using the values you provide.
 
-The most important choices are the **Initialisation Template**, which controls what configuration is installed, and your **Period End** date. All other settings are easily modified later, but these two settings determine the initial configuration of the business node and how the accounting model will interpret transactions.
+The most important choices are:
 
-The template you select determines how the business is configured. For example:
+- the **Initialisation Template**
+- the **financial year structure**
 
-- **HMRC templates** map cash transactions to tax return codes, simplifying account submission.
-- If you're following a tutorial, select the associated template and set the year end to the **previous month** to simulate a year-end.
-- Otherwise, choose the **start month** you registered with HMRC.
+These settings determine the initial business configuration and how the accounting model interprets transactions.
 
-For more information, consult:
+For more information, see:
 
 - [Initialisation Templates](/admin/admin-manager-init-templates)
 
@@ -43,59 +45,61 @@ For more information, consult:
 
 <div style="max-width: 800px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-template.png"
+      src="/images/admin-manager/setup-template.png"
       alt="Business Template and Unit of Account"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
-Use this section to select the template rule set, Unit of Account and financial year start month.
+Use this section to select:
+
+- the template rule set
+- the unit of account
+- the financial year start month
 
 ### Business and Primary Contact
 
 <div style="max-width: 800px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-business.png"
+      src="/images/admin-manager/init-business.png"
       alt="Business Identity"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
-Use this section to define the business identity (account code, name, and address), business owner/administrator contact details.
+Use this section to define:
+
+- the business identity
+- the account code
+- the business name and address
+- the primary contact details
 
 ### Registration & Tax
 
 <div style="max-width: 800px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-registration-tax.png"
+      src="/images/admin-manager/init-registration-tax.png"
       alt="Registration and Tax"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
-Use this section to record optional company and VAT identifiers and confirm the default government/tax authority entity name.
+Use this section to record company and VAT identifiers where applicable.
 
 ### Banking
 
 <div style="max-width: 800px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-banking.png"
+      src="/images/admin-manager/init-banking.png"
       alt="Bank Details"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
-Use this section to set the default current and reserve account details used by the accounting model. If you do not have a reserve account, you can leave these fields blank. Additional reserve accounts can be added later.
-
-> **Important**: Sole Traders cannot use their own personal bank account because the system reconciles business and bank transaction balances. If your business does not have a current account, create a new account with your bank and use those details here. It will also reduce your dependency on receipts to near zero.
+Use this section to set the default current and reserve account details used by the accounting model.
 
 ## Tips
 
-Although every setting can be retrospectively modified, it's best to enter correct values from the outset to avoid unnecessary reconfiguration later.
-
-- If you are unsure which start month to choose, use the financial year start you registered with HMRC (or your official accounting year start).
-- Treat initialisation as a foundational step; review template and financial year values carefully before submitting.
+- if you are unsure which financial year start to use, use the official year start registered for the business
+- if you are following a tutorial, choose the matching template and date guidance from that tutorial
+- review template and year settings carefully before submitting

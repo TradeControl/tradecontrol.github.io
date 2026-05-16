@@ -8,117 +8,82 @@ Users is where Administrators process registration requests and manage access.
 
 Use it to:
 
-- Create internal user records (`Usr.tbUser`) for confirmed registrants.
-- Assign roles (e.g. Administrator, Manager).
-- Delete registrations/users safely.
+- create internal user records for confirmed registrants
+- assign roles such as Administrator and Manager
+- delete registrations or users safely
+
+<div style="max-width: 1200px; margin: 1rem 0;">
+  <img
+    src="/images/admin-manager/users.png"
+    alt="User maintenance module"
+    style="width: 100%; height: auto; display: block; border-radius: 8px;"
+  />
+</div>
 
 ## Access
 
 Open:
 
-- **Admin > Manager**
-- Select **Users**
+- **System > Admin Manager**
+- select **Users**
 
-On desktop, the module opens in the right-hand pane (embedded mode). On mobile devices, it opens as a full page.
+On desktop, Users opens in the right-hand pane. On mobile, it opens as a full-screen view.
 
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-users-tree.png"
-      alt="Admin Manager with Users selected"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+## What the module shows
+
+The Users area combines:
+
+- a registration workflow summary
+- readiness checks for registration email dependencies
+- a stage filter for registrations
+- the working list of users and registrations
 
 ## Understand the user states
 
-The list displays two key flags:
+The list uses two important flags:
 
-- **Confirmed**: the user confirmed their email in Identity.
-- **Registered**: the internal user record exists (`Usr.tbUser`).
+- **Confirmed**: the user confirmed their email address
+- **Registered**: the internal Trade Control profile exists
 
-These states are explained here:
+These states are explained in:
 
 - [Users - Registration process](/admin/admin-manager-user-registration)
 
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-users-index.png"
-      alt="User registrations list showing confirmed and registered state"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+## Process a new registration
 
-## Process a new registration (Confirmed = Yes, Registered = No)
+The normal flow is:
 
-This is the normal state after the user confirms their email address.
-
-1. Find the user in the list.
-2. Select **Create**.
-3. Enter the internal user details.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-users-create.png"
-      alt="Create user form"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+1. find a user with confirmed email
+2. select **Create**
+3. enter the internal profile details
+4. save the profile
 
 Expected outcome:
 
-- A `Usr.tbUser` record is created.
-- The user becomes **Registered**.
-- The user can then be assigned roles.
+- the `Usr.tbUser` record is created
+- the user becomes registered
+- role assignment can proceed
 
-### User ID generation
+## Assign roles
 
-When you enter a Name, Trade Control suggests a default **User ID** based on the name and makes it unique.
+1. Locate the registered user
+2. select **Roles**
+3. assign the required roles
+4. save the changes
 
-You can override the suggestion by typing a different User ID.
-
-## Assign roles (Confirmed = Yes, Registered = Yes)
-
-1. Locate the user.
-2. Select **Roles**.
-3. Assign roles as required.
-
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-users-roles.png"
-      alt="Assign roles"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
-
-Expected outcome:
-
-- The user has access appropriate to their role.
-- Administrative modules remain restricted to Admins.
-
-## Delete a registration / user
+## Delete a registration or user
 
 Delete is intended for:
 
-- Mistaken registrations.
-- Users who should no longer have access.
-- Cleanup after testing.
+- mistaken registrations
+- access removal
+- test-data cleanup
 
-1. Select **Delete** for the user.
-2. Confirm deletion.
+1. Select **Delete**
+2. review the confirmation
+3. confirm deletion
 
-<div style="max-width: 900px; margin: 1rem 0;">
-    <img
-      src="/images/admin-manager-users-delete.png"
-      alt="Delete registration confirmation"
-      style="width: 100%; height: auto; display: block; border-radius: 8px;"
-    />
-</div>
+## Notes
 
-### Deletion consequences and constraints
-
-Trade Control attempts to delete both:
-
-- The Identity user (authentication/login)
-- The internal user (`Usr.tbUser`)
-
-If `Usr.tbUser` cannot be deleted due to references (foreign key constraints), deletion is blocked and an event is written explaining what must be removed first.
+- on mobile, **Back** returns to the previous Manager node
+- if a deletion fails because of references, inspect **Event Viewer** for details

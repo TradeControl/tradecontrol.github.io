@@ -4,56 +4,71 @@ title: Admin Manager - Setup
 permalink: /admin/admin-manager-setup
 ---
 
-Setup in Admin Manager is used to (re)initialise the business node after tutorials, trial runs, or when you intentionally need a clean configuration baseline.
+Setup is used to initialise or re-initialise the business node when you need a clean configuration baseline.
 
 ## Access
 
 Open:
 
-- **System > Business Manager > Setup**
+- **System > Admin Manager**
+- select **Setup**
 
-## Business Initialisation (destructive)
+On desktop, Setup opens in the right-hand pane. On mobile, it opens as a full-screen view.
 
-<div style="max-width: 900px; margin: 1rem 0;">
+## Business Initialisation
+
+<div style="max-width: 1200px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-setup-warning.png"
+      src="/images/admin-manager/setup-warning.png"
       alt="Business Initialisation Warning"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
-The Business Initialisation page is a destructive operation.
+Business Initialisation is a destructive action.
 
 It will:
 
-- Wipe existing organisations and transactions.
-- Recreate a blank node ready for configuration.
+- remove existing organisations and transactions
+- recreate a blank node ready for configuration
 
 Safety controls:
 
-- Access is restricted to the `Administrators` role.
-- You must confirm the warning checkbox before proceeding.
+- access is restricted to the `Administrators` role
+- you must confirm the warning before continuing
 
-## Business Setup (configuration form)
+## Business Setup form
 
-<div style="max-width: 900px; margin: 1rem 0;">
+<div style="max-width: 1200px; margin: 1rem 0;">
     <img
-      src="/images/admin-manager-setup-config.png"
+      src="/images/admin-manager/setup-config.png"
       alt="Business Initialisation Configuration"
       style="width: 100%; height: auto; display: block; border-radius: 8px;"
     />
-  </a>
 </div>
 
-After confirming the warning, you will be taken to the Business Setup form.
+After confirming the warning, the Business Setup form opens.
 
-For detailed guidance on how the form works and how to choose templates and financial year settings, see:
+Use it to define:
+
+- the initialisation template
+- the financial year structure
+- the business identity
+- tax and registration details
+- default banking details
+
+For detailed guidance on the setup fields, see:
 
 - [Node Initialisation](/admin/admin-manager-init)
 
-## Embedded behavior
+## Typical uses
 
-On desktop, the Setup pages open inside the Admin Manager right-hand pane (embedded mode).
+Use Setup when you need to:
 
-On mobile devices, Setup opens as a full page.
+- prepare a new business node
+- reset a trial or tutorial environment
+- intentionally rebuild the accounting baseline
+
+## Mobile notes
+
+On mobile, the **Back** action returns to the previous Admin Manager node.
