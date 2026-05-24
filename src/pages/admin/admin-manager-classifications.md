@@ -9,7 +9,7 @@ Classifications covers two simple, foundational configuration areas:
 - Invoice Settings (next document numbers)
 - Subject Types (how organizations are classified)
 
-These are shared concepts across the system and rely on [**cash polarity**](/articles/tc_cash_codes) (the direction of value flow) to distinguish sales vs purchases, and customers vs suppliers.
+These are shared concepts across the system and rely on [**cash polarity**](/cash/cash-polarity) (the direction of value flow) to distinguish sales vs purchases, and customers vs suppliers.
 
 ## Access
 

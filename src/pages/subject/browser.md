@@ -6,7 +6,7 @@ permalink: /subject/browser
 
 Subject Browser is where you organise, browse, and maintain people, organisations, departments, and structural groupings in one place.
 
-Unlike older contact lists, Subject Browser is built around [a namespace model](/articles/tc_production/#namespaces). A **namespace** is simply the path that shows where a Subject sits in your business structure.
+Unlike older contact lists, Subject Browser is built around a namespace model. A **namespace** is simply the path that shows where a Subject sits in your business structure.
 
 A Subject can represent:
 

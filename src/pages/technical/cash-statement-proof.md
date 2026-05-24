@@ -4,7 +4,7 @@ title: Cash Statement Proofs (DEBK Invariants)
 permalink: /technical/cash-statement-proof
 ---
 
-A unified DEBK invariant for companies and sole traders
+A unified <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping" target="_blank" rel="noopener noreferrer">DEBK</a> invariant for companies and sole traders
 
 - Published: 25 March 2026
 - Revised: 19 April 2026
@@ -14,7 +14,7 @@ A unified DEBK invariant for companies and sole traders
 **Trade Control** is an open‑source production system with an accounting engine built on a simple idea:  
 that the economic reality of a business is found in its *flows* — the productive transactions that move goods, services, and cash — rather than in static snapshots of assets.
 
-In this model, every financial transaction mirrors a productive one, with quantity and cash expressed as opposite‑signed flows. This [Cash Polarity Principle](/articles/tc_production#cash-polarity) allows Trade Control to operate at the level of individual transactions, independent of arbitrary reporting periods. From this transaction‑grained representation, the engine can algorithmically reconstruct the asset‑based reporting required by conventional accounting.
+In this model, every financial transaction mirrors a productive one, with quantity and cash expressed as opposite‑signed flows. This [Cash Polarity Principle](/cash/cash-polarity) allows Trade Control to operate at the level of individual transactions, independent of arbitrary reporting periods. From this transaction‑grained representation, the engine can algorithmically reconstruct the asset‑based reporting required by conventional accounting.
 
 The invariant presented in this paper is the bridge between these two mentalities. It shows how a dynamic, flow‑based model can be reconciled exactly with the static, asset‑rooted view of traditional bookkeeping. Because this approach rewrites the core computational logic of accounting, it requires a clear, rigorous proof. This document provides that proof, along with the definitions and reasoning that make the invariant operational inside Trade Control.
 
