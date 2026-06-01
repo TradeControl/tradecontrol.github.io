@@ -130,7 +130,7 @@ This ensures downstream reporting surfaces (views/materializations that depend o
 
 ## Relationship to the proof paper
 
-The proof paper [`/technical/cash-statement-proof`](/technical/cash-statement-proof) references:
+[The proof paper](https://github.com/iamonnox/papers/blob/main/DEBK/debk.md) references:
 
 - the proof assertions script [`PROOF_CashStatementReconciliation.sql`](https://github.com/TradeControl/sqlnode/blob/HEAD/src/tcNodeDb4/Scripts/PROOF_CashStatementReconciliation.sql), and
 - annual reconciliation views.

@@ -14,14 +14,14 @@ permalink: /
 
 ## A new foundation for ERP design
 
-Trade Control rethinks how <a href="https://en.wikipedia.org/wiki/Enterprise_resource_planning" target="_blank" rel="noopener noreferrer">ERP applications</a> are designed. Instead of combining double‑entry book‑keeping with separate sales, works, and purchase order systems, Trade Control models both money and goods as flows with [polarity](/strategy/strategy-section-one-c-operations-cash). This unified structure supports operational modelling, financial reporting, and tax behaviour within a single coherent framework.
+Trade Control rethinks how <a href="https://en.wikipedia.org/wiki/Enterprise_resource_planning" target="_blank" rel="noopener noreferrer">ERP applications</a> are designed. Instead of combining double‑entry book‑keeping with separate sales, works, and purchase order systems, Trade Control models both money and goods as flows with [polarity](/cash/cash-polarity). This unified structure supports operational modelling, financial reporting, and tax behaviour within a single coherent framework.
 
 This site is the home of:
 
 - **Guides and Documentation** — user guides, technical references, and schema details  
 - **Proofs and Examples** — formal reconciliation identities and machine‑checkable outputs  
 
-Trade Control includes a synthetic dataset and [a full proof suite](/technical/cash-statement-proof) demonstrating that polarity‑driven flows produce DEBK‑consistent financial statements.
+Trade Control includes a [synthetic dataset](technical/synthetic-dataset) and [a full proof suite](https://github.com/iamonnox/papers/blob/main/DEBK/debk.md) demonstrating that polarity‑driven flows produce DEBK‑consistent financial statements.
 
 ### Technical Papers
 

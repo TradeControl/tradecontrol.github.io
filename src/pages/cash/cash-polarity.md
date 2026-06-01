@@ -15,7 +15,7 @@ by treating all business activity as **flows with polarity**. Every flow—finan
 
 This page introduces the theory. The formal mathematical proofs demonstrating that polarity‑driven flows produce DEBK‑consistent financial statements are available at:
 
-- [Cash Statement Proofs (DEBK Invariants)](/technical/cash-statement-proof)
+- [Cash Statement Proofs (DEBK Invariants)](https://github.com/iamonnox/papers/blob/main/DEBK/debk.md)
 
 ## 1. Polarity as a unifying principle
 
@@ -121,4 +121,4 @@ Cash Polarity is not only a conceptual framework; it is mathematically verifiabl
 
 The proofs are documented at:
 
-- [Cash Statement Proofs (DEBK Invariants)](/technical/cash-statement-proof)
+- [Technical Background](https://github.com/iamonnox/papers)

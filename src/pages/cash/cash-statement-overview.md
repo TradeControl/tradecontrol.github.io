@@ -145,8 +145,6 @@ To enable it, select:
 - **WARN**: there is a difference that is small enough to normally be caused by rounding or timing edges, but should still be reviewed before submission.
 - **FAIL**: the bridge does not balance and must be corrected before submission.
 
-For technical details, consult the [algorithmic proofs](/technical/cash-statement-proof).
-
 ## Who uses what (quick guidance)
 
 ### If you configure the Category Tree
