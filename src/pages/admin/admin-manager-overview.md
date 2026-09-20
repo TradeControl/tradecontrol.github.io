@@ -70,6 +70,9 @@ On mobile devices, modules open as full-screen views with a **Back** action to r
   - Tax Settings: due rules and scheduling per tax type.
   - Tax Codes: VAT codes and rounding rules used in transactions.
   - Tax Rates & Adjustments: corporation tax rates over time and windowed adjustments.
+- [Reporting Profiles](/admin/admin-manager-reporting-profiles)
+  - Maintain authority registrations and durable statutory filing settings.
+  - Review readiness before preparing submissions in Tax Hub.
 - [Classifications](/admin/admin-manager-classifications)
   - Invoice Settings: set the next document numbers per invoice type.
   - Subject Types: classify organizations using cash polarity.

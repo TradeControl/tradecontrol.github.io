@@ -6,7 +6,7 @@ permalink: dev/index
 
 Information about planned developments for Trade Control.
 
-Updated 3 June 2026
+Updated 7 August 2026
 
 ## Release 1 — Accounts Mode
 
@@ -14,14 +14,19 @@ Updated 3 June 2026
 
 ### Specifications
 
-- [ ] Invoice Register  
-- [ ] Company Accounts  
-- [ ] MTD API Interface  
+- [x] Invoice Register  
+- [x] Tax Hub
+- [x] Company Accounts  
+- [x] Self Assessment
+- [x] MTD API Interface  
 
 ### Implementation
 
-- [ ] Invoice Register  
-- [ ] Company Accounts  
+- [x] Invoice Register  
+- [x] Tax Hub
+- [x] VAT
+- [x] Self Assessment
+- [x] Company Accounts  
 - [ ] MTD API Interface  
 
 ### Deployment

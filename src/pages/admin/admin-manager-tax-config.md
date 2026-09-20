@@ -9,6 +9,7 @@ Tax Configuration is where you define how Trade Control calculates and reports t
 This area covers:
 
 - Tax Settings
+- Reporting Profiles
 - Tax Codes
 - Tax Rates & Adjustments
 
@@ -27,10 +28,15 @@ Open:
 - **System > Admin Manager**
 - in the tree:
   - **Tax > Tax Settings**
+  - **Tax > Reporting Profiles**
   - **Tax > Tax Codes**
   - **Tax > Tax Rates & Adjustments**
 
 On desktop, these modules open in the right-hand pane. On mobile, they open as full-screen views.
+
+## Reporting Profiles
+
+Reporting Profiles maintains the registrations, authority references and effective settings used for statutory filing. See [Admin Manager - Reporting Profiles](/admin/admin-manager-reporting-profiles) for the profile states, maintenance workflow and Tax Hub readiness link.
 
 ## Tax Settings
 

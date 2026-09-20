@@ -194,7 +194,7 @@ They are **conceptual visualisations** inspired by the structure and purpose of 
           half‑visible spinal column, a massive engineered nerve‑trunk whose full scale is deliberately
           withheld. Only a portion of it is shown — enough to imply power, not enough to reveal its limits.
           The trunk is a fused braid of dark metal, volcanic stone, and translucent channels of molten
-          circuitry. Larva‑flows pulse bright inside it, casting molten gold and electric orange
+          circuitry. Lava‑flows pulse bright inside it, casting molten gold and electric orange
           light across the ground.
         </p>
         <p>
