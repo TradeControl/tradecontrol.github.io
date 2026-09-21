@@ -1,25 +1,26 @@
 ---
 layout: ../../layouts/Documentation.astro
-title: Tax Configurator - MTD Mapping
+title: Tax Configurator - Statutory Mapping
 permalink: /tax/tax-configurator
 ---
 
-Tax Configurator is where you map accounting categories and cash codes to the tax field sets used by Trade Control.
+Tax Configurator is where you map accounting categories and Cash Codes to the statutory component fields used by Trade Control.
 
-The supplied templates create a sound mapping by default. You only need to configure MTD mappings if you modify the [Category Tree](/cash/category-tree-getting-around) or build your own.
+The supplied templates create a working mapping by default. You normally need to change it only if you modify the [Category Tree](/cash/category-tree-getting-around), add Cash Codes or build your own classification.
 
-## Related technical documents
+## Mapping guides
 
-These are for implementers and advanced users. They describe the field sets and canonical mappings used by the configurator.
+These guides explain the installed defaults, supported field groups and checks to make before changing a mapping:
 
-- [Self-Assessment mapping](/tax/self-assessment-map)
-- [Company mapping](/tax/company-map)
+- [Sole-Trader MTD Income Tax Mapping](/tax/self-assessment-map)
+- [Company Statutory Mapping](/tax/company-map)
+- [Company Mapping Process](/tax/company-map-process)
 
 ## What Tax Configurator does
 
 Tax Configurator lets you:
 
-- review the selected jurisdiction, source, tag class, or tag
+- review the selected jurisdiction, source, field class or field
 - add, remove, and enable mappings where the tag is mappable
 - validate the selected tax source after changes
 - work comfortably on desktop and mobile
@@ -72,11 +73,11 @@ The tree is organised as:
 
 The selected node is always shown in the details pane.
 
-### Tag classes
+### Field classes
 
-Only component tags can be mapped.
+Only component fields can be mapped.
 
-Derived and rollup tags are read-only and explain that they cannot be mapped.
+Calculated and contextual fields are read-only and explain that they cannot be mapped.
 
 ### Source nodes
 

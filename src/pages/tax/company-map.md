@@ -1,240 +1,65 @@
 ---
 layout: ../../layouts/Documentation.astro
-title: Company MTD Mapping (CT600)
+title: Company Statutory Mapping
 permalink: /tax/company-map
 ---
 
-This page explains how Trade Control presents **company account mappings** for the **MTD CT600** interface.
+This guide explains how a UK micro-entity company's Trade Control accounting data is projected for statutory accounts and Corporation Tax.
 
-It is written for technical implementers and advanced users who need a clear understanding of how company accounts are surfaced, grouped, and validated for the first micro-accounts release.
+The supplied company templates install working mappings. You normally need to change them only after customizing the [Category Tree](/cash/category-tree-getting-around) or adding Cash Codes.
 
-The focus is on the **MTD interface**, not the internal template tree. Where the Category Tree is referenced, it is only to explain how a mapping resolves.
+## Separate statutory outputs
 
-Abridged and full account formats will be added in later releases.
+Tax Hub keeps three projections separate:
 
-## Related technical documents
-
-- [Company mapping process](/tax/company-map-process) - how Trade Control builds the company MTD CT600 micro-accounts mapping from template definitions and live transactions
-
-## Scope
-
-In scope:
-
-- MTD CT600 company mapping interface
-- Micro-accounts only
-- Canonical reporting groups
-- AC-code mapping model
-- How mappings resolve into the Category Tree
-- Template behaviour (`BASE`, `MICRO_CUR`, `MICRO_CUR_STD`) where relevant
-- Validation and configuration notes
-
-Out of scope:
-
-- Abridged or full statutory accounts
-- Detailed template internals
-- Non-MTD reporting formats
-- Future account formats not included in the first release
-
-## 1. Overview of the MTD Company Mapping Interface
-
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img src="/images/company-mtd-overview.png" alt="Company MTD Mapping Overview" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
-</div>
-
-The Company MTD interface provides a **single, consolidated view** of how a business’s financial activity is mapped into the **CT600 reporting structure**.
-
-The interface presents:
-
-- Canonical reporting groups such as Turnover, Other Income, and Direct Costs
-- AC-codes used by HMRC for CT600 micro-entity submissions
-- Totals derived from the Category Tree
-- Validation indicators for missing or inconsistent mappings
-
-The user does **not** interact with the Category Tree directly.
-
-Instead, the interface shows reporting totals, each backed by a deterministic mapping chain:
-
-`AC-code → Reporting Group → Category → Cash Codes → Transactions`
-
-This page explains how that chain works.
-
-## 2. Canonical Reporting Groups
-
-The micro-accounts CT600 format uses a small, stable set of reporting groups.
-
-These appear directly in the MTD interface.
-
-| Reporting Group | Description |
+| Projection | Purpose |
 |---|---|
-| Turnover | Sales income from normal trading activity |
-| Other Income | Non-trading income, for example grants or sundry income |
-| Direct Costs | Costs directly attributable to generating turnover |
-| Staff Costs | Wages, salaries, subcontractors, and related staff cost headings |
-| Admin Costs | General administrative overheads |
-| Premises Costs | Rent, heat, light, and repairs |
-| Depreciation | Depreciation charges for plant, vehicles, and fixtures |
-| Tax | Corporation tax charge |
-| Profit | Profit before tax or after tax, as required by CT600 micro |
-| Capital / Balance Sheet | Equipment, adjustments, share capital, and reserves |
+| Company Accounts | Current and comparative statutory accounts information |
+| Corporation Tax | Accounting result, reviewed tax adjustments and computation results |
+| CT600 Return | Company Tax Return values and package declarations |
 
-These groups are populated automatically using the mapping model described next.
+Companies House accounts and the HMRC Company Tax Return are separate filings. They use different contracts, validation, credentials and acknowledgements. Acceptance by one authority would not imply acceptance by the other.
 
-## 3. AC-Codes Used in Micro-Accounts
+## Company Accounts
 
-The following AC-codes are used by the micro-entity CT600 format and are supported by the MTD interface.
+The default mapping supplies the accounting components that can be obtained deterministically from the Category Tree:
 
-| AC Code | Description | Source |
-|---|---|---|
-| `AC12` | Turnover | `MICRO_CUR_2026` |
-| `AC405` | Other income | `MICRO_CUR_2026` |
-| `AC410` | Direct costs | `MICRO_CUR_2026` |
-| `AC415` | Staff costs | `MICRO_CUR_2026` |
-| `AC420` | Depreciation | `MICRO_CUR_2026` / STD override |
-| `AC425` | Other charges / admin | `MICRO_CUR_2026` |
-| `AC34` | Profit or loss | `MICRO_CUR_2026` |
-| `AC435` | Tax on profit | `MICRO_CUR_2026` |
-| `CP28` | Additions to equipment | `MICRO_CUR_STD_2026` |
-| `CP46` | Depreciation adjustments | `MICRO_CUR_STD_2026` |
+| Statutory area | Default accounting source |
+|---|---|
+| Turnover | Turnover category |
+| Other income | Other-income category |
+| Cost of sales | Cost-of-sales category |
+| Administrative expenses | Staff-cost and overhead totals |
+| Fixed assets | Asset and accumulated-depreciation categories |
+| Creditors due after more than one year | Long-term-liability category |
 
-These codes are surfaced directly in the MTD interface.
+Tax Hub derives statement totals such as profit or loss, net current assets and net assets from their underlying evidence. Current assets, short-term creditors, capital and reserves, and similar balance-sheet values may also be obtained from account balances rather than configurable Tax Tag mappings.
 
-The mapping logic behind them is described below.
+Company identity, reporting periods, approval, accounting policies, average employees and conditional disclosures come from business configuration or the accounts-review workflow. They are not transaction classifications.
 
-## 4. Mapping Model
+## Corporation Tax computation
 
-The MTD interface uses a deterministic mapping chain:
+The accounting profit or loss is the starting point, not the taxable result.
 
-`AC-code → Category → Cash Codes → Transactions`
+The default configurable accounting component is book depreciation, which is supplied as evidence for a reviewed add-back. Other add-backs, deductions, capital allowances, gains, reliefs and loss claims require their proper reviewed source.
 
-### 4.1 AC-code assignment
+Accounting depreciation and capital allowances are different concepts. Do not map one directly to the other.
 
-<div style="max-width: 900px; margin: 1rem 0;">
-  <img src="/images/company-mtd-micro-map.png" alt="Micro Accounts Mapping Example" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
-</div>
+Tax Hub derives taxable total profits, Corporation Tax chargeable and tax payable from the approved computation inputs. The configured Corporation Tax rate applies to the relevant financial periods; historical differences should be represented by adjustments rather than by rewriting accounting history.
 
-Each AC-code is mapped to a Category in the template layer:
+## CT600 Return
 
-- `BASE_MIN_2026` defines the foundational categories
-- `MICRO_CUR_2026` assigns AC-codes to those categories
-- `MICRO_CUR_STD_2026` refines or overrides mappings, for example depreciation splits
+The default direct Category Tree mapping supplies turnover. Company identity, the UTR and return period come from statutory configuration and period context. Profit before tax, taxable total profits, Corporation Tax chargeable and tax payable are reconciled results from the accounts and computation.
 
-### 4.2 Category → Cash Code resolution
+Attachment choices, supplementary pages and the declaration are filing-workflow information. They are not Cash Code mappings.
 
-Each Category contains one or more cash codes.
+## Customize a mapping
 
-These represent the operational buckets used by the business.
+Use **Tax Configurator** to map a component field to a category or, where a narrower distinction is required, a Cash Code.
 
-Examples:
+A mapping is appropriate only when the selected accounting source has the same statutory meaning. Similar wording is not enough. Calculated, contextual and workflow fields remain read-only.
 
-- `CA-SALES` → `CC-SALES`
-- `CA-SALES` → `CC-SALAB`
-- `CA-SALES` → `CC-SAMAT`
-- `CA-DIRECT` → `CC-MAT`
-- `CA-DIRECT` → `CC-SUB`
-- `CA-DIRECT` → `CC-FUEL`
-- `CA-DIRECT` → `CC-MTRAV`
-- `CA-ASSET` → `CC-DEPRC`
-- `CA-ASSET` → `CC-DEPRJ`
-- `CA-ASSET` → `CC-DEPPL`
-- `CA-ASSET` → `CC-DEPMV`
-- `CA-ASSET` → `CC-DEPFX`
+After a change, validate every affected source and review the result in both [Tax Hub Accounts](/tax/tax-hub-accounts) and [Tax Hub Business Tax](/tax/tax-hub-business-tax).
 
-### 4.3 Cash Code → Transaction totals
-
-At runtime, the system totals all transactions assigned to the cash codes for a category.
-
-These totals feed the AC-code values shown in the MTD interface.
-
-### 4.4 Template stack behaviour
-
-The template stack is additive:
-
-**`BASE_MIN_2026`**
-
-- Defines the core company tree, including sales, direct costs, staff, admin, premises, depreciation, tax, and capital
-- Creates the foundational cash codes and assigns them to those categories
-- Provides the minimum depreciation and tax structure used by the micro accounts release
-
-**`MICRO_CUR_2026`**
-
-- Adds the micro-accounts AC-codes
-- Maps the reporting groups and categories to those AC-codes
-- Provides the first complete micro-entity reporting surface for the MTD interface
-
-**`MICRO_CUR_STD_2026`**
-
-- Adds more granular cash codes for materials, subcontractors, building, and admin
-- Splits depreciation into plant, vehicles, and fixtures
-- Adds `CP28` and `CP46` mappings
-- Overrides `BASE` depreciation behaviour so the STD definitions drive the final totals
-
-The MTD interface always reflects the final resolved mapping after all template layers are applied.
-
-## 5. Micro-Accounts Release
-
-The first release supports:
-
-- Micro-entity CT600 format
-- Full AC-code mapping for micro accounts
-- Standardised reporting groups
-- Deterministic mapping from template to MTD interface
-- Automatic validation of missing or unmapped categories
-
-Not included:
-
-- Abridged accounts
-- Full accounts
-- Director disclosures
-- Notes to the accounts
-- Multi-format switching
-
-These will be added in later releases.
-
-## 6. How the Category Tree Fits In
-
-The [Category Tree](/cash/category-tree-getting-around) is the internal semantic model used by the platform.
-
-It is not shown directly in the MTD interface.
-
-The tree provides:
-
-- Category definitions
-- Cash code membership
-- Roll-ups
-- Expression categories for profit, tax, and depreciation
-- Capital account structure
-
-The MTD interface consumes totals, not the tree itself.
-
-You only need to reference the Category Tree when:
-
-- diagnosing a missing total
-- understanding why a value appears under a specific AC-code
-- validating template overrides
-- extending the template for custom deployments
-
-## 7. Validation and Configuration Notes
-
-The MTD interface performs several checks:
-
-- Unmapped categories  
-  Categories without AC-codes are flagged.
-
-- Zero-value categories  
-  Shown but not flagged; useful for diagnostics.
-
-- Unexpected totals  
-  Indicates a cash code assigned to the wrong category.
-
-- Depreciation override checks  
-  Ensures STD depreciation replaces BASE depreciation cleanly.
-
-- Capital account consistency  
-  Ensures `CP28` and `CP46` totals match equipment movements.
-
-For implementers, the most common issues arise from:
-
-- custom cash codes not assigned to categories
-- category overrides that break roll-ups
-- missing STD depreciation splits
+For a task-oriented explanation of the mapping chain and validation checks, see [Company Mapping Process](/tax/company-map-process).
 

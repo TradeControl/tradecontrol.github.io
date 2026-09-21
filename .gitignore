@@ -32,3 +32,6 @@ src/env.d.ts
 *.suo
 *.userosscache
 *.sln.docstates
+
+# dev
+.local/
