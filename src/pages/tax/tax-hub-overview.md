@@ -12,9 +12,9 @@ Tax Hub supports:
 - MTD Income Tax cumulative reporting for sole traders using the MIN or STD accounting profile;
 - statutory accounts and accounts iXBRL preparation for companies;
 - Corporation Tax computation, computation iXBRL and CT600 package preparation; and
-- Companies House accounts package preparation.
+- Companies House accounts preparation for the approved unaudited filleted FRS 105 micro-entity scope.
 
-VAT and sole-trader reporting are complete supported capabilities. Company accounts and Corporation Tax are the principal product priority.
+VAT and sole-trader reporting are supported capabilities. Companies House filing supports unaudited filleted FRS 105 micro-entity accounts. Corporation Tax remains separately gated.
 
 <div style="max-width: 1400px; margin: 1rem 0;">
     <a href="/tax/tax-hub-overview#guide" title="Tax Hub — click to explore">
@@ -36,7 +36,7 @@ The stages are distinct:
 2. **Readiness** checks that business identity, registrations and reporting profiles are complete and reviewed.
 3. **Validation and reconciliation** check the structure and compare prepared totals with their accounting evidence.
 4. **Preview and package preparation** produce reviewable request or document artifacts for supported operations.
-5. **Filing** will add authority authorization, transmission, responses and submission history in later programme objectives.
+5. **Filing** adds authority authorization, transmission, responses and submission history for each supported workflow. VAT and the supported Companies House accounts profile provide guided filing journeys.
 
 A valid preview does not prove that an authority has received or accepted a filing.
 
@@ -48,11 +48,11 @@ Sole traders use **Business Tax** for cumulative MTD Income Tax reporting. Their
 
 Both business types can use VAT when VAT registration is enabled.
 
-## Current filing boundary
+## Filing services
 
-Tax Hub can prepare, validate, reconcile and preview populated information for its supported operations. Live authorization and transmission to HMRC or Companies House, authority acceptance or rejection, retries, fraud-prevention headers and official submission history are not yet available.
+Tax Hub provides guided VAT and Companies House filing journeys. Companies House filing includes year-end evidence review, exact-document preparation, attributable approval, controlled submission, acknowledgement and status continuation. Remember that a gateway acknowledgement confirms receipt but is not the same as acceptance.
 
-Corporation Tax computation-taxonomy assets and Companies House Filing TIS validation assets remain outstanding external dependencies. The corresponding packages are available for preparation and preview, but must not be treated as production-sendable filings.
+Corporation Tax remains separately gated by its computation-taxonomy dependency.
 
 ## Guide
 
@@ -61,6 +61,7 @@ Corporation Tax computation-taxonomy assets and Companies House Filing TIS valid
 - [VAT](/tax/tax-hub-vat)
 - [Business Tax](/tax/tax-hub-business-tax)
 - [Accounts](/tax/tax-hub-accounts)
+- [Companies House accounts filing](/tax/tax-hub-companies-house)
 - [Administration and troubleshooting](/tax/tax-hub-troubleshooting)
 - [Filing and connections](/tax/tax-hub-filing-connections)
 

@@ -4,19 +4,22 @@ title: Tax Hub Filing and Connections
 permalink: /tax/tax-hub-filing-connections
 ---
 
-## Forthcoming functionality
+## Current availability
 
-Live authority connections are not available in the current Tax Hub release.
+The VAT workspace provides the implemented HMRC connection, obligations, review, submission, reconciliation and filing-history journey described in [Tax Hub VAT](/tax/tax-hub-vat).
 
-Future programme work will add:
+The Companies House connection supports unaudited filleted FRS 105 micro-entity accounts. The filing journey starts from the completed accounting year and continues through review, approval, submission and status enquiry.
 
-- authorization with HMRC and Companies House;
-- live filing transmission;
-- acceptance and rejection responses;
-- retry and fraud-prevention handling; and
-- official submission history.
+The implemented Companies House journey includes:
 
-Until those workflows have been implemented and accepted, use Tax Hub to prepare, validate, reconcile and preview supported reporting information only. A valid payload or package preview is not evidence that it was filed or accepted.
+- review of the exact prepared accounts document;
+- attributable declaration and approval;
+- one controlled filing transmission;
+- gateway acknowledgement kept separate from acceptance;
+- explicit status enquiry for the retained conversation; and
+- restart-safe duplicate-filing prevention.
 
-Corporation Tax and Companies House live transport will also remain gated until the required official validation assets have been provisioned and the recorded contract status has been changed explicitly.
+Reopen the same company and accounting period to continue an existing filing. See [Companies House accounts filing](/tax/tax-hub-companies-house) for the complete procedure.
+
+Corporation Tax remains separately gated by its authoritative computation-taxonomy dependency. Companies House approval does not change the Corporation Tax position.
 
