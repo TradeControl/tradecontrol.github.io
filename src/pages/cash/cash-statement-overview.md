@@ -12,7 +12,12 @@ The **Cash Statement** is a configurable financial statement generated from your
 - **How those flows change over time** (by accounting periods)
 - **A transparent bridge between “what happened” and “what’s expected”**, using optional forecasting features
 
-The Cash Statement outputs to a **spreadsheet** with a consistent layout regardless of file format.
+The Cash Statement outputs to a **spreadsheet** with a consistent layout in either supported format:
+
+- **Microsoft Excel** (`.xlsx`), for Excel and compatible spreadsheet applications.
+- **LibreOffice Calc** (`.ods`), using the OpenDocument spreadsheet standard.
+
+Both formats are generated from the same financial model. Choose the format on the Cash Statement page; the selection is remembered as the default for that business.
 
 <div style="max-width: 1800px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
   <img src="/images/cash-flow-header.png" alt="Cash Flow Statement header"
@@ -81,10 +86,12 @@ The result is a statement that reads like “your model of the business”, not 
 
 When generating the Cash Statement, you can optionally include features that change what is shown and/or how values are computed.
 
-<div style="max-width: 600px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
-  <img src="/images/cash-flow-parameters.png" alt="Cash Flow Parameters"
+<div style="max-width: 1200px; margin: 1rem 0; text-align: left; padding-left: 1rem;">
+  <img src="/images/cash-flow-parameters.png" alt="Cash Statement format and content options"
        style="width: 100%; height: auto; display: inline-block; border-radius: 8px;" />
 </div>
+
+Select **Microsoft Excel** or **LibreOffice Calc** before generating the statement. The page remembers that choice for the business. All content switches apply identically to both formats.
 
 ### Include Active Periods
 
