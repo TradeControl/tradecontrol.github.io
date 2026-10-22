@@ -15,11 +15,13 @@ This page is intended for end users, support staff, and Administrators.
 
 Normal registration depends on email sending.
 
-Before users can register, an Administrator must configure:
+Before users can register, the hosting environment must provide:
 
-- an active mail host
+- an active system-managed email route
 - the user registration confirmation template
 - the user registration administrator notification template
+
+The Mail Host page confirms whether system-managed email is active. A tenant SMTP override is not required for registration.
 
 See:
 
@@ -118,14 +120,13 @@ See:
 
 Common causes:
 
-- no active mail host is configured
-- SMTP settings are incorrect
+- the system-managed email route is unavailable
 - the registration templates are not assigned
 - the message was filtered to junk or quarantine
 
 Actions:
 
-- validate SMTP using **Mail Host > Test Email**
+- validate the active route using **Mail Host > Test Email**
 - verify **Templates > System** assignments
 - inspect **Event Viewer** for mail send errors
 

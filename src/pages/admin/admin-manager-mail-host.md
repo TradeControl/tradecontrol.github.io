@@ -4,7 +4,7 @@ title: Admin Manager – Mail Host
 permalink: /admin/admin-manager-mail-host
 ---
 
-Mail Host is where you configure SMTP settings used by Trade Control to send operational emails such as invoices, orders, registration emails, and support notifications.
+Mail Host shows the email delivery route used by Trade Control and lets a business optionally supply its own SMTP host.
 
 This module is intended for **Administrators**.
 
@@ -29,27 +29,38 @@ On desktop, Mail Host opens in the right-hand pane. On mobile, it opens as a ful
 
 Use Mail Host to:
 
-- create and maintain SMTP host profiles
-- select the active SMTP host
+- confirm that system-managed email is available
+- send a test email using the active delivery route
+- optionally create and maintain business-specific SMTP overrides
+- select the active business-specific override
 - configure SMTP authentication
-- rotate encryption keys used for stored mail passwords
-- send a test email and review the outcome in Event Viewer
+- rotate encryption keys used for stored override passwords
 
-## Active host
+## System-managed email
 
-Only one host is active at a time.
+In a hosted Trade Control environment, email is normally **System managed**. The hosting service supplies the sender and keeps its credentials outside the business database.
 
-1. Select a host from **Active Host**
+The blue banner confirms when this route is available. If no tenant override is configured, **Active Email Route** shows **System managed**. No action is required from the business Administrator.
+
+System-managed email sends account and registration messages and acts as the default route for business documents and support notifications.
+
+## Business-specific override
+
+A business may add its own SMTP host when messages must be sent from an address or service that it controls. This is optional in a hosted environment.
+
+Only one tenant override is active at a time. When an override is active, business documents and support notifications use it. Account and registration messages remain system managed.
+
+1. Select a host from the tenant override list
 2. select **Set Active**
 
 Expected outcome:
 
-- the selected host becomes the active sender
-- system-generated emails use that host
+- the selected host becomes the active tenant override
+- business email uses that host while platform account email remains system managed
 
 ## Add a new host
 
-1. Select **New Host**
+1. Select **New Override**
 2. enter:
    - **Host Desc.**
    - **Email Address**
@@ -83,7 +94,7 @@ Expected outcome:
 
 ## Test Email
 
-Use **Test Email** to verify the active host.
+Use **Test Email** to verify the active email route. With no tenant override, this tests system-managed email. With an active override, it tests that override.
 
 1. Select **Test Email**
 2. Trade Control sends a test message to the signed-in user's Identity email address
@@ -95,9 +106,9 @@ Expected outcome:
 
 ## Encryption key rotation
 
-Mail host passwords are stored encrypted.
+Tenant-host passwords are stored encrypted. The platform email credential is managed by the hosting service and is not held in the business database.
 
-Use **Rotate Keys** if you need to replace the encryption key material.
+Use **Rotate Keys** if you need to replace the encryption key material for tenant-host passwords. This action is unavailable when the business has no tenant overrides.
 
 1. Select **Rotate Keys**
 2. confirm you have a database backup

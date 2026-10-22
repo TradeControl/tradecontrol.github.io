@@ -54,9 +54,9 @@ On mobile devices, modules open as full-screen views with a **Back** action to r
   - Assign documents, images, and related resources.
   - Parse templates to validate output rendering.
 - [Mail Host](/admin/admin-manager-mail-host)
-  - Manage SMTP host profiles and select the active sender.
+  - Confirm the system-managed email route and optionally manage a tenant SMTP override.
   - Send a test email and review the result in Event Viewer.
-  - Rotate encryption keys used for stored mail passwords.
+  - Rotate encryption keys used for stored tenant-host passwords.
 - [Users - Registration process](/admin/admin-manager-user-registration)
   - Understand registration states and the end-to-end workflow.
   - Troubleshoot missing emails and pending approval.

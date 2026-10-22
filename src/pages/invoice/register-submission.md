@@ -153,7 +153,7 @@ Invoice information, recipients, templates, and document previews remain availab
 ### I cannot submit an invoice
 
 * Check that a valid recipient has been selected and that the subject contains at least one available email address.
-* [Mail Host](/admin/admin-manager-mail-host) not configured or activated.
+* The system-managed email route is unavailable, or a configured [Mail Host](/admin/admin-manager-mail-host) override is not working.
 * [Document Templates](/admin/admin-manager-html-templates) not assigned.
 
 ### The wrong recipient is available
