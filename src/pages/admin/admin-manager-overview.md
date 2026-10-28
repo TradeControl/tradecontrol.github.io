@@ -63,6 +63,11 @@ On mobile devices, modules open as full-screen views with a **Back** action to r
 - [Users](/admin/admin-manager-users)
   - Process confirmed registrations by creating `Usr.tbUser`.
   - Assign roles and delete users safely.
+- [Customer Exit](/admin/admin-manager-customer-exit)
+  - Review what is included in a provider-switching archive and what is excluded.
+  - Acknowledge the security warning before generating a download.
+  - Export documented JSON business data and tenant-owned files.
+  - Confirm the attributable generation event in Event Viewer.
 - [Financial Periods](/admin/admin-manager-periods)
   - Set the financial year and monthly boundaries.
   - Close months and rebuild closed periods after historic changes.
